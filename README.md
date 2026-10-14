@@ -16,8 +16,13 @@
 
 - [技能入口](skills/design-guofeng-system-icons/SKILL.md)
 - [完整设计规范与提示词](skills/design-guofeng-system-icons/references/design-standard.md)
-- [参考图](skills/design-guofeng-system-icons/assets)：卡册、礼盒、青鸟，来自本项目现有资源。
+- [参考图](skills/design-guofeng-system-icons/assets)：9张完整图标、6张原像素局部观察图及1张真实尺寸失败反例，均来自本项目现有资源。
 - [只读规格检查](skills/design-guofeng-system-icons/scripts/check_icon.py)：需要Python 3与Pillow，不修改图像，不替代视觉验收。
+
+- [分类参考图库](skills/design-guofeng-system-icons/references/reference-library.md)：按任务选1–3张，标注来源与确认状态。
+- [画面控制卡](skills/design-guofeng-system-icons/references/visual-control.md)：明确必须保持、允许调整、禁止出现与可检查画面要求。
+
+参考图状态：已制作并检查，待用户最终确认；不把未提出异议视为批准。
 
 ## 在其他设备使用
 
