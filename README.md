@@ -22,7 +22,7 @@
 - [分类参考图库](skills/design-guofeng-system-icons/references/reference-library.md)：按任务选1–3张，标注来源与确认状态。
 - [画面控制卡](skills/design-guofeng-system-icons/references/visual-control.md)：明确必须保持、允许调整、禁止出现与可检查画面要求。
 
-参考图状态：已制作并检查，待用户最终确认；不把未提出异议视为批准。
+参考图状态：用户于2026-10-14明确确认当前R01–R09全部9张完整图标，作为正式视觉基准；不含早期失败反例，不自动批准未来改稿。
 
 ## 在其他设备使用
 
