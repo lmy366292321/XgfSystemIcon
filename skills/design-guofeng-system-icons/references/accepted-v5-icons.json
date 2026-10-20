@@ -1,0 +1,304 @@
+{
+  "case": "F-20261021-001",
+  "date": "2026-10-21",
+  "version": "v5",
+  "user_request": "将第六版的八个图标全部标记通过，并加入到图库中",
+  "version_clarification": "是第五版",
+  "decision": "八项用户验收通过，加入正式限定用途图库；原视觉疑点和技术未验证记录保留",
+  "not_a_global_rule_change": true,
+  "items": [
+    {
+      "id": "R13",
+      "batch_id": "01",
+      "name": "VIP特权",
+      "version": "v5",
+      "category": "薄卡／会员权益",
+      "master": {
+        "path": "assets/vip-privilege-v5.png",
+        "sha256": "2a8d45619be1651de4269bd0c339809382b03058f857d19356227ac1ad1ffa92"
+      },
+      "preview": {
+        "path": "assets/previews/vip-privilege-v5-120.png",
+        "sha256": "302d996c1433fa366fccf220379c69328c7956cc46ab4f0b44f1af303d71e799"
+      },
+      "user_acceptance": "pass",
+      "library_status": "正式限定用途参考",
+      "accepted_on": "2026-10-21",
+      "purpose": "同系列薄卡、冠形主符号、贴边花绸",
+      "limits": "不将冠形推广为中国历史冠制；具体权益依赖名称",
+      "hard_specs": "pass",
+      "margins_ltrb": [
+        163,
+        108,
+        163,
+        107
+      ],
+      "visual_review_20261020": "pass",
+      "acceptance_basis": "用户明确确认第五版八项全部通过并授权入库",
+      "color_metadata": "unverified",
+      "source_color_space": "unverified",
+      "actual_ui": "unverified",
+      "engineering": "unverified"
+    },
+    {
+      "id": "R14",
+      "batch_id": "02",
+      "name": "广告特权",
+      "version": "v5",
+      "category": "玉牌／跳过凭证",
+      "master": {
+        "path": "assets/ad-privilege-v5.png",
+        "sha256": "c69bbd7e868c970040bd40644f9c5438ac9f301dc71a1b60cf710f584739f95c"
+      },
+      "preview": {
+        "path": "assets/previews/ad-privilege-v5-120.png",
+        "sha256": "79308f4fbc0bd21ed1fca104a7c4254e8b43aee71f372b96190b733488a64dfd"
+      },
+      "user_acceptance": "pass",
+      "library_status": "正式限定用途参考",
+      "accepted_on": "2026-10-21",
+      "purpose": "圆牌与短票主次、跳过符号可见",
+      "limits": "▶│也可表示下一项；免视频机制依赖名称，不作为无文字必然识别模板",
+      "hard_specs": "pass",
+      "margins_ltrb": [
+        107,
+        149,
+        107,
+        148
+      ],
+      "visual_review_20261020": "pass",
+      "acceptance_basis": "用户明确确认第五版八项全部通过并授权入库",
+      "color_metadata": "unverified",
+      "source_color_space": "unverified",
+      "actual_ui": "unverified",
+      "engineering": "unverified"
+    },
+    {
+      "id": "R15",
+      "batch_id": "03",
+      "name": "终身卡",
+      "version": "v5",
+      "category": "薄卡／永久权益",
+      "master": {
+        "path": "assets/lifetime-card-v5.png",
+        "sha256": "5afa8286586e73cd4708b2e7e05b80cb020e27bad48e4cdfab31fa04441a9084"
+      },
+      "preview": {
+        "path": "assets/previews/lifetime-card-v5-120.png",
+        "sha256": "5e187609eb049c0c03425731388cea292fbe6fb0e5c4944b82570c2eec1bb86c"
+      },
+      "user_acceptance": "pass",
+      "library_status": "正式限定用途参考",
+      "accepted_on": "2026-10-21",
+      "purpose": "与VIP共用卡型、∞与冠形区分",
+      "limits": "红金浓度及云纹不推广到全组；永久权益细则依赖名称",
+      "hard_specs": "pass",
+      "margins_ltrb": [
+        160,
+        102,
+        155,
+        102
+      ],
+      "visual_review_20261020": "pass",
+      "acceptance_basis": "用户明确确认第五版八项全部通过并授权入库",
+      "color_metadata": "unverified",
+      "source_color_space": "unverified",
+      "actual_ui": "unverified",
+      "engineering": "unverified"
+    },
+    {
+      "id": "R16",
+      "batch_id": "04",
+      "name": "鲜花合约",
+      "version": "v5",
+      "category": "纸契／平面朱印",
+      "master": {
+        "path": "assets/flower-contract-v5.png",
+        "sha256": "4c58352a9c3d7b059b7a7d8df250008f1d2143f847fd19bc6cc260814a3040b8"
+      },
+      "preview": {
+        "path": "assets/previews/flower-contract-v5-120.png",
+        "sha256": "ef88d09314c4bdf5cf727a09cdbc4ace6cdd88ff762199b2ed10058ee7ee89bc"
+      },
+      "user_acceptance": "pass",
+      "library_status": "正式限定用途参考",
+      "accepted_on": "2026-10-21",
+      "purpose": "单纸、束带、条目与朱印的契约语义",
+      "limits": "不固定花种，不增加后纸折角、蜡封或无关书写工具",
+      "hard_specs": "pass",
+      "margins_ltrb": [
+        114,
+        106,
+        114,
+        106
+      ],
+      "visual_review_20261020": "pass",
+      "acceptance_basis": "用户明确确认第五版八项全部通过并授权入库",
+      "color_metadata": "unverified",
+      "source_color_space": "unverified",
+      "actual_ui": "unverified",
+      "engineering": "unverified"
+    },
+    {
+      "id": "R17",
+      "batch_id": "05",
+      "name": "金玉基金",
+      "version": "v5",
+      "category": "金玉／硬容器",
+      "master": {
+        "path": "assets/jade-fund-v5.png",
+        "sha256": "73bfd89823cac33db2dd04804a772af624af0e90ba577105e6340e67000f71a6"
+      },
+      "preview": {
+        "path": "assets/previews/jade-fund-v5-120.png",
+        "sha256": "e62660852700bdb5b4423d44ad9f8f5da55f2adca8d9a21eb8e01b16c593db77"
+      },
+      "user_acceptance": "pass",
+      "library_status": "正式限定用途参考",
+      "accepted_on": "2026-10-21",
+      "purpose": "暖容器与青绿玉分离、货币钩口短绳身份",
+      "limits": "基金条件依赖名称；不得泛化为卡册或改成金币元宝",
+      "hard_specs": "pass",
+      "margins_ltrb": [
+        102,
+        151,
+        104,
+        146
+      ],
+      "visual_review_20261020": "pass",
+      "acceptance_basis": "用户明确确认第五版八项全部通过并授权入库",
+      "color_metadata": "unverified",
+      "source_color_space": "unverified",
+      "actual_ui": "unverified",
+      "engineering": "unverified"
+    },
+    {
+      "id": "R18",
+      "batch_id": "06",
+      "name": "培育基金",
+      "version": "v5",
+      "category": "透明壶／种袋／粉盘",
+      "master": {
+        "path": "assets/cultivation-fund-v5.png",
+        "sha256": "fd5a4de46ce7b51c42c01ff303e2413ba01a5d22e8ccd26e9a5031024242c8a1"
+      },
+      "preview": {
+        "path": "assets/previews/cultivation-fund-v5-120.png",
+        "sha256": "1b2236701a363ab4a805376c592bc8fc222032d4008197e5f620acfca8036908"
+      },
+      "user_acceptance": "pass",
+      "library_status": "正式限定用途参考",
+      "accepted_on": "2026-10-21",
+      "purpose": "三种培育道具分组、柔和紫蓝与材质差异",
+      "limits": "保留工具身份；不把本图降低饱和度推广为所有材质必须更灰",
+      "hard_specs": "pass",
+      "margins_ltrb": [
+        108,
+        113,
+        104,
+        114
+      ],
+      "visual_review_20261020": "pass",
+      "acceptance_basis": "用户明确确认第五版八项全部通过并授权入库",
+      "color_metadata": "unverified",
+      "source_color_space": "unverified",
+      "actual_ui": "unverified",
+      "engineering": "unverified"
+    },
+    {
+      "id": "R19",
+      "batch_id": "07",
+      "name": "充值",
+      "version": "v5",
+      "category": "钱袋／金玉",
+      "master": {
+        "path": "assets/recharge-v5.png",
+        "sha256": "5d30ce3ea53460362fb2b70e7b279cd23a0028d28e4889c62e4cca5877553d95"
+      },
+      "preview": {
+        "path": "assets/previews/recharge-v5-120.png",
+        "sha256": "8104e4f62d2b99c539a3da2e9aafca67aa48fe7a5263f8c681348f2d556643e1"
+      },
+      "user_acceptance": "pass",
+      "library_status": "正式限定用途参考",
+      "accepted_on": "2026-10-21",
+      "purpose": "软袋与玉前后关系、与基金硬容器区分",
+      "limits": "购买动作依赖名称；金玉钩口、金饰和蓝紫短绳属于物品身份",
+      "hard_specs": "pass",
+      "margins_ltrb": [
+        103,
+        113,
+        103,
+        114
+      ],
+      "visual_review_20261020": "pass",
+      "acceptance_basis": "用户明确确认第五版八项全部通过并授权入库",
+      "color_metadata": "unverified",
+      "source_color_space": "unverified",
+      "actual_ui": "unverified",
+      "engineering": "unverified"
+    },
+    {
+      "id": "R20",
+      "batch_id": "08",
+      "name": "累充奖励",
+      "version": "v5",
+      "category": "开箱／衣花饰牌",
+      "master": {
+        "path": "assets/cumulative-rewards-v5.png",
+        "sha256": "f35049badbfb321725caf904576a24e19450ff726baa8b68f5c5e241e1f17541"
+      },
+      "preview": {
+        "path": "assets/previews/cumulative-rewards-v5-120.png",
+        "sha256": "ada27b0f8ca4aabaebf9dda0d78d8e5b00b0588b65b3a168a2be99524ee880e5"
+      },
+      "user_acceptance": "pass",
+      "library_status": "正式限定用途参考",
+      "accepted_on": "2026-10-21",
+      "purpose": "暖玫瑰箱、浅衣花、深内衬与展开多奖励轮廓",
+      "limits": "用户接受当前版本；120px衣装与礼盒丝带混读风险保留，不作为无名称三类奖励必然可辨模板",
+      "hard_specs": "pass",
+      "margins_ltrb": [
+        102,
+        142,
+        102,
+        143
+      ],
+      "visual_review_20261020": "unverified",
+      "acceptance_basis": "用户明确确认第五版八项全部通过并授权入库",
+      "color_metadata": "unverified",
+      "source_color_space": "unverified",
+      "actual_ui": "unverified",
+      "engineering": "unverified"
+    }
+  ],
+  "qa": [
+    {
+      "path": "assets/qa/privileges-v5/qa-dark-01.png",
+      "sha256": "a4167ed5a44510ff9dc487eb80abdae4a891e0ca1a57c79fe9516271e45c0047"
+    },
+    {
+      "path": "assets/qa/privileges-v5/qa-dark-02.png",
+      "sha256": "436358034951a275967a7933c4756376cc72c6a2bf1811bd21861376fac00573"
+    },
+    {
+      "path": "assets/qa/privileges-v5/qa-light-01.png",
+      "sha256": "750bf964a9629e391b5995ecbd06dd5364a3148d7a025ff8c59023b2f4cc7564"
+    },
+    {
+      "path": "assets/qa/privileges-v5/qa-light-02.png",
+      "sha256": "96ed99bd3a99194e1454b3518c12a424cedc8dc1a0f76b1612419da4b86e05e1"
+    }
+  ],
+  "qa_mapping": "R01-R08/R11/R12是当次固定十参考；candidate 01-08对应本次R13-R20，previous为v4。图内候选版本v5；每格120px。",
+  "derivation_evidence": {
+    "method": "Sharp 0.35.5 lanczos3 full 1024 canvas to 120 decoded RGBA",
+    "fresh_replay_20261020": 8,
+    "report_sha256": "e1c050ae40bd9a523bd76dd30e48ee249848cb43a7b396e281a28db186c2678a"
+  },
+  "historical_review": {
+    "sha256": "5d0f310349107607312b8811d988b1d58a82c2d0cb2497aa15bdbc4b8367c069",
+    "summary": "01-07视觉通过；08衣装120px稳定读出未验证；用户此次接受v5版本，不伪造新玩家识别测试"
+  },
+  "source_pngs_reencoded": false
+}

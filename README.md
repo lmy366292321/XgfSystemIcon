@@ -22,13 +22,13 @@
 
 - [技能入口](skills/design-guofeng-system-icons/SKILL.md)
 - [完整设计规范与提示词](skills/design-guofeng-system-icons/references/design-standard.md)
-- [参考图](skills/design-guofeng-system-icons/assets)：12张完整图标、6张原像素局部观察图及1张真实尺寸失败反例，均来自本项目现有资源。
+- [参考图](skills/design-guofeng-system-icons/assets)：20张完整图标、6张原像素局部观察图及1张真实尺寸失败反例，均来自本项目现有资源。
 - [只读规格检查](skills/design-guofeng-system-icons/scripts/check_icon.py)：需要Python 3与Pillow，检查PNG真实位深、安全区、sRGB标识与120px派生关联；只读，不替代视觉验收。
 
 - [分类参考图库](skills/design-guofeng-system-icons/references/reference-library.md)：制作前及验收固定查看10张，生成输入选1–3张，标注来源与确认状态。
 - [画面控制卡](skills/design-guofeng-system-icons/references/visual-control.md)：明确必须保持、允许调整、禁止出现与可检查画面要求。
 
-参考图状态：R01–R09已确认；R10闺蜜、R11节日礼包、R12留言为后续已授权的限定用途参考，具体范围以图库索引为准。不含早期失败反例，不自动批准未来改稿。
+参考图状态：R01–R09已确认；R10闺蜜、R11节日礼包、R12留言为后续已授权的限定用途参考，具体范围以图库索引为准。R13–R20为2026-10-21用户确认的第五版八项，见[入库记录](skills/design-guofeng-system-icons/references/accepted-v5-icons.md)。不含早期失败反例，不自动批准未来改稿。
 
 - [交付与失败处理方案](skills/design-guofeng-system-icons/references/delivery-review.md)：逐项证据、参考分工、两次失败后换方法、实际UI与效果记录。
 - [120px对照验收](skills/design-guofeng-system-icons/references/qa-120.md)：固定10张参考，分开报告文件、视觉、用户接受、UI和工程状态。
