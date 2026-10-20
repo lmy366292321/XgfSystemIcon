@@ -6,8 +6,8 @@ import io
 import json
 import struct
 import sys
-import tempfile
 import unittest
+from test_fixture_directory import WorkspaceTemporaryDirectory
 import zlib
 from pathlib import Path
 
@@ -23,7 +23,7 @@ def png_chunk(kind, payload):
 
 class IconChecks(unittest.TestCase):
     def setUp(self):
-        self.temp = tempfile.TemporaryDirectory(prefix='check-icon-test-')
+        self.temp = WorkspaceTemporaryDirectory(prefix='check-icon-test-')
         self.addCleanup(self.temp.cleanup)
         self.root = Path(self.temp.name)
         self.master = Image.new('RGBA', (1024, 1024))

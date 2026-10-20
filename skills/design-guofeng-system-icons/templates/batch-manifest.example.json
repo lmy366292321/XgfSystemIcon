@@ -1,0 +1,199 @@
+{
+  "schema_version": 1,
+  "batch_id": "reference-example-only",
+  "expected_ids": [
+    "01"
+  ],
+  "skill": {
+    "path": "../SKILL.md",
+    "sha256": "e4a13e560c03308940baf124d187f443f4d8fc37f86a703687e1a01cb97bbb97"
+  },
+  "rules": [
+    {
+      "id": "design-standard",
+      "file": {
+        "path": "../references/design-standard.md",
+        "sha256": "aca710a4be60ab71f227ca0b78bd2aa259f6a8059bbed2b35701208cb254c74c"
+      }
+    },
+    {
+      "id": "reference-library",
+      "file": {
+        "path": "../references/reference-library.md",
+        "sha256": "042f906f8cea770a485032350e7d3c20e8b29208b10139b5909032e6e05329a9"
+      }
+    },
+    {
+      "id": "visual-control",
+      "file": {
+        "path": "../references/visual-control.md",
+        "sha256": "05050046029f13e91df460fa9860572a73aee3f6ff294c43b7a88fed61ea4d04"
+      }
+    },
+    {
+      "id": "qa-120",
+      "file": {
+        "path": "../references/qa-120.md",
+        "sha256": "83b1ab09a6dfbb03678210571dd80ec9ecd4bdb2f8b9a19660b1733503aa21af"
+      }
+    },
+    {
+      "id": "delivery-review",
+      "file": {
+        "path": "../references/delivery-review.md",
+        "sha256": "c7cc4aee182ae6fe597584b0bf8508581eeeb13a8a02166e3527932714922787"
+      }
+    },
+    {
+      "id": "batch-review",
+      "file": {
+        "path": "../references/batch-review.md",
+        "sha256": "63f68dac9d9ce627e42997af75739d07ce3e7d1fb08b8aaff62da38900e3f4d1"
+      }
+    },
+    {
+      "id": "style-transfer-review",
+      "file": {
+        "path": "../references/style-transfer-review.md",
+        "sha256": "6602c0fc088cd6858fb3d746d643164a85fd5fd3429d8d775a35d7ca2ecc6578"
+      }
+    }
+  ],
+  "references": [
+    {
+      "id": "R01",
+      "file": {
+        "path": "../assets/album.png",
+        "sha256": "273f4888f9ffabdf49ab2e374037c0439f438ea8994e0ae90b3f7ba1a6ac1512"
+      },
+      "purpose": "纸册结构、体量和描边",
+      "limits": "不迁入白花等无关内容"
+    },
+    {
+      "id": "R02",
+      "file": {
+        "path": "../assets/tea.png",
+        "sha256": "15ae2abb60cda25085e27fcbeb9b15c5375c0833ac964763d52fb2eda838ff23"
+      },
+      "purpose": "瓷器与连续液体高光",
+      "limits": "不推广碎反光"
+    },
+    {
+      "id": "R03",
+      "file": {
+        "path": "../assets/ginkgo.png",
+        "sha256": "662e9fc8c828c906a474cb7decc7f6925e7b918ec378d7ddf81c46a5da3e0c05"
+      },
+      "purpose": "疏朗轮廓与金色植物",
+      "limits": "金色不推广到全组"
+    },
+    {
+      "id": "R04",
+      "file": {
+        "path": "../assets/gift.png",
+        "sha256": "bd0f04a0211fe778b4aac97a63e04e19c40fdd6ea84e80bdc6abef727784c29f"
+      },
+      "purpose": "丝绸折面、体量与明暗",
+      "limits": "不统一加蝴蝶结或礼盒"
+    },
+    {
+      "id": "R05",
+      "file": {
+        "path": "../assets/daily-packs.png",
+        "sha256": "66665ddd37bd8669894c63c894903d9a2a0fc28e769e80c2af986bdebfee34c8"
+      },
+      "purpose": "开箱与内容物层次",
+      "limits": "卡包内容不复制到无关功能"
+    },
+    {
+      "id": "R06",
+      "file": {
+        "path": "../assets/fragment-shop.png",
+        "sha256": "45c228b7dcbf386befebf54bb4bd97127d37468bd570dc218e4c266cdb38298f"
+      },
+      "purpose": "开箱物件边界",
+      "limits": "不复制缺口等无关内容"
+    },
+    {
+      "id": "R07",
+      "file": {
+        "path": "../assets/pack-shop.png",
+        "sha256": "69c244aec81ecb06d6b0432cae5da83bb77dcd5210af98a523f9eb44d65f62eb"
+      },
+      "purpose": "封闭卡包与错落层次",
+      "limits": "不把卡包改成露出的卡片"
+    },
+    {
+      "id": "R08",
+      "file": {
+        "path": "../assets/flower-checkin.png",
+        "sha256": "d879e3bc9cb78f1d77fc327d9660e3f31554fd5b185e398ce8ca5cd7a168cd46"
+      },
+      "purpose": "折纸与印章结构",
+      "limits": "不作为绝对无肌理标准"
+    },
+    {
+      "id": "R11",
+      "file": {
+        "path": "../assets/holiday-gift.png",
+        "sha256": "c6faf11a1be058b21402300a13abbdc32e2d059bfa5a4f72b4a77f78ef27eff7"
+      },
+      "purpose": "红色与香槟金配色",
+      "limits": "仅限已授权配色用途"
+    },
+    {
+      "id": "R12",
+      "file": {
+        "path": "../assets/message.png",
+        "sha256": "83faf04a652eef5d2a548ef5b1f60733654474e12267f17a5836ceb5fb653937"
+      },
+      "purpose": "书信与双物交叉关系",
+      "limits": "不推广固定横式、笔封比例或亮金色"
+    }
+  ],
+  "items": [
+    {
+      "id": "01",
+      "name": "既有闺蜜参考的格式示例",
+      "version": "approved-v2",
+      "requirements": {
+        "action": "示例展示",
+        "subject": "双人头肩组合",
+        "keep": [
+          "原有两人身份",
+          "既有完整画布"
+        ],
+        "name_dependency": "此示例不是新任务"
+      },
+      "control_card": {
+        "path": "../references/visual-control.md",
+        "sha256": "05050046029f13e91df460fa9860572a73aee3f6ff294c43b7a88fed61ea4d04"
+      },
+      "master": {
+        "path": "../assets/best-friends-v2.png",
+        "sha256": "8354729c9665bbeeb919534de3ee0b7448154cf2b46e543dade47739f7271131"
+      },
+      "preview": {
+        "path": "../assets/previews/best-friends-v2-120.png",
+        "sha256": "e670017a9d53aed2e2feea0573e01a596a59e63e42efbd5ad304f3ac518f2cc6"
+      },
+      "export": {
+        "library": "historical-unknown",
+        "version": "unrecorded",
+        "resample": "unrecorded",
+        "complete_canvas": true,
+        "alpha_handling": "unrecorded",
+        "color_conversion": "unrecorded"
+      },
+      "visual_review": {
+        "status": "unverified"
+      },
+      "color_provenance": {
+        "status": "unverified"
+      },
+      "other_states": {
+        "historical_user_acceptance": "See reference-library.md; not rejudged here"
+      }
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+# Local runtime selection and generated Python files.
+runtime.local.json
+__pycache__/
+*.py[cod]
+.test-fixtures/
+
+# Per-machine deployment, backups and per-batch evidence stay outside the source package.
+/deployment/
+/validation/
+/output/
+/backup/
+/backups/
+/WORKCOPY.md

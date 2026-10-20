@@ -1,4 +1,4 @@
 interface:
   display_name: "新国风功能图标设计"
-  short_description: "设计与扩展新国风女性向游戏入口图标，统一画风、规格和120px验收"
-  default_prompt: "使用 $design-guofeng-system-icons，为新功能设计与现有图标一致的透明图标，并完成120px验收。"
+  short_description: "设计及批量评审新国风入口图标，检查透明规格、120px可读性与跨物件画风"
+  default_prompt: "使用 $design-guofeng-system-icons，按任务要求设计或评审入口图标，完成批次检查、120px对照与跨物件画风验收。"
