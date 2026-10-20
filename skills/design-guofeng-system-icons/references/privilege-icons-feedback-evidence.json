@@ -1,0 +1,954 @@
+{
+  "case": "F-20261021-002",
+  "scope": "same batch v1-v5 retrospective; not independent cross-case validation",
+  "date": "2026-10-21",
+  "icons": [
+    {
+      "version": "v1",
+      "item": "01-VIP特权",
+      "master_sha256": "934e4f261e717de957984d232b24672019bab4da0047c2798d4142abeab70498",
+      "preview_sha256": "7f3120220e9f4e50668de7c094d13bff1422eeabd49e6c7ce84442f28b9759fc",
+      "size": [
+        1024,
+        1024
+      ],
+      "bbox": [
+        234,
+        116,
+        794,
+        907
+      ],
+      "minimum_margin": 116,
+      "alpha_weighted_area": 0.270488
+    },
+    {
+      "version": "v1",
+      "item": "02-广告特权",
+      "master_sha256": "32a564c714b3128ba650f3f2e532e887e93f46e1f5a027a7a31045c96354ea74",
+      "preview_sha256": "f700090d922a9423f58e559033df6394d2fa298eb441d7ffb6292e407cedf72f",
+      "size": [
+        1024,
+        1024
+      ],
+      "bbox": [
+        184,
+        123,
+        840,
+        904
+      ],
+      "minimum_margin": 120,
+      "alpha_weighted_area": 0.368567
+    },
+    {
+      "version": "v1",
+      "item": "03-终身卡",
+      "master_sha256": "03ebef0af6bddbd8f7d8a9bb0d5561fd71d8f968aeee3ada4de6d00ecabc3dd1",
+      "preview_sha256": "eaf442e0801a3096f03e212512b6511a3d1d75b2c1774455c5a13dd18fb9cb9d",
+      "size": [
+        1024,
+        1024
+      ],
+      "bbox": [
+        164,
+        118,
+        863,
+        906
+      ],
+      "minimum_margin": 118,
+      "alpha_weighted_area": 0.360214
+    },
+    {
+      "version": "v1",
+      "item": "04-鲜花合约",
+      "master_sha256": "c0b94212868bfa634a1f1cfebb0287f7361016cd7b37b82a3d1b95e0e271de52",
+      "preview_sha256": "23814d89a4518be7b2f5e70b8bebfd7e7f7da4926aa464d55e91b6ec3820c964",
+      "size": [
+        1024,
+        1024
+      ],
+      "bbox": [
+        117,
+        137,
+        912,
+        889
+      ],
+      "minimum_margin": 112,
+      "alpha_weighted_area": 0.345017
+    },
+    {
+      "version": "v1",
+      "item": "05-金玉基金",
+      "master_sha256": "c5d2d6df797a26df706394de3ecce181da33200870ec7c0c27253bb608864a17",
+      "preview_sha256": "d16bc5172423a858552a9ec19a0271ef148c4d13a13686c897c58e83fc9fca0a",
+      "size": [
+        1024,
+        1024
+      ],
+      "bbox": [
+        112,
+        115,
+        911,
+        905
+      ],
+      "minimum_margin": 112,
+      "alpha_weighted_area": 0.380302
+    },
+    {
+      "version": "v1",
+      "item": "06-培育基金",
+      "master_sha256": "0e376bd31a748224820b80d5571bc8df884204421d49cfa80eda4aad8ce5070c",
+      "preview_sha256": "ee5de3b75b665ebd08d43e102235e3873afaec14ee06078f5aa821abb4ce599b",
+      "size": [
+        1024,
+        1024
+      ],
+      "bbox": [
+        118,
+        123,
+        912,
+        906
+      ],
+      "minimum_margin": 112,
+      "alpha_weighted_area": 0.384006
+    },
+    {
+      "version": "v1",
+      "item": "07-充值",
+      "master_sha256": "6b8ae0e38a2fd76afd72bf5ab47724beeed5bfe47f00946811ae5ec02f982a5e",
+      "preview_sha256": "b7d3edb2d6edaf95ccf4c9c9fe48d0f2ab6808aef19b8b7ac66d069193bfeeb3",
+      "size": [
+        1024,
+        1024
+      ],
+      "bbox": [
+        127,
+        126,
+        897,
+        893
+      ],
+      "minimum_margin": 126,
+      "alpha_weighted_area": 0.369457
+    },
+    {
+      "version": "v1",
+      "item": "08-累充奖励",
+      "master_sha256": "e583f29b61cd25de734b3856e95ed783ede7bcdbdea01a09b0ce6caeb449ac78",
+      "preview_sha256": "0e0ec16149e61c3af877dda0f8b0f9f617ec2e702ada08aafb210cf2fb4734bf",
+      "size": [
+        1024,
+        1024
+      ],
+      "bbox": [
+        112,
+        137,
+        906,
+        891
+      ],
+      "minimum_margin": 112,
+      "alpha_weighted_area": 0.369685
+    },
+    {
+      "version": "v2",
+      "item": "01-VIP特权",
+      "master_sha256": "47b47ea77a190000056d4b17ee3db5882304018ab5bb5b5859da7a03b5489ec2",
+      "preview_sha256": "3b156c276a944d54954cdea027dd1f609f2316d4d1b265b92824c7917ea82b01",
+      "size": [
+        1024,
+        1024
+      ],
+      "bbox": [
+        164,
+        104,
+        854,
+        922
+      ],
+      "minimum_margin": 102,
+      "alpha_weighted_area": 0.386729
+    },
+    {
+      "version": "v2",
+      "item": "02-广告特权",
+      "master_sha256": "c69bbd7e868c970040bd40644f9c5438ac9f301dc71a1b60cf710f584739f95c",
+      "preview_sha256": "79308f4fbc0bd21ed1fca104a7c4254e8b43aee71f372b96190b733488a64dfd",
+      "size": [
+        1024,
+        1024
+      ],
+      "bbox": [
+        107,
+        149,
+        917,
+        876
+      ],
+      "minimum_margin": 107,
+      "alpha_weighted_area": 0.425641
+    },
+    {
+      "version": "v2",
+      "item": "03-终身卡",
+      "master_sha256": "d9ac9f3b6318791338b66a9921c0573b9f4dfd533568d7c786a5bfeaa595de1f",
+      "preview_sha256": "b1b5367469668361352fea3a6f2320df4d3d21cedaa342777e32543e91161bde",
+      "size": [
+        1024,
+        1024
+      ],
+      "bbox": [
+        170,
+        108,
+        854,
+        922
+      ],
+      "minimum_margin": 102,
+      "alpha_weighted_area": 0.385775
+    },
+    {
+      "version": "v2",
+      "item": "04-鲜花合约",
+      "master_sha256": "d82b9b17c2fb7b2839357c2e7ca02b0f62c02e6d4554bd791b0320e0b86cd2e1",
+      "preview_sha256": "c6f07077f0e27f6b6ae9edc4a4c083fc9583352f625d464826f124c3390c1142",
+      "size": [
+        1024,
+        1024
+      ],
+      "bbox": [
+        108,
+        122,
+        922,
+        902
+      ],
+      "minimum_margin": 102,
+      "alpha_weighted_area": 0.381436
+    },
+    {
+      "version": "v2",
+      "item": "05-金玉基金",
+      "master_sha256": "83f5cc06cda3677bd6bc0b3a6749f8d5606b9dc193049a40a759e52ad78be3d1",
+      "preview_sha256": "e0796b9af6f3ebe5d4bb165f916d333849159982d51d23e190b6986579f76161",
+      "size": [
+        1024,
+        1024
+      ],
+      "bbox": [
+        107,
+        150,
+        922,
+        878
+      ],
+      "minimum_margin": 102,
+      "alpha_weighted_area": 0.404193
+    },
+    {
+      "version": "v2",
+      "item": "06-培育基金",
+      "master_sha256": "d864d2e4ff0e67e769b34f90d6b0580997702b7abbaceb76830c85a2493a5155",
+      "preview_sha256": "0d1f0062892e1e47ecf372e2532d9686f29f9f228b6b090da5497a0152b98a03",
+      "size": [
+        1024,
+        1024
+      ],
+      "bbox": [
+        107,
+        118,
+        922,
+        906
+      ],
+      "minimum_margin": 102,
+      "alpha_weighted_area": 0.465125
+    },
+    {
+      "version": "v2",
+      "item": "07-充值",
+      "master_sha256": "f2e0509a4f497a1640e12e301022c1ad2dcd8f0196fa913cdd81f6ed24d00dd3",
+      "preview_sha256": "1af68a48e18f5c1fbd1a092d46cbb5e20547ce9b6477dae2df2b446cc986077d",
+      "size": [
+        1024,
+        1024
+      ],
+      "bbox": [
+        108,
+        107,
+        916,
+        913
+      ],
+      "minimum_margin": 107,
+      "alpha_weighted_area": 0.408046
+    },
+    {
+      "version": "v2",
+      "item": "08-累充奖励",
+      "master_sha256": "3242f9fb04530155e593ef5b56a60f65cd70a2501e8124641f3a1bb86a7fb693",
+      "preview_sha256": "207884bf7a2752169350751985b20bcbbb504c69d7b55fbd419782eafef5ca6f",
+      "size": [
+        1024,
+        1024
+      ],
+      "bbox": [
+        107,
+        140,
+        918,
+        887
+      ],
+      "minimum_margin": 106,
+      "alpha_weighted_area": 0.391471
+    },
+    {
+      "version": "v3",
+      "item": "01-VIP特权",
+      "master_sha256": "f76c985eef9727a60f01a95b521f8fbbc32d5698bd33b49bcef369a32865688e",
+      "preview_sha256": "744df02f584cfef636e559a0716579259298829a8894c0d68362a56656a6a9f6",
+      "size": [
+        1024,
+        1024
+      ],
+      "bbox": [
+        160,
+        107,
+        864,
+        916
+      ],
+      "minimum_margin": 107,
+      "alpha_weighted_area": 0.388708
+    },
+    {
+      "version": "v3",
+      "item": "02-广告特权",
+      "master_sha256": "c69bbd7e868c970040bd40644f9c5438ac9f301dc71a1b60cf710f584739f95c",
+      "preview_sha256": "79308f4fbc0bd21ed1fca104a7c4254e8b43aee71f372b96190b733488a64dfd",
+      "size": [
+        1024,
+        1024
+      ],
+      "bbox": [
+        107,
+        149,
+        917,
+        876
+      ],
+      "minimum_margin": 107,
+      "alpha_weighted_area": 0.425641
+    },
+    {
+      "version": "v3",
+      "item": "03-终身卡",
+      "master_sha256": "5afa8286586e73cd4708b2e7e05b80cb020e27bad48e4cdfab31fa04441a9084",
+      "preview_sha256": "5e187609eb049c0c03425731388cea292fbe6fb0e5c4944b82570c2eec1bb86c",
+      "size": [
+        1024,
+        1024
+      ],
+      "bbox": [
+        160,
+        102,
+        869,
+        922
+      ],
+      "minimum_margin": 102,
+      "alpha_weighted_area": 0.388054
+    },
+    {
+      "version": "v3",
+      "item": "04-鲜花合约",
+      "master_sha256": "4c58352a9c3d7b059b7a7d8df250008f1d2143f847fd19bc6cc260814a3040b8",
+      "preview_sha256": "ef88d09314c4bdf5cf727a09cdbc4ace6cdd88ff762199b2ed10058ee7ee89bc",
+      "size": [
+        1024,
+        1024
+      ],
+      "bbox": [
+        114,
+        106,
+        910,
+        918
+      ],
+      "minimum_margin": 106,
+      "alpha_weighted_area": 0.393428
+    },
+    {
+      "version": "v3",
+      "item": "05-金玉基金",
+      "master_sha256": "73bfd89823cac33db2dd04804a772af624af0e90ba577105e6340e67000f71a6",
+      "preview_sha256": "e62660852700bdb5b4423d44ad9f8f5da55f2adca8d9a21eb8e01b16c593db77",
+      "size": [
+        1024,
+        1024
+      ],
+      "bbox": [
+        102,
+        151,
+        920,
+        878
+      ],
+      "minimum_margin": 102,
+      "alpha_weighted_area": 0.399233
+    },
+    {
+      "version": "v3",
+      "item": "06-培育基金",
+      "master_sha256": "d864d2e4ff0e67e769b34f90d6b0580997702b7abbaceb76830c85a2493a5155",
+      "preview_sha256": "0d1f0062892e1e47ecf372e2532d9686f29f9f228b6b090da5497a0152b98a03",
+      "size": [
+        1024,
+        1024
+      ],
+      "bbox": [
+        107,
+        118,
+        922,
+        906
+      ],
+      "minimum_margin": 102,
+      "alpha_weighted_area": 0.465125
+    },
+    {
+      "version": "v3",
+      "item": "07-充值",
+      "master_sha256": "f2e0509a4f497a1640e12e301022c1ad2dcd8f0196fa913cdd81f6ed24d00dd3",
+      "preview_sha256": "1af68a48e18f5c1fbd1a092d46cbb5e20547ce9b6477dae2df2b446cc986077d",
+      "size": [
+        1024,
+        1024
+      ],
+      "bbox": [
+        108,
+        107,
+        916,
+        913
+      ],
+      "minimum_margin": 107,
+      "alpha_weighted_area": 0.408046
+    },
+    {
+      "version": "v3",
+      "item": "08-累充奖励",
+      "master_sha256": "2051f16a2ead1f07d17061b3613e3898637c90aea73f3e3fabc86589cd7d65ad",
+      "preview_sha256": "8bdb77f24fca386d1549cdcf2f6774f2351260f913020a5e30399aa2e8327772",
+      "size": [
+        1024,
+        1024
+      ],
+      "bbox": [
+        106,
+        138,
+        919,
+        887
+      ],
+      "minimum_margin": 105,
+      "alpha_weighted_area": 0.428123
+    },
+    {
+      "version": "v4",
+      "item": "01-VIP特权",
+      "master_sha256": "2a8d45619be1651de4269bd0c339809382b03058f857d19356227ac1ad1ffa92",
+      "preview_sha256": "302d996c1433fa366fccf220379c69328c7956cc46ab4f0b44f1af303d71e799",
+      "size": [
+        1024,
+        1024
+      ],
+      "bbox": [
+        163,
+        108,
+        861,
+        917
+      ],
+      "minimum_margin": 107,
+      "alpha_weighted_area": 0.385739
+    },
+    {
+      "version": "v4",
+      "item": "02-广告特权",
+      "master_sha256": "c69bbd7e868c970040bd40644f9c5438ac9f301dc71a1b60cf710f584739f95c",
+      "preview_sha256": "79308f4fbc0bd21ed1fca104a7c4254e8b43aee71f372b96190b733488a64dfd",
+      "size": [
+        1024,
+        1024
+      ],
+      "bbox": [
+        107,
+        149,
+        917,
+        876
+      ],
+      "minimum_margin": 107,
+      "alpha_weighted_area": 0.425641
+    },
+    {
+      "version": "v4",
+      "item": "03-终身卡",
+      "master_sha256": "5afa8286586e73cd4708b2e7e05b80cb020e27bad48e4cdfab31fa04441a9084",
+      "preview_sha256": "5e187609eb049c0c03425731388cea292fbe6fb0e5c4944b82570c2eec1bb86c",
+      "size": [
+        1024,
+        1024
+      ],
+      "bbox": [
+        160,
+        102,
+        869,
+        922
+      ],
+      "minimum_margin": 102,
+      "alpha_weighted_area": 0.388054
+    },
+    {
+      "version": "v4",
+      "item": "04-鲜花合约",
+      "master_sha256": "4c58352a9c3d7b059b7a7d8df250008f1d2143f847fd19bc6cc260814a3040b8",
+      "preview_sha256": "ef88d09314c4bdf5cf727a09cdbc4ace6cdd88ff762199b2ed10058ee7ee89bc",
+      "size": [
+        1024,
+        1024
+      ],
+      "bbox": [
+        114,
+        106,
+        910,
+        918
+      ],
+      "minimum_margin": 106,
+      "alpha_weighted_area": 0.393428
+    },
+    {
+      "version": "v4",
+      "item": "05-金玉基金",
+      "master_sha256": "73bfd89823cac33db2dd04804a772af624af0e90ba577105e6340e67000f71a6",
+      "preview_sha256": "e62660852700bdb5b4423d44ad9f8f5da55f2adca8d9a21eb8e01b16c593db77",
+      "size": [
+        1024,
+        1024
+      ],
+      "bbox": [
+        102,
+        151,
+        920,
+        878
+      ],
+      "minimum_margin": 102,
+      "alpha_weighted_area": 0.399233
+    },
+    {
+      "version": "v4",
+      "item": "06-培育基金",
+      "master_sha256": "c1da7d59216038ee8fd65df63e9b125f04376ee758d5e0cad5958d58112a9c56",
+      "preview_sha256": "b8bc81d4086f3551bc4112fdaa5f55d80a11bd52b860e9bc517da13914a85850",
+      "size": [
+        1024,
+        1024
+      ],
+      "bbox": [
+        103,
+        120,
+        922,
+        903
+      ],
+      "minimum_margin": 102,
+      "alpha_weighted_area": 0.46066
+    },
+    {
+      "version": "v4",
+      "item": "07-充值",
+      "master_sha256": "5d30ce3ea53460362fb2b70e7b279cd23a0028d28e4889c62e4cca5877553d95",
+      "preview_sha256": "8104e4f62d2b99c539a3da2e9aafca67aa48fe7a5263f8c681348f2d556643e1",
+      "size": [
+        1024,
+        1024
+      ],
+      "bbox": [
+        103,
+        113,
+        921,
+        910
+      ],
+      "minimum_margin": 103,
+      "alpha_weighted_area": 0.406566
+    },
+    {
+      "version": "v4",
+      "item": "08-累充奖励",
+      "master_sha256": "ae5457438550a92932cfee9a5af9b4d32564a9ef8182e0d8725dc6f0149e7e88",
+      "preview_sha256": "7346129993fa0a8499baf8f942183757438d7965a7618f69209e3362cc93c1e0",
+      "size": [
+        1024,
+        1024
+      ],
+      "bbox": [
+        106,
+        146,
+        918,
+        877
+      ],
+      "minimum_margin": 106,
+      "alpha_weighted_area": 0.421863
+    },
+    {
+      "version": "v5",
+      "item": "01-VIP特权",
+      "master_sha256": "2a8d45619be1651de4269bd0c339809382b03058f857d19356227ac1ad1ffa92",
+      "preview_sha256": "302d996c1433fa366fccf220379c69328c7956cc46ab4f0b44f1af303d71e799",
+      "size": [
+        1024,
+        1024
+      ],
+      "bbox": [
+        163,
+        108,
+        861,
+        917
+      ],
+      "minimum_margin": 107,
+      "alpha_weighted_area": 0.385739
+    },
+    {
+      "version": "v5",
+      "item": "02-广告特权",
+      "master_sha256": "c69bbd7e868c970040bd40644f9c5438ac9f301dc71a1b60cf710f584739f95c",
+      "preview_sha256": "79308f4fbc0bd21ed1fca104a7c4254e8b43aee71f372b96190b733488a64dfd",
+      "size": [
+        1024,
+        1024
+      ],
+      "bbox": [
+        107,
+        149,
+        917,
+        876
+      ],
+      "minimum_margin": 107,
+      "alpha_weighted_area": 0.425641
+    },
+    {
+      "version": "v5",
+      "item": "03-终身卡",
+      "master_sha256": "5afa8286586e73cd4708b2e7e05b80cb020e27bad48e4cdfab31fa04441a9084",
+      "preview_sha256": "5e187609eb049c0c03425731388cea292fbe6fb0e5c4944b82570c2eec1bb86c",
+      "size": [
+        1024,
+        1024
+      ],
+      "bbox": [
+        160,
+        102,
+        869,
+        922
+      ],
+      "minimum_margin": 102,
+      "alpha_weighted_area": 0.388054
+    },
+    {
+      "version": "v5",
+      "item": "04-鲜花合约",
+      "master_sha256": "4c58352a9c3d7b059b7a7d8df250008f1d2143f847fd19bc6cc260814a3040b8",
+      "preview_sha256": "ef88d09314c4bdf5cf727a09cdbc4ace6cdd88ff762199b2ed10058ee7ee89bc",
+      "size": [
+        1024,
+        1024
+      ],
+      "bbox": [
+        114,
+        106,
+        910,
+        918
+      ],
+      "minimum_margin": 106,
+      "alpha_weighted_area": 0.393428
+    },
+    {
+      "version": "v5",
+      "item": "05-金玉基金",
+      "master_sha256": "73bfd89823cac33db2dd04804a772af624af0e90ba577105e6340e67000f71a6",
+      "preview_sha256": "e62660852700bdb5b4423d44ad9f8f5da55f2adca8d9a21eb8e01b16c593db77",
+      "size": [
+        1024,
+        1024
+      ],
+      "bbox": [
+        102,
+        151,
+        920,
+        878
+      ],
+      "minimum_margin": 102,
+      "alpha_weighted_area": 0.399233
+    },
+    {
+      "version": "v5",
+      "item": "06-培育基金",
+      "master_sha256": "fd5a4de46ce7b51c42c01ff303e2413ba01a5d22e8ccd26e9a5031024242c8a1",
+      "preview_sha256": "1b2236701a363ab4a805376c592bc8fc222032d4008197e5f620acfca8036908",
+      "size": [
+        1024,
+        1024
+      ],
+      "bbox": [
+        108,
+        113,
+        920,
+        910
+      ],
+      "minimum_margin": 104,
+      "alpha_weighted_area": 0.460586
+    },
+    {
+      "version": "v5",
+      "item": "07-充值",
+      "master_sha256": "5d30ce3ea53460362fb2b70e7b279cd23a0028d28e4889c62e4cca5877553d95",
+      "preview_sha256": "8104e4f62d2b99c539a3da2e9aafca67aa48fe7a5263f8c681348f2d556643e1",
+      "size": [
+        1024,
+        1024
+      ],
+      "bbox": [
+        103,
+        113,
+        921,
+        910
+      ],
+      "minimum_margin": 103,
+      "alpha_weighted_area": 0.406566
+    },
+    {
+      "version": "v5",
+      "item": "08-累充奖励",
+      "master_sha256": "f35049badbfb321725caf904576a24e19450ff726baa8b68f5c5e241e1f17541",
+      "preview_sha256": "ada27b0f8ca4aabaebf9dda0d78d8e5b00b0588b65b3a168a2be99524ee880e5",
+      "size": [
+        1024,
+        1024
+      ],
+      "bbox": [
+        102,
+        142,
+        922,
+        881
+      ],
+      "minimum_margin": 102,
+      "alpha_weighted_area": 0.419064
+    }
+  ],
+  "sheets": [
+    {
+      "versions": [
+        "v1",
+        "v2"
+      ],
+      "background": "light",
+      "file": "../assets/case-studies/privilege-feedback/v1-v2-light.png",
+      "sha256": "b879020e66cb5717781a824139571ae05461504d9b95e4eab517297ef7248eec",
+      "canvas_size": [
+        800,
+        1040
+      ],
+      "purpose": "历史修改前后证据，不作为新增正向参考"
+    },
+    {
+      "versions": [
+        "v1",
+        "v2"
+      ],
+      "background": "dark",
+      "file": "../assets/case-studies/privilege-feedback/v1-v2-dark.png",
+      "sha256": "e0c784eab1905201458231536ddfc7bae9c6fbdb2ef47a363f4126fe3e66fbc4",
+      "canvas_size": [
+        800,
+        1040
+      ],
+      "purpose": "历史修改前后证据，不作为新增正向参考"
+    },
+    {
+      "versions": [
+        "v2",
+        "v3"
+      ],
+      "background": "light",
+      "file": "../assets/case-studies/privilege-feedback/v2-v3-light.png",
+      "sha256": "bd2f5bbf2209c854163a5dc82a4fff31cf9fd27ed8c4ecade8fceb49ca1d3bb0",
+      "canvas_size": [
+        800,
+        1040
+      ],
+      "purpose": "历史修改前后证据，不作为新增正向参考"
+    },
+    {
+      "versions": [
+        "v2",
+        "v3"
+      ],
+      "background": "dark",
+      "file": "../assets/case-studies/privilege-feedback/v2-v3-dark.png",
+      "sha256": "e8f4c08e5870f8d204f804741a6ebb4f623ee962dd4e7c3f2102419ad397d133",
+      "canvas_size": [
+        800,
+        1040
+      ],
+      "purpose": "历史修改前后证据，不作为新增正向参考"
+    },
+    {
+      "versions": [
+        "v3",
+        "v4"
+      ],
+      "background": "light",
+      "file": "../assets/case-studies/privilege-feedback/v3-v4-light.png",
+      "sha256": "9a27783cddd3923e238c08f9763c911bcefc52f2dd5c0b73e3a1576fce38043c",
+      "canvas_size": [
+        800,
+        1040
+      ],
+      "purpose": "历史修改前后证据，不作为新增正向参考"
+    },
+    {
+      "versions": [
+        "v3",
+        "v4"
+      ],
+      "background": "dark",
+      "file": "../assets/case-studies/privilege-feedback/v3-v4-dark.png",
+      "sha256": "80e9ed223d1a5249aefa70f9cf52d50aaca9686d26df50860ac942290a09e373",
+      "canvas_size": [
+        800,
+        1040
+      ],
+      "purpose": "历史修改前后证据，不作为新增正向参考"
+    },
+    {
+      "versions": [
+        "v4",
+        "v5"
+      ],
+      "background": "light",
+      "file": "../assets/case-studies/privilege-feedback/v4-v5-light.png",
+      "sha256": "9b2f5e550b8ba7e3980a985dce92d85e5383c867c250e70f33bbb44d0b2b30e6",
+      "canvas_size": [
+        800,
+        1040
+      ],
+      "purpose": "历史修改前后证据，不作为新增正向参考"
+    },
+    {
+      "versions": [
+        "v4",
+        "v5"
+      ],
+      "background": "dark",
+      "file": "../assets/case-studies/privilege-feedback/v4-v5-dark.png",
+      "sha256": "c11eaa668933a92504b0c82bdf1898c91d056e69b1737f514febc07ba3f5d053",
+      "canvas_size": [
+        800,
+        1040
+      ],
+      "purpose": "历史修改前后证据，不作为新增正向参考"
+    }
+  ],
+  "transitions": {
+    "v1->v2": {
+      "master_changed": [
+        "01",
+        "02",
+        "03",
+        "04",
+        "05",
+        "06",
+        "07",
+        "08"
+      ],
+      "preview_changed": [
+        "01",
+        "02",
+        "03",
+        "04",
+        "05",
+        "06",
+        "07",
+        "08"
+      ]
+    },
+    "v2->v3": {
+      "master_changed": [
+        "01",
+        "03",
+        "04",
+        "05",
+        "08"
+      ],
+      "preview_changed": [
+        "01",
+        "03",
+        "04",
+        "05",
+        "08"
+      ]
+    },
+    "v3->v4": {
+      "master_changed": [
+        "01",
+        "06",
+        "07",
+        "08"
+      ],
+      "preview_changed": [
+        "01",
+        "06",
+        "07",
+        "08"
+      ]
+    },
+    "v4->v5": {
+      "master_changed": [
+        "06",
+        "08"
+      ],
+      "preview_changed": [
+        "06",
+        "08"
+      ]
+    }
+  },
+  "metrics_limit": "alpha area/bbox diagnose geometry; do not measure perceived weight, mood, surprise or readability",
+  "generation_calls_this_iteration": 0,
+  "historical_calls": {
+    "basis": "version-local production/delivery records, not independently recounted tool events",
+    "v1": {
+      "requests": 15,
+      "returned_images": 9,
+      "connection_errors": 5,
+      "unknown_result": 1
+    },
+    "v2": {
+      "requests": 10,
+      "returned_images": 8,
+      "connection_errors": 2
+    },
+    "v3": {
+      "requests": 6,
+      "returned_images": 5,
+      "connection_errors": 1
+    },
+    "v4": {
+      "requests": 5,
+      "returned_images": 4,
+      "connection_errors": 1
+    },
+    "v5": {
+      "requests": 2,
+      "returned_images": 2
+    },
+    "total_requests": 38,
+    "returned_images": 28,
+    "connection_errors": 9,
+    "unknown_result": 1,
+    "final_user_accepted": 8,
+    "cost_and_service_time": "unknown"
+  },
+  "cell_verification": {
+    "version": "0.35.5",
+    "candidate_cells": 128,
+    "reference_cells": 80,
+    "exact": 208,
+    "failures": []
+  },
+  "independent_review": {
+    "reviewer": "/root/independent_visual_review",
+    "scope": "v1-v5 full 120px light/dark pairs, controls, user acceptance",
+    "did_not_read_primary_new_conclusion": true,
+    "conclusion": "同人主审与独立复核均支持本案例改善及检查方法；08纹样变化细微、衣装稳定识别风险保留；同批不当独立跨案例"
+  }
+}

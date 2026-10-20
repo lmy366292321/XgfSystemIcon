@@ -64,7 +64,7 @@ R13–R20为2026-10-21用户确认的第五版八项正式限定用途参考；�
 
 ## 使用反馈与维护
 
-收到使用反馈或用户要求沉淀经验时，读取 [反馈闭环](references/feedback-loop.md)；查阅并更新相关 [案例记录](references/feedback-records.md) 和 [规则变更记录](references/rule-changes.md)。普通出图只读取与当前问题相关的记录，不加载全部历史。先实际验证修改效果，再决定规则更新；把单图要求、候选结论与生效规则分开。用户确认单图不等于批准全局标准；未经跨案例验证的视觉经验保留为候选。
+收到使用反馈或用户要求沉淀经验时，读取 [反馈闭环](references/feedback-loop.md)；查阅并更新相关 [案例记录](references/feedback-records.md) 和 [规则变更记录](references/rule-changes.md)。普通出图只读取与当前问题相关的记录，不加载全部历史。先实际验证修改效果，再决定规则更新；把单图要求、候选结论与生效规则分开。用户确认单图不等于批准全局标准；未经跨案例验证的视觉经验保留为候选。 完整八项v1–v5的反馈、修改效果、误判更正及本图要求隔离见 [功能入口迭代案例](references/privilege-icons-feedback.md)；先核销最终目标，再决定经验能否升级，不把同批多图当独立跨案例。
 
 
 修改本技能时同步检查SKILL.md、设计规范、元数据和参考图是否一致。不要把任务日志或生成历史塞进入口正文。GitHub维护源为 https://github.com/lmy366292321/XgfSystemIcon ，技能路径为 skills/design-guofeng-system-icons；仓库和安装副本不是自动双向同步，修改后核对版本，保留冲突而非静默覆盖。
