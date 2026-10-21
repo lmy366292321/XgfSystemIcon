@@ -6,7 +6,7 @@ from pathlib import Path
 
 STATES = ("pass", "fail", "unverified", "error")
 VISUAL_FIELDS = ("semantics", "weight", "structure", "materials",
-                 "lighting_outline", "edges", "keep")
+                 "lighting_outline", "edges", "keep", "palette")
 
 
 def digest(data):
@@ -136,6 +136,22 @@ def descriptors(value):
             yield from descriptors(child)
 
 
+def review_sheet_files(review):
+    """Accept direct descriptors and the background/file form used by batch review."""
+    sheets = review.get("sheets", [])
+    if not isinstance(sheets, list):
+        raise ValueError("visual_review.sheets must be an array")
+    files = []
+    for n, sheet in enumerate(sheets):
+        if not isinstance(sheet, dict):
+            raise ValueError(f"visual_review.sheets[{n}] must be a file descriptor")
+        file = sheet.get("file", sheet)
+        if not isinstance(file, dict) or not file.get("path") or not file.get("sha256"):
+            raise ValueError(f"visual_review.sheets[{n}] needs path/sha256 or background/file")
+        files.append(file)
+    return files
+
+
 def snapshot(path, m):
     paths = {path}
     paths.update(resolve(path.parent, d["path"]) for d in descriptors(m))
@@ -186,6 +202,8 @@ def context(path, m, snap):
               "skill_sha256": snap[str(resolve(base, m["skill"]["path"]))]["sha256"]}
     if "comparison_groups" in m:
         result["comparison_groups_fingerprint"] = fingerprint(m["comparison_groups"])
+    if "design_plan" in m:
+        result["design_plan_sha256"] = snap[str(resolve(base, m["design_plan"]["path"]))]["sha256"]
     return result
 
 

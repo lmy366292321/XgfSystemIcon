@@ -72,7 +72,8 @@ class BatchTests(unittest.TestCase):
 
     def run_check(self):
         self.save()
-        return check_batch.check_batch(self.manifest)
+        # Legacy tests exercise machine diagnostics; delivery has its own tests.
+        return check_batch.check_batch(self.manifest, delivery=False)
 
     def add_reviews(self):
         initial = self.run_check()

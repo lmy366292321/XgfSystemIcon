@@ -1,4 +1,4 @@
 interface:
   display_name: "新国风功能图标设计"
   short_description: "设计及批量评审新国风入口图标，检查透明规格、120px可读性与跨物件画风"
-  default_prompt: "使用 $design-guofeng-system-icons，按任务要求设计或评审入口图标，完成批次检查、120px对照与跨物件画风验收。"
+  default_prompt: "使用 $design-guofeng-system-icons，按任务要求设计或评审入口图标，先封存配色与参考分工，完成固定文件、120px视觉、整组配色和第二遍复查流程；最终交付关卡未通过不得标为通过。"

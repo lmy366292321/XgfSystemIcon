@@ -6,56 +6,63 @@
   ],
   "skill": {
     "path": "../SKILL.md",
-    "sha256": "46c921cfa9ec7293e1a9c9c0fb1f605367ded671ebfc2445487a8c3b0c1ebc36"
+    "sha256": "1ed335a1c5061adbf9cd638496d5d8723130fb5f37c7c33777ab2c5248ba8b15"
   },
   "rules": [
     {
       "id": "design-standard",
       "file": {
         "path": "../references/design-standard.md",
-        "sha256": "aca710a4be60ab71f227ca0b78bd2aa259f6a8059bbed2b35701208cb254c74c"
+        "sha256": "45f2ef734464a2cbe5ffad2bbdc350f387ed01a76169a6eb381d3acfa345558c"
       }
     },
     {
       "id": "reference-library",
       "file": {
         "path": "../references/reference-library.md",
-        "sha256": "262d13d8fc0a5a2ff305694a02a8d994f1b41457cf41bf58f714537a4ba68e78"
+        "sha256": "489fcde57860a2d95393d213ffe688a9206fdf1d022a06b84cf56fc165fc3619"
       }
     },
     {
       "id": "visual-control",
       "file": {
         "path": "../references/visual-control.md",
-        "sha256": "ee244ad8a90e63482e0f527d1dc234f9f347c8f8f55880bb232613030fe6a9f6"
+        "sha256": "52de237a3637c2fc3bf15f245620d3ab9a95e28eade2804119308ec62956ed73"
       }
     },
     {
       "id": "qa-120",
       "file": {
         "path": "../references/qa-120.md",
-        "sha256": "83b1ab09a6dfbb03678210571dd80ec9ecd4bdb2f8b9a19660b1733503aa21af"
+        "sha256": "fefe99b049d1feff8a4834b9bb98bc3e83b9a5a0c8ac5a310577b64c11d3d018"
       }
     },
     {
       "id": "delivery-review",
       "file": {
         "path": "../references/delivery-review.md",
-        "sha256": "c7cc4aee182ae6fe597584b0bf8508581eeeb13a8a02166e3527932714922787"
+        "sha256": "946f75197fc83b0adb3f3e50b0528a41597e6054485ea6a6c40f6a1a02e77ca4"
       }
     },
     {
       "id": "batch-review",
       "file": {
         "path": "../references/batch-review.md",
-        "sha256": "63f68dac9d9ce627e42997af75739d07ce3e7d1fb08b8aaff62da38900e3f4d1"
+        "sha256": "1ed42c03381a0a8166646a8336a5965377ed7c46947d2fa2165c4fb8555f9078"
       }
     },
     {
       "id": "style-transfer-review",
       "file": {
         "path": "../references/style-transfer-review.md",
-        "sha256": "f7640af7f34a5fbc2f624b579719b780a46a3b07b28bb12ecc2724a24a6d3b80"
+        "sha256": "6ab82e9ff9e8a2dd0a213b0117491efedd056977f9ccbfde6dcb69641652a151"
+      }
+    },
+    {
+      "id": "palette-workflow",
+      "file": {
+        "path": "../references/palette-workflow.md",
+        "sha256": "585c503d6c00e0562d7e326b388a18353f6d1fd3d007f027bc668b3cab0c788d"
       }
     }
   ],
@@ -167,7 +174,7 @@
       },
       "control_card": {
         "path": "../references/visual-control.md",
-        "sha256": "ee244ad8a90e63482e0f527d1dc234f9f347c8f8f55880bb232613030fe6a9f6"
+        "sha256": "52de237a3637c2fc3bf15f245620d3ab9a95e28eade2804119308ec62956ed73"
       },
       "master": {
         "path": "../assets/best-friends-v2.png",
@@ -193,7 +200,17 @@
       },
       "other_states": {
         "historical_user_acceptance": "See reference-library.md; not rejudged here"
+      },
+      "visual_recheck": {
+        "status": "unverified"
       }
     }
-  ]
+  ],
+  "_usage": "Historical format example; delivery must remain unverified. Build a new design_plan/workflow for a new task; do not backfill history.",
+  "palette_review": {
+    "status": "unverified"
+  },
+  "palette_recheck": {
+    "status": "unverified"
+  }
 }

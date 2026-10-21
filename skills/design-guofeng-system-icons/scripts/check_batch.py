@@ -10,7 +10,7 @@ from PIL import __version__ as PILLOW_VERSION
 import check_icon
 from batch_common import (VISUAL_FIELDS, binding, changed_inputs, context, item_binding,
                           load_manifest, prepare_output, read_json, resolve, snapshot,
-                          state, worst, write_json)
+                          state, worst, write_json, review_sheet_files)
 
 
 def inspect_file(path, size, margin):
@@ -99,14 +99,18 @@ def imported_review(base, review, bound, snap, visual=False):
     if review.get("bound") != bound:
         return result
     evidence = review.get("evidence")
-    if not evidence or not review.get("reviewer") or not review.get("reviewed_at"):
+    if not evidence or not str(review.get("reviewer", "")).strip() or not str(review.get("reviewed_at", "")).strip():
         return result
     check = binding(base, evidence, snap)
     if check["status"] != "pass":
         result["reason"] = "Review evidence changed/unreadable"
         return result
     if visual:
-        sheets = review.get("sheets", [])
+        try:
+            sheets = review_sheet_files(review)
+        except ValueError as exc:
+            result["reason"] = str(exc)
+            return result
         sheet_paths = {str(resolve(base, d["path"])) for d in sheets}
         if (len(sheets) < 2 or len(sheet_paths) != len(sheets)
                 or any(binding(base, d, snap)["status"] != "pass" for d in sheets)):
@@ -115,7 +119,8 @@ def imported_review(base, review, bound, snap, visual=False):
         entries = review.get("items", {})
         if any(k not in entries or not isinstance(entries[k], dict)
                or entries[k].get("status") not in ("pass", "fail", "unverified")
-               or not entries[k].get("observation") or not entries[k].get("location")
+               or not isinstance(entries[k].get("observation"), str) or not entries[k]["observation"].strip()
+               or not isinstance(entries[k].get("location"), str) or not entries[k]["location"].strip()
                for k in VISUAL_FIELDS):
             return result
         status = worst(entries[k]["status"] for k in VISUAL_FIELDS)
@@ -128,7 +133,7 @@ def imported_review(base, review, bound, snap, visual=False):
                  evidence=check, review=review)
 
 
-def check_batch(path):
+def check_batch(path, *, delivery=True):
     path, m = load_manifest(path)
     base = path.parent
     before = snapshot(path, m)
@@ -230,7 +235,7 @@ def check_batch(path):
             row["visual"] = state("unverified", "Batch inputs changed during run", freshness="stale")
     status = worst([r["machine_status"] for r in rows] + [context_status]
                    + (["error"] if errors else []))
-    return {
+    report = {
         "schema_version": 1, "batch_id": m["batch_id"], "manifest": str(path),
         "manifest_sha256": before[str(path)]["sha256"],
         "checked_at": datetime.now(timezone.utc).isoformat(), "pillow_version": PILLOW_VERSION,
@@ -252,6 +257,14 @@ def check_batch(path):
         "input_snapshot": before,
         "scope": "Machine file/evidence checks only. No new visual, user, UI or engine acceptance."
     }
+    report["machine_exit_code"] = report["exit_code"]
+    if delivery:
+        from review_workflow import delivery_gate
+        gate = delivery_gate(path, m, report)
+        report["delivery"] = gate
+        report["exit_code"] = 2 if gate["status"] == "error" else (0 if gate["status"] == "pass" else 1)
+        report["scope"] = "Resource delivery gate: technical checks and current recorded visual/recheck evidence. Not user, UI or engine acceptance."
+    return report
 
 
 def markdown(report):
@@ -261,7 +274,7 @@ def markdown(report):
              f"覆盖 {report['covered_count']}/{report['expected_count']}；机器状态 "
              f"`{report['machine_status']}`；退出码 {report['exit_code']}。",
              f"高清与120均可读取的文件对：{report['readable_file_pair_count']}/{report['expected_count']}。",
-             "", "只检查文件与证据关联；不新授予视觉、用户、UI或工程通过。", "",
+             "", "机器不代替实际看图；不授予用户、UI或工程通过。", "",
              "| ID | 入口 | 版本关联 | 硬规格 | 色彩声明 | 色彩来源 | 派生复验 | 视觉记录 |",
              "|---|---|---|---|---|---|---|---|"]
     for row in report["items"]:
@@ -286,6 +299,10 @@ def markdown(report):
     lines += ["", f"输入检查前后未改变：{report['inputs_unchanged']}。",
               f"额外PNG（不计入交付）：{len(report['extra_files_not_counted'])}。",
               "", "逐文件数值、原始单图结果、版本绑定及其他状态见 batch-report.json。", ""]
+    if "delivery" in report:
+        gate = report["delivery"]
+        lines += [f"## 资源交付判定：{gate['status']}", "", gate["reason"], ""]
+        lines += [f"- {cell(x)}" for x in gate.get("issues", [])]
     return "\n".join(lines)
 
 

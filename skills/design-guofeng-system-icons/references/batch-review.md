@@ -1,6 +1,6 @@
 # 批次清单与只读验收
 
-多图制作、批量交付或复查时使用。设计规范、参考授权和视觉标准继续以原有文档为准。本入口只增加清单关联、批量机器检查与120px对照编排，不自动判断画风或完成用户／UI／工程验收。
+多图制作、批量交付或复查时使用。设计规范、参考授权和视觉标准继续以原有文档为准。本入口提供清单关联、机器检查、120px编排及资源交付关卡；工作顺序见[固定流程](palette-workflow.md)。不自动判断画风或完成用户／UI／工程验收。
 
 ## 清单
 
@@ -17,7 +17,11 @@
 | `previous_preview` | 可选，120px修改前文件；不占10张正式参考名额 |
 | `inventory_dirs` | 只枚举指定目录的额外PNG，额外草稿不计入完成数 |
 | `protected_roots` | 可选只读源根目录；禁止将输出写到其内部 |
-| `visual_review`／`color_provenance` | 可选的已绑定审阅记录；默认未验证 |
+| `design_plan`／`workflow` | 配色计划及最终阶段记录的文件描述；缺失不得资源交付通过 |
+| `qa_index`／`relation_index` | 当前浅深底总览／关系索引；多图关系组覆盖所有项目 |
+| `visual_review`／`visual_recheck` | 每项首遍和第二遍八项意见；最终交付必需 |
+| `palette_review`／`palette_recheck` | 整批配色及关系组首遍和第二遍意见；含单图主辅层级 |
+| `color_provenance` | 色彩来源意见；缺失保留未验证，不补造证据 |
 | `other_states` | 用户接受、实际UI、工程等原始记录；脚本仅展示，不授予通过 |
 | `comparison_groups` | 可选P2关系组；每组 `id`、`purpose`、`members`。成员为 `{"role":"reference或candidate","id":"清单中的ID"}`，每组2–5格 |
 
@@ -34,7 +38,7 @@ python -B scripts/build_qa_sheet.py /absolute/path/batch-manifest.json --output-
 
 输出目录必须是新目录，且不在原图目录、参考目录或指定保护根内。工具不覆盖历史报告，不改写原图、预览、元数据或安装环境。
 
-批量检查生成 `batch-report.json` 与 `batch-report.md`。JSON保留单图检查器的原始字段、逐项状态、输入快照与审阅绑定。退出码0表示本次机器必需项通过；1表示检查完成但有失败／未验证；2表示清单或执行错误。0不代表视觉、用户接受或上线通过。
+批量检查生成 `batch-report.json` 与 `batch-report.md`。JSON保留单图检查器的原始字段、逐项状态、输入快照与审阅绑定。默认退出码0只表示资源交付关卡通过：机器必需项、当前八项视觉、整组配色、第二遍复查及完整阶段证据均通过；1表示失败／未验证；2表示清单或机器执行错误。machine_status与machine_exit_code保留独立技术结果。旧清单缺新流程只显示未验证，不改旧文件或撤销历史用户确认。0仍不表示用户接受、实际UI或上线通过。
 
 PNG尺寸、安全区、真实位深与色彩声明复用 `check_icon.py`。状态区分 `pass`、`fail`、`unverified`、`error`。缺失sRGB声明是色彩未验证，不掩盖已通过的尺寸检查，也不为得到绿色结果自动添加标签。
 
@@ -61,7 +65,7 @@ PNG尺寸、安全区、真实位深与色彩声明复用 `check_icon.py`。状�
 
 视觉记录另需 `reviewer`、`reviewed_at`、`evidence`（审阅正文文件描述）、至少两份浅深底 `sheets` 文件描述，以及 `items`：
 
-- `semantics`、`weight`、`structure`、`materials`、`lighting_outline`、`edges`、`keep`；
+- `semantics`、`weight`、`structure`、`materials`、`lighting_outline`、`edges`、`keep`、`palette`；
 - 每项填写 `status`（pass/fail/unverified）、`observation` 与 `location`，在观察正文中写明主要参照。
 
 缺字段、文件改变、规则／控制卡／需求改变，意见保留但标为 `stale`，当前状态未验证。仅有旧Markdown验收正文时可填 `legacy_evidence`，不自动生成当时不存在的完整绑定。工具导入意见不冒充新的独立审阅。
