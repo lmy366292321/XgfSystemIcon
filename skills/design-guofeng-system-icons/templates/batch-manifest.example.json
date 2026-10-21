@@ -27,7 +27,7 @@
       "id": "visual-control",
       "file": {
         "path": "../references/visual-control.md",
-        "sha256": "52de237a3637c2fc3bf15f245620d3ab9a95e28eade2804119308ec62956ed73"
+        "sha256": "538371053e7b7ce320323416d5e50b07671e1e34aeb6dc42b748c31c7d2c2e7a"
       }
     },
     {
@@ -181,7 +181,7 @@
       },
       "control_card": {
         "path": "../references/visual-control.md",
-        "sha256": "52de237a3637c2fc3bf15f245620d3ab9a95e28eade2804119308ec62956ed73"
+        "sha256": "538371053e7b7ce320323416d5e50b07671e1e34aeb6dc42b748c31c7d2c2e7a"
       },
       "master": {
         "path": "../assets/best-friends-v2.png",
