@@ -11,6 +11,7 @@ import batch_common as common
 import check_batch
 import build_qa_sheet
 import build_relation_sheet
+import color_record
 
 
 class BatchTests(unittest.TestCase):
@@ -76,6 +77,13 @@ class BatchTests(unittest.TestCase):
         return check_batch.check_batch(self.manifest, delivery=False)
 
     def add_reviews(self):
+        for item in self.m["items"]:
+            capture = self.root / ("color-capture-" + item["id"] + ".json")
+            receipt = self.root / ("color-export-" + item["id"] + ".json")
+            if not receipt.exists():
+                color_record.collect(item["master"]["path"], capture, role="original", note="Synthetic sRGB fixture")
+                color_record.audit(capture, item["master"]["path"], item["preview"]["path"], receipt)
+            item["color_record"] = self.desc(receipt)
         initial = self.run_check()
         evidence = self.root / "review.md"
         evidence.write_text("Fixture review only; no production acceptance.", encoding="utf-8")

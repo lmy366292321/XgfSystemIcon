@@ -10,6 +10,7 @@ import build_qa_sheet
 import build_relation_sheet
 import review_workflow as workflow
 import test_batch
+import color_record
 
 
 class WorkflowTests(unittest.TestCase):
@@ -69,6 +70,11 @@ class WorkflowTests(unittest.TestCase):
         for item, row in zip(self.m['items'], report['items']):
             item['color_provenance'] = {'status': 'pass', 'statement': 'Synthetic sRGB source',
                 'reviewer': 'fixture', 'reviewed_at': self.now(), 'bound': row['binding_for_review'], 'evidence': self.desc(p)}
+            capture = self.evidence_dir / ('color-capture-' + item['id'] + '.json')
+            receipt = self.evidence_dir / ('color-export-' + item['id'] + '.json')
+            color_record.collect(item['master']['path'], capture, role='original', note='Synthetic sRGB fixture')
+            color_record.audit(capture, item['master']['path'], item['preview']['path'], receipt)
+            item['color_record'] = self.desc(receipt)
 
     def build_sheets(self):
         self.save()
@@ -251,8 +257,8 @@ class WorkflowTests(unittest.TestCase):
                         for item, plan_item in zip(self.m['items'], self.plan['items'])]}
         log_path = logs / 'calls.json'
         common.write_json(log_path, log)
-        self.advance('generated', log_path)
         self.add_provenance()
+        self.advance('generated', log_path)
         self.advance('files')
         self.build_sheets()
         self.reviews()
@@ -268,6 +274,25 @@ class WorkflowTests(unittest.TestCase):
         self.prepare()
         self.m['items'][0]['other_states'] = {'user_acceptance': 'pass'}
         self.assertNotEqual(self.final()['delivery']['status'], 'pass')
+
+    def test_removing_color_record_never_passes_complete_visual_review(self):
+        self.complete()
+        del self.m['items'][0]['color_record']
+        report = self.final()
+        self.assertEqual(report['items'][0]['color_provenance']['status'], 'unverified')
+        self.assertNotEqual(report['delivery']['status'], 'pass')
+
+    def test_new_color_receipt_invalidates_previous_stage_binding(self):
+        self.complete()
+        item = self.m['items'][0]
+        receipt = common.read_json(item['color_record']['path'])
+        receipt['scope'] += '; revised description'
+        path = self.root / 'replacement-color.json'
+        common.write_json(path, receipt)
+        item['color_record'] = self.desc(path)
+        report = self.final()
+        self.assertEqual(report['items'][0]['color_provenance']['status'], 'pass')
+        self.assertNotEqual(report['delivery']['status'], 'pass')
 
 
 if __name__ == '__main__':

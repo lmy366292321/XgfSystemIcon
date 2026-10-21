@@ -8,6 +8,7 @@ import json
 
 from PIL import __version__ as PILLOW_VERSION
 import check_icon
+import color_record
 from batch_common import (VISUAL_FIELDS, binding, changed_inputs, context, item_binding,
                           load_manifest, prepare_output, read_json, resolve, snapshot,
                           state, worst, write_json, review_sheet_files)
@@ -190,7 +191,7 @@ def check_batch(path, *, delivery=True):
             bound = item_binding(base, item, ctx, before)
             color = color_state([master, preview])
             derived = derivation(base, item, [master, preview], [master_im, preview_im], before)
-            provenance = imported_review(base, item.get("color_provenance", {}), bound, before)
+            provenance = color_record.check_item(base, item)
             visual = imported_review(base, item.get("visual_review", {}), bound, before, visual=True)
             if integrity["status"] != "pass" or context_status != "pass":
                 visual = state("unverified", "Asset/control/reference/rule integrity prevents current acceptance",
@@ -275,7 +276,7 @@ def markdown(report):
              f"`{report['machine_status']}`；退出码 {report['exit_code']}。",
              f"高清与120均可读取的文件对：{report['readable_file_pair_count']}/{report['expected_count']}。",
              "", "机器不代替实际看图；不授予用户、UI或工程通过。", "",
-             "| ID | 入口 | 版本关联 | 硬规格 | 色彩声明 | 色彩来源 | 派生复验 | 视觉记录 |",
+             "| ID | 入口 | 版本关联 | 硬规格 | 色彩声明 | 色彩空间/导出记录 | 派生复验 | 视觉记录 |",
              "|---|---|---|---|---|---|---|---|"]
     for row in report["items"]:
         values = [row["id"], row["name"]] + [row[k]["status"] for k in (

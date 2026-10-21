@@ -6,14 +6,14 @@
   ],
   "skill": {
     "path": "../SKILL.md",
-    "sha256": "1ed335a1c5061adbf9cd638496d5d8723130fb5f37c7c33777ab2c5248ba8b15"
+    "sha256": "6bdddabf6a6349f2dd52a5221bc4713a77ac885a94a1ae0caa297d6b2ea44f09"
   },
   "rules": [
     {
       "id": "design-standard",
       "file": {
         "path": "../references/design-standard.md",
-        "sha256": "45f2ef734464a2cbe5ffad2bbdc350f387ed01a76169a6eb381d3acfa345558c"
+        "sha256": "acc2e1ace1a1c151be50e9160dfc322dc73fa9a0ecf13e461eadaf0e6b78d75c"
       }
     },
     {
@@ -48,7 +48,7 @@
       "id": "batch-review",
       "file": {
         "path": "../references/batch-review.md",
-        "sha256": "1ed42c03381a0a8166646a8336a5965377ed7c46947d2fa2165c4fb8555f9078"
+        "sha256": "33249924af4dbc1268b1ef6fd4f0c2cbece8713c65e973b92d57ac21aa887349"
       }
     },
     {
@@ -62,7 +62,14 @@
       "id": "palette-workflow",
       "file": {
         "path": "../references/palette-workflow.md",
-        "sha256": "585c503d6c00e0562d7e326b388a18353f6d1fd3d007f027bc668b3cab0c788d"
+        "sha256": "535374ac6b08d84441fdd37544bea7922d9ebdc9333e5c3b0bd1d4476bac3198"
+      }
+    },
+    {
+      "id": "color-space-export",
+      "file": {
+        "path": "../references/color-space-export.md",
+        "sha256": "d4145f427bc4357fe4e7c8f1d3e6ad26ed52f39fbd228e1f950287c0c37f896e"
       }
     }
   ],
@@ -206,7 +213,7 @@
       }
     }
   ],
-  "_usage": "Historical format example; delivery must remain unverified. Build a new design_plan/workflow for a new task; do not backfill history.",
+  "_usage": "Historical format example; delivery remains unverified. New tasks need design_plan/workflow and per-item color_record from color_record.py; never fabricate historical color evidence.",
   "palette_review": {
     "status": "unverified"
   },

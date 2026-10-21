@@ -21,7 +21,8 @@
 | `qa_index`／`relation_index` | 当前浅深底总览／关系索引；多图关系组覆盖所有项目 |
 | `visual_review`／`visual_recheck` | 每项首遍和第二遍八项意见；最终交付必需 |
 | `palette_review`／`palette_recheck` | 整批配色及关系组首遍和第二遍意见；含单图主辅层级 |
-| `color_provenance` | 色彩来源意见；缺失保留未验证，不补造证据 |
+| `color_record` | collect/export/audit生成的记录文件描述；files前绑定，实际重放，见[色彩空间与导出记录](color-space-export.md) |
+| `color_provenance` | 旧人工意见仅保留历史；输出同名字段为新记录的重算结果，文字pass不授予通过 |
 | `other_states` | 用户接受、实际UI、工程等原始记录；脚本仅展示，不授予通过 |
 | `comparison_groups` | 可选P2关系组；每组 `id`、`purpose`、`members`。成员为 `{"role":"reference或candidate","id":"清单中的ID"}`，每组2–5格 |
 
@@ -40,7 +41,7 @@ python -B scripts/build_qa_sheet.py /absolute/path/batch-manifest.json --output-
 
 批量检查生成 `batch-report.json` 与 `batch-report.md`。JSON保留单图检查器的原始字段、逐项状态、输入快照与审阅绑定。默认退出码0只表示资源交付关卡通过：机器必需项、当前八项视觉、整组配色、第二遍复查及完整阶段证据均通过；1表示失败／未验证；2表示清单或机器执行错误。machine_status与machine_exit_code保留独立技术结果。旧清单缺新流程只显示未验证，不改旧文件或撤销历史用户确认。0仍不表示用户接受、实际UI或上线通过。
 
-PNG尺寸、安全区、真实位深与色彩声明复用 `check_icon.py`。状态区分 `pass`、`fail`、`unverified`、`error`。缺失sRGB声明是色彩未验证，不掩盖已通过的尺寸检查，也不为得到绿色结果自动添加标签。
+色彩空间与导出记录在files前采集；`check_batch.py`直接读取当前源文件、ICC/假设依据与输出，检查关联并重放。原始声明已知且全部支持步骤匹配才通过；未知或假设即使导出匹配仍未验证，记录不完整或篡改不能通过。更换记录会使现有视觉/流程绑定过期。PNG尺寸、安全区、真实位深与色彩声明复用 `check_icon.py`。状态区分 `pass`、`fail`、`unverified`、`error`。缺失sRGB声明是色彩未验证，不掩盖已通过的尺寸检查，也不为得到绿色结果自动添加标签。
 
 ### 派生边界
 

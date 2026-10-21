@@ -155,6 +155,15 @@ def review_sheet_files(review):
 def snapshot(path, m):
     paths = {path}
     paths.update(resolve(path.parent, d["path"]) for d in descriptors(m))
+    # Color receipts include source/profile/decision files outside the manifest.
+    # Track them through the complete batch run, not only during color replay.
+    for item in m.get("items", []):
+        if item.get("color_record"):
+            try:
+                receipt = read_json(resolve(path.parent, item["color_record"]["path"]))
+                paths.update(resolve(path.parent, d["path"]) for d in descriptors(receipt))
+            except (OSError, ValueError, TypeError, KeyError):
+                pass  # The color validator reports this explicitly; no acceptance here.
     result = {}
     for p in sorted(paths):
         try:
@@ -208,11 +217,14 @@ def context(path, m, snap):
 
 
 def item_binding(base, item, ctx, snap):
-    return {**ctx,
+    result = {**ctx,
             "master_sha256": snap[str(resolve(base, item["master"]["path"]))]["sha256"],
             "preview_sha256": snap[str(resolve(base, item["preview"]["path"]))]["sha256"],
             "control_card_sha256": snap[str(resolve(base, item["control_card"]["path"]))]["sha256"],
             "requirements_fingerprint": fingerprint(item["requirements"])}
+    if item.get("color_record"):
+        result["color_record_sha256"] = snap[str(resolve(base, item["color_record"]["path"]))]["sha256"]
+    return result
 
 
 def prepare_output(path, m, output):
