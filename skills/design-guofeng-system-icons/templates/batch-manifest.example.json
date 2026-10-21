@@ -6,42 +6,42 @@
   ],
   "skill": {
     "path": "../SKILL.md",
-    "sha256": "6bdddabf6a6349f2dd52a5221bc4713a77ac885a94a1ae0caa297d6b2ea44f09"
+    "sha256": "eea438f594d7a10db37684d6b90cb48b38e95fc468d8ff91bbf2679319a1dad4"
   },
   "rules": [
     {
       "id": "design-standard",
       "file": {
         "path": "../references/design-standard.md",
-        "sha256": "acc2e1ace1a1c151be50e9160dfc322dc73fa9a0ecf13e461eadaf0e6b78d75c"
+        "sha256": "a33ab36ebb6c893fd67ff35ff43be9cb88a384f213378f52daf7cec90a488d08"
       }
     },
     {
       "id": "reference-library",
       "file": {
         "path": "../references/reference-library.md",
-        "sha256": "489fcde57860a2d95393d213ffe688a9206fdf1d022a06b84cf56fc165fc3619"
+        "sha256": "ad2631b30976490421c4545be4dd82da77fb31bd17b679eab4613bcb6a520b69"
       }
     },
     {
       "id": "visual-control",
       "file": {
         "path": "../references/visual-control.md",
-        "sha256": "52de237a3637c2fc3bf15f245620d3ab9a95e28eade2804119308ec62956ed73"
+        "sha256": "b0e2067e2fe760fd57def527f233f7f65e57f8fa614e99e5d3232d306be65133"
       }
     },
     {
       "id": "qa-120",
       "file": {
         "path": "../references/qa-120.md",
-        "sha256": "fefe99b049d1feff8a4834b9bb98bc3e83b9a5a0c8ac5a310577b64c11d3d018"
+        "sha256": "32786a62f319ec868587d51cbe3d3133caec93fd21facce9f6446fcb3d23a2c6"
       }
     },
     {
       "id": "delivery-review",
       "file": {
         "path": "../references/delivery-review.md",
-        "sha256": "946f75197fc83b0adb3f3e50b0528a41597e6054485ea6a6c40f6a1a02e77ca4"
+        "sha256": "428387f8eeeb2a5537c9f9dcc927e32853bc91f269f9f50429990e39eb683c10"
       }
     },
     {
@@ -62,7 +62,7 @@
       "id": "palette-workflow",
       "file": {
         "path": "../references/palette-workflow.md",
-        "sha256": "535374ac6b08d84441fdd37544bea7922d9ebdc9333e5c3b0bd1d4476bac3198"
+        "sha256": "5dd47600d6dc475feac4ef6c769ecc04356a7e75530dcbc6b135718d87818e26"
       }
     },
     {
@@ -70,6 +70,13 @@
       "file": {
         "path": "../references/color-space-export.md",
         "sha256": "d4145f427bc4357fe4e7c8f1d3e6ad26ed52f39fbd228e1f950287c0c37f896e"
+      }
+    },
+    {
+      "id": "design-language",
+      "file": {
+        "path": "../references/design-language.md",
+        "sha256": "08eee9ad4a7d68f71e5a337576f067965bb49844e12d1f2ca54a77ec4213cf41"
       }
     }
   ],
@@ -181,7 +188,7 @@
       },
       "control_card": {
         "path": "../references/visual-control.md",
-        "sha256": "52de237a3637c2fc3bf15f245620d3ab9a95e28eade2804119308ec62956ed73"
+        "sha256": "b0e2067e2fe760fd57def527f233f7f65e57f8fa614e99e5d3232d306be65133"
       },
       "master": {
         "path": "../assets/best-friends-v2.png",

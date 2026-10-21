@@ -12,6 +12,7 @@ import check_batch
 import build_qa_sheet
 import build_relation_sheet
 import color_record
+import design_language
 
 
 class BatchTests(unittest.TestCase):
@@ -98,6 +99,9 @@ class BatchTests(unittest.TestCase):
                 **shared, "sheets": sheet_files,
                 "items": {k: {"status": "pass", "observation": "fixture",
                               "location": "whole tile"} for k in common.VISUAL_FIELDS}}
+            for dimension, keys in design_language.CHECKS.items():
+                item['visual_review']['items'][dimension]['design_checks'] = {
+                    k: dict(status='pass', observation='Synthetic fixture only', location='whole tile') for k in keys}
 
     def test_hard_specs_and_replay_do_not_invent_color_provenance_or_visual_acceptance(self):
         r = self.run_check()

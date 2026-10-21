@@ -9,6 +9,7 @@ import json
 from PIL import __version__ as PILLOW_VERSION
 import check_icon
 import color_record
+import design_language
 from batch_common import (VISUAL_FIELDS, binding, changed_inputs, context, item_binding,
                           load_manifest, prepare_output, read_json, resolve, snapshot,
                           state, worst, write_json, review_sheet_files)
@@ -124,7 +125,12 @@ def imported_review(base, review, bound, snap, visual=False):
                or not isinstance(entries[k].get("location"), str) or not entries[k]["location"].strip()
                for k in VISUAL_FIELDS):
             return result
-        status = worst(entries[k]["status"] for k in VISUAL_FIELDS)
+        try:
+            design_statuses = design_language.review_status(review)
+        except ValueError as exc:
+            result["reason"] = str(exc)
+            return result
+        status = worst([entries[k]["status"] for k in VISUAL_FIELDS] + design_statuses)
     else:
         if review.get("status") not in ("pass", "fail", "unverified") or not review.get("statement"):
             return result

@@ -11,6 +11,18 @@ import build_relation_sheet
 import review_workflow as workflow
 import test_batch
 import color_record
+import design_language
+
+
+def design_fixture():
+    """Synthetic decisions only; never a production default or art evidence."""
+    return {'purpose': {'branch': 'custom', 'reason': 'Synthetic fixture'},
+            'hierarchy': dict(lightest='upper face', darkest='base', chroma_focus='body',
+                              temperature='neutral', focal_order='body then edge'),
+            'shape': dict(family='flat', silhouette='square', perspective='front', reason='fixture'),
+            'materials': [dict(subject='square', material='paper', behavior='matte',
+                               example_ids=['R01'], transfer_limit='synthetic only')],
+            'gold': dict(role='none', reason='fixture has none'), 'method_validation': 'unverified'}
 
 
 class WorkflowTests(unittest.TestCase):
@@ -32,12 +44,13 @@ class WorkflowTests(unittest.TestCase):
         self.plan_path = self.root / 'plan' / 'plan.json'
         self.plan_path.parent.mkdir()
         self.plan = {
-            'schema_version': 1, 'mode': mode, 'batch_id': self.m['batch_id'],
+            'schema_version': 2, 'mode': mode, 'batch_id': self.m['batch_id'],
             'batch_palette_reason': 'Synthetic test only; deliberate repeated blue is allowed with reason.',
             'references': copy.deepcopy(self.m['references']), 'items': []}
         for n, item in enumerate(self.m['items']):
             self.plan['items'].append({
                 'id': item['id'], 'control_card': item['control_card'],
+                'design_language': design_fixture(),
                 'palette': {'dominant': (colors or ['blue', 'blue'])[n], 'secondary': [], 'accent': [],
                             'reason': 'Fixture semantics', 'color_source': 'Synthetic authored pixels',
                             'hierarchy': 'One continuous main block', 'preserve_existing': mode == 'review'},
@@ -96,6 +109,9 @@ class WorkflowTests(unittest.TestCase):
                       'evidence': self.desc(p), 'sheets': sheets,
                       'items': {k: {'status': 'pass', 'observation': 'Synthetic observation', 'location': 'Whole tile'} for k in common.VISUAL_FIELDS}}
             review['items']['palette']['status'] = palette_status
+            for dimension, checks in design_language.CHECKS.items():
+                review['items'][dimension]['design_checks'] = {
+                    k: dict(status='pass', observation='Synthetic observation', location='Fixture') for k in checks}
             if second:
                 review['method'] = 'same_reviewer_second_pass'
             item['visual_recheck' if second else 'visual_review'] = review

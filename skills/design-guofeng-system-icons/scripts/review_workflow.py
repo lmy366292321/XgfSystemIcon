@@ -8,6 +8,7 @@ import argparse
 from datetime import datetime, timezone
 from pathlib import Path
 import json
+import design_language
 
 from batch_common import (binding, descriptors, digest, fingerprint, load_manifest,
                           read_json, resolve, snapshot, state, worst, write_json)
@@ -50,7 +51,7 @@ def same_file(a, b, base):
 
 
 def validate_plan(plan):
-    require(plan.get("schema_version") == 1, "Expected plan schema_version=1")
+    require(plan.get("schema_version") == 2, "Expected plan schema_version=2; prepare design_language without rewriting historical plans")
     require(plan.get("mode") in ("create", "revise", "review"), "Unknown workflow mode")
     require(nonempty(plan.get("batch_id")), "Missing batch_id")
     require(nonempty(plan.get("batch_palette_reason")), "Explain batch color distribution/repetition")
@@ -61,6 +62,7 @@ def validate_plan(plan):
     items = plan.get("items", [])
     require(items and len({i["id"] for i in items}) == len(items), "Plan items missing/duplicated")
     for item in items:
+        design_language.validate(item.get("design_language"), ref_ids)
         palette = item.get("palette", {})
         for key in ("dominant", "reason", "color_source", "hierarchy"):
             require(nonempty(palette.get(key)), f"{item['id']}: missing palette.{key}")
@@ -267,6 +269,7 @@ def review_status(path, manifest, report, bound, stage, earliest):
             require(first["evidence"]["sha256"].lower() != review["evidence"]["sha256"].lower(),
                     "Recheck cannot reuse identical observation bytes under a new filename")
         statuses.append(value["status"])
+        statuses.extend(design_language.review_status(review))
     group_key = "palette_recheck" if second else "palette_review"
     group = manifest.get(group_key, {})
     statuses.append(group_review(path, manifest, group, bound, earliest))
@@ -397,8 +400,9 @@ def delivery_gate(path, manifest, report):
         issues.append("Technical checks incomplete/failed; see per-item machine results")
     if any(r["visual"]["status"] != "pass" for r in report["items"]):
         issues.append("Primary visual review incomplete/failed; see per-item results")
-    return state(status, "Only pass permits resource delivery acceptance; user/UI/engine remain separate.",
-                 issues=issues, checks=checks, automated_visual_judgment=False)
+    return state(status, "Only pass permits resource delivery acceptance; user/engine remain separate.",
+                 issues=issues, checks=checks, automated_visual_judgment=False,
+                 design_method_effectiveness="unverified")
 
 
 def main(argv=None):

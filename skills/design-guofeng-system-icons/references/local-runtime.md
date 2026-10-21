@@ -18,3 +18,5 @@ $entry = Join-Path $env:USERPROFILE '.codex\skills\design-guofeng-system-icons\s
 `check-icon` 将 `-Arguments` 传给 `check_icon.py`，批量命令同理。输出沿用各工具的退出码：批量检查的1表示检查完成但存在失败或未验证，不等于执行崩溃；check-batch的0要求资源交付关卡完整通过，但仍不授予用户、UI或工程验收。workflow操作将参数交给review_workflow.py；color-record操作将参数交给color_record.py，支持collect/export/audit/verify，具体命令见[color-space-export.md](color-space-export.md)；步骤命令成功只证明记录成功，不证明交付通过。测试夹具必须放在项目内，不写安装目录。
 
 纯评审任务从 [批量流程](batch-review.md) 开始，不启动生成或修图。更换技能入口或规则会使已有审阅绑定失效；保留旧意见，实际复核后记录新绑定，不自动将旧结论改成当前通过。
+
+设计选择使用 `-Operation design-language`，参数和新计划步骤见[用途、层级、轮廓与材质](design-language.md)。不会安装依赖或改动源图。

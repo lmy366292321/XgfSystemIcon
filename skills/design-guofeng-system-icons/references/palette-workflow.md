@@ -18,7 +18,7 @@
 3. 将计划文件描述填入清单 `design_plan`，每项填入实际 `color_record` 文件描述。先运行色彩verify，再记录 `files`，执行真实技术检查；失败/未验证仍可继续诊断，但最终不通过。
 4. 用原有工具创建固定十参考浅深底及关系面板，将索引描述填入 `qa_index`、`relation_index`。多图关系组必须覆盖全部候选。实际查看所有页面，填写每枚首遍八项、整批配色及关系意见，再记录 `visual`。
 5. 单独第二遍查看；填写 `visual_recheck` 与 `palette_recheck`，记录 `recheck`。可独立或同人复查，必须如实注明；误报/连续失败加强检查，不能复制首遍正文冒充第二遍。
-6. 将最后记录的文件描述填入清单 `workflow`，运行 `check_batch.py`。只有 `delivery.status=pass`、退出码0，才称资源交付审核通过。用户接受、实际UI、工程另列。
+6. 将最后记录的文件描述填入清单 `workflow`，运行 `check_batch.py`。只有 `delivery.status=pass`、退出码0，才称资源交付审核通过。用户接受、工程另列；实际UI、相邻入口、红点遮挡不计缺项。
 
 ```text
 python -B scripts/review_workflow.py start /task/inputs/design-plan.json --output /task/records/01-plan.json --actor maker
@@ -37,7 +37,7 @@ python -B scripts/check_batch.py /task/manifest.json --output-dir /task/final-ch
 
 ## 计划格式
 
-顶层：`schema_version:1`、`mode:create|revise|review`、`batch_id`、`batch_palette_reason`、`references`、`items`。references复制本次清单10张的id/file/purpose/limits，文件描述转为绝对路径。items顺序与清单expected_ids一致；每项：
+顶层：`schema_version:2`、`mode:create|revise|review`、`batch_id`、`batch_palette_reason`、`references`、`items`。references复制本次清单10张的id/file/purpose/limits，文件描述转为绝对路径。items顺序与清单expected_ids一致；每项还必须包含[设计选择](design-language.md)的design_language，使用其draft/prepare命令生成并检查。下面只展示原配色部分，不是可直接封存的完整计划：
 
 ```json
 {
@@ -69,7 +69,7 @@ python -B scripts/check_batch.py /task/manifest.json --output-dir /task/final-ch
 
 ## 视觉证据格式
 
-每枚 `visual_review`沿用batch-review.md格式，必须含八项：semantics、weight、structure、materials、lighting_outline、edges、keep、palette。每项status、observation、location非空。`bound`从当次check_batch输出的binding_for_review取得；初检报告的delivery未验证是正常的。检查工具永不自动填写pass。
+每枚 `visual_review`沿用batch-review.md格式，必须含八项：semantics、weight、structure、materials、lighting_outline、edges、keep、palette。每项status、observation、location非空；semantics、structure、materials、palette内同时完成[设计选择子项](design-language.md)的design_checks。`bound`从当次check_batch输出的binding_for_review取得；初检报告的delivery未验证是正常的。检查工具永不自动填写pass。
 
 第二遍 `visual_recheck`结构相同，另写`method:independent|same_reviewer_second_pass`。independent必须有不同reviewer；正文是另外的文件。所有reviewed_at为实际观察结束的带时区时间，不早于上一阶段；不要复制旧日期。首遍失败不能被第二遍通过直接抵消，须处理后重新执行首遍及第二遍。
 
