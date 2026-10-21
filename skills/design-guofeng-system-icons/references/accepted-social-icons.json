@@ -1,0 +1,862 @@
+{
+  "case": "F-20261021-SOCIAL-001",
+  "date": "2026-10-21",
+  "recorded_at": "2026-10-21T16:37:40.249883+08:00",
+  "user_request": "最新的图标通过并加入到图库",
+  "accepted_batch": "好友系统V4交付组合（01/04为V4，02/03沿用V3）",
+  "decision": "用户验收通过，原样加入正式限定用途图库；技术未知和名称依赖保留",
+  "not_a_global_rule_change": true,
+  "generation_calls_this_ingestion": 0,
+  "prior_scope": "上轮两次真实图像修订，01体量/04人物与信封层级通过首遍及独立复核；V3中01失败意见不撤销",
+  "production_plan_erratum": "原制作计划palette.color_source误留本轮无生成措辞；保留原计划/回执，调用后另存勘误，未倒填。此次用户确认不消除该记录偏差。",
+  "source_report": {
+    "library_file_id": "libfile_7c3251433e608191805e8b151d6a4cdf",
+    "file_sha256": "1c3b4a716ed9bf81dc7125b9d0fdb1a28f78e0683273bd51386fa0f46fd8bcc6"
+  },
+  "source_evidence": {
+    "library_file_id": "libfile_6541c3f35610819182d6534cb77862ed",
+    "file_sha256": "669f1fe8dfa3df80d9f5c3eeb3732d218ae723b43720ca8b5925ddae0d133ca4"
+  },
+  "items": [
+    {
+      "id": "R24",
+      "batch_id": "01",
+      "name": "好友",
+      "version": "v4",
+      "category": "人物／招呼双人",
+      "master": {
+        "path": "assets/friends-v4.png",
+        "sha256": "70d4908becf505fd7304c8176c15a6bcced93177d4551a67d5877ea10238bc9f"
+      },
+      "preview": {
+        "path": "assets/previews/friends-v4-120.png",
+        "sha256": "36106c0cd746a0c3f866372aad369cd946c4f281cf10b122c7f265a3ce510984"
+      },
+      "user_acceptance": "pass",
+      "accepted_on": "2026-10-21",
+      "library_status": "正式限定用途参考",
+      "purpose": "睁眼正面双人、收紧招呼手和饱满头肩；与密友本体姿态区分",
+      "limits": "不把直立姿势、两人青绿浅桃配色或头身比例推广；精确好友列表用途仍配名称",
+      "library_master": {
+        "library_file_id": "libfile_88ec644db8248191956670e6f7d5651c",
+        "version_number": 2
+      },
+      "hard_specs": "pass",
+      "margins_ltrb": [
+        112,
+        133,
+        112,
+        133
+      ],
+      "master_to_preview": {
+        "status": "pass",
+        "method": "Pillow 12.3.0 RGBA full-canvas LANCZOS exact pixels"
+      },
+      "visual_review": "pass",
+      "independent_recheck": "pass",
+      "color_metadata": "unverified",
+      "source_color_space": "unverified",
+      "resource_delivery": "unverified",
+      "actual_ui": {
+        "status": "unverified",
+        "scope": "历史信息保留；当前技能审核排除实际UI/相邻入口/红点遮挡，不因此增加审核缺项"
+      },
+      "engineering": "unverified"
+    },
+    {
+      "id": "R25",
+      "batch_id": "02",
+      "name": "密友",
+      "version": "v3",
+      "category": "人物／亲密双人",
+      "master": {
+        "path": "assets/close-friends-v3.png",
+        "sha256": "dfa13cf57eedbb16cd7e1def5dfadb978adabc8ae7ea78e39d1bf7afcc86ad4c"
+      },
+      "preview": {
+        "path": "assets/previews/close-friends-v3-120.png",
+        "sha256": "e67f9acc37871d7cba503e5865726450ff602d58ee2368afb70b1a5d3dc961ea"
+      },
+      "user_acceptance": "pass",
+      "accepted_on": "2026-10-21",
+      "library_status": "正式限定用途参考",
+      "purpose": "闭眼相依双人、脸距与倾斜关系、前景心形层级",
+      "limits": "心形有恋爱联想；不将贴脸、心形或同角色配色作为所有好友入口默认",
+      "library_master": {
+        "library_file_id": "libfile_365330d0b9708191a319531af8b348f7",
+        "version_number": 1
+      },
+      "hard_specs": "pass",
+      "margins_ltrb": [
+        112,
+        131,
+        112,
+        131
+      ],
+      "master_to_preview": {
+        "status": "pass",
+        "method": "Pillow 12.3.0 RGBA full-canvas LANCZOS exact pixels"
+      },
+      "visual_review": "pass",
+      "independent_recheck": "pass",
+      "color_metadata": "unverified",
+      "source_color_space": "unverified",
+      "resource_delivery": "unverified",
+      "actual_ui": {
+        "status": "unverified",
+        "scope": "历史信息保留；当前技能审核排除实际UI/相邻入口/红点遮挡，不因此增加审核缺项"
+      },
+      "engineering": "unverified"
+    },
+    {
+      "id": "R26",
+      "batch_id": "03",
+      "name": "好友推荐",
+      "version": "v3",
+      "category": "人物／眨眼星形",
+      "master": {
+        "path": "assets/friend-recommendation-v3.png",
+        "sha256": "3393c653e9a87c147e01128a939c2a5b3cfbd19d8f43c0e4df75a6d20ac665a2"
+      },
+      "preview": {
+        "path": "assets/previews/friend-recommendation-v3-120.png",
+        "sha256": "7c132c5c2ee3d1ab7533d944293985daf4aee0c053dab4aacedc25db444d1211"
+      },
+      "user_acceptance": "pass",
+      "accepted_on": "2026-10-21",
+      "library_status": "正式限定用途参考",
+      "purpose": "单人眨眼与完整星形的遮挡、功能物不遮表情",
+      "limits": "星形仍可读作收藏或精选，精确推荐用途依赖名称；不作为无字必然识别模板",
+      "library_master": {
+        "library_file_id": "libfile_f1a34267f0a48191bccefacd19c3c3a8",
+        "version_number": 1
+      },
+      "hard_specs": "pass",
+      "margins_ltrb": [
+        158,
+        112,
+        158,
+        112
+      ],
+      "master_to_preview": {
+        "status": "pass",
+        "method": "Pillow 12.3.0 RGBA full-canvas LANCZOS exact pixels"
+      },
+      "visual_review": "pass",
+      "independent_recheck": "pass",
+      "color_metadata": "unverified",
+      "source_color_space": "unverified",
+      "resource_delivery": "unverified",
+      "actual_ui": {
+        "status": "unverified",
+        "scope": "历史信息保留；当前技能审核排除实际UI/相邻入口/红点遮挡，不因此增加审核缺项"
+      },
+      "engineering": "unverified"
+    },
+    {
+      "id": "R27",
+      "batch_id": "04",
+      "name": "好友申请",
+      "version": "v4",
+      "category": "人物／接收来信",
+      "master": {
+        "path": "assets/friend-request-v4.png",
+        "sha256": "9aaed719de4dab406e84d8840b59caf35ff9f0240a8f95f5a3745eea715cd969"
+      },
+      "preview": {
+        "path": "assets/previews/friend-request-v4-120.png",
+        "sha256": "84b1fcaa4c88459659f2a968e347304d6b1e61f5ec58697bb6bbf17d38886715"
+      },
+      "user_acceptance": "pass",
+      "accepted_on": "2026-10-21",
+      "library_status": "正式限定用途参考",
+      "purpose": "闭嘴浅笑人物优先、信封其次、接收下箭头与封口关系",
+      "limits": "普通来信或邀请仍可混读，精确待处理好友申请依赖名称；不推广信封比例或小箭头尺寸",
+      "library_master": {
+        "library_file_id": "libfile_71b8675e8e58819181ac8618fb0a0078",
+        "version_number": 2
+      },
+      "hard_specs": "pass",
+      "margins_ltrb": [
+        188,
+        112,
+        188,
+        112
+      ],
+      "master_to_preview": {
+        "status": "pass",
+        "method": "Pillow 12.3.0 RGBA full-canvas LANCZOS exact pixels"
+      },
+      "visual_review": "pass",
+      "independent_recheck": "pass",
+      "color_metadata": "unverified",
+      "source_color_space": "unverified",
+      "resource_delivery": "unverified",
+      "actual_ui": {
+        "status": "unverified",
+        "scope": "历史信息保留；当前技能审核排除实际UI/相邻入口/红点遮挡，不因此增加审核缺项"
+      },
+      "engineering": "unverified"
+    }
+  ],
+  "qa_pages": [
+    {
+      "path": "assets/qa/social-v4/family-qa-dark-01.png",
+      "sha256": "2daa1cbbb9c4d06f7b2bc9c1987f21451a708b950e3d4380e31a218837f3beb1"
+    },
+    {
+      "path": "assets/qa/social-v4/family-qa-light-01.png",
+      "sha256": "6c6a88a01a0a4a63edff792524cc2084450afd04e704a37ef052de1653d915b3"
+    },
+    {
+      "path": "assets/qa/social-v4/family-relation-discovery-requests-dark.png",
+      "sha256": "e927d9d82aac04c1036061316053a72e3fa79ca0de85a33ffa4e5a499b93493a"
+    },
+    {
+      "path": "assets/qa/social-v4/family-relation-discovery-requests-light.png",
+      "sha256": "72af502a732808f2915215bad76d9ce30d4911dd33816f5d612e6ef397383ebd"
+    },
+    {
+      "path": "assets/qa/social-v4/family-relation-friends-close-dark.png",
+      "sha256": "3b18f0ebfc49245103c7f6c031100a7782adfe3bc0ae3d5ccb5b921dbf8c2d22"
+    },
+    {
+      "path": "assets/qa/social-v4/family-relation-friends-close-light.png",
+      "sha256": "d7baaf1cf7e3c7ea9d9e4cdda3af0fdb0019e708bf4c98017db37373066d6a52"
+    },
+    {
+      "path": "assets/qa/social-v4/family-relation-social-family-dark.png",
+      "sha256": "e6f81b7486371140912f7f08ab721466b26db7aa1ce1c1277b42df9c89b02c44"
+    },
+    {
+      "path": "assets/qa/social-v4/family-relation-social-family-light.png",
+      "sha256": "443142e7148c6d5e84ebc6c6e32cdbabb51a9d97f335aa7643b48cc24469823b"
+    },
+    {
+      "path": "assets/qa/social-v4/revised-qa-dark-01.png",
+      "sha256": "0ade4b84eb79e4377537c710ca3e9d9486a4d57cc3681bdfed4d3a24c9f78500"
+    },
+    {
+      "path": "assets/qa/social-v4/revised-qa-light-01.png",
+      "sha256": "9e1cf0e02fd84a8719fd0c9621b1113cdcd5cd90dc9cfd9647c5181aa9290707"
+    },
+    {
+      "path": "assets/qa/social-v4/revised-relation-revised-pair-dark.png",
+      "sha256": "a4c886295aefea0dd87049c368f79cabffb86ddd2cbd21c160a96959816efc97"
+    },
+    {
+      "path": "assets/qa/social-v4/revised-relation-revised-pair-light.png",
+      "sha256": "f464cbdc9de5a7a5e9d75ecd86cea6d0e4db0b4ec559f5869b61ec7f896e3e1e"
+    }
+  ],
+  "historical_visual_reviews": {
+    "family-review": {
+      "historical_manifest_sha256": "663f6c399945fd8df51ffa96f15206a197c4c0370587c7cdbaa287f4eaa23c05",
+      "historical_final_check_sha256": "7edde722fcc4a0a9dcd8b7e96f010a68fecc30f45031934233afbbba67c4ff60",
+      "historical_delivery": {
+        "status": "unverified",
+        "reason": "Only pass permits resource delivery acceptance; user/UI/engine remain separate.",
+        "issues": [
+          "Technical checks incomplete/failed; see per-item machine results"
+        ],
+        "checks": {
+          "technical": "unverified",
+          "workflow": "pass",
+          "visual": "pass",
+          "recheck": "pass"
+        },
+        "automated_visual_judgment": false
+      },
+      "scope": "历史V4流程与意见，非本轮当前规则下重新执行完整验收；不回写历史绑定",
+      "primary": {
+        "01": {
+          "semantics": {
+            "status": "pass",
+            "observation": "双人睁眼招呼：左人开口笑并挥手，右人小幅微笑；无需心形即可和02闭眼相依分开。关系可推断，精确好友列表用途仍配名称，未做玩家盲测。",
+            "location": "01双脸/左掌/两肩；friends-close中格对R10与02；overview previous对v4"
+          },
+          "weight": {
+            "status": "pass",
+            "observation": "相较previous，挥手收拢，头肩组合纵向更足；与R10及02并列不再横扁偏轻。肩部实色延续至底缘，改善不是仅扩大透明包围框。自然直立比相依更方正可接受。",
+            "location": "01双脸/左掌/两肩；friends-close中格对R10与02；overview previous对v4"
+          },
+          "structure": {
+            "status": "pass",
+            "observation": "两脸大致同高且各自完整，手掌紧邻左脸但不粘眼嘴，袖口接手自然；双人保持直立招呼，没有变成相依姿态。",
+            "location": "01双脸/左掌/两肩；friends-close中格对R10与02；overview previous对v4"
+          },
+          "materials": {
+            "status": "pass",
+            "observation": "暖棕头发有连贯宽亮面，青绿与浅桃衣衫为柔和大面；内发束少于外轮廓，不见碎亮金属塑感。",
+            "location": "01双脸/左掌/两肩；friends-close中格对R10与02；overview previous对v4"
+          },
+          "lighting_outline": {
+            "status": "pass",
+            "observation": "发髻左上偏亮、右下发束较暗；暖棕外线与较浅内线层级清楚，粗细与R10和02同组可接受。",
+            "location": "01双脸/左掌/两肩；friends-close中格对R10与02；overview previous对v4"
+          },
+          "edges": {
+            "status": "pass",
+            "observation": "两底完整120px外缘，手指、花瓣与短发带无明显白圈、黑底、外发光或游离点；细小alpha边缘未一刀切。",
+            "location": "01双脸/左掌/两肩；friends-close中格对R10与02；overview previous对v4"
+          },
+          "keep": {
+            "status": "pass",
+            "observation": "白花青绿左人、短带浅桃右人的身份/色组保留；两人睁眼，左挥手，无心星信，01/02本体区别保留。",
+            "location": "01双脸/左掌/两肩；friends-close中格对R10与02；overview previous对v4"
+          },
+          "palette": {
+            "status": "pass",
+            "observation": "暖棕发色为暗锚，暖肤与青绿浅桃形成亮面，小白花和淡带只作识别点；01/02重复色组有相同人物身份依据。",
+            "location": "01双脸/左掌/两肩；friends-close中格对R10与02；overview previous对v4"
+          }
+        },
+        "02": {
+          "semantics": {
+            "status": "pass",
+            "observation": "闭眼相依的双人加心形可见亲密感；双人头部向内倾、脸距收紧，即使不借心形也和01直立挥手不同。具体密友入口仍配名称。",
+            "location": "02闭眼双脸/向内头倾/前景心形；friends-close右格"
+          },
+          "weight": {
+            "status": "pass",
+            "observation": "头肩连续大体块，和新版01及R10的实际分量接近；心形未挤压双脸，组内可接受。",
+            "location": "02闭眼双脸/向内头倾/前景心形；friends-close右格"
+          },
+          "structure": {
+            "status": "pass",
+            "observation": "两张闭眼笑脸相向，发束和肩线各有归属；心形在前景，遮挡顺序清楚。",
+            "location": "02闭眼双脸/向内头倾/前景心形；friends-close右格"
+          },
+          "materials": {
+            "status": "pass",
+            "observation": "头发暖棕宽亮面，青绿浅桃柔和衣料，与R10概括方式一致。",
+            "location": "02闭眼双脸/向内头倾/前景心形；friends-close右格"
+          },
+          "lighting_outline": {
+            "status": "pass",
+            "observation": "左上亮发束、右下暗部可见，暖棕外线稳定，内线较细浅，无过硬黑圈。",
+            "location": "02闭眼双脸/向内头倾/前景心形；friends-close右格"
+          },
+          "edges": {
+            "status": "pass",
+            "observation": "两底看双发髻、脸缘、心形边缘，没有明显残底和外发光；心形尖角完整。",
+            "location": "02闭眼双脸/向内头倾/前景心形；friends-close右格"
+          },
+          "keep": {
+            "status": "pass",
+            "observation": "V3主图和120原字节沿用，闭眼笑相依、心形、角色身份及配色保留。",
+            "location": "02闭眼双脸/向内头倾/前景心形；friends-close右格"
+          },
+          "palette": {
+            "status": "pass",
+            "observation": "重复青绿浅桃是同一双人系统；珊瑚心形有足够局部区分，未变成最大面积主色。",
+            "location": "02闭眼双脸/向内头倾/前景心形；friends-close右格"
+          }
+        },
+        "03": {
+          "semantics": {
+            "status": "pass",
+            "observation": "单人眨眼与金色完整星形清楚。能和04来信区分；星形存在推荐/收藏混读，精确好友推荐须名称辅助，未宣称无名盲测通过。",
+            "location": "03脸部眨眼/左下青绿肩/右前完整金星；discovery-requests中格"
+          },
+          "weight": {
+            "status": "pass",
+            "observation": "单人头肩与星形构成完整团块，和04单人类别接近；不要求单人面积等于双人。",
+            "location": "03脸部眨眼/左下青绿肩/右前完整金星；discovery-requests中格"
+          },
+          "structure": {
+            "status": "pass",
+            "observation": "眨眼的闭眼线与另一只睁眼可分，星形前景和脸部错开，不遮表情。",
+            "location": "03脸部眨眼/左下青绿肩/右前完整金星；discovery-requests中格"
+          },
+          "materials": {
+            "status": "pass",
+            "observation": "头发以连续大面表现，青绿衣衫柔和；星形亮面简洁，不呈碎金属纹。",
+            "location": "03脸部眨眼/左下青绿肩/右前完整金星；discovery-requests中格"
+          },
+          "lighting_outline": {
+            "status": "pass",
+            "observation": "发髻及星形左上较亮，右下阴影收住；暖棕外线与较淡内线同组。",
+            "location": "03脸部眨眼/左下青绿肩/右前完整金星；discovery-requests中格"
+          },
+          "edges": {
+            "status": "pass",
+            "observation": "完整星尖、白花与发丝外缘在两底未见残底、白边或外发光。",
+            "location": "03脸部眨眼/左下青绿肩/右前完整金星；discovery-requests中格"
+          },
+          "keep": {
+            "status": "pass",
+            "observation": "V3两尺寸字节未改，保留单人眨眼、青绿衣、白花及星形。",
+            "location": "03脸部眨眼/左下青绿肩/右前完整金星；discovery-requests中格"
+          },
+          "palette": {
+            "status": "pass",
+            "observation": "金星为小面积暖亮强调，与青绿衣和暖棕发有层级；局部金色有推荐功能物依据，未借参考青绿强行统一全组。",
+            "location": "03脸部眨眼/左下青绿肩/右前完整金星；discovery-requests中格"
+          }
+        },
+        "04": {
+          "semantics": {
+            "status": "pass",
+            "observation": "单人双眼睁开、闭嘴浅笑，信封斜口、珊瑚封记及向下接收箭头可读；可与03眨眼星形分开。仍可能读作普通来信，精确待处理好友申请依赖名称。",
+            "location": "04双眼闭嘴/高髻/右下信封与箭头；overview previous对v4；discovery-requests右格"
+          },
+          "weight": {
+            "status": "pass",
+            "observation": "相较previous，信封收小、人物头面成为第一视觉；面部亮区完整，信封未再横向撑大压人。纵向髻较高是单人造型，不作为双人同面积要求。",
+            "location": "04双眼闭嘴/高髻/右下信封与箭头；overview previous对v4；discovery-requests右格"
+          },
+          "structure": {
+            "status": "pass",
+            "observation": "双眼闭嘴表情自然，信封完整位于肩前，箭头朝封口；缩小后封口折线和封记仍在，不以细节牺牲功能物。",
+            "location": "04双眼闭嘴/高髻/右下信封与箭头；overview previous对v4；discovery-requests右格"
+          },
+          "materials": {
+            "status": "pass",
+            "observation": "暖棕发束宽亮面与浅桃衣料同组，纸面为柔和浅暖平面，封口层次简洁，无多余珠光。",
+            "location": "04双眼闭嘴/高髻/右下信封与箭头；overview previous对v4；discovery-requests右格"
+          },
+          "lighting_outline": {
+            "status": "pass",
+            "observation": "发髻左上受光，右下发束较暗；人物外轮廓和信封外边暖棕，内线较浅，箭头绿面无厚黑描边。",
+            "location": "04双眼闭嘴/高髻/右下信封与箭头；overview previous对v4；discovery-requests右格"
+          },
+          "edges": {
+            "status": "pass",
+            "observation": "两底检查高髻、发带、信封角和小箭头，未见明显残底或光圈；箭头完整不缺尖。",
+            "location": "04双眼闭嘴/高髻/右下信封与箭头；overview previous对v4；discovery-requests右格"
+          },
+          "keep": {
+            "status": "pass",
+            "observation": "保留浅桃人物、淡紫短带、双眼闭嘴浅笑、信封/封记/接收下箭头；没有加入心形、星形或新底板。",
+            "location": "04双眼闭嘴/高髻/右下信封与箭头；overview previous对v4；discovery-requests右格"
+          },
+          "palette": {
+            "status": "pass",
+            "observation": "暖棕头发为暗锚，肤色与桃衣为主亮面，米色信封次之；青绿箭头和珊瑚封记是小强调，不抢脸。",
+            "location": "04双眼闭嘴/高髻/右下信封与箭头；overview previous对v4；discovery-requests右格"
+          }
+        }
+      },
+      "independent": {
+        "01": {
+          "semantics": {
+            "status": "pass",
+            "observation": "双脸睁眼、左人开口笑和收近脸侧的招呼手在120px可读；与02闭眼相依的差异来自眼形、手势、正面姿态及脸距，不只依赖心形。已有好友列表的精确用途仍配名称。",
+            "location": "family/social-family左格、friends-close中格；revise/01-v4"
+          },
+          "weight": {
+            "status": "pass",
+            "observation": "比V3旧稿，手势的外扩占位收紧，双人头肩纵向更饱满，两脸与肩衣核心体块更突出；对R10/02不再呈原先明显偏扁偏轻的观感。保持正面横展构图，不称与02逐像素等大，也不以最长边或面积数值替代本判断。",
+            "location": "两分支总览01/previous与01/v4；family/friends-close的R10/01/02三格"
+          },
+          "structure": {
+            "status": "pass",
+            "observation": "两张脸大致同高、正面直立且有间距；招呼手靠近左脸侧但仍与脸/衣边分离，未见明显多臂或融合。没有因收紧构图改成02的贴脸侧倾。",
+            "location": "01/v4中部双脸、左侧手与下部肩衣"
+          },
+          "materials": {
+            "status": "pass",
+            "observation": "发束、面部和衣衫保持连续柔色块；发髻/衣领细节层级与R10相容，没有新增颗粒、写实皮肤或塑料碎高光。",
+            "location": "01/v4发顶大束、双颊、衣领和肩部"
+          },
+          "lighting_outline": {
+            "status": "pass",
+            "observation": "左上发束亮面、内侧遮挡暗部及柔和面部明暗延续；暖棕外轮廓深于细浅内线，120px未出现突兀粗黑边或额外轮廓光。",
+            "location": "01/v4左上发顶、颊缘、衣肩外线；R10"
+          },
+          "edges": {
+            "status": "pass",
+            "observation": "浅深两底的花饰、手缘、发带与衣肩底边未见明显残底、白晕或游离点；只针对完整120px观察，不保证高清绝对零异常像素。",
+            "location": "01/v4完整外缘，重点收紧后的手缘和发饰"
+          },
+          "keep": {
+            "status": "pass",
+            "observation": "两人身份、青绿/浅桃衣色、棕发白花/紫短带、左人睁眼开口笑与招呼、右人睁眼小笑、无心星信/字/底板均保持；体量改善未抵消01/02区分。",
+            "location": "01/v4整体及family/friends-close三格"
+          },
+          "palette": {
+            "status": "pass",
+            "observation": "棕发深色块、暖肤与米白亮区及青绿/浅桃双衣仍分层；未见明显换色或加重饱和度。小白花/紫带为身份点缀，较大头肩没有以增加金饰制造重量。",
+            "location": "01/v4发束、双脸、衣领和衣衫；总览V3/V4对照"
+          }
+        },
+        "02": {
+          "semantics": {
+            "status": "pass",
+            "observation": "闭眼弯笑、相依倾斜的双脸和下方心形可读；对新01正面睁眼招呼仍有本体差异。亲昵关系成立，心形的恋爱联想继续保留。",
+            "location": "family/social-family第二格、friends-close右格"
+          },
+          "weight": {
+            "status": "pass",
+            "observation": "紧凑发束与相依双脸、下方心形形成饱满体块；新01更接近这种核心重量，02未因01修改而显得异常过大。单/双人比较不以单张脸同大为要求。",
+            "location": "family/friends-close的R10/01/02及social-family四格"
+          },
+          "structure": {
+            "status": "pass",
+            "observation": "双脸彼此独立、倾斜接近关系可理解，一大一小笑口未粘连；心形位于肩前但不遮脸。",
+            "location": "02/v3双脸接近处、闭眼曲线、下方心形"
+          },
+          "materials": {
+            "status": "pass",
+            "observation": "发束、肤面和衣衫为柔和连续色块，心形亮面简洁，没有厚重金属或碎亮点。",
+            "location": "02/v3发束、衣肩及心形"
+          },
+          "lighting_outline": {
+            "status": "pass",
+            "observation": "左上发束较亮、发束内侧和衣领遮挡较暗；暖棕外线与浅细内线层级与R10及新01相容。",
+            "location": "02/v3发顶、衣领与心形下缘；R10/01"
+          },
+          "edges": {
+            "status": "pass",
+            "observation": "两底花饰、短带及心形下尖未见明显白边、残底或游离点。",
+            "location": "02/v3完整外缘"
+          },
+          "keep": {
+            "status": "pass",
+            "observation": "闭眼相依、一大一小笑口、两色衣和心形保持；本轮没有要求将其改成正面招呼。02的高清和120字节另做与V3的只读核对，不以看图冒充像素验证。",
+            "location": "02/v3整体及本报告只读哈希核对"
+          },
+          "palette": {
+            "status": "pass",
+            "observation": "棕发/暖肤为主要人物块，青绿与浅桃衣为次级，桃粉心形作关系标记；同色重复有同人物依据，仍能与01姿态区分。",
+            "location": "02/v3头脸、衣衫及心形"
+          }
+        },
+        "03": {
+          "semantics": {
+            "status": "pass",
+            "observation": "单眼眨眼、另一眼睁开和完整金星在120px可读；与新04闭嘴浅笑/来信不同。星仍可能表示收藏/星标，具体好友推荐依赖名称，眨眼不证明推荐机制。",
+            "location": "family/social-family第三格及discovery-requests中格"
+          },
+          "weight": {
+            "status": "pass",
+            "observation": "单人头脸较双人单脸大属于构图允许差异，肩衣和星补充右下重量；与新04的人物体量关系更接近，星仍较醒目但未遮脸或压掉眨眼。",
+            "location": "family/discovery-requests的R10/03/04三格"
+          },
+          "structure": {
+            "status": "pass",
+            "observation": "一闭一开眼关系明确，五角星轮廓完整且与肩前遮挡清楚，没有多余手、镜柄或面部粘连。",
+            "location": "03/v3眼部、右下肩与星的交界"
+          },
+          "materials": {
+            "status": "pass",
+            "observation": "发束衣衫延续R10柔色块，柔金星用简洁连续亮暗面，没有厚金属和碎纹高光。",
+            "location": "03/v3发束、衣衫和星面"
+          },
+          "lighting_outline": {
+            "status": "pass",
+            "observation": "发束左上亮、内侧和右下柔暗，暖棕/金棕外线层级清楚，没有新粗黑圈或外发光。",
+            "location": "03/v3发顶、脸肩外缘和星右下"
+          },
+          "edges": {
+            "status": "pass",
+            "observation": "浅深底白花、飘发及星尖无明显残底、白晕或孤立点。",
+            "location": "03/v3完整外缘"
+          },
+          "keep": {
+            "status": "pass",
+            "observation": "青绿衣单人、白花棕髻、眨眼、完整金星和无心/信/字/底板保持。03的高清/120是否字节不变另在本报告只读核对，不将主审技术信息写成独立看图证明。",
+            "location": "03/v3整体及本报告只读哈希核对"
+          },
+          "palette": {
+            "status": "pass",
+            "observation": "棕发、暖肤、青绿衣构成人物主色块，金星为较亮辅助色，与04桃衣白信仍可分；同人物身份色不要求强制改成另一色相。",
+            "location": "03/v3人物与金星；discovery-requests两候选"
+          }
+        },
+        "04": {
+          "semantics": {
+            "status": "pass",
+            "observation": "人物闭嘴浅笑、完整信封和指向信封的下箭头在120px可辨；箭头虽小仍能读到接收方向，未变成批准勾号。一般来信/邀请与好友申请的精确区别仍需名称，眉眼轻微不夸为明显抬眉/垂眼。",
+            "location": "04/v4脸、前下方信封和右侧小箭头；family/discovery-requests右格"
+          },
+          "weight": {
+            "status": "pass",
+            "observation": "比V3旧稿，脸与头肩的相对占比更突出，前方信封收紧并退到第二层，人物先读更明确；不只是缩整个图，也未见用更幼态面孔换取表观变大。与03完整体量更接近，不宣称所有单脸完全同大。",
+            "location": "两分支总览04/previous与04/v4；family/discovery-requests的03/04"
+          },
+          "structure": {
+            "status": "pass",
+            "observation": "信封封口和封签可读、位于肩前但未遮脸，箭头保持向下指入信封的关系；小箭头没有与发带混成同一物，脸、发带、衣领仍分层。",
+            "location": "04/v4面部下缘、信封上口、右侧箭头与发带"
+          },
+          "materials": {
+            "status": "pass",
+            "observation": "发束与衣衫的柔色块继续，纸面偏奶油哑白、薄荷封口和少量金色角纹为次级；未用强亮金属或密集纹理补主次。",
+            "location": "04/v4发束、桃衣和信封纸面"
+          },
+          "lighting_outline": {
+            "status": "pass",
+            "observation": "左上发束及面部亮区、内侧遮挡暗部与R10相容；暖棕人物外线与金棕纸缘有层级，未见加粗黑边或第二主光。",
+            "location": "04/v4发顶、脸缘、衣肩和信封外缘"
+          },
+          "edges": {
+            "status": "pass",
+            "observation": "两底发带、信封角和小箭头边缘清楚，未见明显白晕、残底、孤立点或强锯齿。",
+            "location": "04/v4完整外缘，重点右侧箭头与下方纸角"
+          },
+          "keep": {
+            "status": "pass",
+            "observation": "浅桃衣、淡紫发带、棕发身份、闭嘴浅笑、完整信封和接收箭头保留，没有新增批准勾号/星/心/字/底板。信收紧没有丢失接收层含义。",
+            "location": "04/v4整体及V3/V4对照"
+          },
+          "palette": {
+            "status": "pass",
+            "observation": "棕发/暖肤、浅桃衣、奶油纸、薄荷封口和珊瑚封签层级仍清楚；信减小后亮纸色块不再同等抢脸。目视没有明显换色或画风变冷，色彩配置来源仍由技术证据单列未知。",
+            "location": "04/v4人物与纸信/箭头；总览V3/V4两格"
+          }
+        }
+      },
+      "relations_primary": {
+        "social-family": {
+          "status": "pass",
+          "observation": "四图分别为睁眼挥手双人、闭眼相依双人、眨眼星形单人、闭嘴浅笑来信单人；无需只靠配色和心形区分。青绿/浅桃有身份复用依据，人物分量可接受。",
+          "location": "social-family浅深底完整120px关系页"
+        },
+        "friends-close": {
+          "status": "pass",
+          "observation": "01保持正面睁眼挥手、两脸分离，02闭眼倾靠和心形；主物姿态已分开。01新头肩纵向和实色核心更充足，不再明显弱于02/R10。",
+          "location": "friends-close浅深底完整120px关系页"
+        },
+        "discovery-requests": {
+          "status": "pass",
+          "observation": "03眨眼金星与04闭嘴浅笑米色来信可分；04面部优先且封口/箭头仍清楚。推荐/收藏、申请/普通信仍有精确语义名称依赖，不等于玩家盲测通过。",
+          "location": "discovery-requests浅深底完整120px关系页"
+        }
+      },
+      "relations_independent": {
+        "social-family": {
+          "status": "pass",
+          "observation": "01睁眼正面招呼、02闭眼相依、03单眼眨眼、04闭嘴浅笑/接收信仍可分。新01不再明显偏扁，新04人物层级更突出；同棕发与两色身份衣衫未造成只有小角标不同的退化。",
+          "location": "family-review/social-family两底四候选"
+        },
+        "friends-close": {
+          "status": "pass",
+          "observation": "01核心头肩较V3饱满，招呼手收近；与02仍从睁眼/闭眼、正面/侧倾、脸距/手势区分，未因紧凑而靠拢成同一贴脸关系。R10仅负责人像画风与重量，不要求复制姿态。",
+          "location": "family-review/friends-close两底R10、01/v4、02/v3三格"
+        },
+        "discovery-requests": {
+          "status": "pass",
+          "observation": "04面部/头肩相对纸信更突出，接收箭头仍可辨；对03眨眼金星的人物组合，表情/衣色/辅助物均能区分。03星标/推荐和04一般来信/申请精确用途的名称依赖仍保留。",
+          "location": "family-review/discovery-requests两底R10、03/v3、04/v4三格"
+        }
+      }
+    },
+    "revise-batch": {
+      "historical_manifest_sha256": "030ef8bcfb5c810f132c634cd4832f93c0232b9205bf0a60e31fe57f2ff98ac3",
+      "historical_final_check_sha256": "36e322eed7c410f7a7910385fb6e5f2cbb56bb5d3ad6bd8d235f39d0324d219a",
+      "historical_delivery": {
+        "status": "unverified",
+        "reason": "Only pass permits resource delivery acceptance; user/UI/engine remain separate.",
+        "issues": [
+          "Technical checks incomplete/failed; see per-item machine results"
+        ],
+        "checks": {
+          "technical": "unverified",
+          "workflow": "pass",
+          "visual": "pass",
+          "recheck": "pass"
+        },
+        "automated_visual_judgment": false
+      },
+      "scope": "历史V4流程与意见，非本轮当前规则下重新执行完整验收；不回写历史绑定",
+      "primary": {
+        "01": {
+          "semantics": {
+            "status": "pass",
+            "observation": "双人睁眼招呼：左人开口笑并挥手，右人小幅微笑；无需心形即可和02闭眼相依分开。关系可推断，精确好友列表用途仍配名称，未做玩家盲测。",
+            "location": "01双脸/左掌/两肩；friends-close中格对R10与02；overview previous对v4"
+          },
+          "weight": {
+            "status": "pass",
+            "observation": "相较previous，挥手收拢，头肩组合纵向更足；与R10及02并列不再横扁偏轻。肩部实色延续至底缘，改善不是仅扩大透明包围框。自然直立比相依更方正可接受。",
+            "location": "01双脸/左掌/两肩；friends-close中格对R10与02；overview previous对v4"
+          },
+          "structure": {
+            "status": "pass",
+            "observation": "两脸大致同高且各自完整，手掌紧邻左脸但不粘眼嘴，袖口接手自然；双人保持直立招呼，没有变成相依姿态。",
+            "location": "01双脸/左掌/两肩；friends-close中格对R10与02；overview previous对v4"
+          },
+          "materials": {
+            "status": "pass",
+            "observation": "暖棕头发有连贯宽亮面，青绿与浅桃衣衫为柔和大面；内发束少于外轮廓，不见碎亮金属塑感。",
+            "location": "01双脸/左掌/两肩；friends-close中格对R10与02；overview previous对v4"
+          },
+          "lighting_outline": {
+            "status": "pass",
+            "observation": "发髻左上偏亮、右下发束较暗；暖棕外线与较浅内线层级清楚，粗细与R10和02同组可接受。",
+            "location": "01双脸/左掌/两肩；friends-close中格对R10与02；overview previous对v4"
+          },
+          "edges": {
+            "status": "pass",
+            "observation": "两底完整120px外缘，手指、花瓣与短发带无明显白圈、黑底、外发光或游离点；细小alpha边缘未一刀切。",
+            "location": "01双脸/左掌/两肩；friends-close中格对R10与02；overview previous对v4"
+          },
+          "keep": {
+            "status": "pass",
+            "observation": "白花青绿左人、短带浅桃右人的身份/色组保留；两人睁眼，左挥手，无心星信，01/02本体区别保留。",
+            "location": "01双脸/左掌/两肩；friends-close中格对R10与02；overview previous对v4"
+          },
+          "palette": {
+            "status": "pass",
+            "observation": "暖棕发色为暗锚，暖肤与青绿浅桃形成亮面，小白花和淡带只作识别点；01/02重复色组有相同人物身份依据。",
+            "location": "01双脸/左掌/两肩；friends-close中格对R10与02；overview previous对v4"
+          }
+        },
+        "04": {
+          "semantics": {
+            "status": "pass",
+            "observation": "单人双眼睁开、闭嘴浅笑，信封斜口、珊瑚封记及向下接收箭头可读；可与03眨眼星形分开。仍可能读作普通来信，精确待处理好友申请依赖名称。",
+            "location": "04双眼闭嘴/高髻/右下信封与箭头；overview previous对v4；discovery-requests右格"
+          },
+          "weight": {
+            "status": "pass",
+            "observation": "相较previous，信封收小、人物头面成为第一视觉；面部亮区完整，信封未再横向撑大压人。纵向髻较高是单人造型，不作为双人同面积要求。",
+            "location": "04双眼闭嘴/高髻/右下信封与箭头；overview previous对v4；discovery-requests右格"
+          },
+          "structure": {
+            "status": "pass",
+            "observation": "双眼闭嘴表情自然，信封完整位于肩前，箭头朝封口；缩小后封口折线和封记仍在，不以细节牺牲功能物。",
+            "location": "04双眼闭嘴/高髻/右下信封与箭头；overview previous对v4；discovery-requests右格"
+          },
+          "materials": {
+            "status": "pass",
+            "observation": "暖棕发束宽亮面与浅桃衣料同组，纸面为柔和浅暖平面，封口层次简洁，无多余珠光。",
+            "location": "04双眼闭嘴/高髻/右下信封与箭头；overview previous对v4；discovery-requests右格"
+          },
+          "lighting_outline": {
+            "status": "pass",
+            "observation": "发髻左上受光，右下发束较暗；人物外轮廓和信封外边暖棕，内线较浅，箭头绿面无厚黑描边。",
+            "location": "04双眼闭嘴/高髻/右下信封与箭头；overview previous对v4；discovery-requests右格"
+          },
+          "edges": {
+            "status": "pass",
+            "observation": "两底检查高髻、发带、信封角和小箭头，未见明显残底或光圈；箭头完整不缺尖。",
+            "location": "04双眼闭嘴/高髻/右下信封与箭头；overview previous对v4；discovery-requests右格"
+          },
+          "keep": {
+            "status": "pass",
+            "observation": "保留浅桃人物、淡紫短带、双眼闭嘴浅笑、信封/封记/接收下箭头；没有加入心形、星形或新底板。",
+            "location": "04双眼闭嘴/高髻/右下信封与箭头；overview previous对v4；discovery-requests右格"
+          },
+          "palette": {
+            "status": "pass",
+            "observation": "暖棕头发为暗锚，肤色与桃衣为主亮面，米色信封次之；青绿箭头和珊瑚封记是小强调，不抢脸。",
+            "location": "04双眼闭嘴/高髻/右下信封与箭头；overview previous对v4；discovery-requests右格"
+          }
+        }
+      },
+      "independent": {
+        "01": {
+          "semantics": {
+            "status": "pass",
+            "observation": "双脸睁眼、左人开口笑和收近脸侧的招呼手在120px可读；与02闭眼相依的差异来自眼形、手势、正面姿态及脸距，不只依赖心形。已有好友列表的精确用途仍配名称。",
+            "location": "family/social-family左格、friends-close中格；revise/01-v4"
+          },
+          "weight": {
+            "status": "pass",
+            "observation": "比V3旧稿，手势的外扩占位收紧，双人头肩纵向更饱满，两脸与肩衣核心体块更突出；对R10/02不再呈原先明显偏扁偏轻的观感。保持正面横展构图，不称与02逐像素等大，也不以最长边或面积数值替代本判断。",
+            "location": "两分支总览01/previous与01/v4；family/friends-close的R10/01/02三格"
+          },
+          "structure": {
+            "status": "pass",
+            "observation": "两张脸大致同高、正面直立且有间距；招呼手靠近左脸侧但仍与脸/衣边分离，未见明显多臂或融合。没有因收紧构图改成02的贴脸侧倾。",
+            "location": "01/v4中部双脸、左侧手与下部肩衣"
+          },
+          "materials": {
+            "status": "pass",
+            "observation": "发束、面部和衣衫保持连续柔色块；发髻/衣领细节层级与R10相容，没有新增颗粒、写实皮肤或塑料碎高光。",
+            "location": "01/v4发顶大束、双颊、衣领和肩部"
+          },
+          "lighting_outline": {
+            "status": "pass",
+            "observation": "左上发束亮面、内侧遮挡暗部及柔和面部明暗延续；暖棕外轮廓深于细浅内线，120px未出现突兀粗黑边或额外轮廓光。",
+            "location": "01/v4左上发顶、颊缘、衣肩外线；R10"
+          },
+          "edges": {
+            "status": "pass",
+            "observation": "浅深两底的花饰、手缘、发带与衣肩底边未见明显残底、白晕或游离点；只针对完整120px观察，不保证高清绝对零异常像素。",
+            "location": "01/v4完整外缘，重点收紧后的手缘和发饰"
+          },
+          "keep": {
+            "status": "pass",
+            "observation": "两人身份、青绿/浅桃衣色、棕发白花/紫短带、左人睁眼开口笑与招呼、右人睁眼小笑、无心星信/字/底板均保持；体量改善未抵消01/02区分。",
+            "location": "01/v4整体及family/friends-close三格"
+          },
+          "palette": {
+            "status": "pass",
+            "observation": "棕发深色块、暖肤与米白亮区及青绿/浅桃双衣仍分层；未见明显换色或加重饱和度。小白花/紫带为身份点缀，较大头肩没有以增加金饰制造重量。",
+            "location": "01/v4发束、双脸、衣领和衣衫；总览V3/V4对照"
+          }
+        },
+        "04": {
+          "semantics": {
+            "status": "pass",
+            "observation": "人物闭嘴浅笑、完整信封和指向信封的下箭头在120px可辨；箭头虽小仍能读到接收方向，未变成批准勾号。一般来信/邀请与好友申请的精确区别仍需名称，眉眼轻微不夸为明显抬眉/垂眼。",
+            "location": "04/v4脸、前下方信封和右侧小箭头；family/discovery-requests右格"
+          },
+          "weight": {
+            "status": "pass",
+            "observation": "比V3旧稿，脸与头肩的相对占比更突出，前方信封收紧并退到第二层，人物先读更明确；不只是缩整个图，也未见用更幼态面孔换取表观变大。与03完整体量更接近，不宣称所有单脸完全同大。",
+            "location": "两分支总览04/previous与04/v4；family/discovery-requests的03/04"
+          },
+          "structure": {
+            "status": "pass",
+            "observation": "信封封口和封签可读、位于肩前但未遮脸，箭头保持向下指入信封的关系；小箭头没有与发带混成同一物，脸、发带、衣领仍分层。",
+            "location": "04/v4面部下缘、信封上口、右侧箭头与发带"
+          },
+          "materials": {
+            "status": "pass",
+            "observation": "发束与衣衫的柔色块继续，纸面偏奶油哑白、薄荷封口和少量金色角纹为次级；未用强亮金属或密集纹理补主次。",
+            "location": "04/v4发束、桃衣和信封纸面"
+          },
+          "lighting_outline": {
+            "status": "pass",
+            "observation": "左上发束及面部亮区、内侧遮挡暗部与R10相容；暖棕人物外线与金棕纸缘有层级，未见加粗黑边或第二主光。",
+            "location": "04/v4发顶、脸缘、衣肩和信封外缘"
+          },
+          "edges": {
+            "status": "pass",
+            "observation": "两底发带、信封角和小箭头边缘清楚，未见明显白晕、残底、孤立点或强锯齿。",
+            "location": "04/v4完整外缘，重点右侧箭头与下方纸角"
+          },
+          "keep": {
+            "status": "pass",
+            "observation": "浅桃衣、淡紫发带、棕发身份、闭嘴浅笑、完整信封和接收箭头保留，没有新增批准勾号/星/心/字/底板。信收紧没有丢失接收层含义。",
+            "location": "04/v4整体及V3/V4对照"
+          },
+          "palette": {
+            "status": "pass",
+            "observation": "棕发/暖肤、浅桃衣、奶油纸、薄荷封口和珊瑚封签层级仍清楚；信减小后亮纸色块不再同等抢脸。目视没有明显换色或画风变冷，色彩配置来源仍由技术证据单列未知。",
+            "location": "04/v4人物与纸信/箭头；总览V3/V4两格"
+          }
+        }
+      },
+      "relations_primary": {
+        "revised-pair": {
+          "status": "pass",
+          "observation": "01收紧手势后头肩更饱满，04信封收小后面部优先；两者暖棕线、暖肤及上左受光和R10同组。不同人物数不要求同面积。",
+          "location": "revised-pair浅深底完整120px关系页"
+        }
+      },
+      "relations_independent": {
+        "revised-pair": {
+          "status": "pass",
+          "observation": "新01收近招呼手并增加核心头肩饱满感，04提高人物相对纸信的层级；与R10的人物线条、柔色块和左上明暗相容。两图都保留自身表情/辅助语义，没有为了体量统一改成相同构图。",
+          "location": "revise-batch/revised-pair两底R10、01/v4、04/v4三格"
+        }
+      }
+    }
+  },
+  "ingestion_checks": {
+    "same_accepted_bytes": true,
+    "true_8bit_RGBA": true,
+    "master_1024_preview_120": true,
+    "min_margin_at_least_102": true,
+    "four_exact_preview_replays": true,
+    "new_visual_review": "not_run; retain version-bound actual 120px reviews from previous turn",
+    "sRGB_tag_rewrite": false,
+    "cross_case_global_visual_validation": "unverified"
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "date": "2026-10-21",
+  "user_request": "最新的图标通过并加入到图库",
+  "status": "用户通过；正式限定用途参考",
+  "global_rules_changed": false,
+  "items": [
+    {
+      "id": "R21",
+      "name": "资料",
+      "version": "v2",
+      "purpose": "暖杏连续折页、人物与条目分区",
+      "limits": "不固定纸面颜色、折页数量或花印位置；不沿用被替换的封面册结构",
+      "files": [
+        {
+          "path": "assets/profile-foldout-v2.png",
+          "source": "D:\\codex\\入口图标\\output\\protagonist-20261021-v2\\资料-v2-1024.png",
+          "sha256": "329c693f5fb3e76cbce35d14742ffe719cf784e31c15568f0fe51ecbb9e753e4",
+          "size": 1024,
+          "mode": "RGBA"
+        },
+        {
+          "path": "assets/previews/profile-foldout-v2-120.png",
+          "source": "D:\\codex\\入口图标\\output\\protagonist-20261021-v2\\资料-v2-120.png",
+          "sha256": "17a0bace4fae12cf4e3845a061127054828e14f235834647bb9afae5d8f7cd3d",
+          "size": 120,
+          "mode": "RGBA"
+        }
+      ],
+      "bbox": [
+        107,
+        182,
+        917,
+        841
+      ]
+    },
+    {
+      "id": "R22",
+      "name": "花展",
+      "version": "v2",
+      "purpose": "粉紫花艺与展陈支撑、花与容器层次",
+      "limits": "按展示花艺成果理解；具体玩法未验证，不把花种与几架固定为通用形式",
+      "files": [
+        {
+          "path": "assets/flower-exhibition-v2.png",
+          "source": "D:\\codex\\入口图标\\output\\protagonist-20261021-v2\\花展-v2-1024.png",
+          "sha256": "92636451aaa9c56631a0f6514612d4f103bdb09e8133f84dd76dc2a051c1cf33",
+          "size": 1024,
+          "mode": "RGBA"
+        },
+        {
+          "path": "assets/previews/flower-exhibition-v2-120.png",
+          "source": "D:\\codex\\入口图标\\output\\protagonist-20261021-v2\\花展-v2-120.png",
+          "sha256": "c555adb632d4e436a3ee8907fbcb0878f9bd9997a7cce7b96bbdf99a31a28692",
+          "size": 120,
+          "mode": "RGBA"
+        }
+      ],
+      "bbox": [
+        112,
+        143,
+        912,
+        881
+      ]
+    },
+    {
+      "id": "R23",
+      "name": "等级",
+      "version": "v3",
+      "purpose": "暖象牙白与浅香槟金层次、花形徽章与双晋阶纹",
+      "limits": "不沿用未接受的紫色v2；不将暖白金推广为所有等级图标默认配色",
+      "files": [
+        {
+          "path": "assets/level-emblem-v3.png",
+          "source": "D:\\codex\\入口图标\\output\\protagonist-level-v3-20261021\\等级-v3-1024.png",
+          "sha256": "84a5c9336ca6fbad5a0306036f28f37864d6bf11147e62158b8a5a8a77347b50",
+          "size": 1024,
+          "mode": "RGBA"
+        },
+        {
+          "path": "assets/previews/level-emblem-v3-120.png",
+          "source": "D:\\codex\\入口图标\\output\\protagonist-level-v3-20261021\\等级-v3-120.png",
+          "sha256": "b966c035edfe7b965ad41d553a4ce0763a3e4a7f8c1dce9a896b9d8e145c684b",
+          "size": 120,
+          "mode": "RGBA"
+        }
+      ],
+      "bbox": [
+        122,
+        144,
+        902,
+        879
+      ]
+    }
+  ],
+  "unverified": [
+    "来源像素色度及转换链",
+    "实际UI适配",
+    "引擎、图集压缩与真机"
+  ]
+}
