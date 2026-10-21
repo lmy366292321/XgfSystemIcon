@@ -37,7 +37,7 @@ python -B scripts/check_batch.py /task/manifest.json --output-dir /task/final-ch
 
 ## 计划格式
 
-顶层：`schema_version:2`、`mode:create|revise|review`、`batch_id`、`batch_palette_reason`、`references`、`items`。references复制本次清单10张的id/file/purpose/limits，文件描述转为绝对路径。items顺序与清单expected_ids一致；每项还必须包含[设计选择](design-language.md)的design_language，使用其draft/prepare命令生成并检查。下面只展示原配色部分，不是可直接封存的完整计划：
+顶层：`schema_version:1`、`mode:create|revise|review`、`batch_id`、`batch_palette_reason`、`references`、`items`。references复制本次清单10张的id/file/purpose/limits，文件描述转为绝对路径。items顺序与清单expected_ids一致；每项：
 
 ```json
 {
@@ -69,7 +69,7 @@ python -B scripts/check_batch.py /task/manifest.json --output-dir /task/final-ch
 
 ## 视觉证据格式
 
-每枚 `visual_review`沿用batch-review.md格式，必须含八项：semantics、weight、structure、materials、lighting_outline、edges、keep、palette。每项status、observation、location非空；semantics、structure、materials、palette内同时完成[设计选择子项](design-language.md)的design_checks。`bound`从当次check_batch输出的binding_for_review取得；初检报告的delivery未验证是正常的。检查工具永不自动填写pass。
+每枚 `visual_review`沿用batch-review.md格式，必须含八项：semantics、weight、structure、materials、lighting_outline、edges、keep、palette。每项status、observation、location非空。`bound`从当次check_batch输出的binding_for_review取得；初检报告的delivery未验证是正常的。检查工具永不自动填写pass。
 
 第二遍 `visual_recheck`结构相同，另写`method:independent|same_reviewer_second_pass`。independent必须有不同reviewer；正文是另外的文件。所有reviewed_at为实际观察结束的带时区时间，不早于上一阶段；不要复制旧日期。首遍失败不能被第二遍通过直接抵消，须处理后重新执行首遍及第二遍。
 

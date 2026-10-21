@@ -6,28 +6,28 @@
   ],
   "skill": {
     "path": "../SKILL.md",
-    "sha256": "eea438f594d7a10db37684d6b90cb48b38e95fc468d8ff91bbf2679319a1dad4"
+    "sha256": "40649e8ff38e0522325532dfb7bab9f771380836698c3dd0805f3013845db25c"
   },
   "rules": [
     {
       "id": "design-standard",
       "file": {
         "path": "../references/design-standard.md",
-        "sha256": "a33ab36ebb6c893fd67ff35ff43be9cb88a384f213378f52daf7cec90a488d08"
+        "sha256": "25b431d92efbe6fda4de0c845d13ad1885b80239e7ac9c934690c6f6c377ee9e"
       }
     },
     {
       "id": "reference-library",
       "file": {
         "path": "../references/reference-library.md",
-        "sha256": "ad2631b30976490421c4545be4dd82da77fb31bd17b679eab4613bcb6a520b69"
+        "sha256": "489fcde57860a2d95393d213ffe688a9206fdf1d022a06b84cf56fc165fc3619"
       }
     },
     {
       "id": "visual-control",
       "file": {
         "path": "../references/visual-control.md",
-        "sha256": "b0e2067e2fe760fd57def527f233f7f65e57f8fa614e99e5d3232d306be65133"
+        "sha256": "52de237a3637c2fc3bf15f245620d3ab9a95e28eade2804119308ec62956ed73"
       }
     },
     {
@@ -41,7 +41,7 @@
       "id": "delivery-review",
       "file": {
         "path": "../references/delivery-review.md",
-        "sha256": "428387f8eeeb2a5537c9f9dcc927e32853bc91f269f9f50429990e39eb683c10"
+        "sha256": "8233e4b26859a5b16d6c6e31545cd8feb74853fe53cb8bf175eae5e53ddcd078"
       }
     },
     {
@@ -62,7 +62,7 @@
       "id": "palette-workflow",
       "file": {
         "path": "../references/palette-workflow.md",
-        "sha256": "5dd47600d6dc475feac4ef6c769ecc04356a7e75530dcbc6b135718d87818e26"
+        "sha256": "ada9ebd2c0a3cefed5ed7b211dbcddae7ba337b456c375e12d3a8ed2ccbf57a9"
       }
     },
     {
@@ -70,13 +70,6 @@
       "file": {
         "path": "../references/color-space-export.md",
         "sha256": "d4145f427bc4357fe4e7c8f1d3e6ad26ed52f39fbd228e1f950287c0c37f896e"
-      }
-    },
-    {
-      "id": "design-language",
-      "file": {
-        "path": "../references/design-language.md",
-        "sha256": "08eee9ad4a7d68f71e5a337576f067965bb49844e12d1f2ca54a77ec4213cf41"
       }
     }
   ],
@@ -188,7 +181,7 @@
       },
       "control_card": {
         "path": "../references/visual-control.md",
-        "sha256": "b0e2067e2fe760fd57def527f233f7f65e57f8fa614e99e5d3232d306be65133"
+        "sha256": "52de237a3637c2fc3bf15f245620d3ab9a95e28eade2804119308ec62956ed73"
       },
       "master": {
         "path": "../assets/best-friends-v2.png",

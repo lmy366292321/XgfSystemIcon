@@ -28,7 +28,7 @@
 | R15 [lifetime-card-v5](../assets/lifetime-card-v5.png) | 终身卡（v5） | 薄卡／永久权益 | 与VIP共用卡型、∞与冠形区分 | 红金浓度及云纹不推广到全组；永久权益细则依赖名称 |
 | R16 [flower-contract-v5](../assets/flower-contract-v5.png) | 鲜花合约（v5） | 纸契／平面朱印 | 单纸、束带、条目与朱印的契约语义 | 不固定花种，不增加后纸折角、蜡封或无关书写工具 |
 | R17 [jade-fund-v5](../assets/jade-fund-v5.png) | 金玉基金（v5） | 金玉／硬容器 | 暖容器与青绿玉分离、货币钩口短绳身份 | 基金条件依赖名称；不得泛化为卡册或改成金币元宝 |
-| R18 [cultivation-fund-v5](../assets/cultivation-fund-v5.png) | 培育基金（v5） | 透明壶／种袋／花瓣托盘 | 三种培育道具分组、柔和紫蓝与材质差异 | 保留工具身份；不把本图降低饱和度推广为所有材质必须更灰 |
+| R18 [cultivation-fund-v5](../assets/cultivation-fund-v5.png) | 培育基金（v5） | 透明壶／种袋／粉盘 | 三种培育道具分组、柔和紫蓝与材质差异 | 保留工具身份；不把本图降低饱和度推广为所有材质必须更灰 |
 | R19 [recharge-v5](../assets/recharge-v5.png) | 充值（v5） | 钱袋／金玉 | 软袋与玉前后关系、与基金硬容器区分 | 购买动作依赖名称；金玉钩口、金饰和蓝紫短绳属于物品身份 |
 | R20 [cumulative-rewards-v5](../assets/cumulative-rewards-v5.png) | 累充奖励（v5） | 开箱／衣花饰牌 | 暖玫瑰箱、浅衣花、深内衬与展开多奖励轮廓 | 用户接受当前版本；120px衣装与礼盒丝带混读风险保留，不作为无名称三类奖励必然可辨模板 |
 
