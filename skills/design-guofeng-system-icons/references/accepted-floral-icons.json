@@ -1,0 +1,195 @@
+{
+  "schema_version": 1,
+  "case": "F-20261021-005",
+  "date": "2026-10-21",
+  "user_request": "最新的图标通过并加入到图库",
+  "decision": "鲜花v2、花瓶v3、培育v3用户验收通过，按已交付字节加入正式限定用途图库；技术缺口继续保留",
+  "not_a_global_rule_change": true,
+  "items": [
+    {
+      "id": "R28",
+      "batch_id": "01",
+      "name": "鲜花",
+      "version": "v2",
+      "category": "盛放花簇／植物组合",
+      "master": {
+        "path": "assets/flowers-v2.png",
+        "sha256": "2756f058341a281317a704ccd81ccf1b8244a21c3477ecde9d3b0c2e7e963ea2",
+        "source_filename": "01-鲜花-v2沿用-1024.png",
+        "library_file_id": "libfile_07fe561b1bb08191b414b0b686e4fcd4"
+      },
+      "preview": {
+        "path": "assets/previews/flowers-v2-120.png",
+        "sha256": "599cbe314a31735345c15d4eeed849083a5d8343335a120964da690cd32d9ee2",
+        "source_filename": "01-鲜花-v2沿用-120.png",
+        "library_file_id": "libfile_73ca614e92d481918358c136ba10c0d7"
+      },
+      "user_acceptance": "pass",
+      "accepted_on": "2026-10-21",
+      "library_status": "正式限定用途参考",
+      "purpose": "开放花簇、花叶遮挡、短束茎收拢与柔和植物色块",
+      "limits": "不固定花种、花叶数量、桃粉奶白或正面构图；具体选择/库存规则依赖入口名称",
+      "hard_specs": "pass",
+      "margins_ltrb": [
+        115,
+        147,
+        113,
+        144
+      ],
+      "preview_derivation": "Pillow 12.3.0; complete 1024 RGBA canvas; LANCZOS; pixel-exact",
+      "visual_review": "pass",
+      "independent_recheck": "pass",
+      "color_metadata": "unverified",
+      "source_color_space": "unverified",
+      "engineering": "unverified"
+    },
+    {
+      "id": "R29",
+      "batch_id": "02",
+      "name": "花瓶",
+      "version": "v3",
+      "category": "空瓶／青白瓷",
+      "master": {
+        "path": "assets/vase-v3.png",
+        "sha256": "ab6a985f4c3dc51a61fcc58b3c302fa2081c541e70335435eee9a243a3b7a359",
+        "source_filename": "02-花瓶-v3-1024.png",
+        "library_file_id": "libfile_c2764d1a41248191b069f00d3dc3e0b1"
+      },
+      "preview": {
+        "path": "assets/previews/vase-v3-120.png",
+        "sha256": "a34e080c98611d13adbeb4d7323b85ee8ac9a79611dd89270a65fed824a12dee",
+        "source_filename": "02-花瓶-v3-120.png",
+        "library_file_id": "libfile_7e095eb147ac819191e544841c505531"
+      },
+      "user_acceptance": "pass",
+      "accepted_on": "2026-10-21",
+      "library_status": "正式限定用途参考",
+      "purpose": "空口收颈圆腹结构、连续瓷釉曲面、纹饰与瓶体主次",
+      "limits": "青白瓷与花叶纹仅为本图方案，不作为所有器物默认配色或图案；保持空瓶身份",
+      "hard_specs": "pass",
+      "margins_ltrb": [
+        218,
+        108,
+        217,
+        105
+      ],
+      "preview_derivation": "Pillow 12.3.0; complete 1024 RGBA canvas; LANCZOS; pixel-exact",
+      "visual_review": "pass",
+      "independent_recheck": "pass",
+      "color_metadata": "unverified",
+      "source_color_space": "unverified",
+      "engineering": "unverified"
+    },
+    {
+      "id": "R30",
+      "batch_id": "03",
+      "name": "培育",
+      "version": "v3",
+      "category": "幼苗／盆土／浇灌组合",
+      "master": {
+        "path": "assets/cultivation-v3.png",
+        "sha256": "3d441b0f997a8c322cf3ba7e647b986a55b353d5edb460217ee2b6a1000e6b39",
+        "source_filename": "03-培育-v3-1024.png",
+        "library_file_id": "libfile_9a499d5edff88191b467f5aa320512ba"
+      },
+      "preview": {
+        "path": "assets/previews/cultivation-v3-120.png",
+        "sha256": "e844efc8d99490b2832dbf466e70cb7315dfa9fcb5d605f3496f1271145a3efc",
+        "source_filename": "03-培育-v3-120.png",
+        "library_file_id": "libfile_db1766f6c67481918a0c63dac0ae67cc"
+      },
+      "user_acceptance": "pass",
+      "accepted_on": "2026-10-21",
+      "library_status": "正式限定用途参考",
+      "purpose": "入土茎与闭合花苞、倾壶水滴动作、植物和辅助容器主辅层级",
+      "limits": "不固定柔桃盆/淡青壶配色、双叶或三滴水数量；不把所有养护任务统一为本构图",
+      "hard_specs": "pass",
+      "margins_ltrb": [
+        108,
+        125,
+        107,
+        125
+      ],
+      "preview_derivation": "Pillow 12.3.0; complete 1024 RGBA canvas; LANCZOS; pixel-exact",
+      "visual_review": "pass",
+      "independent_recheck": "pass",
+      "color_metadata": "unverified",
+      "source_color_space": "unverified",
+      "engineering": "unverified"
+    }
+  ],
+  "qa": [
+    {
+      "path": "assets/qa/floral-system-v3/qa-light.png",
+      "sha256": "62b8bfd3f4f72f5bd0f17098c378bb9f6a7cb5d923136c67c13cd94ce8321d8a",
+      "background": "#F4EDE1",
+      "tile_canvas": [
+        120,
+        120
+      ],
+      "library_file_id": null
+    },
+    {
+      "path": "assets/qa/floral-system-v3/qa-dark.png",
+      "sha256": "298f2d3015ccaf1dccbe9a596500a5bae59e1c03c142941d521a113ab99ea0ce",
+      "background": "#293139",
+      "tile_canvas": [
+        120,
+        120
+      ],
+      "library_file_id": null
+    }
+  ],
+  "historical_reference_ids": [
+    "R01",
+    "R02",
+    "R03",
+    "R04",
+    "R07",
+    "R08",
+    "R09",
+    "R12",
+    "R16",
+    "R18"
+  ],
+  "historical_review": {
+    "batch_id": "floral-system-v3-current-rules-readonly-20261021",
+    "skill_sha256": "1ed335a1c5061adbf9cd638496d5d8723130fb5f37c7c33777ab2c5248ba8b15",
+    "delivery": {
+      "status": "unverified",
+      "reason": "Only pass permits resource delivery acceptance; user/UI/engine remain separate.",
+      "issues": [
+        "Technical checks incomplete/failed; see per-item machine results"
+      ],
+      "checks": {
+        "technical": "unverified",
+        "workflow": "pass",
+        "visual": "pass",
+        "recheck": "pass"
+      },
+      "automated_visual_judgment": false
+    },
+    "exit_code": 1,
+    "note": "审核为当时冻结规则下只读复查；用户接受不把历史技术未验证改写为通过，也不证明旧制作前已有新版流程"
+  },
+  "evidence": {
+    "historical_final_report": {
+      "filename": "batch-report.json",
+      "sha256": "b5aa710109892ca2575ef7a6d7dd46c169137f664b07caf9d5604ab1e6b80dc5"
+    },
+    "primary_review": {
+      "filename": "primary.md",
+      "sha256": "1f859bc382c023670b1c8dbcfcb48a1b46023f26d0256ea2253868e129c8f736"
+    },
+    "independent_review": {
+      "filename": "independent.json",
+      "sha256": "24f2ef13e075a5e908d3c589b3110e2494101486c8524f218d490c20014bebaa"
+    },
+    "control_card": {
+      "filename": "control-card.md",
+      "sha256": "f0007417450848cb104f9f6fb964a8bf4b51374493702592fd91f608368fd029"
+    }
+  },
+  "image_generation_calls_this_admission": 0,
+  "scope_exclusion": "实际UI、相邻入口、红点遮挡按当前技能不纳入审核，不计缺项；历史报告原文保留"
+}
