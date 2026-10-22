@@ -1,0 +1,700 @@
+{
+  "schema_version": 2,
+  "case_id": "F-20261021-BOTTOM-TAB-001",
+  "recorded_on": "2026-10-21",
+  "scope": "this bottom-tab layout and final local PNG exports only; not a global parameter default",
+  "coordinate_system": {
+    "origin": "top-left of 120px component reference frame, before icon offset",
+    "x": "right",
+    "y": "down",
+    "units": "CSS px at 1x"
+  },
+  "placement_source": {
+    "path": "external-evidence/output/bottom-tab-preview-20261021-v1/placement.json",
+    "sha256": "d3bddc8a02977e77c376e53c12ed02e9b9b7f53119fe276feed8f81ca71d2a0e"
+  },
+  "fixed_placement": {
+    "icon_layer": {
+      "width": 120,
+      "height": 120,
+      "offset": [
+        0,
+        0
+      ],
+      "scale": 1
+    },
+    "circle": {
+      "width": 113,
+      "height": 113,
+      "offset": [
+        3.5,
+        7
+      ]
+    },
+    "nameplate": {
+      "width": 131,
+      "height": 40,
+      "offset": [
+        -5.5,
+        90
+      ]
+    },
+    "z_order": [
+      "circle",
+      "icon",
+      "nameplate",
+      "text"
+    ],
+    "clipping": false,
+    "all_three_share_transform": true,
+    "text": {
+      "font": "SimSun",
+      "size": 24,
+      "status": "preview typography; production font not provided"
+    },
+    "background": {
+      "color": "#877b77",
+      "status": "approximate bottom-bar color; not original screenshot"
+    },
+    "offset_owner": "PNG pixel placement, do not apply old UI y=-6 again"
+  },
+  "offset_owner": "PNG internal content positioning; UI extra offset [0,0]",
+  "bounds": {
+    "layer_rectangle_union": {
+      "x": -5.5,
+      "y": 0,
+      "width": 131,
+      "height": 130
+    },
+    "alpha_union": "not remeasured in this skill update"
+  },
+  "component_resources": [
+    {
+      "key": "circle",
+      "source": "external-resources/common_tab_function_2_1.png",
+      "snapshot": "external-evidence/output/bottom-tab-preview-20261021-v1/inputs/circle.png",
+      "sha256": "e8abf5c565ed71cc0282cedcf4d40140af42324d177277708a11c10fc2d5f70b"
+    },
+    {
+      "key": "plate",
+      "source": "external-resources/common_tab_function_name_1.png",
+      "snapshot": "external-evidence/output/bottom-tab-preview-20261021-v1/inputs/plate.png",
+      "sha256": "4e441a92953684d3fba91680639295a657a51709d1ed505f1ac757c991bc8444"
+    }
+  ],
+  "selected": [
+    {
+      "id": "friends",
+      "name": "好友",
+      "version": "friends-v4",
+      "decision": "unchanged per user",
+      "master": {
+        "path": "../assets/friends-v4.png",
+        "sha256": "70d4908becf505fd7304c8176c15a6bcced93177d4551a67d5877ea10238bc9f"
+      },
+      "preview": {
+        "path": "../assets/previews/friends-v4-120.png",
+        "sha256": "36106c0cd746a0c3f866372aad369cd946c4f281cf10b122c7f265a3ce510984"
+      },
+      "master_skill_relative": "assets/friends-v4.png",
+      "preview_skill_relative": "assets/previews/friends-v4-120.png"
+    },
+    {
+      "id": "close",
+      "name": "密友",
+      "version": "close-attempt1",
+      "decision": "user selected actual appearance; no further image work",
+      "raw": {
+        "path": "external-evidence/output/bottom-tab-adjustment-20261021-v2/raw/close-attempt1.png",
+        "sha256": "cc93e7a9a7c1bfa807c44cc4c92a63e2a377b219c98da59293f68d23a09798d0"
+      },
+      "master": {
+        "path": "external-evidence/output/bottom-tab-adjustment-20261021-v2/candidates/close-attempt1/master-1024.png",
+        "sha256": "605d4e1d368a9363c9fa640527b6776c2a704503ca85a79b9d26538cee4d79d7"
+      },
+      "preview": {
+        "path": "external-evidence/output/bottom-tab-adjustment-20261021-v2/candidates/close-attempt1/preview-120.png",
+        "sha256": "987e2be3a06c391e8d8a718afd78e3fee90362599898a93be188682a492df480"
+      },
+      "generation_receipt": {
+        "path": "external-evidence/output/bottom-tab-adjustment-20261021-v2/receipts/close-attempt1.json",
+        "sha256": "23607824ee0141ad585315135b0fc44f65e0c3014fe569b3baa1adda853fe6fb"
+      }
+    },
+    {
+      "id": "recommendation",
+      "name": "好友推荐",
+      "version": "recommendation-attempt1",
+      "decision": "user selected actual appearance; no further image work",
+      "raw": {
+        "path": "external-evidence/output/bottom-tab-adjustment-20261021-v2/raw/recommendation-attempt1.png",
+        "sha256": "340128ed9e4aeee8dc43e2ea6c44d4f5b65fe37cdca438bab3ddf72bb84ed16d"
+      },
+      "master": {
+        "path": "external-evidence/output/bottom-tab-adjustment-20261021-v2/candidates/recommendation-attempt1/master-1024.png",
+        "sha256": "f4a5b799a6051d29b76e50ff89f0b2a63a7504493094c3b2e3616178066d9904"
+      },
+      "preview": {
+        "path": "external-evidence/output/bottom-tab-adjustment-20261021-v2/candidates/recommendation-attempt1/preview-120.png",
+        "sha256": "3b70bb9b4e5d9631fa79d6936ebcf67ad7029ff0659aa523e669c4c22f753f79"
+      },
+      "generation_receipt": {
+        "path": "external-evidence/output/bottom-tab-adjustment-20261021-v2/receipts/recommendation-attempt1.json",
+        "sha256": "8e900f253eb0430baf433e2fd553ba5c2033e4aa29cd08af3c3c2f8e17e20088"
+      }
+    }
+  ],
+  "selection_evidence": {
+    "close_quote": "密友先保留这版",
+    "recommendation_quote": "我觉得这一个版就可以，不需要继续处理了",
+    "screenshot": {
+      "path": "external-evidence/selection/user-selected-recommendation.png",
+      "sha256": "7ea230017b413334b3f7c114aa95e8e33c3067e8db21da1142bd65152bf290fc"
+    },
+    "mapping": "selected second thumbnail of four; visually matched to raw/recommendation-attempt1.png and generation receipt in this documentation update"
+  },
+  "historical_comparison": {
+    "binding": {
+      "path": "external-evidence/output/bottom-tab-adjustment-20261021-v2/comparison-bindings.json",
+      "sha256": "7a0b44aeabadf75be96117578d234e9b12589e24d0a56465906fb490c2d9bfcc"
+    },
+    "html": {
+      "path": "external-evidence/output/bottom-tab-adjustment-20261021-v2/bottom-tab-before-after.html",
+      "sha256": "01bf603f769234eb889596e70359d57959d1bbf499cd6c6daeadd75563f4b6c9"
+    },
+    "recommendation_version": "recommendation-attempt2",
+    "valid_for_final_recommendation": false,
+    "record_preserved": true
+  },
+  "superseded_numeric_request": {
+    "star_width_height_scale": 0.9,
+    "translation_in_120px_units": {
+      "x": 2,
+      "y": -8
+    },
+    "status": "earlier requested target, not a verified measurement of selected version"
+  },
+  "not_selected": [
+    "recommendation-attempt2",
+    "recommendation-attempt3",
+    "bottom-tab-star-precision-20261021-v3"
+  ],
+  "acceptance": {
+    "user_selection": "original artwork choice retained; current_delivery records the final padding export files requested by the user",
+    "final_selected_composition": "120px source+UI(-6) equals exported PNG+UI(0) for all 3 icons and 3 backgrounds per preserved report; this turn rechecks file identities and translations only",
+    "full_resource_delivery": "not newly granted",
+    "non_target_pixel_identity": "not proven by generative edit",
+    "engine_and_device": "unverified",
+    "gallery": "R24-R27 unchanged; no candidate images copied into gallery"
+  },
+  "this_update": "local skill documentation and final export bindings only; no image/ZIP/report modification; no GitHub synchronization",
+  "historical_pre_bake": {
+    "fixed_placement": {
+      "icon_layer": {
+        "width": 120,
+        "height": 120,
+        "offset": [
+          0,
+          -6
+        ],
+        "scale": 1
+      },
+      "circle": {
+        "width": 113,
+        "height": 113,
+        "offset": [
+          3.5,
+          7
+        ]
+      },
+      "nameplate": {
+        "width": 131,
+        "height": 40,
+        "offset": [
+          -5.5,
+          90
+        ]
+      },
+      "z_order": [
+        "circle",
+        "icon",
+        "nameplate",
+        "text"
+      ],
+      "clipping": false,
+      "all_three_share_transform": true,
+      "text": {
+        "font": "SimSun",
+        "size": 24,
+        "status": "preview typography; production font not provided"
+      },
+      "background": {
+        "color": "#877b77",
+        "status": "approximate bottom-bar color; not original screenshot"
+      }
+    },
+    "offset_owner": "UI/preview layout; not baked into PNG canvas",
+    "bounds": {
+      "legacy_nominal_assembly_bounds": {
+        "x": -5.5,
+        "y": 0,
+        "width": 131,
+        "height": 130
+      },
+      "layer_rectangle_union": {
+        "x": -5.5,
+        "y": -6,
+        "width": 131,
+        "height": 136
+      },
+      "alpha_union": "not remeasured"
+    },
+    "acceptance": {
+      "user_selection": "original artwork choice retained; current_delivery records the final padding export files requested by the user",
+      "final_selected_composition": "120px source+UI(-6) equals exported PNG+UI(0) for all 3 icons and 3 backgrounds per preserved report; this turn rechecks file identities and translations only",
+      "full_resource_delivery": "not newly granted",
+      "non_target_pixel_identity": "not proven by generative edit",
+      "engine_and_device": "unverified",
+      "gallery": "R24-R27 unchanged; no candidate images copied into gallery"
+    },
+    "this_update": "documentation and skill synchronization only; all icon resources preserved byte-for-byte",
+    "selection_snapshot": {
+      "path": "external-evidence/validation/png-padding-skill-sync-20261021/backup/work/references/bottom-tab-20261021.json",
+      "sha256": "f703e68699278d46f8b902483eb3d44a5eb485ebebd421aaf75875566d8a2217"
+    }
+  },
+  "selected_role": "artwork sources before padding export; current usage files are in current_delivery.exports",
+  "current_delivery": {
+    "version": "bottom-tab-padding-baked-20261021-v1",
+    "root": "external-evidence/output/bottom-tab-padding-baked-20261021-v1",
+    "primary_size": [
+      120,
+      120
+    ],
+    "exports": [
+      {
+        "id": "friends",
+        "name": "好友",
+        "artwork_version": "friends-v4",
+        "master": {
+          "path": "external-evidence/output/bottom-tab-padding-baked-20261021-v1/1024/friends-padding-1024.png",
+          "sha256": "0ce079e3d9c8b640315f4983b1d1b6fb08c03c321a7243b28613c6af9f5dc656",
+          "source": {
+            "path": "../assets/friends-v4.png",
+            "sha256": "70d4908becf505fd7304c8176c15a6bcced93177d4551a67d5877ea10238bc9f"
+          },
+          "size": [
+            1024,
+            1024
+          ],
+          "translation": [
+            0,
+            -51
+          ],
+          "source_alpha_bbox": [
+            112,
+            133,
+            912,
+            891
+          ],
+          "output_alpha_bbox": [
+            112,
+            82,
+            912,
+            840
+          ],
+          "retained_rgba_samples_exact": true,
+          "resampled": false,
+          "clipped_alpha_nonzero_count": 0,
+          "clipped_alpha_max": 0,
+          "clipped_alpha_sum": 0,
+          "color_declaration": "preserved source metadata only; no new sRGB claim"
+        },
+        "preview": {
+          "path": "external-evidence/output/bottom-tab-padding-baked-20261021-v1/120/friends-padding-120.png",
+          "sha256": "80453fa503ae09bda2512478c0d9467275d59c0beffe9047f4fd36abbfb14238",
+          "source": {
+            "path": "../assets/previews/friends-v4-120.png",
+            "sha256": "36106c0cd746a0c3f866372aad369cd946c4f281cf10b122c7f265a3ce510984"
+          },
+          "size": [
+            120,
+            120
+          ],
+          "translation": [
+            0,
+            -6
+          ],
+          "source_alpha_bbox": [
+            11,
+            13,
+            109,
+            107
+          ],
+          "output_alpha_bbox": [
+            11,
+            7,
+            109,
+            101
+          ],
+          "retained_rgba_samples_exact": true,
+          "resampled": false,
+          "clipped_alpha_nonzero_count": 0,
+          "clipped_alpha_max": 0,
+          "clipped_alpha_sum": 0,
+          "color_declaration": "preserved source metadata only; no new sRGB claim"
+        }
+      },
+      {
+        "id": "close",
+        "name": "密友",
+        "artwork_version": "close-attempt1",
+        "master": {
+          "path": "external-evidence/output/bottom-tab-padding-baked-20261021-v1/1024/close-padding-1024.png",
+          "sha256": "d5c993e2e0aee61fa329403e3ce689815728a6d5178564af86cf67daa4b99aee",
+          "source": {
+            "path": "external-evidence/output/bottom-tab-adjustment-20261021-v2/candidates/close-attempt1/master-1024.png",
+            "sha256": "605d4e1d368a9363c9fa640527b6776c2a704503ca85a79b9d26538cee4d79d7"
+          },
+          "size": [
+            1024,
+            1024
+          ],
+          "translation": [
+            0,
+            -51
+          ],
+          "source_alpha_bbox": [
+            0,
+            42,
+            934,
+            1024
+          ],
+          "output_alpha_bbox": [
+            0,
+            7,
+            934,
+            973
+          ],
+          "retained_rgba_samples_exact": true,
+          "resampled": false,
+          "clipped_alpha_nonzero_count": 1,
+          "clipped_alpha_max": 1,
+          "clipped_alpha_sum": 1,
+          "color_declaration": "preserved source metadata only; no new sRGB claim"
+        },
+        "preview": {
+          "path": "external-evidence/output/bottom-tab-padding-baked-20261021-v1/120/close-padding-120.png",
+          "sha256": "72a0ba23bbfc17fdc5b1b2caa1a00e849fa627e87f2c8d2ea8bb0a29ecb3acf7",
+          "source": {
+            "path": "external-evidence/output/bottom-tab-adjustment-20261021-v2/candidates/close-attempt1/preview-120.png",
+            "sha256": "987e2be3a06c391e8d8a718afd78e3fee90362599898a93be188682a492df480"
+          },
+          "size": [
+            120,
+            120
+          ],
+          "translation": [
+            0,
+            -6
+          ],
+          "source_alpha_bbox": [
+            11,
+            13,
+            109,
+            105
+          ],
+          "output_alpha_bbox": [
+            11,
+            7,
+            109,
+            99
+          ],
+          "retained_rgba_samples_exact": true,
+          "resampled": false,
+          "clipped_alpha_nonzero_count": 0,
+          "clipped_alpha_max": 0,
+          "clipped_alpha_sum": 0,
+          "color_declaration": "preserved source metadata only; no new sRGB claim"
+        }
+      },
+      {
+        "id": "recommendation",
+        "name": "好友推荐",
+        "artwork_version": "recommendation-attempt1",
+        "master": {
+          "path": "external-evidence/output/bottom-tab-padding-baked-20261021-v1/1024/recommendation-padding-1024.png",
+          "sha256": "f0f6506c4352aa37deed3a88e7377e88a8919c8500d33fd53342652a9010b1a7",
+          "source": {
+            "path": "external-evidence/output/bottom-tab-adjustment-20261021-v2/candidates/recommendation-attempt1/master-1024.png",
+            "sha256": "f4a5b799a6051d29b76e50ff89f0b2a63a7504493094c3b2e3616178066d9904"
+          },
+          "size": [
+            1024,
+            1024
+          ],
+          "translation": [
+            0,
+            -51
+          ],
+          "source_alpha_bbox": [
+            0,
+            58,
+            1000,
+            978
+          ],
+          "output_alpha_bbox": [
+            0,
+            7,
+            1000,
+            927
+          ],
+          "retained_rgba_samples_exact": true,
+          "resampled": false,
+          "clipped_alpha_nonzero_count": 0,
+          "clipped_alpha_max": 0,
+          "clipped_alpha_sum": 0,
+          "color_declaration": "preserved source metadata only; no new sRGB claim"
+        },
+        "preview": {
+          "path": "external-evidence/output/bottom-tab-padding-baked-20261021-v1/120/recommendation-padding-120.png",
+          "sha256": "ab92424919536c13b314f13e505646b8170ef7495bc9affbfb89356f02bb21c9",
+          "source": {
+            "path": "external-evidence/output/bottom-tab-adjustment-20261021-v2/candidates/recommendation-attempt1/preview-120.png",
+            "sha256": "3b70bb9b4e5d9631fa79d6936ebcf67ad7029ff0659aa523e669c4c22f753f79"
+          },
+          "size": [
+            120,
+            120
+          ],
+          "translation": [
+            0,
+            -6
+          ],
+          "source_alpha_bbox": [
+            16,
+            11,
+            102,
+            109
+          ],
+          "output_alpha_bbox": [
+            16,
+            5,
+            102,
+            103
+          ],
+          "retained_rgba_samples_exact": true,
+          "resampled": false,
+          "clipped_alpha_nonzero_count": 0,
+          "clipped_alpha_max": 0,
+          "clipped_alpha_sum": 0,
+          "color_declaration": "preserved source metadata only; no new sRGB claim"
+        }
+      }
+    ],
+    "layout": {
+      "path": "external-evidence/output/bottom-tab-padding-baked-20261021-v1/layout.json",
+      "sha256": "b98c292b495bdddf7c64078589764f09dcaeb11690adb1516ce93eaf02238150"
+    },
+    "verification": {
+      "path": "external-evidence/output/bottom-tab-padding-baked-20261021-v1/records/02-export-verification.json",
+      "sha256": "db5644acd3bd3af62c6ad0b4893cb6b7ab5857ad76e65459ec41b6c622c844a4"
+    },
+    "visual_inspection": {
+      "path": "external-evidence/output/bottom-tab-padding-baked-20261021-v1/records/03-inspection.json",
+      "sha256": "3a807d464d11c9a6f71c76bd81ba24091bc79e6882818be4eac93ad1b7863c7f"
+    },
+    "package_verification": {
+      "path": "external-evidence/output/bottom-tab-padding-baked-20261021-v1/records/04-package-verification.json",
+      "sha256": "018897bb52f0d2ccb848aaf51fe0b970beb3882fd16926f2380736b9e9c379d2"
+    },
+    "zip": {
+      "path": "external-evidence/output/bottom-tab-padding-baked-20261021-v1/底栏PNG留白定位稿.zip",
+      "sha256": "7e03811961ef6e1523aa8cb73863f20ee5bc58dc566662e31194a30b6f15e797"
+    },
+    "comparisons": [
+      {
+        "path": "external-evidence/output/bottom-tab-padding-baked-20261021-v1/qa/组合对照-底栏-1x.png",
+        "sha256": "c2fb7c0b69ba3d65c264ca87062ae8c4e6fcc9652f09231c02c6d2092d4a4567"
+      },
+      {
+        "path": "external-evidence/output/bottom-tab-padding-baked-20261021-v1/qa/组合对照-浅底-1x.png",
+        "sha256": "366ff9c25f351bf444baffbcdf32aa55c1b88949b60e98dbe52b55c623967717"
+      },
+      {
+        "path": "external-evidence/output/bottom-tab-padding-baked-20261021-v1/qa/组合对照-深底-1x.png",
+        "sha256": "755b1cc8b1ccef43f52411f0b344d83f3865104d00f05d188b0203d84a8d2846"
+      }
+    ],
+    "120_translation": [
+      0,
+      -6
+    ],
+    "1024_translation": [
+      0,
+      -51
+    ],
+    "master_equivalent_y_at_120": -5.9765625,
+    "rounding_error_at_120_y": 0.0234375,
+    "direct_master_to_120_resize": false,
+    "exact_120_combinations": [
+      {
+        "id": "friends",
+        "background": "#877b77",
+        "different_rgb_pixels": 0
+      },
+      {
+        "id": "close",
+        "background": "#877b77",
+        "different_rgb_pixels": 0
+      },
+      {
+        "id": "recommendation",
+        "background": "#877b77",
+        "different_rgb_pixels": 0
+      },
+      {
+        "id": "friends",
+        "background": "#F4EDE1",
+        "different_rgb_pixels": 0
+      },
+      {
+        "id": "close",
+        "background": "#F4EDE1",
+        "different_rgb_pixels": 0
+      },
+      {
+        "id": "recommendation",
+        "background": "#F4EDE1",
+        "different_rgb_pixels": 0
+      },
+      {
+        "id": "friends",
+        "background": "#293139",
+        "different_rgb_pixels": 0
+      },
+      {
+        "id": "close",
+        "background": "#293139",
+        "different_rgb_pixels": 0
+      },
+      {
+        "id": "recommendation",
+        "background": "#293139",
+        "different_rgb_pixels": 0
+      }
+    ],
+    "selection_basis": "用户要求将此次PNG留白做法和最终文件版本同步到本机技能；普通任务以后同样输出",
+    "scope": "current local usage exports; does not replace gallery artwork or grant full technical/engine acceptance",
+    "geometry_validation": {
+      "scope": "只读v2合同复验；主尺寸目标、明确取整、UI零补偿及逐像素重放；不升级损失/颜色/视觉接受",
+      "schema_version": 2,
+      "primary": "preview",
+      "target_translation": [
+        0,
+        -6
+      ],
+      "rounding_method": "nearest-half-away-from-zero",
+      "secondary_ideal_translation": [
+        0,
+        -51.2
+      ],
+      "secondary_expected_translation": [
+        0,
+        -51
+      ],
+      "rounding_error_at_120": [
+        0,
+        0.0234375
+      ],
+      "rounding_record_scope": "本次合同明确采用的校验规则，与现有位移一致；不倒填历史工具算法",
+      "summary": {
+        "path": "external-evidence/validation/layout-rounding-20261021/existing-final-summary.json",
+        "sha256": "b93127aa7dbd10b63bf408844a25928af89b663f442f93501dfe2116425a6927"
+      },
+      "batch_report": {
+        "path": "external-evidence/validation/layout-rounding-20261021/existing-final-batch-report.json",
+        "sha256": "1daf757f23a71856141e298618a5790cf795bf1abfc427ee3ce83bcbad8fcbe4"
+      },
+      "contracts": [
+        {
+          "path": "external-evidence/validation/layout-rounding-20261021/friends-geometry.json",
+          "sha256": "583f0abfc227c8cd2c55a54408babe9d096c4f42b80e0cfde34e80b8fd9834b8"
+        },
+        {
+          "path": "external-evidence/validation/layout-rounding-20261021/close-geometry.json",
+          "sha256": "fc44c31cf5a415b82ccd08110515c66c5f5f9228c255f1a0d2c686f31eaa8bab"
+        },
+        {
+          "path": "external-evidence/validation/layout-rounding-20261021/recommendation-geometry.json",
+          "sha256": "c3a3185c1aa85bdf2cd7c937c859fefcced651d37311d2156297ddc1d35ad4db"
+        }
+      ],
+      "checks": [
+        {
+          "path": "external-evidence/validation/layout-rounding-20261021/friends-check.json",
+          "sha256": "9da43ce99fcfea70cd006737f92d11a7e8a7023b07c9ee1a0ba55ef30cfd24d3"
+        },
+        {
+          "path": "external-evidence/validation/layout-rounding-20261021/close-check.json",
+          "sha256": "32a3d3bad97ef697311125292a9f060f9d3908bc1bd27a812a8d628ac7885248"
+        },
+        {
+          "path": "external-evidence/validation/layout-rounding-20261021/recommendation-check.json",
+          "sha256": "a868869b7d54bd490a4b95339dcc237d33c7b73b6d6d91f9195054d7e76a7a59"
+        }
+      ],
+      "png_modified": false,
+      "github_synced": false
+    },
+    "previous_geometry_validation": {
+      "scope": "只读重放既有最终版本；默认结果、任务边界、裁出像素、色彩及完整交付分列",
+      "summary": {
+        "path": "external-evidence/validation/geometry-contract-20261021/existing-final-summary.json",
+        "sha256": "ad3ea80340c65516b6643c639264919ff5f3b5eaeaf2c5af35fd876d4c811136"
+      },
+      "batch_report": {
+        "path": "external-evidence/validation/geometry-contract-20261021/existing-final-batch-report.json",
+        "sha256": "85d69e1427758cde68d836d3b937cbc1d2501c512d3fb12b669bb5361ab1f18e"
+      },
+      "contracts": [
+        {
+          "path": "external-evidence/validation/geometry-contract-20261021/friends-geometry.json",
+          "sha256": "55c52edc621b1ec1ae10ec0e6479e8987d4d9d2aec3aeb9535bb0cc3f1fd8b67"
+        },
+        {
+          "path": "external-evidence/validation/geometry-contract-20261021/close-geometry.json",
+          "sha256": "eef674f8b53ae87b192b219053d132adf808ef39e9300357d06eb2ef0621a8b7"
+        },
+        {
+          "path": "external-evidence/validation/geometry-contract-20261021/recommendation-geometry.json",
+          "sha256": "6e8bd24a6bfffc42aff4fd11e1aca96f811889c0459c5d08e1a7b9dd3b678824"
+        }
+      ],
+      "checks": [
+        {
+          "path": "external-evidence/validation/geometry-contract-20261021/friends-check.json",
+          "sha256": "20c780cb052de935310624d7fba273fee74b654c0cebf0b8e1c61c7758e32c4c"
+        },
+        {
+          "path": "external-evidence/validation/geometry-contract-20261021/close-check.json",
+          "sha256": "bc25c1a90c6050644e8f1497abbc4a8f6253a5acd5be410b48ebf9158c7f4bfa"
+        },
+        {
+          "path": "external-evidence/validation/geometry-contract-20261021/recommendation-check.json",
+          "sha256": "438929174663c960bd60cd8df632232955c6d57c5319d756515fb0a828d0375a"
+        }
+      ],
+      "png_modified": false,
+      "github_synced": false
+    }
+  },
+  "placement_source_role": "historical preview before PNG positioning; current layout is current_delivery.layout",
+  "publication": {
+    "local_paths_redacted": true,
+    "path_resolution": "Existing relative repository asset paths retain their original convention. external-evidence/ and external-resources/ are logical names for unpublished files, not existing repository directories.",
+    "external_files_included": false,
+    "verification_limit": "To replay external records, obtain the original files through an authorized channel and map logical names to local paths; verify preserved SHA-256. Redacted case records are not runnable geometry contracts.",
+    "local_original_preserved": true
+  }
+}

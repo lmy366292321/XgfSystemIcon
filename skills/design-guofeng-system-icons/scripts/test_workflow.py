@@ -139,6 +139,24 @@ class WorkflowTests(unittest.TestCase):
         self.assertEqual(report['machine_status'], 'pass')
         self.assertEqual(report['exit_code'], 1)
 
+    def test_complete_route_loses_acceptance_when_layout_removed(self):
+        self.assertEqual(self.complete()['exit_code'], 0)
+        del self.m['items'][0]['layout']
+        report = self.final()
+        self.assertEqual(report['items'][0]['layout']['status'], 'unverified')
+        self.assertNotEqual(report['delivery']['status'], 'pass')
+
+    def test_complete_route_loses_acceptance_when_ui_offset_reintroduced(self):
+        self.assertEqual(self.complete()['exit_code'], 0)
+        layout = common.read_json(self.layout)
+        layout['icon_layer']['offset'] = [0, -6]
+        common.write_json(self.layout, layout)
+        for item in self.m['items']:
+            item['layout'] = self.desc(self.layout)
+        report = self.final()
+        self.assertEqual(report['summary']['layout'], {'fail': 2})
+        self.assertNotEqual(report['delivery']['status'], 'pass')
+
     def test_second_review_missing_never_passes(self):
         self.complete()
         del self.m['items'][1]['visual_recheck']

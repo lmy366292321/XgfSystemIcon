@@ -26,6 +26,8 @@ class BatchTests(unittest.TestCase):
         self.rule.write_text("fixture rules", encoding="utf-8")
         self.control = self.root / "control.md"
         self.control.write_text("fixture card", encoding="utf-8")
+        self.layout = self.root / 'layout.json'
+        common.write_json(self.layout, {'icon_layer': {'width': 120, 'height': 120, 'scale': 1, 'offset': [0, 0]}})
         refs = []
         for n in range(10):
             path = self.inputs / f"ref-{n}.png"
@@ -46,7 +48,7 @@ class BatchTests(unittest.TestCase):
                 "id": f"{n + 1:02}", "name": f"测试{n}", "version": "v1",
                 "requirements": {"action": "open", "subject": "fixture",
                                  "keep": ["shape"], "name_dependency": "label"},
-                "control_card": self.desc(self.control),
+                "control_card": self.desc(self.control), "layout": self.desc(self.layout),
                 "master": self.desc(master), "preview": self.desc(preview),
                 "export": {"library": "Pillow", "version": PILLOW_VERSION, "resample": "lanczos",
                            "complete_canvas": True, "alpha_handling": "Pillow RGBA resize",

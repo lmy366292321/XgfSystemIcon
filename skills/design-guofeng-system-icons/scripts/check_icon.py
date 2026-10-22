@@ -218,7 +218,7 @@ def compare_preview(master, preview, master_result, preview_result, resample):
     return result
 
 
-def check_files(image, preview=None, resample='lanczos', require_srgb=False):
+def check_files(image, preview=None, resample='lanczos', require_srgb=False, geometry=None, layout=None):
     master_result, master = load_and_inspect(image, 1024, 102)
     results = [master_result]
     derivation = {'status': 'not_checked', 'derivation_pass': None,
@@ -231,13 +231,35 @@ def check_files(image, preview=None, resample='lanczos', require_srgb=False):
     color_pass = all(r['color_metadata']['srgb_check_pass'] for r in results)
     overall = hard_pass and (not require_srgb or color_pass) and (
         preview is None or derivation['derivation_pass'] is True)
-    return {'pillow_version': PILLOW_VERSION, 'results': results,
+    report = {'pillow_version': PILLOW_VERSION, 'results': results,
             'hard_spec_pass': hard_pass, 'color_metadata_pass': color_pass,
             'require_srgb': require_srgb, 'derivation_check': derivation,
             'overall_check_pass': overall,
             'scope': 'Only the requested script checks; not visual, engine or release acceptance',
             'preview_margin_note': '102px safe margin applies to the 1024 master only; '
                                    'preview margins are reported, not separately gated'}
+    if geometry is not None:
+        import geometry_contract
+        task = geometry_contract.verify(geometry, image, preview)
+        basic = [load_and_inspect(image, 1024, 0)[0]]
+        if preview is not None:
+            basic.append(load_and_inspect(preview, 120, 0)[0])
+        stable = [r['sha256'] for r in basic] == [r['sha256'] for r in results]
+        task_hard = (len(basic) == 2 and stable and all(r['hard_spec_pass'] for r in basic)
+                     and task.get('bounds_pass') is True)
+        task_derived = task.get('status') == 'pass' and stable
+        report.update(default_hard_spec_pass=hard_pass, default_derivation_check=derivation,
+                      geometry=task, task_file_checks=basic, hard_spec_pass=task_hard,
+                      derivation_check={'status': task['status'] if stable else 'fail',
+                                        'derivation_pass': task_derived, 'route': 'geometry-contract',
+                                        'replay_pass': task.get('replay_pass', False)},
+                      overall_check_pass=task_hard and task_derived and (not require_srgb or color_pass))
+    import geometry_contract
+    layout_check = geometry_contract.verify_layout(layout, geometry=geometry)
+    report['layout_check'] = layout_check
+    report['file_check_pass'] = report['overall_check_pass']
+    report['overall_check_pass'] = report['file_check_pass'] and layout_check['status'] == 'pass'
+    return report
 
 
 def main(argv=None):
@@ -250,8 +272,12 @@ def main(argv=None):
     parser.add_argument('--require-srgb', action='store_true',
                         help='Require a valid, nonconflicting PNG sRGB declaration for each file; '
                              'ICC profiles are not validated')
+    parser.add_argument('--geometry', type=Path,
+                        help='Optional confirmed geometry contract; defaults remain separately reported')
+    parser.add_argument('--layout', type=Path,
+                        help='Bound layout required for ordinary tasks; geometry may supply the same layout')
     args = parser.parse_args(argv)
-    report = check_files(args.image, args.preview, args.resample, args.require_srgb)
+    report = check_files(args.image, args.preview, args.resample, args.require_srgb, args.geometry, args.layout)
     print(json.dumps(report, ensure_ascii=False, indent=2))
     return 0 if report['overall_check_pass'] else 1
 

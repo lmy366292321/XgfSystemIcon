@@ -13,12 +13,12 @@
 
 路径使用绝对路径，或清单支持的相对路径。计划、工作流内全部文件描述使用绝对路径及真实SHA-256。建议将计划/控制卡放 `inputs/`，记录放 `records/`，对照放 `qa/`，审阅正文放 `reviews/`。每次记录输出用新文件名，禁止覆盖输入或旧记录。
 
-1. 准备控制卡、10张正式参考和 `design-plan.json`；制作前执行 `start`。计划只包含已有参考、控制卡和输入图，不要求未来成图已经存在。
-2. 新建/修改图像后，保存真实调用输入、输出及回执，立即按[色彩空间与导出记录](color-space-export.md)采集原始文件，再导出候选并建立批次清单。记录 `generated`。纯复查跳过生成，只读collect/audit并明确是本次补采集，不倒填历史。
-3. 将计划文件描述填入清单 `design_plan`，每项填入实际 `color_record` 文件描述。先运行色彩verify，再记录 `files`，执行真实技术检查；失败/未验证仍可继续诊断，但最终不通过。
-4. 用原有工具创建固定十参考浅深底及关系面板，将索引描述填入 `qa_index`、`relation_index`。多图关系组必须覆盖全部候选。实际查看所有页面，填写每枚首遍八项、整批配色及关系意见，再记录 `visual`。
-5. 单独第二遍查看；填写 `visual_recheck` 与 `palette_recheck`，记录 `recheck`。可独立或同人复查，必须如实注明；误报/连续失败加强检查，不能复制首遍正文冒充第二遍。
-6. 将最后记录的文件描述填入清单 `workflow`，运行 `check_batch.py`。只有 `delivery.status=pass`、退出码0，才称资源交付审核通过。用户接受、工程另列；实际UI、相邻入口、红点遮挡不计缺项。
+1. 按[完整组合区域流程](composition-layout.md)确定布局与资源，将配置路径和SHA-256写入控制卡；准备10张正式参考和 `design-plan.json`；制作前执行 `start`。计划只包含已有参考、控制卡和输入图，不要求未来成图已经存在。
+2. 新建/修改图像后，保存真实调用输入、输出及回执，立即按[色彩空间与导出记录](color-space-export.md)采集原始文件，再按composition-layout.md把组合位置写进PNG留白、将UI额外补偿归零，记录真实变换链并建立批次清单。记录 `generated`。纯复查跳过生成，只读collect/audit并明确是本次补采集，不倒填历史。
+3. 将计划文件描述填入清单 `design_plan`，每项填入实际 `color_record` 文件描述，并绑定控制卡使用的`layout`；例外可由v2 `geometry`提供同一布局。先运行色彩verify，再记录 `files`，执行真实技术检查；失败/未验证仍可继续诊断，但最终不通过。
+4. 用原有工具创建固定十参考浅深底及关系面板，将索引描述填入 `qa_index`、`relation_index`。多图关系组必须覆盖全部候选。实际查看所有页面及交付PNG在UI零额外补偿下的完整组合，将组合证据及配置/资源哈希写入审阅正文，相关结论并入现有八项；填写整批配色及关系意见，再记录 `visual`。
+5. 对图标及组合单独第二遍查看；填写 `visual_recheck` 与 `palette_recheck`，记录 `recheck`。可独立或同人复查，必须如实注明；误报/连续失败加强检查，不能复制首遍正文冒充第二遍。
+6. 将最后记录的文件描述填入清单 `workflow`，运行 `check_batch.py`。只有 `delivery.status=pass`、退出码0，才称资源交付审核通过。组合检查缺口必须反映在相关视觉项，不能靠脚本退出码核销。用户接受、引擎和真机验收另列；脚本核对布局及嵌套资源、UI零补偿，例外另核对边界和变换；真实遮挡与引擎坐标仍需实际验证。
 
 ```text
 python -B scripts/review_workflow.py start /task/inputs/design-plan.json --output /task/records/01-plan.json --actor maker

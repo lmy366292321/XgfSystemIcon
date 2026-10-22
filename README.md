@@ -7,10 +7,10 @@
 技能名：`design-guofeng-system-icons`。
 
 ```text
-使用 $design-guofeng-system-icons，设计“好友拜访”入口图标，沿用现有风格和规格，完成120px验收。
+使用 $design-guofeng-system-icons，设计“好友拜访”入口图标，按完整组件区域设计，沿用现有风格和规格，完成120px图标与组合检查。
 ```
 
-支持新增功能、现有图标精修、规格检查、只读批量评审及跨物件画风一致性复查。默认1024×1024透明PNG、102px安全留白、左上受光和统一描边观感；只做120px小尺寸验收。实际制作能力依赖调用环境是否提供图像生成/编辑工具。
+支持新增功能、现有图标精修、规格检查、只读批量评审及跨物件画风一致性复查。默认1024×1024透明PNG、102px安全留白、左上受光和统一描边观感；以120px图标图层做小尺寸验收，普通任务也按完整组合区域安排留白与遮挡。实际制作能力依赖调用环境是否提供图像生成/编辑工具。
 
 已有图标可明确要求只读评审：
 
@@ -21,6 +21,7 @@
 ## 文件
 
 - [技能入口](skills/design-guofeng-system-icons/SKILL.md)
+- [完整组件区域与留白](skills/design-guofeng-system-icons/references/composition-layout.md)：普通任务的设计与组合审核流程；具体底栏参数及最终选择单列在[案例记录](skills/design-guofeng-system-icons/references/bottom-tab-20261021.md)。
 - [完整设计规范与提示词](skills/design-guofeng-system-icons/references/design-standard.md)
 - [参考图](skills/design-guofeng-system-icons/assets)：38张完整图标、6张原像素局部观察图及1张真实尺寸失败反例，均来自本项目现有资源。
 - [只读规格检查](skills/design-guofeng-system-icons/scripts/check_icon.py)：需要Python 3与Pillow，检查PNG真实位深、安全区、sRGB标识与120px派生关联；只读，不替代视觉验收。
@@ -43,6 +44,8 @@
 
 GitHub存放文件不等于所有设备已经安装。当前Work技能副本与GitHub维护源需显式同步，不是自动双向同步；修改先核对版本，避免覆盖另一端修改。
 
+公开案例中的 `external-evidence/`、`external-resources/` 是脱敏后的外部文件逻辑名称，不是已包含的资源。原文件名、版本和哈希用于追溯；执行检查前须经授权取得文件并建立本机映射。完整本机记录独立保存，后续同步沿用此脱敏边界。
+
 仓库不包含 `runtime.local.json`、本机部署备份、批次报告或本次待验原图。Windows固定入口需要各机器自己的运行配置；缺配置时会明确停止。也可直接用明确选定、已具备Pillow的Python运行通用脚本，不必使用Windows启动器。
 
 ## 运行检查
@@ -56,7 +59,7 @@ python -B skills/design-guofeng-system-icons/scripts/build_relation_sheet.py /ab
 python -B -m unittest discover -s skills/design-guofeng-system-icons/scripts -p "test_*.py" -v
 ```
 
-测试默认在当前目录的 `.test-fixtures` 下建立并清理自身夹具；也可用进程环境变量 `XGF_TEST_ROOT` 指定可写项目目录。批量检查退出码0表示机器必需项通过，1表示检查完成但有失败或未验证，2表示清单或执行错误。状态与原始证据须保留，不能为得到0而重导出或修改输入。
+测试默认在当前目录的 `.test-fixtures` 下建立并清理自身夹具；也可用进程环境变量 `XGF_TEST_ROOT` 指定可写项目目录。批量检查退出码0表示当前资源交付关卡通过（含文件、视觉、配色及复查证据；不自动判断组合遮挡），1表示检查完成但有失败或未验证，2表示清单或执行错误。状态与原始证据须保留，不能为得到0而重导出或修改输入。
 
 ## 验收边界
 

@@ -225,7 +225,7 @@ def audit(capture_path, master, preview, output, *, resample="lanczos"):
     return verify(output)
 
 
-def verify(path):
+def verify(path, geometry=None):
     """Recompute evidence; saved status/reviewer prose never grants color acceptance."""
     try:
         desc = descriptor(path)
@@ -278,13 +278,44 @@ def verify(path):
         states = [src["status"], chain["status"], derived["status"], metadata["status"]]
         if mode == "assume-srgb":
             states.append("unverified")
-        return state(worst(states), "Color-space/export checks recomputed; unknown/assumed origin never becomes verified",
+        result = state(worst(states), "Color-space/export checks recomputed; unknown/assumed origin never becomes verified",
                      record_integrity="pass", source=src, source_space=observation["space"],
                      policy=mode, source_to_master=chain, master_to_preview=derived, output_metadata=metadata,
                      record=desc, source_file=record["source"], master=record["master"], preview=record["preview"],
                      scope=record["scope"])
+        if geometry is not None:
+            result = verify_positioned(result, geometry)
+        return result
     except (OSError, ValueError, TypeError, KeyError, AttributeError, IndexError, ImageCms.PyCMSError) as exc:
         return state("fail", str(exc), record_integrity="fail")
+
+
+def verify_positioned(prior, geometry_path):
+    """Extend a genuine pre-placement color receipt without relabelling its source."""
+    import geometry_contract
+    geometry_path = Path(geometry_path).resolve()
+    data = geometry_path.read_bytes()
+    contract = json.loads(data)
+    base = geometry_path.parent
+    for role in ("master", "preview"):
+        origin = contract["chains"][role]["source"]
+        expected = prior[role]
+        if role == "preview" and contract["mode"] == "master-to-preview":
+            expected = contract["outputs"]["master"]
+            expected_path = (base / expected["path"]).resolve()
+        else:
+            expected_path = Path(expected["path"]).resolve()
+        require((base / origin["path"]).resolve() == expected_path and origin["sha256"] == expected["sha256"],
+                f"Geometry {role} source is not linked to this color receipt")
+    final = {k: (base / contract["outputs"][k]["path"]).resolve() for k in ("master", "preview")}
+    geometry = geometry_contract.verify(geometry_path, final["master"], final["preview"])
+    require(geometry_path.read_bytes() == data, "Geometry changed during color verification")
+    return {**prior, "status": worst([prior["status"], geometry["status"]]),
+            "reason": "Original color receipt plus bound placement replay; original uncertainty retained",
+            "pre_geometry": prior, "geometry": geometry,
+            "master": descriptor(final["master"]), "preview": descriptor(final["preview"]),
+            "master_to_preview": state(geometry["status"], "Placement relationship; see mode, not necessarily direct resize",
+                                       mode=contract["mode"])}
 
 
 def check_item(base, item):
@@ -295,7 +326,11 @@ def check_item(base, item):
     try:
         record_path = (base / desc["path"]).resolve()
         require(descriptor(record_path)["sha256"] == desc["sha256"].lower(), "Color record changed")
-        result = verify(record_path)
+        geometry_path = None
+        if item.get("geometry"):
+            geometry_path = (base / item["geometry"]["path"]).resolve()
+            require(descriptor(geometry_path)["sha256"] == item["geometry"]["sha256"].lower(), "Geometry record changed")
+        result = verify(record_path, geometry=geometry_path)
         if result.get("record_integrity") == "pass":
             for key in ("master", "preview"):
                 current = descriptor((base / item[key]["path"]).resolve())
@@ -334,6 +369,7 @@ def main(argv=None):
     p = sub.add_parser("verify")
     p.add_argument("record", type=Path)
     p.add_argument("--output", type=Path)
+    p.add_argument("--geometry", type=Path, help="Read-only placement replay after the bound pre-placement color receipt")
     args = parser.parse_args(argv)
     try:
         if args.command == "collect":
@@ -349,7 +385,7 @@ def main(argv=None):
             result = audit(args.capture, args.master, args.preview, args.output, resample=args.resample)
             code = 0 if result["status"] == "pass" else 1
         else:
-            result = verify(args.record)
+            result = verify(args.record, geometry=args.geometry)
             if args.output:
                 save_new(args.output, result)
             code = 0 if result["status"] == "pass" else 1

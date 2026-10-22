@@ -30,6 +30,11 @@ class IconChecks(unittest.TestCase):
         self.master.paste((80, 160, 200, 255), (112, 140, 900, 880))
         self.master.paste((230, 90, 60, 128), (310, 230, 740, 700))
         self.master_path = self.save(self.master, 'master.png')
+        self.layout = self.root / 'layout.json'
+        self.layout.write_text(json.dumps({'icon_layer': {'width': 120, 'height': 120, 'scale': 1, 'offset': [0, 0]}}))
+
+    def check(self, *args, **kwargs):
+        return checker.check_files(*args, layout=self.layout, **kwargs)
 
     def save(self, image, name, chunks=()):
         path = self.root / name
@@ -46,7 +51,7 @@ class IconChecks(unittest.TestCase):
 
     def color_report(self, chunks, strict=True):
         path = self.save(self.master, 'color.png', chunks)
-        return checker.check_files(path, require_srgb=strict)
+        return self.check(path, require_srgb=strict)
 
     def test_16_bit_source_is_rejected_despite_rgba_pillow_mode(self):
         clear = struct.pack('>4H', 0, 0, 0, 0)
@@ -60,41 +65,41 @@ class IconChecks(unittest.TestCase):
                          + png_chunk(b'IEND', b''))
         with Image.open(path) as im:
             self.assertEqual(im.mode, 'RGBA')
-        report = checker.check_files(path)
+        report = self.check(path)
         self.assertFalse(report['overall_check_pass'])
         self.assertEqual(report['results'][0]['png_header']['bit_depth'], 16)
         self.assertEqual(report['results'][0]['alpha_check'], 'not_checked_unsupported_source_format')
 
     def test_rgb_source_is_not_rgba(self):
         path = self.save(self.master.convert('RGB'), 'rgb.png')
-        self.assertFalse(checker.check_files(path)['hard_spec_pass'])
+        self.assertFalse(self.check(path)['hard_spec_pass'])
 
     def test_wrong_dimensions_fail(self):
         path = self.save(self.master.resize((512, 512)), '512.png')
-        self.assertFalse(checker.check_files(path)['hard_spec_pass'])
+        self.assertFalse(self.check(path)['hard_spec_pass'])
 
     def test_empty_and_opaque_images_fail(self):
         for name, color in [('empty', (0, 0, 0, 0)), ('opaque', (20, 40, 60, 255))]:
             with self.subTest(name=name):
                 path = self.save(Image.new('RGBA', (1024, 1024), color), name + '.png')
-                self.assertFalse(checker.check_files(path)['hard_spec_pass'])
+                self.assertFalse(self.check(path)['hard_spec_pass'])
 
     def test_exact_safe_boundary_passes_but_alpha_one_outside_fails(self):
         image = Image.new('RGBA', (1024, 1024))
         image.paste((80, 90, 100, 255), (102, 102, 922, 922))
         path = self.save(image, 'boundary.png')
-        result = checker.check_files(path)['results'][0]
+        result = self.check(path)['results'][0]
         self.assertTrue(result['hard_spec_pass'])
         self.assertEqual(result['margins_ltrb'], [102, 102, 102, 102])
         image.putpixel((101, 400), (20, 30, 40, 1))
         path = self.save(image, 'stray-alpha-one.png')
-        self.assertFalse(checker.check_files(path)['hard_spec_pass'])
+        self.assertFalse(self.check(path)['hard_spec_pass'])
 
     def test_correct_full_canvas_derivation_for_each_filter(self):
         for method in ('lanczos', 'bicubic', 'bilinear'):
             with self.subTest(method=method):
                 path = self.save(self.preview(method), method + '.png')
-                report = checker.check_files(self.master_path, path, resample=method)
+                report = self.check(self.master_path, path, resample=method)
                 self.assertTrue(report['overall_check_pass'])
                 self.assertEqual(report['derivation_check']['different_pixels'], 0)
                 self.assertEqual(report['derivation_check']['parameters']['resample'], method)
@@ -107,26 +112,26 @@ class IconChecks(unittest.TestCase):
         for name, image in [('unrelated', unrelated), ('cropped', cropped)]:
             with self.subTest(name=name):
                 path = self.save(image, name + '.png')
-                report = checker.check_files(self.master_path, path)
+                report = self.check(self.master_path, path)
                 self.assertTrue(report['hard_spec_pass'])
                 self.assertFalse(report['overall_check_pass'])
                 self.assertEqual(report['derivation_check']['status'], 'fail')
 
     def test_wrong_filter_fails(self):
         path = self.save(self.preview('bilinear'), 'bilinear.png')
-        self.assertFalse(checker.check_files(self.master_path, path)['overall_check_pass'])
+        self.assertFalse(self.check(self.master_path, path)['overall_check_pass'])
 
     def test_hidden_rgb_in_fully_transparent_preview_is_ignored(self):
         preview = self.preview()
         preview.putpixel((0, 0), (211, 17, 99, 0))
         path = self.save(preview, 'hidden-rgb.png')
-        self.assertTrue(checker.check_files(self.master_path, path)['overall_check_pass'])
+        self.assertTrue(self.check(self.master_path, path)['overall_check_pass'])
 
     def test_hidden_rgb_in_master_does_not_change_derivation(self):
         preview_path = self.save(self.preview(), 'preview.png')
         self.master.putpixel((0, 0), (211, 17, 99, 0))
         master_path = self.save(self.master, 'hidden-master.png')
-        self.assertTrue(checker.check_files(master_path, preview_path)['overall_check_pass'])
+        self.assertTrue(self.check(master_path, preview_path)['overall_check_pass'])
 
     def test_visible_rgb_and_alpha_changes_are_not_ignored(self):
         original = self.preview()
@@ -136,12 +141,12 @@ class IconChecks(unittest.TestCase):
                 preview = original.copy()
                 preview.putpixel(xy, pixel)
                 path = self.save(preview, name + '.png')
-                report = checker.check_files(self.master_path, path)
+                report = self.check(self.master_path, path)
                 self.assertFalse(report['overall_check_pass'])
                 self.assertEqual(report['derivation_check']['different_pixels'], 1)
 
     def test_no_preview_is_not_checked_and_hashes_are_recorded(self):
-        report = checker.check_files(self.master_path)
+        report = self.check(self.master_path)
         self.assertEqual(report['derivation_check']['status'], 'not_checked')
         self.assertIsNone(report['derivation_check']['derivation_pass'])
         self.assertEqual(report['results'][0]['sha256'],
@@ -149,11 +154,11 @@ class IconChecks(unittest.TestCase):
         self.assertEqual(report['pillow_version'], checker.PILLOW_VERSION)
 
     def test_missing_srgb_is_optional_but_fails_strict_mode(self):
-        report = checker.check_files(self.master_path)
+        report = self.check(self.master_path)
         self.assertTrue(report['overall_check_pass'])
         self.assertFalse(report['color_metadata_pass'])
         self.assertEqual(report['results'][0]['color_metadata']['status'], 'missing')
-        strict = checker.check_files(self.master_path, require_srgb=True)
+        strict = self.check(self.master_path, require_srgb=True)
         self.assertTrue(strict['hard_spec_pass'])
         self.assertFalse(strict['overall_check_pass'])
 
@@ -201,7 +206,7 @@ class IconChecks(unittest.TestCase):
     def test_late_srgb_chunk_fails_strict_check(self):
         data = self.master_path.read_bytes()
         self.master_path.write_bytes(data[:-12] + png_chunk(b'sRGB', b'\0') + data[-12:])
-        report = checker.check_files(self.master_path, require_srgb=True)
+        report = self.check(self.master_path, require_srgb=True)
         self.assertEqual(report['results'][0]['color_metadata']['status'], 'invalid_metadata')
         self.assertFalse(report['overall_check_pass'])
 
@@ -213,7 +218,7 @@ class IconChecks(unittest.TestCase):
     def test_strict_color_check_applies_to_preview_too(self):
         master = self.save(self.master, 'srgb-master.png', [(b'sRGB', b'\0')])
         preview = self.save(self.preview(), 'untagged-preview.png')
-        report = checker.check_files(master, preview, require_srgb=True)
+        report = self.check(master, preview, require_srgb=True)
         self.assertTrue(report['derivation_check']['derivation_pass'])
         self.assertFalse(report['overall_check_pass'])
 
@@ -222,7 +227,7 @@ class IconChecks(unittest.TestCase):
         data[29] ^= 1
         self.master_path.write_bytes(data)
         for path in (self.master_path, self.root / 'absent.png'):
-            report = checker.check_files(path)
+            report = self.check(path)
             self.assertFalse(report['overall_check_pass'])
             self.assertTrue(report['results'][0]['errors'])
 
@@ -231,7 +236,7 @@ class IconChecks(unittest.TestCase):
         header = bytearray(data[16:29])
         header[10] = 1
         self.master_path.write_bytes(data[:8] + png_chunk(b'IHDR', header) + data[33:])
-        self.assertFalse(checker.check_files(self.master_path)['overall_check_pass'])
+        self.assertFalse(self.check(self.master_path)['overall_check_pass'])
 
     def test_malformed_late_color_chunks_return_json_instead_of_raising(self):
         data = self.master_path.read_bytes()
@@ -240,7 +245,7 @@ class IconChecks(unittest.TestCase):
                 self.master_path.write_bytes(data[:-12] + png_chunk(kind, payload) + data[-12:])
                 out = io.StringIO()
                 with contextlib.redirect_stdout(out):
-                    code = checker.main([str(self.master_path)])
+                    code = checker.main([str(self.master_path), '--layout', str(self.layout)])
                 self.assertEqual(code, 1)
                 report = json.loads(out.getvalue())
                 self.assertFalse(report['overall_check_pass'])
@@ -255,7 +260,7 @@ class IconChecks(unittest.TestCase):
             if strict:
                 args.append('--require-srgb')
             with contextlib.redirect_stdout(out):
-                actual_exit = checker.main(args)
+                actual_exit = checker.main(args + ['--layout', str(self.layout)])
             self.assertEqual(actual_exit, expected_exit)
             report = json.loads(out.getvalue())
             self.assertEqual(report['derivation_check']['preview_sha256'],

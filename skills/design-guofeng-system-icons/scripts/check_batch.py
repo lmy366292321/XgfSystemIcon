@@ -9,6 +9,7 @@ import json
 from PIL import __version__ as PILLOW_VERSION
 import check_icon
 import color_record
+import geometry_contract
 from batch_common import (VISUAL_FIELDS, binding, changed_inputs, context, item_binding,
                           load_manifest, prepare_output, read_json, resolve, snapshot,
                           state, worst, write_json, review_sheet_files)
@@ -176,7 +177,7 @@ def check_batch(path, *, delivery=True):
             rows.append({"id": asset_id, "name": "", "machine_status": "error",
                          "error": "Missing or duplicate manifest item",
                          **{k: state("error", "Missing or duplicate manifest item")
-                            for k in ("integrity", "hard_specs", "color_metadata", "color_provenance", "derivation")},
+                            for k in ("integrity", "layout", "hard_specs", "color_metadata", "color_provenance", "derivation")},
                          "visual": state("unverified", "No unambiguous asset")})
             continue
         item = entries[0]
@@ -191,6 +192,37 @@ def check_batch(path, *, delivery=True):
             bound = item_binding(base, item, ctx, before)
             color = color_state([master, preview])
             derived = derivation(base, item, [master, preview], [master_im, preview_im], before)
+            layout_path = resolve(base, item['layout']['path']) if item.get('layout') else None
+            geometry_path = resolve(base, item['geometry']['path']) if item.get('geometry') else None
+            layout = geometry_contract.verify_layout(layout_path, geometry=geometry_path)
+            if item.get('layout'):
+                layout_binding = binding(base, item['layout'], before)
+                integrity['files']['layout'] = layout_binding
+                integrity['status'] = worst(v['status'] for v in integrity['files'].values())
+                layout['status'] = worst([layout['status'], layout_binding['status']])
+                if layout_binding['status'] != 'pass':
+                    layout['reason'] = 'Layout differs from manifest binding'
+            if item.get("geometry"):
+                geometry_binding = binding(base, item["geometry"], before)
+                integrity["files"]["geometry"] = geometry_binding
+                integrity["status"] = worst(v["status"] for v in integrity["files"].values())
+                geometry_report = check_icon.check_files(
+                    resolve(base, item["master"]["path"]), resolve(base, item["preview"]["path"]),
+                    geometry=geometry_path, layout=layout_path)
+                task = geometry_report["geometry"]
+                recipe = read_json(resolve(base, item["geometry"]["path"]))
+                e = item["export"]
+                if (any(e[k] != recipe.get(k) for k in ("library", "version", "resample"))
+                        or e["complete_canvas"] is not True or e["alpha_handling"] != "geometry-contract"
+                        or e["color_conversion"] != "none"):
+                    task = {**task, "status": "fail", "bounds_pass": False,
+                            "reason": "Manifest export must match geometry contract; use alpha_handling=geometry-contract"}
+                    geometry_report["hard_spec_pass"] = False
+                hard = state("pass" if geometry_report["hard_spec_pass"] and geometry_binding["status"] == "pass" else "fail",
+                             "Task geometry boundary; original default checks retained", default=hard,
+                             task_file_checks=geometry_report["task_file_checks"], geometry=task)
+                derived = state(worst([task["status"], geometry_binding["status"]]),
+                                "Confirmed geometry chain replay", replayed=True, default=derived, raw=task)
             provenance = color_record.check_item(base, item)
             visual = imported_review(base, item.get("visual_review", {}), bound, before, visual=True)
             if integrity["status"] != "pass" or context_status != "pass":
@@ -201,16 +233,16 @@ def check_batch(path, *, delivery=True):
             rows.append({"id": asset_id, "name": item["name"], "version": item["version"],
                          "requirements": item["requirements"], "binding_for_review": bound,
                          "integrity": integrity, "hard_specs": hard, "color_metadata": color,
-                         "color_provenance": provenance, "derivation": derived, "visual": visual,
+                         "color_provenance": provenance, "derivation": derived, "layout": layout, "visual": visual,
                          "other_recorded_states": item.get("other_states", {}),
                          "machine_status": worst([context_status, integrity["status"], hard["status"],
-                                                  color["status"], provenance["status"], derived["status"]])})
+                                                  color["status"], provenance["status"], derived["status"], layout['status']])})
         except (OSError, ValueError, TypeError, KeyError, AttributeError) as exc:
             errors.append(f"{asset_id}: {exc}")
             rows.append({"id": asset_id, "name": item["name"], "machine_status": "error",
                          "error": str(exc),
                          **{k: state("error", str(exc)) for k in
-                            ("integrity", "hard_specs", "color_metadata", "color_provenance", "derivation")},
+                            ("integrity", "layout", "hard_specs", "color_metadata", "color_provenance", "derivation")},
                          "visual": state("unverified", "Execution error")})
     listed = {str(resolve(base, i[k]["path"])) for i in m["items"]
               for k in ("master", "preview", "previous_preview") if i.get(k)}
@@ -251,7 +283,7 @@ def check_batch(path, *, delivery=True):
         "unexpected_item_ids": unexpected, "extra_files_not_counted": sorted(extra_files),
         "reused_master_semantics_need_review": reused, "items": rows,
         "summary": {key: dict(Counter(r[key]["status"] for r in rows))
-                    for key in ("integrity", "hard_specs", "color_metadata",
+                    for key in ("integrity", "layout", "hard_specs", "color_metadata",
                                 "color_provenance", "derivation", "visual")},
         "machine_status": status, "exit_code": 2 if status == "error" else (0 if status == "pass" else 1),
         "inputs_unchanged": not changed, "changed_inputs": changed,
@@ -276,15 +308,15 @@ def markdown(report):
              f"`{report['machine_status']}`；退出码 {report['exit_code']}。",
              f"高清与120均可读取的文件对：{report['readable_file_pair_count']}/{report['expected_count']}。",
              "", "机器不代替实际看图；不授予用户、UI或工程通过。", "",
-             "| ID | 入口 | 版本关联 | 硬规格 | 色彩声明 | 色彩空间/导出记录 | 派生复验 | 视觉记录 |",
-             "|---|---|---|---|---|---|---|---|"]
+             "| ID | 入口 | 版本关联 | 布局 | 硬规格 | 色彩声明 | 色彩空间/导出记录 | 派生复验 | 视觉记录 |",
+             "|---|---|---|---|---|---|---|---|---|"]
     for row in report["items"]:
         values = [row["id"], row["name"]] + [row[k]["status"] for k in (
-            "integrity", "hard_specs", "color_metadata", "color_provenance", "derivation", "visual")]
+            "integrity", "layout", "hard_specs", "color_metadata", "color_provenance", "derivation", "visual")]
         lines.append("| " + " | ".join(map(cell, values)) + " |")
     lines += ["", "## 需处理或保留未验证的项目", ""]
     for row in report["items"]:
-        for key in ("integrity", "hard_specs", "color_metadata", "color_provenance", "derivation", "visual"):
+        for key in ("integrity", "layout", "hard_specs", "color_metadata", "color_provenance", "derivation", "visual"):
             if row[key]["status"] != "pass":
                 lines.append(f"- {row['id']} {key}: {cell(row[key]['reason'])}")
         ext = row["derivation"].get("external_record")

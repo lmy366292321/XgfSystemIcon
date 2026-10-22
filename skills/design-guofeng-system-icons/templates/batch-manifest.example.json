@@ -6,14 +6,14 @@
   ],
   "skill": {
     "path": "../SKILL.md",
-    "sha256": "bdf2807ec79a1bd54256f423e76a72b9234c419f8eacfc7170154db0ded431c2"
+    "sha256": "dfb70b0c70e3669418bf0ab02ff626dc527350fa60a1708c750b489224de9497"
   },
   "rules": [
     {
       "id": "design-standard",
       "file": {
         "path": "../references/design-standard.md",
-        "sha256": "25b431d92efbe6fda4de0c845d13ad1885b80239e7ac9c934690c6f6c377ee9e"
+        "sha256": "d5b0daf8c27d73913f1d6f800c1dc057280cb4ec8a4b40173f5d8c9ed30e8b0f"
       }
     },
     {
@@ -27,28 +27,28 @@
       "id": "visual-control",
       "file": {
         "path": "../references/visual-control.md",
-        "sha256": "538371053e7b7ce320323416d5e50b07671e1e34aeb6dc42b748c31c7d2c2e7a"
+        "sha256": "40e644d7e4384515fa8d1416e22f05534acb829c473e3f35136fb0aa9c2cf42e"
       }
     },
     {
       "id": "qa-120",
       "file": {
         "path": "../references/qa-120.md",
-        "sha256": "32786a62f319ec868587d51cbe3d3133caec93fd21facce9f6446fcb3d23a2c6"
+        "sha256": "a3d6b36eb9f4a0efe74a87c69aa3ce14eb4bc37797175e532ea7e0a8e6870b10"
       }
     },
     {
       "id": "delivery-review",
       "file": {
         "path": "../references/delivery-review.md",
-        "sha256": "8233e4b26859a5b16d6c6e31545cd8feb74853fe53cb8bf175eae5e53ddcd078"
+        "sha256": "fa4ba5801580fabefbc09c78b8195257f4f5c6409c5346be4b83b6876b22e57d"
       }
     },
     {
       "id": "batch-review",
       "file": {
         "path": "../references/batch-review.md",
-        "sha256": "33249924af4dbc1268b1ef6fd4f0c2cbece8713c65e973b92d57ac21aa887349"
+        "sha256": "0cd07e18e24c86670e313eb2feeaa95eac018fbd5748317e4e0749d43ebd7af2"
       }
     },
     {
@@ -62,14 +62,21 @@
       "id": "palette-workflow",
       "file": {
         "path": "../references/palette-workflow.md",
-        "sha256": "ada9ebd2c0a3cefed5ed7b211dbcddae7ba337b456c375e12d3a8ed2ccbf57a9"
+        "sha256": "580429d506d249eaf8726aaeb73bc2a4895a145e4d98b31452c6c9b622405d9b"
       }
     },
     {
       "id": "color-space-export",
       "file": {
         "path": "../references/color-space-export.md",
-        "sha256": "d4145f427bc4357fe4e7c8f1d3e6ad26ed52f39fbd228e1f950287c0c37f896e"
+        "sha256": "b7069977434f78069713f14665f80af4497b77f4386e8391a60550d98544cc49"
+      }
+    },
+    {
+      "id": "composition-layout",
+      "file": {
+        "path": "../references/composition-layout.md",
+        "sha256": "08ec7ab77e9d8d5a4ac00cf82996173de06ee320f08a0f2154f2edef8ad290bc"
       }
     }
   ],
@@ -181,7 +188,7 @@
       },
       "control_card": {
         "path": "../references/visual-control.md",
-        "sha256": "538371053e7b7ce320323416d5e50b07671e1e34aeb6dc42b748c31c7d2c2e7a"
+        "sha256": "40e644d7e4384515fa8d1416e22f05534acb829c473e3f35136fb0aa9c2cf42e"
       },
       "master": {
         "path": "../assets/best-friends-v2.png",
@@ -210,10 +217,14 @@
       },
       "visual_recheck": {
         "status": "unverified"
+      },
+      "layout": {
+        "path": "layout.example.json",
+        "sha256": "473b09446dc6a3be526c4d06f6a53e9690be29424a16afe1d3a36340a553f6c8"
       }
     }
   ],
-  "_usage": "Historical format example; delivery remains unverified. New tasks need design_plan/workflow and per-item color_record from color_record.py; never fabricate historical color evidence.",
+  "_usage": "Historical format example; delivery remains unverified. New tasks need design_plan/workflow and per-item color_record from color_record.py; never fabricate historical color evidence. Bind the actual layout for every new task; the included layout is a standalone structure example, not verified production placement. Geometry exceptions use a schema v2 contract with primary target_translation and rounding_method.",
   "palette_review": {
     "status": "unverified"
   },

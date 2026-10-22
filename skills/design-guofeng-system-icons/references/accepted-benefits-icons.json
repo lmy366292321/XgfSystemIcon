@@ -16,12 +16,12 @@
       "1024": {
         "path": "assets/newcomer-tasks-v2.png",
         "sha256": "08aff81ca2769ec711c03310725a82caa35f6cca6f5b346a5bf61ab09e8a4735",
-        "source": "D:\\codex\\入口图标\\output\\benefits-20261021\\revision-2\\1024\\01-新人任务-1024.png"
+        "source": "external-evidence/output/benefits-20261021/revision-2/1024/01-新人任务-1024.png"
       },
       "120": {
         "path": "assets/previews/newcomer-tasks-v2-120.png",
         "sha256": "53d46cbdf635825d788dca5a38149c14bc36a9e957298183eefb890c36e8fa88",
-        "source": "D:\\codex\\入口图标\\output\\benefits-20261021\\revision-2\\120\\01-新人任务-120.png"
+        "source": "external-evidence/output/benefits-20261021/revision-2/120/01-新人任务-120.png"
       },
       "bbox": [
         127,
@@ -44,12 +44,12 @@
       "1024": {
         "path": "assets/seven-day-checkin-v3.png",
         "sha256": "2f2c5938adbb1e8a082502f068e470b6ecd3f978fea4649c16124cacc0e79b16",
-        "source": "D:\\codex\\入口图标\\output\\benefits-20261021\\revision-3\\1024\\02-七日签到-1024.png"
+        "source": "external-evidence/output/benefits-20261021/revision-3/1024/02-七日签到-1024.png"
       },
       "120": {
         "path": "assets/previews/seven-day-checkin-v3-120.png",
         "sha256": "c37ad6e842e14bd5b149f4047591385d0551f5183ed1cb8e235e1b1456d02372",
-        "source": "D:\\codex\\入口图标\\output\\benefits-20261021\\revision-3\\120\\02-七日签到-120.png"
+        "source": "external-evidence/output/benefits-20261021/revision-3/120/02-七日签到-120.png"
       },
       "bbox": [
         102,
@@ -72,12 +72,12 @@
       "1024": {
         "path": "assets/double-coins-v2.png",
         "sha256": "dc998946c9c9acbc5a10796cf32717a91dd943456aebd1036a4901bb74985961",
-        "source": "D:\\codex\\入口图标\\output\\benefits-20261021\\revision-2\\1024\\03-双倍金币-1024.png"
+        "source": "external-evidence/output/benefits-20261021/revision-2/1024/03-双倍金币-1024.png"
       },
       "120": {
         "path": "assets/previews/double-coins-v2-120.png",
         "sha256": "2904163f96a52df71c460cb46a36c25543900d19c9a9c65d6e1f5c026c095741",
-        "source": "D:\\codex\\入口图标\\output\\benefits-20261021\\revision-2\\120\\03-双倍金币-120.png"
+        "source": "external-evidence/output/benefits-20261021/revision-2/120/03-双倍金币-120.png"
       },
       "bbox": [
         117,
@@ -100,12 +100,12 @@
       "1024": {
         "path": "assets/easy-benefits-v3.png",
         "sha256": "7ffc1c54e3252d5503bbb1f856a2b24e480dca41c170743bf1061dd08b3eebbc",
-        "source": "D:\\codex\\入口图标\\output\\benefits-20261021\\revision-3\\1024\\04-轻松福利-1024.png"
+        "source": "external-evidence/output/benefits-20261021/revision-3/1024/04-轻松福利-1024.png"
       },
       "120": {
         "path": "assets/previews/easy-benefits-v3-120.png",
         "sha256": "5a95cec2e4c862f77d6cb533432c3020cb0a08e5827f1c4371faa6a721b102fa",
-        "source": "D:\\codex\\入口图标\\output\\benefits-20261021\\revision-3\\120\\04-轻松福利-120.png"
+        "source": "external-evidence/output/benefits-20261021/revision-3/120/04-轻松福利-120.png"
       },
       "bbox": [
         112,
@@ -128,12 +128,12 @@
       "1024": {
         "path": "assets/cumulative-checkin-v2.png",
         "sha256": "b651859095563bf26427c9088bb2579a68b9f387ba1d7e6475bd7834233efedd",
-        "source": "D:\\codex\\入口图标\\output\\benefits-20261021\\revision-2\\1024\\05-累天签到-1024.png"
+        "source": "external-evidence/output/benefits-20261021/revision-2/1024/05-累天签到-1024.png"
       },
       "120": {
         "path": "assets/previews/cumulative-checkin-v2-120.png",
         "sha256": "491a97b3293c65b337c51a8102238e908d7a6ba58ba05eecbca59fbd0d5b78aa",
-        "source": "D:\\codex\\入口图标\\output\\benefits-20261021\\revision-2\\120\\05-累天签到-120.png"
+        "source": "external-evidence/output/benefits-20261021/revision-2/120/05-累天签到-120.png"
       },
       "bbox": [
         107,
@@ -156,12 +156,12 @@
       "1024": {
         "path": "assets/invite-friends-v2.png",
         "sha256": "7bcab314d391f5c0c8435e7ae13ddc2dd38b162a21957f82013302e2ff5d41c8",
-        "source": "D:\\codex\\入口图标\\output\\benefits-20261021\\revision-2\\1024\\06-邀请好友-1024.png"
+        "source": "external-evidence/output/benefits-20261021/revision-2/1024/06-邀请好友-1024.png"
       },
       "120": {
         "path": "assets/previews/invite-friends-v2-120.png",
         "sha256": "8838f56430db6b3b6f3a34808e84d5960ef39fd9f4fc4afe4af8c98a6740a66c",
-        "source": "D:\\codex\\入口图标\\output\\benefits-20261021\\revision-2\\120\\06-邀请好友-120.png"
+        "source": "external-evidence/output/benefits-20261021/revision-2/120/06-邀请好友-120.png"
       },
       "bbox": [
         102,
@@ -184,12 +184,12 @@
       "1024": {
         "path": "assets/thousand-draws-v3.png",
         "sha256": "9aa09b00b6107df221ee123843ad9a60a63f95d5cf80ab82843d066f7dd78b09",
-        "source": "D:\\codex\\入口图标\\output\\benefits-20261021\\revision-3\\1024\\07-千抽狂欢-1024.png"
+        "source": "external-evidence/output/benefits-20261021/revision-3/1024/07-千抽狂欢-1024.png"
       },
       "120": {
         "path": "assets/previews/thousand-draws-v3-120.png",
         "sha256": "940c403be2e6815f199d99939da4d2d5fd96923a0d1756383ca7a1aaed08f169",
-        "source": "D:\\codex\\入口图标\\output\\benefits-20261021\\revision-3\\120\\07-千抽狂欢-120.png"
+        "source": "external-evidence/output/benefits-20261021/revision-3/120/07-千抽狂欢-120.png"
       },
       "bbox": [
         119,
@@ -212,12 +212,12 @@
       "1024": {
         "path": "assets/anti-fraud-v2.png",
         "sha256": "0370082305e3caf763bb05a6ff42e041fa226cd57d75f1139d7519bde8ccd864",
-        "source": "D:\\codex\\入口图标\\output\\benefits-20261021\\revision-2\\1024\\08-防诈骗-1024.png"
+        "source": "external-evidence/output/benefits-20261021/revision-2/1024/08-防诈骗-1024.png"
       },
       "120": {
         "path": "assets/previews/anti-fraud-v2-120.png",
         "sha256": "77b50b981e369d8720cf94b06c95451698e5ff2faf72de8aaf145a20b8029764",
-        "source": "D:\\codex\\入口图标\\output\\benefits-20261021\\revision-2\\120\\08-防诈骗-120.png"
+        "source": "external-evidence/output/benefits-20261021/revision-2/120/08-防诈骗-120.png"
       },
       "bbox": [
         127,
@@ -234,5 +234,12 @@
     "千抽券底暗色歧义保留为非阻断建议",
     "不代表工程、压缩或真机通过"
   ],
-  "generation_calls": 0
+  "generation_calls": 0,
+  "publication": {
+    "local_paths_redacted": true,
+    "path_resolution": "Existing relative repository asset paths retain their original convention. external-evidence/ and external-resources/ are logical names for unpublished files, not existing repository directories.",
+    "external_files_included": false,
+    "verification_limit": "To replay external records, obtain the original files through an authorized channel and map logical names to local paths; verify preserved SHA-256. Redacted case records are not runnable geometry contracts.",
+    "local_original_preserved": true
+  }
 }

@@ -1,0 +1,92 @@
+{
+  "schema_version": 2,
+  "kind": "icon_geometry",
+  "library": "Pillow",
+  "version": "填写实际运行版本",
+  "resample": "lanczos",
+  "mode": "independent-translations",
+  "primary": "preview",
+  "confirmation": {
+    "status": "pending",
+    "scope": "填写已确认布局及双尺寸例外的具体范围；不是通用底栏参数",
+    "basis": {
+      "path": "confirmation.md",
+      "sha256": "填写真实文件SHA-256"
+    }
+  },
+  "layout": {
+    "path": "layout.json",
+    "sha256": "填写真实文件SHA-256"
+  },
+  "allowed_bounds": {
+    "master": [
+      102,
+      102,
+      922,
+      922
+    ],
+    "preview": [
+      0,
+      0,
+      120,
+      120
+    ]
+  },
+  "outputs": {
+    "master": {
+      "path": "final/master-1024.png",
+      "sha256": "填写真实文件SHA-256"
+    },
+    "preview": {
+      "path": "final/preview-120.png",
+      "sha256": "填写真实文件SHA-256"
+    }
+  },
+  "chains": {
+    "master": {
+      "source": {
+        "path": "source/master-1024.png",
+        "sha256": "填写真实文件SHA-256"
+      },
+      "operations": [
+        {
+          "op": "translate",
+          "offset": [
+            0,
+            0
+          ],
+          "expected_clipped": {
+            "count": 0,
+            "max_alpha": 0,
+            "alpha_sum": 0
+          }
+        }
+      ]
+    },
+    "preview": {
+      "source": {
+        "path": "source/preview-120.png",
+        "sha256": "填写真实文件SHA-256"
+      },
+      "operations": [
+        {
+          "op": "translate",
+          "offset": [
+            0,
+            0
+          ],
+          "expected_clipped": {
+            "count": 0,
+            "max_alpha": 0,
+            "alpha_sum": 0
+          }
+        }
+      ]
+    }
+  },
+  "target_translation": [
+    0,
+    0
+  ],
+  "rounding_method": "nearest-half-away-from-zero"
+}

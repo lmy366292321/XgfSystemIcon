@@ -75,6 +75,10 @@ def load_manifest(path):
         strings(req.get("keep"), "requirements.keep")
         for field in ("master", "preview", "control_card"):
             descriptor(item.get(field), "item." + field)
+        if "geometry" in item:
+            descriptor(item["geometry"], "item.geometry")
+        if "layout" in item:
+            descriptor(item["layout"], "item.layout")
         if item.get("previous_preview"):
             descriptor(item["previous_preview"], "previous_preview")
         export = item.get("export")
@@ -158,6 +162,18 @@ def snapshot(path, m):
     # Color receipts include source/profile/decision files outside the manifest.
     # Track them through the complete batch run, not only during color replay.
     for item in m.get("items", []):
+        if item.get("layout"):
+            try:
+                import geometry_contract
+                paths.update(geometry_contract.layout_dependencies(resolve(path.parent, item["layout"]["path"])))
+            except (OSError, ValueError, TypeError, KeyError, AttributeError):
+                pass  # The layout validator reports invalid or missing nested resources.
+        if item.get("geometry"):
+            try:
+                import geometry_contract
+                paths.update(geometry_contract.dependencies(resolve(path.parent, item["geometry"]["path"])))
+            except (OSError, ValueError, TypeError, KeyError, AttributeError):
+                pass  # The geometry validator rejects missing/changed nested files.
         if item.get("color_record"):
             try:
                 receipt = read_json(resolve(path.parent, item["color_record"]["path"]))
@@ -224,6 +240,26 @@ def item_binding(base, item, ctx, snap):
             "requirements_fingerprint": fingerprint(item["requirements"])}
     if item.get("color_record"):
         result["color_record_sha256"] = snap[str(resolve(base, item["color_record"]["path"]))]["sha256"]
+    if item.get("layout"):
+        import geometry_contract
+        layout_path = resolve(base, item["layout"]["path"])
+        result["layout_sha256"] = snap[str(layout_path)]["sha256"]
+        try:
+            deps = geometry_contract.layout_dependencies(layout_path)
+            result["layout_inputs_fingerprint"] = fingerprint(
+                {str(p): snap.get(str(p), {"error": "missing snapshot"}) for p in sorted(deps)})
+        except (OSError, ValueError, TypeError, KeyError, AttributeError):
+            result["layout_inputs_fingerprint"] = "invalid"
+    if item.get("geometry"):
+        import geometry_contract
+        geometry_path = resolve(base, item["geometry"]["path"])
+        result["geometry_sha256"] = snap[str(geometry_path)]["sha256"]
+        try:
+            deps = geometry_contract.dependencies(geometry_path)
+            result["geometry_inputs_fingerprint"] = fingerprint(
+                {str(p): snap.get(str(p), {"error": "missing snapshot"}) for p in sorted(deps)})
+        except (OSError, ValueError, TypeError, KeyError, AttributeError):
+            result["geometry_inputs_fingerprint"] = "invalid"
     return result
 
 

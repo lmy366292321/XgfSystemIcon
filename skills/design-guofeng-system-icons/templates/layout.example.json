@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "status": "example-only; replace with the task's actual layout and evidence",
+  "coordinate_system": {"origin": "component reference anchor", "units": "px at 1x", "x": "right", "y": "down"},
+  "component_bounds": [0, 0, 120, 120],
+  "icon_layer": {"width": 120, "height": 120, "scale": 1, "offset": [0, 0]},
+  "offset_owner": "PNG internal pixel placement; UI extra compensation is zero",
+  "components": [],
+  "usage": "Standalone icon structure example only. For a real assembly, record frame/nameplate/overlay path and SHA-256, dimensions, positions, z-order and clipping here. Do not bake supporting components into the icon PNG. Control card and manifest must bind the same actual layout."
+}
