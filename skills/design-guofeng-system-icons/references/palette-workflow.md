@@ -13,7 +13,7 @@
 
 路径使用绝对路径，或清单支持的相对路径。计划、工作流内全部文件描述使用绝对路径及真实SHA-256。建议将计划/控制卡放 `inputs/`，工具回执与色彩记录放 `records/`，工作流阶段放独立 `workflow/`，对照放 `qa/`，审阅正文放 `reviews/`。每次记录输出用新文件名，禁止覆盖输入或旧记录。
 
-1. 按[完整组合区域流程](composition-layout.md)确定布局与资源，将配置路径和SHA-256写入控制卡；准备10张正式参考和 `design-plan.json`；制作前执行 `start`。计划只包含已有参考、控制卡和输入图，不要求未来成图已经存在。
+1. 按[完整组合区域流程](composition-layout.md)确定实际布局与资源，并执行[生成前构图检查](composition-preflight.md)：生成及查看真实组件规划图，生产v2计划和JSON控制卡绑定同一composition；准备10张正式参考后start，再prepare-request。只读review不伪造生成证据。计划不要求未来成图存在。
 2. 新建/修改图像后，保存真实调用输入、输出及回执，立即按[色彩空间与导出记录](color-space-export.md)采集原始文件，再按composition-layout.md把组合位置写进PNG留白、将UI额外补偿归零，记录真实变换链并建立批次清单。记录 `generated`。纯复查跳过生成，只读collect/audit并明确是本次补采集，不倒填历史。
 3. 将计划文件描述填入清单 `design_plan`，每项填入实际 `color_record` 文件描述，并绑定控制卡使用的`layout`；例外可由v2 `geometry`提供同一布局。先运行色彩verify，再记录 `files`，执行真实技术检查；失败/未验证仍可继续诊断，但最终不通过。
 4. 用原有工具创建固定十参考浅深底及关系面板，将索引描述填入 `qa_index`、`relation_index`。多图关系组必须覆盖全部候选。实际查看所有页面及交付PNG在UI零额外补偿下的完整组合，将组合证据及配置/资源哈希写入审阅正文，相关结论并入现有八项；填写整批配色及关系意见，再记录 `visual`。
@@ -22,6 +22,8 @@
 
 ```text
 python -B scripts/review_workflow.py start /task/inputs/design-plan.json --output /task/workflow/01-plan.json --actor maker
+python -B scripts/review_workflow.py prepare-request /task/workflow/01-plan.json --item-id 01 --output /task/requests/01.json --actor maker
+# 按请求arguments实际调用图像工具并保存回执
 python -B scripts/review_workflow.py record /task/workflow/01-plan.json --manifest /task/manifest.json --stage generated --evidence /task/reviews/calls.json --output /task/workflow/02-generated.json --actor maker
 python -B scripts/review_workflow.py record /task/workflow/02-generated.json --manifest /task/manifest.json --stage files --output /task/workflow/03-files.json --actor maker
 python -B scripts/build_qa_sheet.py /task/manifest.json --output-dir /task/qa/overview
@@ -37,12 +39,12 @@ python -B scripts/check_batch.py /task/manifest.json --output-dir /task/final-ch
 
 ## 计划格式
 
-顶层：`schema_version:1`、`mode:create|revise|review`、`batch_id`、`batch_palette_reason`、`references`、`items`。references复制本次清单10张的id/file/purpose/limits，文件描述转为绝对路径。items顺序与清单expected_ids一致；每项：
+顶层：新增/修改为`schema_version:2`（纯review仍可使用1）、`mode:create|revise|review`、`batch_id`、`batch_palette_reason`、`references`、`items`。references复制本次清单10张的id/file/purpose/limits，文件描述转为绝对路径。items顺序与清单expected_ids一致。新增/修改每项另需非空brief与composition，JSON控制卡必须包含相同composition，详见生成前检查；下面仅展示原有配色/参考字段，不是完整生产计划：
 
 ```json
 {
   "id": "01",
-  "control_card": {"path": "/task/inputs/control-01.md", "sha256": "真实64位SHA-256"},
+  "control_card": {"path": "/task/inputs/control-01.json", "sha256": "真实64位SHA-256"},
   "palette": {
     "dominant": "暖陶红：容器主体",
     "secondary": ["米白：标签"],
@@ -61,11 +63,11 @@ python -B scripts/check_batch.py /task/manifest.json --output-dir /task/final-ch
 }
 ```
 
-颜色仅为字段示例，不能成为新默认。review模式generation_inputs为空。revise模式额外包含edit_target；外部内容依据使用content角色。style/color必须来自各自声明的正式参考，共1–3张。未确认候选不能标成正式画风/配色输入。
+颜色仅为字段示例，不能成为新默认。review模式generation_inputs为空。revise模式额外包含edit_target；外部内容依据使用content角色。style/color必须来自各自声明的正式参考，至少1张；生产v2实际图像输入总数包含规划图且最多3张。未确认候选不能标成正式画风/配色输入。
 
 ## 生成证据
 
-`calls.json`含非空`calls`数组，每项：`item_id`、带时区`at`、`tool`、`outcome:success|failed`、`inputs`（与计划generation_inputs完全一致）、`receipt`文件描述；成功另有`output`原生成图描述。清单每项`source`绑定最后一次成功调用的原生成图，随后按记录导出高清/120。保留所有本轮尝试，失败不能假写成功，每项至少一个成功源。记录的是已有调用证据，脚本不发起生成、不计费、不冒充可独立核实后端调用。
+`calls.json`含非空`calls`数组，每项：`item_id`、带时区`at`、`tool`、`outcome:success|failed`、`inputs`（与计划generation_inputs完全一致）、`request`准备请求描述、`arguments`实际调用参数、`receipt`JSON文件描述（内部arguments必须一致）；成功另有`output`原生成图描述。清单每项`source`绑定最后一次成功调用的原生成图，随后按记录导出高清/120。保留所有本轮尝试，失败不能假写成功，每项至少一个成功源。记录的是已有调用证据，脚本不发起生成、不计费、不冒充可独立核实后端调用。
 
 ## 视觉证据格式
 

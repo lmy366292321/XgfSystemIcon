@@ -1,6 +1,6 @@
 [CmdletBinding()]
 param(
-    [ValidateSet('doctor', 'check-icon', 'check-batch', 'qa-sheet', 'relation-sheet', 'workflow', 'color-record', 'test')]
+    [ValidateSet('doctor', 'check-icon', 'check-batch', 'qa-sheet', 'relation-sheet', 'workflow', 'color-record', 'composition-plan', 'composition-case', 'test')]
     [string]$Operation = 'doctor',
     [string[]]$Arguments = @(),
     [string]$TestRoot
@@ -66,6 +66,8 @@ try {
             'relation-sheet' = 'build_relation_sheet.py'
             'workflow' = 'review_workflow.py'
             'color-record' = 'color_record.py'
+            'composition-plan' = 'composition_preflight.py'
+            'composition-case' = 'replay_composition_case.py'
         }
         & $pythonExe -X utf8 -B (Join-Path $PSScriptRoot $scripts[$Operation]) @Arguments
         $result = $LASTEXITCODE

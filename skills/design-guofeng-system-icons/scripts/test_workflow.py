@@ -45,6 +45,18 @@ class WorkflowTests(unittest.TestCase):
                 'generation_inputs': [] if mode == 'review' else [{
                     'role': 'style', 'file': self.m['references'][0]['file'],
                     'purpose': 'fixture shape only', 'limits': 'do not inherit color'}]})
+        if mode != 'review':
+            from test_composition_preflight import fixture
+            self.plan['schema_version'] = 2
+            composition = fixture(self.root / 'composition', standalone=True)
+            for item, target in zip(self.plan['items'], self.m['items']):
+                item['composition'] = copy.deepcopy(composition)
+                item['brief'] = 'Synthetic workflow test only'
+                card = self.root / 'plan' / ('control-' + item['id'] + '.json')
+                common.write_json(card, {'composition': item['composition']})
+                item['control_card'] = self.desc(card)
+                target['control_card'] = self.desc(card)
+                target['layout'] = composition['layouts'][0]
         common.write_json(self.plan_path, self.plan)
         self.m['design_plan'] = self.desc(self.plan_path)
         self.m['comparison_groups'] = [{'id': 'pair', 'purpose': 'Compare two fixtures',
@@ -267,12 +279,16 @@ class WorkflowTests(unittest.TestCase):
             item['source'] = item['master']
         logs = self.root / 'calls'
         logs.mkdir()
-        receipt = logs / 'receipt.txt'
-        receipt.write_text('Synthetic tool receipt, not a real generation call.', encoding='utf-8')
-        log = {'calls': [{'item_id': item['id'], 'at': self.now(), 'tool': 'synthetic-test-only',
-                         'outcome': 'success', 'inputs': plan_item['generation_inputs'],
-                         'receipt': self.desc(receipt), 'output': item['master']}
-                        for item, plan_item in zip(self.m['items'], self.plan['items'])]}
+        log = {'calls': []}
+        for item, plan_item in zip(self.m['items'], self.plan['items']):
+            request_path = self.root / 'requests' / (item['id'] + '.json')
+            request = workflow.prepare_request(self.latest, item['id'], request_path, 'synthetic')
+            receipt = logs / (item['id'] + '-receipt.json')
+            common.write_json(receipt, {'arguments': request['arguments'], 'scope': 'Synthetic, no real call'})
+            log['calls'].append({'item_id': item['id'], 'at': self.now(), 'tool': 'synthetic-test-only',
+                                'outcome': 'success', 'inputs': plan_item['generation_inputs'],
+                                'request': self.desc(request_path), 'arguments': request['arguments'],
+                                'receipt': self.desc(receipt), 'output': item['master']})
         log_path = logs / 'calls.json'
         common.write_json(log_path, log)
         self.add_provenance()
@@ -292,6 +308,43 @@ class WorkflowTests(unittest.TestCase):
         self.prepare()
         self.m['items'][0]['other_states'] = {'user_acceptance': 'pass'}
         self.assertNotEqual(self.final()['delivery']['status'], 'pass')
+
+    def test_prepared_composition_cannot_be_omitted_from_actual_call(self):
+        self.prepare('create')
+        request_path = self.root / 'requests' / '01.json'
+        request = workflow.prepare_request(self.latest, '01', request_path, 'fixture')
+        receipt = self.root / 'receipts' / '01.json'
+        receipt.parent.mkdir()
+        common.write_json(receipt, {'arguments': request['arguments']})
+        call = {'item_id': '01', 'at': self.now(), 'request': self.desc(request_path),
+                'arguments': copy.deepcopy(request['arguments']), 'receipt': self.desc(receipt)}
+        plan_time = workflow.timestamp(common.read_json(self.latest)['events'][0]['at'])
+        workflow.validate_generation_request(self.plan, call, plan_time)
+        call['arguments']['referenced_image_paths'].pop()
+        with self.assertRaisesRegex(ValueError, 'Actual arguments'):
+            workflow.validate_generation_request(self.plan, call, plan_time)
+        call['arguments'] = request['arguments']
+        common.write_json(receipt, {'arguments': {}})
+        call['receipt'] = self.desc(receipt)
+        with self.assertRaisesRegex(ValueError, 'Receipt arguments'):
+            workflow.validate_generation_request(self.plan, call, plan_time)
+
+    def test_legacy_production_start_and_review_request_blocked(self):
+        self.prepare()
+        with self.assertRaisesRegex(ValueError, 'Only production v2'):
+            workflow.prepare_request(self.latest, '01', self.root / 'requests' / '01.json', 'fixture')
+        self.plan['mode'] = 'create'
+        common.write_json(self.plan_path, self.plan)
+        with self.assertRaisesRegex(ValueError, 'requires v2'):
+            workflow.start(self.plan_path, self.root / 'new-records' / 'plan.json', 'fixture')
+
+    def test_production_output_cannot_switch_layout_after_planning(self):
+        self.prepare('create')
+        report = {'items': [{'binding_for_review': 'synthetic'} for _ in self.m['items']], 'errors': []}
+        workflow.current_binding(self.manifest, self.m, report, self.plan)
+        self.m['items'][0]['layout'] = self.desc(self.layout)
+        with self.assertRaisesRegex(ValueError, 'Output layout differs'):
+            workflow.current_binding(self.manifest, self.m, report, self.plan)
 
     def test_removing_color_record_never_passes_complete_visual_review(self):
         self.complete()

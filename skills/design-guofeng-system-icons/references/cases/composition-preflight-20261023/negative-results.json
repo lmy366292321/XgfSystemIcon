@@ -1,0 +1,36 @@
+[
+  {
+    "case": "actual historical plan without composition",
+    "result": "blocked",
+    "reason": "Production start requires v2 composition preflight; legacy/review evidence is not generation permission"
+  },
+  {
+    "case": "actual fashion plan without composition v2",
+    "result": "blocked",
+    "reason": "Missing composition preflight schema_version=1"
+  },
+  {
+    "case": "actual nameplate overlaps protected skirt footprint",
+    "result": "blocked",
+    "reason": "Planned protected region intersects actual foreground alpha; revise composition before generation"
+  },
+  {
+    "case": "actual layout without planning board",
+    "result": "blocked",
+    "reason": "Composition evidence must use absolute bound paths"
+  },
+  {
+    "case": "stale planning board after footprint change",
+    "result": "blocked",
+    "reason": "Planning board does not reproduce current component resources and regions"
+  },
+  {
+    "case": "real successful call with board removed from declared args",
+    "result": "blocked",
+    "reason": "Actual arguments omitted or changed the composition contract"
+  },
+  {
+    "case": "new actual plan/start/prepared request/actual tool args/receipt/output chain",
+    "result": "pass"
+  }
+]

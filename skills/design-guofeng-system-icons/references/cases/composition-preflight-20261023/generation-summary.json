@@ -1,0 +1,22 @@
+{
+  "scope": "Archived evidence summary of one real tool call, not a new production plan or independent attestation. Absolute local paths omitted. Resolve portable composition only for read-only replay.",
+  "tool": "image_gen.imagegen",
+  "workflow_started_at": "2026-10-23T08:40:57.004006+00:00",
+  "request_prepared_at": "2026-10-23T08:40:57.031633+00:00",
+  "call_recorded_at": "2026-10-23T08:42:49.416156+00:00",
+  "prompt": "制作一枚全新的独立验证候选，不修改任何已确认资源。1024x1024透明画布，古风女性向手绘游戏入口：香槟金衣架悬挂一件展开的奶油白与浅桃粉古风长裙。参考1仅提供衣架/衣裙主体与粉白浅金配色，去掉其棕底。参考2仅学习柔和大色块、丝绸体积、暖棕克制轮廓、左上受光，不画礼盒或紫色。参考3为真实圆底和名称板的构图规划示意，不将底板、圆形、色框和文字画入输出。衣架和衣裙下摆全部位于规定的83x76区域，完整而紧凑，顶部稍抬高，下摆绝不伸入名称板。主色面清楚，简化繁碎刺绣，不加人物、阴影底座、光晕。画布透明边距：左约162px、上约111px、右至少154px、下至少265px。请严格依规划留白，不要将物件放大填满画布。\n\nCOMPOSITION CONTRACT (not a drawing of the UI):\nOutput only the transparent icon; do not paint the frame, nameplate, labels or planning rectangles.\nThe supplied planning board shows actual UI resources. Its diagram is enlarged 4x; coordinates below use a 120x120 full icon layer.\nSubject footprint at 120px: [19, 13, 102, 89]; multiply coordinates by 1024/120 for the 1024 canvas.\nCritical recognition regions: [{\"purpose\": \"衣架顶部和肩线\", \"bounds\": [35, 16, 87, 38]}, {\"purpose\": \"展开衣裙的识别面和完整下摆\", \"bounds\": [25, 38, 97, 86]}].\nPlacement: 衣架、展开粉白衣裙均在真实圆底上部居中，衣裙下摆止于名称板顶缘之前；零UI补偿。仅本次试制采用此矩形范围。. Overlap policy: 本次衣架与衣裙全体都要求在名称板前完整可见，不允许主体被遮挡。.\nKeep transparent padding consistent with this plan. This is a generation target, not a guarantee; verify the returned pixels in the actual component.",
+  "transparent_background": true,
+  "input_roles": [
+    "user fashion reference for content and color",
+    "R04 gift for silk/line style only",
+    "actual component planning.png"
+  ],
+  "input_sha256": [
+    "115110e9c3755f7c48c2d182071844a5d0602b5737029ddcb19bd53c24c70661",
+    "bd0f04a0211fe778b4aac97a63e04e19c40fdd6ea84e80bdc6abef727784c29f",
+    "a7b0b29689cb6d576a1058afb4f7e6647b3cd653884f8c6986a5b226bd0c28ec"
+  ],
+  "source_sha256": "f94cbffcab57baedcfa740a816f6bc9f47e2e7f622e085aff20bc85efffc1ae9",
+  "local_prepared_request_sha256": "bec4ccff4ae5eb775823b34974e8b51d61a92339e631f18f58e5237f9e37fc79",
+  "local_receipt_sha256": "fb40e1e7861fa43a062da280cf637196455c35f023efd1f23a7e14a87b523264"
+}

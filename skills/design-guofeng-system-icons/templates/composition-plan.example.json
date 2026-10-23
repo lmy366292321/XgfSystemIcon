@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "kind": "framed",
+  "status": "unverified",
+  "basis": {"path": "ABSOLUTE_ACTUAL_USAGE_BASIS", "sha256": "REPLACE_WITH_SHA256"},
+  "placement_intent": "按本任务实际组合填写主体摆放，不复制案例坐标",
+  "occlusion_reason": "按本任务说明允许遮挡与必须完整露出的轮廓",
+  "subject_bounds": [0, 0, 0, 0],
+  "critical_regions": [{"purpose": "本图必须可辨识的特征", "bounds": [0, 0, 0, 0]}],
+  "allow_noncritical_overlap": false,
+  "layouts": [{"path": "ABSOLUTE_ACTUAL_LAYOUT", "sha256": "REPLACE_WITH_SHA256"}],
+  "component_roles": {"frame": "ACTUAL_FRAME_ID", "nameplate": "ACTUAL_NAMEPLATE_ID"},
+  "board": {"path": "ABSOLUTE_RENDERED_BOARD_AFTER_RENDER", "sha256": "REPLACE_WITH_SHA256"},
+  "review": {"status": "unverified", "reviewer": "", "at": "", "observation": ""}
+}

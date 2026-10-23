@@ -50,7 +50,7 @@ def same_file(a, b, base):
 
 
 def validate_plan(plan):
-    require(plan.get("schema_version") == 1, "Expected plan schema_version=1")
+    require(plan.get("schema_version") in (1, 2), "Expected plan schema_version=1 or 2")
     require(plan.get("mode") in ("create", "revise", "review"), "Unknown workflow mode")
     require(nonempty(plan.get("batch_id")), "Missing batch_id")
     require(nonempty(plan.get("batch_palette_reason")), "Explain batch color distribution/repetition")
@@ -74,6 +74,13 @@ def validate_plan(plan):
                     f"Invalid {key}")
         require(item["style_reference_ids"], "Select a style reference separately from color")
         require(isinstance(item.get("control_card"), dict), "Missing control card descriptor")
+        if plan.get("schema_version") == 2 and plan["mode"] != "review":
+            from composition_preflight import validate
+            validate(item.get("composition"))
+            require(nonempty(item.get("brief")), "Missing production brief")
+            card = read_json(item["control_card"]["path"])
+            require(card.get("composition") == item["composition"], "Control card must bind the same composition plan")
+            request_arguments(item)
         inputs = item.get("generation_inputs", [])
         if plan["mode"] == "review":
             require(not inputs, "Review mode must not fabricate generation inputs")
@@ -114,6 +121,9 @@ def validate_record(record):
         require(event["prior_fingerprint"] == fingerprint(events[:n]), "Stage history changed")
         previous_time = t
     require(events[0]["plan_sha256"] == record["plan"]["sha256"], "Plan changed after start")
+    if plan.get('schema_version') == 2 and plan['mode'] != 'review':
+        require(all(timestamp(i['composition']['review']['at']) <= timestamp(events[0]['at']) for i in plan['items']),
+                'Composition review must precede production start')
     return plan
 
 
@@ -132,6 +142,14 @@ def current_binding(path, manifest, report, plan):
     for item, intended in zip(manifest["items"], plan["items"]):
         require(item["id"] == intended["id"] and same_file(item["control_card"], intended["control_card"], path.parent),
                 "Control card changed after planning")
+        if plan.get("schema_version") == 2 and plan["mode"] != "review":
+            layout = item.get("layout")
+            if layout is None and item.get("geometry"):
+                gp = resolve(path.parent, item["geometry"]["path"])
+                g = read_json(gp)
+                layout = {**g["layout"], "path": str(resolve(gp.parent, g["layout"]["path"]))}
+            require(isinstance(layout, dict) and same_file(layout, intended["composition"]["layouts"][0], path.parent),
+                    "Output layout differs from pre-generation layout; replan before producing")
     return fingerprint({"plan": fingerprint(plan), "bindings": [r["binding_for_review"] for r in report["items"]]})
 
 
@@ -195,7 +213,55 @@ def verified_pages(path, manifest, report):
     return pages_by_background
 
 
+def request_arguments(item):
+    from composition_preflight import instructions
+    paths = [x['file']['path'] for x in item['generation_inputs']]
+    paths.append(item['composition']['board']['path'])
+    require(len(paths) <= 3, 'Use at most three actual image inputs including the composition board')
+    return {'prompt': item['brief'] + instructions(item['composition']),
+            'referenced_image_paths': paths, 'transparent_background': True}
+
+
+def prepare_request(record_path, item_id, output, actor):
+    record = read_json(record_path)
+    plan = validate_record(record)
+    require(plan.get('schema_version') == 2 and plan['mode'] in ('create', 'revise'),
+            'Only production v2 plans may prepare a generation request')
+    require(nonempty(actor), 'Missing request actor')
+    item = next((x for x in plan['items'] if x['id'] == item_id), None)
+    require(item is not None, 'Unknown item ID')
+    request = {'schema_version': 1, 'item_id': item_id, 'actor': actor,
+               'at': datetime.now(timezone.utc).isoformat(),
+               'workflow': descriptor(record_path), 'plan': record['plan'],
+               'arguments': request_arguments(item),
+               'scope': 'Prepared arguments only. This command does not invoke or intercept the image tool.'}
+    save_new(output, request)
+    return request
+
+
+def validate_generation_request(plan, call, plan_time):
+    require(isinstance(call.get('request'), dict), 'Generation must bind its prepared request')
+    validate_files(call['request'])
+    req = read_json(call['request']['path'])
+    require(req.get('schema_version') == 1 and req.get('item_id') == call['item_id'], 'Wrong generation request')
+    validate_files(req)
+    require(read_json(req['plan']['path']) == plan, 'Prepared request belongs to another plan')
+    record = read_json(req['workflow']['path'])
+    require(validate_record(record) == plan, 'Prepared request workflow differs')
+    require(timestamp(record['events'][0]['at']) == plan_time, 'Prepared request belongs to another start')
+    require(plan_time <= timestamp(req['at']) <= timestamp(call['at']), 'Request must be prepared before generation')
+    item = next(x for x in plan['items'] if x['id'] == call['item_id'])
+    require(req['arguments'] == request_arguments(item), 'Prepared composition arguments changed')
+    require(call.get('arguments') == req['arguments'], 'Actual arguments omitted or changed the composition contract')
+    require(isinstance(call.get('receipt'), dict), 'Bind actual tool receipt')
+    validate_files(call['receipt'])
+    receipt = read_json(call['receipt']['path'])
+    require(receipt.get('arguments') == req['arguments'], 'Receipt arguments differ from prepared request')
+
+
 def generation_status(plan, log, plan_time, manifest):
+    require(plan.get("schema_version") == 2,
+            "Legacy production has no pre-generation composition gate; use a new v2 plan, never backfill history")
     calls = log.get("calls", [])
     require(calls, "Generation log missing calls")
     intended = {i["id"]: i for i in plan["items"]}
@@ -207,6 +273,7 @@ def generation_status(plan, log, plan_time, manifest):
         require(call.get("outcome") in ("success", "failed"), "Unknown generation outcome")
         require(call.get("inputs") == intended[call["item_id"]]["generation_inputs"],
                 "Actual inputs differ from planned inputs; revise plan before next call")
+        validate_generation_request(plan, call, plan_time)
         require(nonempty(call.get("tool")), "Missing tool name")
         require(isinstance(call.get("receipt"), dict), "Bind the actual tool receipt")
         if call["outcome"] == "success":
@@ -304,6 +371,8 @@ def save_new(path, value):
 
 def start(plan_path, output, actor):
     plan = read_json(plan_path)
+    require(plan.get("mode") == "review" or plan.get("schema_version") == 2,
+            "Production start requires v2 composition preflight; legacy/review evidence is not generation permission")
     validate_plan(plan)
     record = {"schema_version": 1, "plan": descriptor(plan_path), "events": []}
     record["events"].append(new_event(record, "plan", actor, plan_sha256=record["plan"]["sha256"]))
@@ -406,6 +475,9 @@ def main(argv=None):
     sub = parser.add_subparsers(dest="command", required=True)
     p = sub.add_parser("start")
     p.add_argument("plan", type=Path)
+    p = sub.add_parser("prepare-request")
+    p.add_argument("previous", type=Path)
+    p.add_argument("--item-id", required=True)
     p = sub.add_parser("record")
     p.add_argument("previous", type=Path)
     p.add_argument("--manifest", required=True, type=Path)
@@ -418,6 +490,11 @@ def main(argv=None):
     try:
         if args.command == "start":
             record = start(args.plan, args.output, args.actor)
+        elif args.command == 'prepare-request':
+            request = prepare_request(args.previous, args.item_id, args.output, args.actor)
+            print(json.dumps({'request': str(args.output), 'item_id': request['item_id'],
+                              'status': 'prepared; invoke image tool with these exact arguments'}, ensure_ascii=False))
+            return 0
         else:
             record = advance(args.previous, args.manifest, args.stage, args.output, args.actor, args.evidence)
         print(json.dumps({"record": str(args.output), "last_stage": record["events"][-1]["stage"],

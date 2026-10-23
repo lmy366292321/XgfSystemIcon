@@ -6,7 +6,7 @@
   ],
   "skill": {
     "path": "../SKILL.md",
-    "sha256": "ca70d50971e01e92edaa44944fe2af45b859a7c08b0aa94bff13d85361f60339"
+    "sha256": "55c17810ce931730c3bf27a1e882754454714bba510733bb0e2de7f6a615356f"
   },
   "rules": [
     {
@@ -27,7 +27,7 @@
       "id": "visual-control",
       "file": {
         "path": "../references/visual-control.md",
-        "sha256": "47ca7291f4e47b36e74593429bb67402ef7e3a553ea4330411e4b03f1cf5a39c"
+        "sha256": "2607b37d950175507412a040d85bdc8a993bc9842416631602ea974425cbd369"
       }
     },
     {
@@ -62,7 +62,7 @@
       "id": "palette-workflow",
       "file": {
         "path": "../references/palette-workflow.md",
-        "sha256": "c719a6be2b0b08c884f6be1e1cf2a0488adeb145fff6fbfbd666d730d1ab4f44"
+        "sha256": "07911bad5ce95181189ee85d6a17ee781a94a36b79554f21c6598ccfdecf793f"
       }
     },
     {
@@ -76,7 +76,7 @@
       "id": "composition-layout",
       "file": {
         "path": "../references/composition-layout.md",
-        "sha256": "80061f95d594f30747004fb266c0c7463e431646d45c5c8b959f7dadfb75458c"
+        "sha256": "d847461de1c248192bc5ea9693f9db981ad730d2474835d10a267dcde7943ecc"
       }
     },
     {
@@ -216,7 +216,7 @@
       },
       "control_card": {
         "path": "../references/visual-control.md",
-        "sha256": "14b325e422243423fa3afadfef758a2ff3375b411f1584cde70f951caa75715f"
+        "sha256": "2607b37d950175507412a040d85bdc8a993bc9842416631602ea974425cbd369"
       },
       "master": {
         "path": "../assets/best-friends-v2.png",

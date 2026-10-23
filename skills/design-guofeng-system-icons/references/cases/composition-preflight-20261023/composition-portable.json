@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "kind": "framed",
+  "status": "ready",
+  "basis": {
+    "path": "basis.md",
+    "sha256": "4054e4bd1b2556f1c974d5a50c00514ea5ac173953ed4f09196091ed50ca761a"
+  },
+  "placement_intent": "衣架、展开粉白衣裙均在真实圆底上部居中，衣裙下摆止于名称板顶缘之前；零UI补偿。仅本次试制采用此矩形范围。",
+  "occlusion_reason": "本次衣架与衣裙全体都要求在名称板前完整可见，不允许主体被遮挡。",
+  "subject_bounds": [
+    19,
+    13,
+    102,
+    89
+  ],
+  "critical_regions": [
+    {
+      "purpose": "衣架顶部和肩线",
+      "bounds": [
+        35,
+        16,
+        87,
+        38
+      ]
+    },
+    {
+      "purpose": "展开衣裙的识别面和完整下摆",
+      "bounds": [
+        25,
+        38,
+        97,
+        86
+      ]
+    }
+  ],
+  "allow_noncritical_overlap": false,
+  "layouts": [
+    {
+      "path": "layout.json",
+      "sha256": "f411a267efb6ace0766dd8b1e76d4a75ff695b7bbcadb3e65d8f558f59d7a35d"
+    }
+  ],
+  "component_roles": {
+    "frame": "circle",
+    "nameplate": "nameplate"
+  },
+  "board": {
+    "path": "planning.png",
+    "sha256": "a7b0b29689cb6d576a1058afb4f7e6647b3cd653884f8c6986a5b226bd0c28ec"
+  },
+  "review": {
+    "status": "ready",
+    "reviewer": "Codex actual board inspection",
+    "at": "2026-10-23T08:40:56.961013+00:00",
+    "observation": "已查看真实圆底/名称板规划图、用户衣架衣裙图、R04与十参考面板。完整衣架与下摆放在名称板之前；青框底89而名称板从90开始。主物上部居中，关键肩线与裙面位于粉框内；没有把板的空白矩形误当成实际alpha。单状态静态布局，不声称引擎验收。"
+  }
+}
