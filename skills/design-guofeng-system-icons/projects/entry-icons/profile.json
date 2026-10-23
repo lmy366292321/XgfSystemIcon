@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "project_id": "xgf-entry-icons",
+  "usage": "entry-icon",
+  "layout": "layout.json",
+  "files": {
+    "basis.md": "4054e4bd1b2556f1c974d5a50c00514ea5ac173953ed4f09196091ed50ca761a",
+    "circle.png": "e8abf5c565ed71cc0282cedcf4d40140af42324d177277708a11c10fc2d5f70b",
+    "layout.json": "f411a267efb6ace0766dd8b1e76d4a75ff695b7bbcadb3e65d8f558f59d7a35d",
+    "nameplate.png": "4e441a92953684d3fba91680639295a657a51709d1ed505f1ac757c991bc8444",
+    "reuse-authorization.txt": "ac8d53a0a904ff0997969ec3254d915110b5e1d347d815a79d75e49fc8dc1022"
+  },
+  "component_roles": {
+    "frame": "circle",
+    "nameplate": "nameplate"
+  },
+  "scope": "Only projects explicitly bound by .xgf-project.json to xgf-entry-icons; never a global default."
+}

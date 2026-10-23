@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "status": "confirmed for this requested static component adaptation",
+  "coordinate_system": {
+    "origin": "top-left of icon layer",
+    "units": "px at 1x",
+    "x": "right",
+    "y": "down"
+  },
+  "component_bounds": [
+    -6,
+    0,
+    125,
+    130
+  ],
+  "icon_layer": {
+    "width": 120,
+    "height": 120,
+    "scale": 1,
+    "offset": [
+      0,
+      0
+    ]
+  },
+  "offset_owner": "Final PNG internal placement; UI extra compensation is zero",
+  "components": [
+    {
+      "id": "circle",
+      "file": {
+        "path": "circle.png",
+        "sha256": "e8abf5c565ed71cc0282cedcf4d40140af42324d177277708a11c10fc2d5f70b"
+      },
+      "width": 113,
+      "height": 113,
+      "offset": [
+        4,
+        7
+      ],
+      "z": 0,
+      "clipping": false
+    },
+    {
+      "id": "nameplate",
+      "file": {
+        "path": "nameplate.png",
+        "sha256": "4e441a92953684d3fba91680639295a657a51709d1ed505f1ac757c991bc8444"
+      },
+      "width": 131,
+      "height": 40,
+      "offset": [
+        -6,
+        90
+      ],
+      "z": 2,
+      "clipping": false
+    }
+  ],
+  "basis": {
+    "path": "basis.md",
+    "sha256": "4054e4bd1b2556f1c974d5a50c00514ea5ac173953ed4f09196091ed50ca761a"
+  },
+  "scope": "User chose this common-circle/nameplate layout; static assembly target only, not engine coordinates",
+  "rounding": "raster preview only: circle x3.5->4; plate x-5.5->-6; no icon movement or resizing",
+  "text": {
+    "font": "SimSun",
+    "size": 24,
+    "status": "preview approximation; production typeface unverified"
+  },
+  "background": {
+    "hex": "#877b77",
+    "status": "approximate panel backdrop, not captured game screenshot"
+  }
+}

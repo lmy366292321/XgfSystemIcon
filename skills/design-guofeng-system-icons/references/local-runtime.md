@@ -22,3 +22,7 @@ $entry = Join-Path $env:USERPROFILE '.codex\skills\design-guofeng-system-icons\s
 ## 生成前构图入口（2026-10-23）
 
 `-Operation composition-plan -Arguments @(composition_json, "--output", new_board_png)`生成真实组件规划图；`-Operation workflow`支持prepare-request；`-Operation composition-case`只读重放真实试制证据。具体顺序及参数见[生成前构图检查](composition-preflight.md)。
+
+## 项目资源入口
+
+`-Operation new-task -Arguments @(<新的任务目录>)`从当前项目自动查找已确认组件，输出独立任务的资源和构图草稿。无需传入组件PNG路径。边界见[项目资源入口](project-resource-entry.md)。

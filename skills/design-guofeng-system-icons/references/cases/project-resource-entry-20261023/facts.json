@@ -1,0 +1,14 @@
+{
+  "project_id": "xgf-entry-icons",
+  "automatic_discovery": true,
+  "resource_arguments_supplied": false,
+  "circle": "e8abf5c565ed71cc0282cedcf4d40140af42324d177277708a11c10fc2d5f70b",
+  "nameplate": "4e441a92953684d3fba91680639295a657a51709d1ed505f1ac757c991bc8444",
+  "layout": "pass",
+  "accepted_icon_unchanged": true,
+  "scope": "Fresh process, fresh task, actual resource reuse and read-only assembly; no new generation or art acceptance.",
+  "new_task_start": "pass",
+  "prepare_request": "pass",
+  "actual_board_in_tool_arguments": true,
+  "generation_invoked": false
+}
