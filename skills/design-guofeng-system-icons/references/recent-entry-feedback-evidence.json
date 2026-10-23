@@ -1,0 +1,698 @@
+{
+  "case": "F-20261023-RECENT-001",
+  "date": "2026-10-23",
+  "scope": "R39-R58",
+  "user_messages": [
+    {
+      "id": "rankings-01",
+      "at": "2026-10-21T10:42:30.882Z",
+      "source_line": 16,
+      "text_sha256": "60956958a6ea4e0420fdaf08da317f77c4c80317d336be25e82205020da40e57",
+      "issues": [
+        "P13"
+      ],
+      "disposition": "case-linked"
+    },
+    {
+      "id": "rankings-02",
+      "at": "2026-10-22T02:58:49.369Z",
+      "source_line": 225,
+      "text_sha256": "acc5648598de6692f75dda7501e251fd5e164bbd30db6a53482e70530fe951e6",
+      "issues": [
+        "P01",
+        "P13"
+      ],
+      "disposition": "case-linked"
+    },
+    {
+      "id": "rankings-03",
+      "at": "2026-10-22T03:14:58.561Z",
+      "source_line": 382,
+      "text_sha256": "885f18b0bd2b4ea1c34f07728b323b8e16bd123d334c55e4d33514b54565f08d",
+      "issues": [
+        "P02"
+      ],
+      "disposition": "case-linked"
+    },
+    {
+      "id": "rankings-04",
+      "at": "2026-10-22T03:18:19.175Z",
+      "source_line": 429,
+      "text_sha256": "1a2d0a35723073afbde15897a918e2ea8327a0468f4f2d79c982b82ecffafdd1",
+      "issues": [
+        "P02"
+      ],
+      "disposition": "case-linked"
+    },
+    {
+      "id": "rankings-05",
+      "at": "2026-10-22T03:36:58.698Z",
+      "source_line": 586,
+      "text_sha256": "43245181464dee9efd8ec370042522f811e5c7eabee26227dd625bc899815b31",
+      "issues": [
+        "P13"
+      ],
+      "disposition": "case-linked"
+    },
+    {
+      "id": "rankings-06",
+      "at": "2026-10-22T03:39:03.932Z",
+      "source_line": 607,
+      "text_sha256": "584fd5854edd84c50a2802121d9b4cc9f16f22639b10c61b889a26b01703bcf2",
+      "issues": [
+        "P13"
+      ],
+      "disposition": "case-linked"
+    },
+    {
+      "id": "rankings-07",
+      "at": "2026-10-23T02:47:50.826Z",
+      "source_line": 788,
+      "text_sha256": "790ce365c093c6985803e513abf11eb5c5a24ed1164a5eab7e78c80f94642969",
+      "issues": [],
+      "disposition": "continue-existing-task; no new defect"
+    },
+    {
+      "id": "rankings-08",
+      "at": "2026-10-23T03:10:09.862Z",
+      "source_line": 1021,
+      "text_sha256": "ac60864572f426bd464cef381237b539deb1898a1b8e1b0dc278f015f9cabfda",
+      "issues": [
+        "P14"
+      ],
+      "disposition": "case-linked"
+    },
+    {
+      "id": "rankings-09",
+      "at": "2026-10-23T03:43:25.661Z",
+      "source_line": 1182,
+      "text_sha256": "f27365d31f01ffa51b7589120369ab4be9fffbfb518379f0de4101365db111b6",
+      "issues": [
+        "P14",
+        "P25"
+      ],
+      "disposition": "case-linked"
+    },
+    {
+      "id": "rankings-10",
+      "at": "2026-10-23T04:04:00.995Z",
+      "source_line": 1312,
+      "text_sha256": "c7a86a0c21d43da9c68a6fd1a204b6f6a2391b8484407cec11ab61a04e065513",
+      "issues": [
+        "P14"
+      ],
+      "disposition": "case-linked"
+    },
+    {
+      "id": "rankings-11",
+      "at": "2026-10-23T04:23:28.678Z",
+      "source_line": 1540,
+      "text_sha256": "5fc8b187a5bd7b7ae5575719d25f98798b522841b2e5bcce1fb8936cd49d7e32",
+      "issues": [
+        "P15"
+      ],
+      "disposition": "case-linked"
+    },
+    {
+      "id": "rankings-12",
+      "at": "2026-10-23T04:32:24.532Z",
+      "source_line": 1586,
+      "text_sha256": "d2bd6c60fb87947ff7ed8ba47b0c3624126190a09deb8c544ec097899c0b6ece",
+      "issues": [
+        "P15"
+      ],
+      "disposition": "case-linked"
+    },
+    {
+      "id": "rankings-13",
+      "at": "2026-10-23T04:50:14.683Z",
+      "source_line": 1737,
+      "text_sha256": "8f3d7eb41d5d61dc810472fd58537ed37193979c56492fad51f9396d30a3f5ea",
+      "issues": [
+        "P13"
+      ],
+      "disposition": "case-linked"
+    },
+    {
+      "id": "rankings-14",
+      "at": "2026-10-23T05:04:57.281Z",
+      "source_line": 2004,
+      "text_sha256": "8b96426a0ff47d9128f5392cc1d562bfcf52f6c17fdf9fdbfe492ca795f3c2ac",
+      "issues": [
+        "P16"
+      ],
+      "disposition": "case-linked"
+    },
+    {
+      "id": "rankings-15",
+      "at": "2026-10-23T06:01:11.705Z",
+      "source_line": 2199,
+      "text_sha256": "fbae3ae75a5fd13e0ea94b48eb8311e51a23cf080c3fb7d2c9d491285bb8755e",
+      "issues": [
+        "P16"
+      ],
+      "disposition": "case-linked"
+    },
+    {
+      "id": "rankings-16",
+      "at": "2026-10-23T06:22:04.050Z",
+      "source_line": 2335,
+      "text_sha256": "697ec125890f490a7811bf0e952abc495ca94a7ddf788091743d1e5028b736c0",
+      "issues": [
+        "P16",
+        "P24"
+      ],
+      "disposition": "case-linked"
+    },
+    {
+      "id": "rankings-17",
+      "at": "2026-10-23T06:26:31.940Z",
+      "source_line": 2380,
+      "text_sha256": "e3e028c9da3a5615239daa02f864598ba5fe0d579bcc3f8c8da0d1c0a2e185e3",
+      "issues": [
+        "P24",
+        "P25"
+      ],
+      "disposition": "case-linked"
+    },
+    {
+      "id": "shop-01",
+      "at": "2026-10-21T10:44:11.280Z",
+      "source_line": 16,
+      "text_sha256": "5859f438cfe6166afdfb14c60f5aaf87ff41ef5ef907699e71ac1b96f9b204b6",
+      "issues": [
+        "P05",
+        "P06"
+      ],
+      "disposition": "case-linked"
+    },
+    {
+      "id": "shop-02",
+      "at": "2026-10-21T11:00:16.914Z",
+      "source_line": 299,
+      "text_sha256": "e4400a20bb20a500894f5e8bffd4039bc39566afa4b8c20a254ec508d1eaafa0",
+      "issues": [
+        "P05"
+      ],
+      "disposition": "case-linked"
+    },
+    {
+      "id": "shop-03",
+      "at": "2026-10-22T02:59:25.328Z",
+      "source_line": 494,
+      "text_sha256": "0468d507fc2fbaddfe4f240582752ba810736322e5fe41a7a47a79e507555185",
+      "issues": [
+        "P01"
+      ],
+      "disposition": "case-linked"
+    },
+    {
+      "id": "shop-04",
+      "at": "2026-10-22T03:14:43.633Z",
+      "source_line": 617,
+      "text_sha256": "370eddd9a7046427ebb1219024444949be464261c0959442a41096743917c547",
+      "issues": [
+        "P02"
+      ],
+      "disposition": "case-linked"
+    },
+    {
+      "id": "shop-05",
+      "at": "2026-10-22T03:18:57.111Z",
+      "source_line": 661,
+      "text_sha256": "47e4229e05e10bc1ceba149b6e50fa8ae39456bba5640de395be6a0075ceda82",
+      "issues": [
+        "P02"
+      ],
+      "disposition": "case-linked"
+    },
+    {
+      "id": "shop-06",
+      "at": "2026-10-22T03:45:41.982Z",
+      "source_line": 861,
+      "text_sha256": "b732a854f1d7a24304b55de66f3f9879a8464a9abfa1e395da98c5773c45e5f6",
+      "issues": [
+        "P11"
+      ],
+      "disposition": "case-linked"
+    },
+    {
+      "id": "shop-07",
+      "at": "2026-10-23T02:47:35.579Z",
+      "source_line": 980,
+      "text_sha256": "790ce365c093c6985803e513abf11eb5c5a24ed1164a5eab7e78c80f94642969",
+      "issues": [],
+      "disposition": "continue-existing-task; no new defect"
+    },
+    {
+      "id": "shop-08",
+      "at": "2026-10-23T02:56:08.298Z",
+      "source_line": 1086,
+      "text_sha256": "5d8f1db496902c11795b12a3f3d77bd127e2023a35bbcc2a0ecc11ed236e0e14",
+      "issues": [
+        "P11",
+        "P12"
+      ],
+      "disposition": "case-linked"
+    },
+    {
+      "id": "shop-09",
+      "at": "2026-10-23T03:14:07.504Z",
+      "source_line": 1212,
+      "text_sha256": "3831e173af11a122009dd17453b9ffba40f06ba521a735df01a6eedeff113c31",
+      "issues": [
+        "P24",
+        "P25"
+      ],
+      "disposition": "case-linked"
+    },
+    {
+      "id": "alliance-01",
+      "at": "2026-10-21T10:57:45.018Z",
+      "source_line": 16,
+      "text_sha256": "22f5481c618ce5df369b9535fd2f75dcf51304c8c58801b4b59e73b5b5d98e6b",
+      "issues": [
+        "P04",
+        "P17"
+      ],
+      "disposition": "case-linked"
+    },
+    {
+      "id": "alliance-02",
+      "at": "2026-10-22T03:01:51.798Z",
+      "source_line": 372,
+      "text_sha256": "b784e767330ee52cb0b5a39a50ae92848f3254965b5c3114f7db7454c73e9da4",
+      "issues": [
+        "P01",
+        "P04",
+        "P17"
+      ],
+      "disposition": "case-linked"
+    },
+    {
+      "id": "alliance-03",
+      "at": "2026-10-22T03:25:42.702Z",
+      "source_line": 600,
+      "text_sha256": "885f18b0bd2b4ea1c34f07728b323b8e16bd123d334c55e4d33514b54565f08d",
+      "issues": [
+        "P02"
+      ],
+      "disposition": "case-linked"
+    },
+    {
+      "id": "alliance-04",
+      "at": "2026-10-23T02:47:57.402Z",
+      "source_line": 919,
+      "text_sha256": "790ce365c093c6985803e513abf11eb5c5a24ed1164a5eab7e78c80f94642969",
+      "issues": [],
+      "disposition": "continue-existing-task; no new defect"
+    },
+    {
+      "id": "alliance-05",
+      "at": "2026-10-23T03:15:42.182Z",
+      "source_line": 1142,
+      "text_sha256": "6baeb2f46ff8406fa515d021f57c0880ad17963039ffc5fe40527223ccacb01c",
+      "issues": [
+        "P18"
+      ],
+      "disposition": "case-linked"
+    },
+    {
+      "id": "alliance-06",
+      "at": "2026-10-23T03:46:27.047Z",
+      "source_line": 1455,
+      "text_sha256": "1b0c52e74fd7fc5d853faf4e1a6f2dd5b0b88192ac6fb2f69ad434740e3c4377",
+      "issues": [
+        "P19"
+      ],
+      "disposition": "case-linked"
+    },
+    {
+      "id": "alliance-07",
+      "at": "2026-10-23T04:03:22.542Z",
+      "source_line": 1608,
+      "text_sha256": "838afeb2a6b7fa93b3a013e90949061cce8e1193bac0804f3742b7e3475c5f56",
+      "issues": [
+        "P20"
+      ],
+      "disposition": "case-linked"
+    },
+    {
+      "id": "alliance-08",
+      "at": "2026-10-23T04:22:25.275Z",
+      "source_line": 1750,
+      "text_sha256": "57f8f09073bdb8a835394e52205077b6b5c6d39cc6c6d7e8d8e3b1c9fb6cb2d7",
+      "issues": [
+        "P20"
+      ],
+      "disposition": "case-linked"
+    },
+    {
+      "id": "alliance-09",
+      "at": "2026-10-23T04:50:05.257Z",
+      "source_line": 2014,
+      "text_sha256": "8f3d7eb41d5d61dc810472fd58537ed37193979c56492fad51f9396d30a3f5ea",
+      "issues": [
+        "P04",
+        "P20"
+      ],
+      "disposition": "case-linked"
+    },
+    {
+      "id": "alliance-10",
+      "at": "2026-10-23T05:04:11.236Z",
+      "source_line": 2234,
+      "text_sha256": "04bd17a15f6155419162f7e9c742591593c80eddcd0fa963060bf80104f4e21c",
+      "issues": [
+        "P20"
+      ],
+      "disposition": "case-linked"
+    },
+    {
+      "id": "alliance-11",
+      "at": "2026-10-23T06:04:20.335Z",
+      "source_line": 2518,
+      "text_sha256": "6977b95dc34a4b225ede30b7b697ca85ca7b349e8a02cb2db8ae7b3afe0f4815",
+      "issues": [
+        "P21"
+      ],
+      "disposition": "case-linked"
+    },
+    {
+      "id": "alliance-12",
+      "at": "2026-10-23T06:46:15.392Z",
+      "source_line": 2782,
+      "text_sha256": "9e512859ebd3d7b53c68386ce428fdce32b649929df41fbb79ad35e7160e24d4",
+      "issues": [
+        "P21"
+      ],
+      "disposition": "case-linked"
+    },
+    {
+      "id": "alliance-13",
+      "at": "2026-10-23T06:56:12.209Z",
+      "source_line": 2803,
+      "text_sha256": "c2212ec8cef64fbf6066746906de7034a93c1ee5bc677381c8d8ddc408c80e2f",
+      "issues": [
+        "P21",
+        "P22"
+      ],
+      "disposition": "case-linked"
+    },
+    {
+      "id": "alliance-14",
+      "at": "2026-10-23T07:06:49.000Z",
+      "source_line": 2891,
+      "text_sha256": "bfdd7406b534f0899c3bad860d7a1e5f5498b35ff171d9c2a235a602c31dca6a",
+      "issues": [
+        "P22"
+      ],
+      "disposition": "case-linked"
+    },
+    {
+      "id": "alliance-15",
+      "at": "2026-10-23T07:07:48.421Z",
+      "source_line": 2904,
+      "text_sha256": "cafdcaee034adebc395047dc20ec567d061d2fceb735feb46f8334017585fdf7",
+      "issues": [
+        "P22"
+      ],
+      "disposition": "case-linked"
+    },
+    {
+      "id": "alliance-16",
+      "at": "2026-10-23T07:25:38.259Z",
+      "source_line": 3034,
+      "text_sha256": "b06164b80c6b4b4c137b3f3d58906226dd3404478b33910c294c3608cb49dc26",
+      "issues": [
+        "P23"
+      ],
+      "disposition": "case-linked"
+    },
+    {
+      "id": "alliance-17",
+      "at": "2026-10-23T07:39:57.399Z",
+      "source_line": 3129,
+      "text_sha256": "4a8d574ff7bc0b589494542daf00859eb1fc6cbb558dd4da15459b5aeda50788",
+      "issues": [
+        "P24"
+      ],
+      "disposition": "case-linked"
+    },
+    {
+      "id": "alliance-18",
+      "at": "2026-10-23T07:45:05.354Z",
+      "source_line": 3156,
+      "text_sha256": "634596f4ee145b5dcbee83e2337f60d5126366edc9d9dbedbe27ef2522ff304b",
+      "issues": [
+        "P24",
+        "P25"
+      ],
+      "disposition": "case-linked"
+    },
+    {
+      "id": "warehouse-01",
+      "at": "2026-10-21T10:58:49.626Z",
+      "source_line": 16,
+      "text_sha256": "5dce420a9cbb37e8c8e1eb3725cd4b6474b928bf33066ad39e6b81764d0e193c",
+      "issues": [
+        "P06",
+        "P07",
+        "P08"
+      ],
+      "disposition": "case-linked"
+    },
+    {
+      "id": "warehouse-02",
+      "at": "2026-10-22T03:00:53.464Z",
+      "source_line": 273,
+      "text_sha256": "200990847dd89f433b77aeae855cfb1642e96db9180b32572006ada544c81c19",
+      "issues": [
+        "P01",
+        "P06",
+        "P07",
+        "P08"
+      ],
+      "disposition": "case-linked"
+    },
+    {
+      "id": "warehouse-03",
+      "at": "2026-10-22T03:07:43.078Z",
+      "source_line": 349,
+      "text_sha256": "43997734091421d31f3d5a73e7b18bc8b495a945050cc1d86757d2177bcb39b3",
+      "issues": [
+        "P06"
+      ],
+      "disposition": "case-linked"
+    },
+    {
+      "id": "warehouse-04",
+      "at": "2026-10-22T03:16:21.827Z",
+      "source_line": 460,
+      "text_sha256": "885f18b0bd2b4ea1c34f07728b323b8e16bd123d334c55e4d33514b54565f08d",
+      "issues": [
+        "P02"
+      ],
+      "disposition": "case-linked"
+    },
+    {
+      "id": "warehouse-05",
+      "at": "2026-10-22T03:18:34.088Z",
+      "source_line": 492,
+      "text_sha256": "9a668e7a1a91993966cb7f7dffaac1de5f43fe60108e62e960da316b8ed8b048",
+      "issues": [
+        "P02"
+      ],
+      "disposition": "case-linked"
+    },
+    {
+      "id": "warehouse-06",
+      "at": "2026-10-22T03:39:55.236Z",
+      "source_line": 681,
+      "text_sha256": "a727e20fdd01b4fc59da42353e7e3f8cfbc0477e1cc6c9082e86b49c3df72ba8",
+      "issues": [
+        "P03"
+      ],
+      "disposition": "case-linked"
+    },
+    {
+      "id": "warehouse-07",
+      "at": "2026-10-22T03:43:11.163Z",
+      "source_line": 716,
+      "text_sha256": "351ed1db56cb888a6ad440303a8f222778ee2d60e11f4283bd7bf198683efe15",
+      "issues": [
+        "P03"
+      ],
+      "disposition": "case-linked"
+    },
+    {
+      "id": "warehouse-08",
+      "at": "2026-10-23T02:50:59.006Z",
+      "source_line": 866,
+      "text_sha256": "790ce365c093c6985803e513abf11eb5c5a24ed1164a5eab7e78c80f94642969",
+      "issues": [],
+      "disposition": "continue-existing-task; no new defect"
+    },
+    {
+      "id": "warehouse-09",
+      "at": "2026-10-23T03:01:09.238Z",
+      "source_line": 991,
+      "text_sha256": "9fb6b89edb084e5417e8291edec83fd7e71abe35c7d6e0c801f7d628a5792520",
+      "issues": [
+        "P03",
+        "P13"
+      ],
+      "disposition": "case-linked"
+    },
+    {
+      "id": "warehouse-10",
+      "at": "2026-10-23T03:16:21.259Z",
+      "source_line": 1129,
+      "text_sha256": "7c3148c830e81d1f9b102dceff1fd87ad9270823d3a2415cc58d47f52f9ccad8",
+      "issues": [
+        "P09"
+      ],
+      "disposition": "case-linked"
+    },
+    {
+      "id": "warehouse-11",
+      "at": "2026-10-23T03:45:22.458Z",
+      "source_line": 1423,
+      "text_sha256": "c61c30cf774854d7a103b382c8e7ae36791574648f7ed197a62a68ef21e1c515",
+      "issues": [
+        "P24"
+      ],
+      "disposition": "case-linked"
+    },
+    {
+      "id": "warehouse-12",
+      "at": "2026-10-23T03:57:20.944Z",
+      "source_line": 1452,
+      "text_sha256": "87cce8b4854657d92b63ef831e074cd5221041f66ba47fba86b99dbe0502f890",
+      "issues": [
+        "P24",
+        "P25"
+      ],
+      "disposition": "case-linked"
+    },
+    {
+      "id": "fashion-01",
+      "at": "2026-10-21T11:03:21.777Z",
+      "source_line": 16,
+      "text_sha256": "fb0e05116c671d76f1efb270b5c7acfc8ee073be7486741ac51a3c1bdc433db0",
+      "issues": [
+        "P10"
+      ],
+      "disposition": "case-linked"
+    },
+    {
+      "id": "fashion-02",
+      "at": "2026-10-22T02:59:18.576Z",
+      "source_line": 226,
+      "text_sha256": "0468d507fc2fbaddfe4f240582752ba810736322e5fe41a7a47a79e507555185",
+      "issues": [
+        "P01"
+      ],
+      "disposition": "case-linked"
+    },
+    {
+      "id": "fashion-03",
+      "at": "2026-10-22T03:08:57.216Z",
+      "source_line": 342,
+      "text_sha256": "5b0d9f5fa01671bd709e6f62770d002680a3c000cf5366831af215c48ebb7e70",
+      "issues": [
+        "P01",
+        "P02"
+      ],
+      "disposition": "case-linked"
+    },
+    {
+      "id": "fashion-04",
+      "at": "2026-10-22T03:12:01.920Z",
+      "source_line": 405,
+      "text_sha256": "b25b789208be09910a12aa65e71732a77c80bb12d4ad00ec7efa488b0267ea56",
+      "issues": [
+        "P10"
+      ],
+      "disposition": "case-linked"
+    },
+    {
+      "id": "fashion-05",
+      "at": "2026-10-22T03:13:26.219Z",
+      "source_line": 437,
+      "text_sha256": "051cf7bd2f82d85568cf57ca6d9fde9bb131f49d2abb632057247a146b14431d",
+      "issues": [
+        "P10"
+      ],
+      "disposition": "case-linked"
+    },
+    {
+      "id": "fashion-06",
+      "at": "2026-10-23T02:48:56.238Z",
+      "source_line": 533,
+      "text_sha256": "2bf78607869cca23909668fbebda642065b32750eca069c85345b34abd4326c2",
+      "issues": [
+        "P24",
+        "P25"
+      ],
+      "disposition": "case-linked"
+    }
+  ],
+  "review_type": "same-person retrospective, known feedback, not blind or prospective; selected visual comparisons, not a fresh full batch acceptance",
+  "viewed_images": [
+    {
+      "logical_source": "external-evidence/output/rankings-feedback-v1-v6-20261023/V1与V6-120px独立及同组件-浅底.png",
+      "sha256": "280bc4e151a9a9f1860f059cbd4b1065b1e6705f71cb1d03c3fb0dee9e24b569"
+    },
+    {
+      "logical_source": "external-evidence/output/alliance-rich-v4-20261023/selected-qa/四枚三版120-light.png",
+      "sha256": "f505bc180b0c89ff519f8542c046e01020fec0295a9f2e4871c72e01f3c39b96"
+    },
+    {
+      "logical_source": "external-evidence/output/alliance-rich-v4-20261023/selected-qa/四枚三版120-dark.png",
+      "sha256": "0fe6cbf173c17981cc90b7dbbf465c9039ffcb881fbcc11429d73b0a7007a2be"
+    },
+    {
+      "logical_source": "external-evidence/output/alliance-345-local-color-v10-20261023/qa/345-120-before-after-light.png",
+      "sha256": "3d0e9b04ef245660b0ef6edc5097caeaba7336be5b34fa99d94654f79c5a0332"
+    },
+    {
+      "logical_source": "external-evidence/output/alliance-rank-blue-v11-20261023/qa/05-blue-UI-comparison.png",
+      "sha256": "5711761977dfe728884b3e7b96f1bb4bddd55230794fdef7bd2fcb0f7edebf8b"
+    },
+    {
+      "logical_source": "external-evidence/output/alliance-rank-blue-v11-20261023/qa/05-blue-before-after-dark.png",
+      "sha256": "5e73fd3212485382df9ab3c9e4cfb094b857e4f7975eedf3880afe16dba5118b"
+    },
+    {
+      "logical_source": "external-evidence/output/warehouse-floral-v4-20261023/selected/花艺品瓶身-前后及同类-120px-浅底.png",
+      "sha256": "b2f0d9c6902973cdc9242fa1a1f02d64a6daa83c3e8dc370bbea4fe4d23e9b93"
+    },
+    {
+      "logical_source": "external-evidence/output/fashion-fit-20261022-v1/120px组合前后-浅底.png",
+      "sha256": "eb18e38a8f476272bf0fa9a6464dc2154345f5da40cb5c0d783ce89b67418795"
+    },
+    {
+      "logical_source": "external-evidence/output/ranking-shop-20261023-v5/V4V5-UI前后-浅底.png",
+      "sha256": "fc87143f3019438efb372e6ed8b03bd740cdd0fc44373cfba06c701354761f6b"
+    }
+  ],
+  "validation": {
+    "plan_sha256": "9a043310b67ccc8d7fa7533e329933c4907fd347ae528f5122b92e7148055c0a",
+    "pixel_replay_sha256": "51b70a54912217f214d5ec651d03153940780412a3013d446620bf25479f9337",
+    "conclusion_sha256": "2088367a42a5b7954b38de14fb1d9f465c6a3fdaef6304adcf172b3668e04fe6",
+    "local_color_pairs": 4,
+    "alpha_changes_all_pairs": 0,
+    "v11_outside_source_blue_rgb_changes": 0,
+    "unchanged_shop_files": 8,
+    "geometry_replays": 3,
+    "nonpreserving_raw_candidates_detected": 2
+  },
+  "limits": [
+    "No new global visual recipe validated",
+    "No forward generation test",
+    "No independent reviewer in this retrospective",
+    "Source color and engineering remain unverified"
+  ],
+  "evidence_access": "external-evidence paths are logical names; files remain in the project archive, hashes alone are not recovered evidence on another device"
+}

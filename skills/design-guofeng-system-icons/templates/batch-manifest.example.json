@@ -6,14 +6,14 @@
   ],
   "skill": {
     "path": "../SKILL.md",
-    "sha256": "5fb03e23d4d86357b11c43cbfa06951655aca1296765c7e56fd383f7de6293be"
+    "sha256": "ca70d50971e01e92edaa44944fe2af45b859a7c08b0aa94bff13d85361f60339"
   },
   "rules": [
     {
       "id": "design-standard",
       "file": {
         "path": "../references/design-standard.md",
-        "sha256": "6a986f515392d6b13371298e17205d6937c4d05414c7d23185f27f41771bbbf5"
+        "sha256": "cc69d6128ff0fb3c357f703cddce7abacd5e068ee8e7edc073d1cbd200e481ad"
       }
     },
     {
@@ -27,7 +27,7 @@
       "id": "visual-control",
       "file": {
         "path": "../references/visual-control.md",
-        "sha256": "14b325e422243423fa3afadfef758a2ff3375b411f1584cde70f951caa75715f"
+        "sha256": "47ca7291f4e47b36e74593429bb67402ef7e3a553ea4330411e4b03f1cf5a39c"
       }
     },
     {
@@ -41,7 +41,7 @@
       "id": "delivery-review",
       "file": {
         "path": "../references/delivery-review.md",
-        "sha256": "fa4ba5801580fabefbc09c78b8195257f4f5c6409c5346be4b83b6876b22e57d"
+        "sha256": "1d39589ef64955be048c39ef475ec8dcda4d0d2b37727083e60edaf8274c90f9"
       }
     },
     {
@@ -76,7 +76,7 @@
       "id": "composition-layout",
       "file": {
         "path": "../references/composition-layout.md",
-        "sha256": "08ec7ab77e9d8d5a4ac00cf82996173de06ee320f08a0f2154f2edef8ad290bc"
+        "sha256": "80061f95d594f30747004fb266c0c7463e431646d45c5c8b959f7dadfb75458c"
       }
     },
     {
