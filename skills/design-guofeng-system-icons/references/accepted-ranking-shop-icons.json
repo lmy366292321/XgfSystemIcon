@@ -1,0 +1,377 @@
+{
+  "date": "2026-10-23",
+  "user_request": "V5的这批图标登记通过，并加入到图库中",
+  "user_acceptance": "pass",
+  "status": "正式限定用途参考",
+  "accepted_version": "ranking-shop-20261023-v5",
+  "scope": "All five exact V5 delivered icons and their shown static common circle/nameplate arrangement; no approval of earlier variants or future edits",
+  "items": [
+    {
+      "id": "R41",
+      "name": "花礼",
+      "version": "ranking-shop-20261023-v5",
+      "accepted_on": "2026-10-23",
+      "user_acceptance": "pass",
+      "status": "正式限定用途参考",
+      "purpose": "绢帛斜束花礼、花头主块与束结次级、固定名称板组合",
+      "limits": "本案花种/三朵数量/桃粉奶白配色/左倾角度不推广；与R28鲜花库存主体区分",
+      "files": {
+        "1024": {
+          "path": "assets/flower-gift-shop-v5.png",
+          "sha256": "da51e26b0f6d711b6a1f4cababa452e5d72c1f7519651f879607ae080120a839",
+          "logical_source": "external-evidence/ranking-shop-20261023-v5/1024/01-花礼-1024.png"
+        },
+        "120": {
+          "path": "assets/previews/flower-gift-shop-v5-120.png",
+          "sha256": "8dd52baf6f0bf080b6049204b5b14998aa4d23b574aa9da067bd6758f151b892",
+          "logical_source": "external-evidence/ranking-shop-20261023-v5/120/01-花礼-120.png"
+        }
+      },
+      "static_composition": "user accepted the selected circle/nameplate composition",
+      "task_geometry": "pass; independent-translations contract retained",
+      "default_102px_safety": "default diagnostic retained; task-layout boundary exception",
+      "color_source": "unverified",
+      "resource_delivery": "unverified",
+      "engineering": "unverified",
+      "lineage": "V4 retained unchanged",
+      "bbox_1024": [
+        120,
+        65,
+        903,
+        856
+      ],
+      "bbox_120": [
+        12,
+        5,
+        108,
+        102
+      ],
+      "geometry_evidence": {
+        "logical_source": "external-evidence/ranking-shop-20261023-v5/geometry/01.json",
+        "sha256": "5d2f3db8badb4a7d3f197f34037521377aec30f6d754c9d3d7ae4013801c37bc"
+      }
+    },
+    {
+      "id": "R42",
+      "name": "培育",
+      "version": "ranking-shop-20261023-v5",
+      "accepted_on": "2026-10-23",
+      "user_acceptance": "pass",
+      "status": "正式限定用途参考",
+      "purpose": "露籽束纸种包、苗印与竹勺的种子商品组合",
+      "limits": "具体培育耗材分类仍配名称；不将纸包、苗印或籽粒数量固定成全部培育功能",
+      "files": {
+        "1024": {
+          "path": "assets/cultivation-shop-v5.png",
+          "sha256": "e3682ad7f2d2cd91e904ac9ee69635fabc92908f35263cf4ca6299bce15fc9d1",
+          "logical_source": "external-evidence/ranking-shop-20261023-v5/1024/02-培育-1024.png"
+        },
+        "120": {
+          "path": "assets/previews/cultivation-shop-v5-120.png",
+          "sha256": "3871c4c7b407cee44f4fa2da7524894e6e8613a6e178791f341ce30dc72f187d",
+          "logical_source": "external-evidence/ranking-shop-20261023-v5/120/02-培育-120.png"
+        }
+      },
+      "static_composition": "user accepted the selected circle/nameplate composition",
+      "task_geometry": "pass; independent-translations contract retained",
+      "default_102px_safety": "default diagnostic retained; task-layout boundary exception",
+      "color_source": "unverified",
+      "resource_delivery": "unverified",
+      "engineering": "unverified",
+      "lineage": "V4 retained unchanged",
+      "bbox_1024": [
+        112,
+        162,
+        912,
+        775
+      ],
+      "bbox_120": [
+        11,
+        17,
+        109,
+        93
+      ],
+      "geometry_evidence": {
+        "logical_source": "external-evidence/ranking-shop-20261023-v5/geometry/02.json",
+        "sha256": "88125e9b4c214a73abbf15489819a439ce46cb9fc7a28364f6a7a4db91db9dd3"
+      }
+    },
+    {
+      "id": "R43",
+      "name": "杂货",
+      "version": "ranking-shop-20261023-v5",
+      "accepted_on": "2026-10-23",
+      "user_acceptance": "pass",
+      "status": "正式限定用途参考",
+      "purpose": "宽篾竹篮承托布卷与瓷罐、多材质主次和细节收敛",
+      "limits": "杂货具体商品范围依名称；无提手/两类货物/暖竹淡瓷青为本案设计",
+      "files": {
+        "1024": {
+          "path": "assets/general-goods-shop-v5.png",
+          "sha256": "b142b1f3306cedc0c0ebb5227d128e0dc648d180b1f86e11ad10ac2c4768a843",
+          "logical_source": "external-evidence/ranking-shop-20261023-v5/1024/03-杂货-1024.png"
+        },
+        "120": {
+          "path": "assets/previews/general-goods-shop-v5-120.png",
+          "sha256": "dfa44c1230b2bb0797298196c302443e1b73a91e67f7b34c1d179742ba98e7d6",
+          "logical_source": "external-evidence/ranking-shop-20261023-v5/120/03-杂货-120.png"
+        }
+      },
+      "static_composition": "user accepted the selected circle/nameplate composition",
+      "task_geometry": "pass; independent-translations contract retained",
+      "default_102px_safety": "default diagnostic retained; task-layout boundary exception",
+      "color_source": "unverified",
+      "resource_delivery": "unverified",
+      "engineering": "unverified",
+      "lineage": "V4 retained unchanged",
+      "bbox_1024": [
+        126,
+        187,
+        897,
+        750
+      ],
+      "bbox_120": [
+        13,
+        20,
+        107,
+        90
+      ],
+      "geometry_evidence": {
+        "logical_source": "external-evidence/ranking-shop-20261023-v5/geometry/03.json",
+        "sha256": "e2911a9f6b4a9be17b47383ca70d0407bab0928c0976a8dad74da745916e6bd8"
+      }
+    },
+    {
+      "id": "R44",
+      "name": "礼包",
+      "version": "ranking-shop-20261023-v5",
+      "accepted_on": "2026-10-23",
+      "user_acceptance": "pass",
+      "status": "正式限定用途参考",
+      "purpose": "闭合矮漆匣、盘绳结、柔和胭脂漆面与连续明暗",
+      "limits": "不将红色、低矮比例或盘绳结推广为所有礼包；保持漆器而非金属反光",
+      "files": {
+        "1024": {
+          "path": "assets/gift-pack-shop-v5.png",
+          "sha256": "46b8f361ddf6c5b25d825d72989da6f3dce69319351429f26561fbfa367f44d8",
+          "logical_source": "external-evidence/ranking-shop-20261023-v5/1024/04-礼包-1024.png"
+        },
+        "120": {
+          "path": "assets/previews/gift-pack-shop-v5-120.png",
+          "sha256": "59ffeb52f7e20afd84d8838b4007ca887e2f75fd87532d16a953f4e4fca11fa5",
+          "logical_source": "external-evidence/ranking-shop-20261023-v5/120/04-礼包-120.png"
+        }
+      },
+      "static_composition": "user accepted the selected circle/nameplate composition",
+      "task_geometry": "pass; independent-translations contract retained",
+      "default_102px_safety": "default diagnostic retained; task-layout boundary exception",
+      "color_source": "unverified",
+      "resource_delivery": "unverified",
+      "engineering": "unverified",
+      "lineage": "V4 retained unchanged",
+      "bbox_1024": [
+        117,
+        196,
+        908,
+        760
+      ],
+      "bbox_120": [
+        11,
+        21,
+        108,
+        91
+      ],
+      "geometry_evidence": {
+        "logical_source": "external-evidence/ranking-shop-20261023-v5/geometry/04.json",
+        "sha256": "8aa7a9689743b0ba942af802fb9f40873c35bcfb7ecfb19f6032cb73f08e852e"
+      }
+    },
+    {
+      "id": "R45",
+      "name": "特权",
+      "version": "ranking-shop-20261023-v5",
+      "accepted_on": "2026-10-23",
+      "user_acceptance": "pass",
+      "status": "正式限定用途参考",
+      "purpose": "右斜宽玉凭牌、奶白花雕接触影与右下玉边的柔和层次",
+      "limits": "具体特权与售卖内容依名称；不将浅青玉/五瓣花/斜角/加深幅度推广为全局规则",
+      "files": {
+        "1024": {
+          "path": "assets/privilege-shop-v5.png",
+          "sha256": "b857573e75be5e545f21b8c31f08be6bbc1bec7ce60851a3d693c9a5d3a373ef",
+          "logical_source": "external-evidence/ranking-shop-20261023-v5/1024/05-特权-1024.png"
+        },
+        "120": {
+          "path": "assets/previews/privilege-shop-v5-120.png",
+          "sha256": "41519f24b9a9ac5bf366df5565a529391dcbff506196f72254bbe8a485e40076",
+          "logical_source": "external-evidence/ranking-shop-20261023-v5/120/05-特权-120.png"
+        }
+      },
+      "static_composition": "user accepted the selected circle/nameplate composition",
+      "task_geometry": "pass; independent-translations contract retained",
+      "default_102px_safety": "default diagnostic retained; task-layout boundary exception",
+      "color_source": "unverified",
+      "resource_delivery": "unverified",
+      "engineering": "unverified",
+      "lineage": "V5 jade/flower depth refinement",
+      "bbox_1024": [
+        195,
+        69,
+        828,
+        868
+      ],
+      "bbox_120": [
+        21,
+        6,
+        99,
+        104
+      ],
+      "geometry_evidence": {
+        "logical_source": "external-evidence/ranking-shop-20261023-v5/geometry/05.json",
+        "sha256": "0553998fa59314f80966f48566afab02daeaf10133d8e6c04b68762d709bf363"
+      }
+    }
+  ],
+  "qa": [
+    {
+      "path": "assets/qa/ranking-shop-v5-accepted/composition.png",
+      "sha256": "d0b2f20b5ef5cc49dd265d6ab2d51bcdcd39c311d4b20502ae3cd4ff8c07d0ab"
+    },
+    {
+      "path": "assets/qa/ranking-shop-v5-accepted/composition-light.png",
+      "sha256": "f5212eb691fa4dbd60369f9db9b9ff1526af2560e5794ef7bcdea7291da2fd29"
+    },
+    {
+      "path": "assets/qa/ranking-shop-v5-accepted/composition-dark.png",
+      "sha256": "e9a13d7089c8c8c14fe89ff1113db9bbc06eeccb13031b4f75eb05ac602a57a9"
+    },
+    {
+      "path": "assets/qa/ranking-shop-v5-accepted/v4-v5-before-after.png",
+      "sha256": "6ad95dca806340b32b57c8156679d03383fd6297eb0ca0e7a43693d58df11b97"
+    },
+    {
+      "path": "assets/qa/ranking-shop-v5-accepted/ten-reference-light.png",
+      "sha256": "ac106f50733670e3f811d8b9fa13668e71a4f0002ae27f383ee5639b623123f1"
+    },
+    {
+      "path": "assets/qa/ranking-shop-v5-accepted/ten-reference-dark.png",
+      "sha256": "c92a7d04146072e8bc40d0c7ba94214c9fd1458e43575cf9a727e80357b01cb5"
+    },
+    {
+      "path": "assets/qa/ranking-shop-v5-accepted/relation-G-all-dark.png",
+      "sha256": "c96a583c318bd2964f82ac705f90366d6d711b8e219341e3ad93cffab0bade50"
+    },
+    {
+      "path": "assets/qa/ranking-shop-v5-accepted/relation-G-all-light.png",
+      "sha256": "b3a75e9a688e7cf582643bdb91984de89a46b82ed05d98be9db8fe09dd3aba7a"
+    },
+    {
+      "path": "assets/qa/ranking-shop-v5-accepted/relation-G-flower-dark.png",
+      "sha256": "de9c668c47715961df07d2dea61311c847729e87aaf8e6f0e1266e0789d8f994"
+    },
+    {
+      "path": "assets/qa/ranking-shop-v5-accepted/relation-G-flower-light.png",
+      "sha256": "0d8d1c8dfbdb6d5f01e57b55a59c5ad0067559603f60f027b0fa9fe65365bb68"
+    },
+    {
+      "path": "assets/qa/ranking-shop-v5-accepted/relation-G-token-dark.png",
+      "sha256": "bd5eb04d2f76ee6af179db62d0f507d8843f630af78d82867d18bec85e625fc1"
+    },
+    {
+      "path": "assets/qa/ranking-shop-v5-accepted/relation-G-token-light.png",
+      "sha256": "a7df3bba0fbb6228e916d48a423bf22eff6004f944fe31df215dbf70b8a439d6"
+    }
+  ],
+  "composition": {
+    "icon_layer": [
+      120,
+      120
+    ],
+    "ui_extra_offset": [
+      0,
+      0
+    ],
+    "circle": {
+      "filename": "common_tab_function_2_1.png",
+      "sha256": "e8abf5c565ed71cc0282cedcf4d40140af42324d177277708a11c10fc2d5f70b",
+      "size": [
+        113,
+        113
+      ],
+      "offset": [
+        4,
+        7
+      ]
+    },
+    "nameplate": {
+      "filename": "common_tab_function_name_1.png",
+      "sha256": "4e441a92953684d3fba91680639295a657a51709d1ed505f1ac757c991bc8444",
+      "size": [
+        131,
+        40
+      ],
+      "offset": [
+        -6,
+        90
+      ]
+    },
+    "z_order": [
+      "circle",
+      "icon",
+      "nameplate",
+      "text"
+    ],
+    "occlusion": "Some terminal silk/stems and lower jade edge lie behind nameplate; core flower/knot/relief remain visible. Not a zero-overlap claim.",
+    "font_and_backdrop": "preview approximation; production unverified"
+  },
+  "transform_scope": {
+    "mode": "independent-translations",
+    "preview_y": [
+      -6,
+      -5,
+      -5,
+      -4,
+      -5
+    ],
+    "master_y": [
+      -51,
+      -43,
+      -43,
+      -34,
+      -43
+    ],
+    "rounding": "nearest-half-away-from-zero",
+    "final_preview": "two branches translated from associated bases; not strict direct resize of final1024",
+    "clipped_nontransparent_pixels": 0
+  },
+  "historical_evidence": [
+    {
+      "logical_source": "external-evidence/ranking-shop-20261023-v5/manifest.json",
+      "sha256": "343955757740d4f7f59379d7a381bb06d688c8c1681383063b67a2707e27a15f"
+    },
+    {
+      "logical_source": "external-evidence/ranking-shop-20261023-v5/records/final-pixel-verification.json",
+      "sha256": "e4172b43d50cdd2e6f3da475589f27c93606cd089fb7d0d967ae6dda453a8524"
+    },
+    {
+      "logical_source": "external-evidence/ranking-shop-20261023-v5/records/normalization.json",
+      "sha256": "09284bae5562f45fb90ecfd08e917f91124d61fe67939d12d3c6aa71f3db5551"
+    },
+    {
+      "logical_source": "external-evidence/ranking-shop-20261023-v5/qa/final-check/batch-report.json",
+      "sha256": "59d8dd0d20db727039e68f98263729abc2c10de66ddd9af8482140b801f1ba45"
+    },
+    {
+      "logical_source": "external-evidence/ranking-shop-20261023-v5/reviews/primary.json",
+      "sha256": "2e17855ec492eb86bbbb9197dc6d0209657714a2c32f21452b96bfcff42e68ad"
+    },
+    {
+      "logical_source": "external-evidence/ranking-shop-20261023-v5/reviews/second.json",
+      "sha256": "3e657d52741a8058c8762848c3515504d7419ba950ae3155347d3a6444089883"
+    }
+  ],
+  "resource_delivery": "unverified",
+  "color_source": "unverified",
+  "engineering": "unverified",
+  "global_rules_changed": false
+}

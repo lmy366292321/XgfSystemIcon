@@ -1,0 +1,295 @@
+{
+  "date": "2026-10-23",
+  "user_request": "通过这批图标，并加入到图库中",
+  "user_acceptance": "pass",
+  "status": "正式限定用途参考",
+  "accepted_batch": "warehouse-latest-delivery-20261023",
+  "scope": "All four exact latest delivered icons: 01/02/03 v3-B+, 04 floral v4 structural attempt03; accepted shown common component. Excludes older floral B+ and first two unselected edits, original warehouse drafts, and future variants.",
+  "items": [
+    {
+      "id": "R46",
+      "name": "鲜花",
+      "version": "v3-B+",
+      "accepted_on": "2026-10-23",
+      "user_acceptance": "pass",
+      "status": "正式限定用途参考",
+      "purpose": "裸茎花簇的主花层级、圆底体量与名称板承托",
+      "limits": "不替换R28；花种、粉白配色、放大比例与下沉量只属本案，具体仓库分类配名称",
+      "files": {
+        "1024": {
+          "path": "assets/warehouse-flowers-v3.png",
+          "sha256": "9e92affb91db2c7b3937b3f041133d11ab214c607d18f8ba6f3a7e896ebe63d7",
+          "logical_source": "external-evidence/warehouse-latest-delivery-20261023/1024/01-鲜花-1024.png"
+        },
+        "120": {
+          "path": "assets/previews/warehouse-flowers-v3-120.png",
+          "sha256": "09a25e4cc71d093bb9d7d81d72f58af512dea6881f9e57e5d7ff51f95d88fe5f",
+          "logical_source": "external-evidence/warehouse-latest-delivery-20261023/120/01-鲜花-120.png"
+        }
+      },
+      "static_composition": "user accepted the exact delivered common circle/nameplate composition",
+      "task_geometry": "previous verified working-layer contract retained",
+      "default_102px_safety": "fail retained; confirmed common component adaptation uses task-layer boundary",
+      "color_source": "unverified",
+      "resource_delivery": "unverified",
+      "engineering": "unverified",
+      "bbox_1024": [
+        92,
+        77,
+        931,
+        811
+      ],
+      "bbox_120": [
+        9,
+        7,
+        111,
+        97
+      ]
+    },
+    {
+      "id": "R47",
+      "name": "道具",
+      "version": "v3-B+",
+      "accepted_on": "2026-10-23",
+      "user_acceptance": "pass",
+      "status": "正式限定用途参考",
+      "purpose": "浇水壶与植物标培育袋的主辅、瓷器与布袋材质、用品类别表达",
+      "limits": "具体收纳目录仍配名称；不将壶/袋内容、雾蓝配色或纹饰密度推广为全部培育入口",
+      "files": {
+        "1024": {
+          "path": "assets/warehouse-cultivation-items-v3.png",
+          "sha256": "6d0ac99706e3039b718e90aa01212877dd6162e148fcc2913770d6d1397f2be1",
+          "logical_source": "external-evidence/warehouse-latest-delivery-20261023/1024/02-道具-1024.png"
+        },
+        "120": {
+          "path": "assets/previews/warehouse-cultivation-items-v3-120.png",
+          "sha256": "10c398e41a676407a598685726e73401efe2461b86ecc94899fc2d5478cae0cb",
+          "logical_source": "external-evidence/warehouse-latest-delivery-20261023/120/02-道具-120.png"
+        }
+      },
+      "static_composition": "user accepted the exact delivered common circle/nameplate composition",
+      "task_geometry": "previous verified working-layer contract retained",
+      "default_102px_safety": "fail retained; confirmed common component adaptation uses task-layer boundary",
+      "color_source": "unverified",
+      "resource_delivery": "unverified",
+      "engineering": "unverified",
+      "bbox_1024": [
+        60,
+        102,
+        964,
+        780
+      ],
+      "bbox_120": [
+        5,
+        10,
+        115,
+        93
+      ]
+    },
+    {
+      "id": "R48",
+      "name": "宫廷制品",
+      "version": "v3-B+",
+      "accepted_on": "2026-10-23",
+      "user_acceptance": "pass",
+      "status": "正式限定用途参考",
+      "purpose": "红绸金绣宫扇与独立香囊、金玉锦绣材质、辅物上收避让",
+      "limits": "红金强调符合本案华贵要求，不作为全组浓度标准；不能以宫扇代表所有宫廷制品，具体分类配名称",
+      "files": {
+        "1024": {
+          "path": "assets/warehouse-palace-crafts-v3.png",
+          "sha256": "0e14b6b77d05583b9c609efb135b8a8e1ba7a252bbb1f314b75f9326c0f29e20",
+          "logical_source": "external-evidence/warehouse-latest-delivery-20261023/1024/03-宫廷制品-1024.png"
+        },
+        "120": {
+          "path": "assets/previews/warehouse-palace-crafts-v3-120.png",
+          "sha256": "4de4ff5ddcb09e845d61ec825ba85dee7eb771bf49c1632447b6c16ca7fccc67",
+          "logical_source": "external-evidence/warehouse-latest-delivery-20261023/120/03-宫廷制品-120.png"
+        }
+      },
+      "static_composition": "user accepted the exact delivered common circle/nameplate composition",
+      "task_geometry": "previous verified working-layer contract retained",
+      "default_102px_safety": "fail retained; confirmed common component adaptation uses task-layer boundary",
+      "color_source": "unverified",
+      "resource_delivery": "unverified",
+      "engineering": "unverified",
+      "bbox_1024": [
+        100,
+        64,
+        975,
+        846
+      ],
+      "bbox_120": [
+        10,
+        5,
+        116,
+        101
+      ]
+    },
+    {
+      "id": "R49",
+      "name": "花艺品",
+      "version": "花艺品v4瓶身修订",
+      "accepted_on": "2026-10-23",
+      "user_acceptance": "pass",
+      "status": "正式限定用途参考",
+      "purpose": "花簇与短颈宽肩瓷瓶的主辅、板上可见上腹、局部结构修正",
+      "limits": "不推广花种/紫白配色/宽肩比例；瓶足仍遮，生成式局部调整不承诺花瓣像素锁定，不整体放大下移",
+      "files": {
+        "1024": {
+          "path": "assets/warehouse-floral-arrangement-v4.png",
+          "sha256": "71f44e84fe8931debc62ae84952fbf4596d14ad8ad80e25073b900c9b3157f9a",
+          "logical_source": "external-evidence/warehouse-latest-delivery-20261023/1024/04-花艺品-1024.png"
+        },
+        "120": {
+          "path": "assets/previews/warehouse-floral-arrangement-v4-120.png",
+          "sha256": "a31d626a3f103c13526fd618c81e07ec59c4b8519a4f3e67682cd592c328882d",
+          "logical_source": "external-evidence/warehouse-latest-delivery-20261023/120/04-花艺品-120.png"
+        }
+      },
+      "static_composition": "user accepted the exact delivered common circle/nameplate composition",
+      "task_geometry": "previous verified working-layer contract retained",
+      "default_102px_safety": "fail retained; confirmed common component adaptation uses task-layer boundary",
+      "color_source": "unverified",
+      "resource_delivery": "unverified",
+      "engineering": "unverified",
+      "bbox_1024": [
+        22,
+        30,
+        1008,
+        1024
+      ],
+      "bbox_120": [
+        12,
+        6,
+        111,
+        110
+      ]
+    }
+  ],
+  "qa": [
+    {
+      "path": "assets/qa/warehouse-accepted/composition-current.png",
+      "sha256": "be3dfcd5e0541bfe31c804a6abaa835dd1de7f919f02673e84b5036ced5e9d3e"
+    },
+    {
+      "path": "assets/qa/warehouse-accepted/花艺品瓶身-前后及同类-120px-界面底色.png",
+      "sha256": "4bdaa38b0ea5a2de1c389ecb8bd625345536138034a35f42d35a130d06998f9f"
+    },
+    {
+      "path": "assets/qa/warehouse-accepted/同组件120px-修订后-第1页-界面底色.png",
+      "sha256": "b11a5339127d28ed5c490936f1180f645aad1c9db50ff2a060f403545424e0d9"
+    },
+    {
+      "path": "assets/qa/warehouse-accepted/同组件120px-修订后-第2页-界面底色.png",
+      "sha256": "03980aab7f47c246d57643734790e4ad760fee65bef4c1cbaf8959b1038d0499"
+    },
+    {
+      "path": "assets/qa/warehouse-accepted/花艺品瓶身-前后及同类-120px-浅底.png",
+      "sha256": "b2f0d9c6902973cdc9242fa1a1f02d64a6daa83c3e8dc370bbea4fe4d23e9b93"
+    },
+    {
+      "path": "assets/qa/warehouse-accepted/同组件120px-修订后-第1页-浅底.png",
+      "sha256": "537fdefacdfc7d7bf8b78bedf6448c1123625ae13d1a37f26fc85f4b2f0858af"
+    },
+    {
+      "path": "assets/qa/warehouse-accepted/同组件120px-修订后-第2页-浅底.png",
+      "sha256": "399c451ea21e108ab7df6aac9f88e3cffb89a1bc51408c80492e23df9c1a6208"
+    },
+    {
+      "path": "assets/qa/warehouse-accepted/花艺品瓶身-前后及同类-120px-深底.png",
+      "sha256": "4365323ecf78966ba248cb0576102ef1babee354d3992004902644c69d55ddf0"
+    },
+    {
+      "path": "assets/qa/warehouse-accepted/同组件120px-修订后-第1页-深底.png",
+      "sha256": "e66bb237fe2d85a15056ed07839292b719101064ac141ae3b9eb4891c6696abd"
+    },
+    {
+      "path": "assets/qa/warehouse-accepted/同组件120px-修订后-第2页-深底.png",
+      "sha256": "abaa75ad7df94b3ce605fbccefc23f1f72c0680f7bf39e6dbce4d4746a7b2b20"
+    },
+    {
+      "path": "assets/qa/warehouse-accepted/ten-reference-qa-dark-01.png",
+      "sha256": "1ac9a887563cde27a4c1e6e22cfc9a818576459075adf6a4c14bac09f01ae2a6"
+    },
+    {
+      "path": "assets/qa/warehouse-accepted/ten-reference-qa-light-01.png",
+      "sha256": "69f106b78f000320ff3652694d5daf08f17d6c75dd32cedde1afb8c6a53bbd03"
+    },
+    {
+      "path": "assets/qa/warehouse-accepted/relation-G-floral-dark.png",
+      "sha256": "8d12ee09501c93cac7f5fc458161589603a889a48a6b7694ffb1aa0212281920"
+    },
+    {
+      "path": "assets/qa/warehouse-accepted/relation-G-floral-light.png",
+      "sha256": "3566632cb77112cede45dd16dc4dc6af7ba7b7a1b9606bff3e7fbb509939e541"
+    }
+  ],
+  "composition": {
+    "icon_layer": [
+      120,
+      120
+    ],
+    "ui_extra_offset": [
+      0,
+      0
+    ],
+    "circle": {
+      "size": [
+        113,
+        113
+      ],
+      "offset": [
+        4,
+        7
+      ],
+      "sha256": "e8abf5c565ed71cc0282cedcf4d40140af42324d177277708a11c10fc2d5f70b"
+    },
+    "nameplate": {
+      "size": [
+        131,
+        40
+      ],
+      "offset": [
+        -6,
+        90
+      ],
+      "sha256": "4e441a92953684d3fba91680639295a657a51709d1ed505f1ac757c991bc8444"
+    },
+    "z_order": [
+      "circle",
+      "icon",
+      "nameplate",
+      "text"
+    ],
+    "occlusion": "Noncritical stems, sachet bottom and vase foot may lie behind nameplate; core flower, watering items, sachet belly and vase upper body remain readable; not zero-overlap.",
+    "font_and_backdrop": "preview approximation; production unverified"
+  },
+  "transforms": "PNG internal placement retained byte-for-byte; all four delivered120 images exactly derive from corresponding full1024 with Pillow LANCZOS. Do not recenter, fit bbox or re-export accepted PNGs.",
+  "historical_evidence": [
+    {
+      "logical_source": "external-evidence/warehouse-component-study-20261022-v3/selected/qa/final-check/batch-report.json",
+      "sha256": "6e789da9a4d8d2c43283846d2bf76a763ff80395c5e9775db6bdf22462e56ed7"
+    },
+    {
+      "logical_source": "external-evidence/warehouse-cross-entry-120px-20261023-r1/qa/final-check/batch-report.json",
+      "sha256": "7a1c2e9e7ce4659a0acd783c8bdb1654c1b94e2b1e6625584d6bd3624008daa6"
+    },
+    {
+      "logical_source": "external-evidence/warehouse-floral-v4-20261023/selected/qa/final-check/batch-report.json",
+      "sha256": "39e82ec861617640f3161f4edb33c9bea8617f449984c098f314ea91240ecb7d"
+    },
+    {
+      "logical_source": "external-evidence/warehouse-floral-v4-20261023/selected/reviews/independent-second.json",
+      "sha256": "ab2852bfb227a37d4a005d90a0f19b71e61b904598a4dc6fb7d698fb98207623"
+    },
+    {
+      "logical_source": "external-evidence/warehouse-latest-delivery-20261023/版本与文件清单.json",
+      "sha256": "690123f46df1b5660ba392df5c41b7a77f5f65e9e45bc1a9fd5d6269c1250a7e"
+    }
+  ],
+  "color_source": "unverified",
+  "resource_delivery": "unverified",
+  "engineering": "unverified",
+  "global_rules_changed": false
+}

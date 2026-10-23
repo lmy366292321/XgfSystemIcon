@@ -1,0 +1,958 @@
+{
+  "schema_version": 1,
+  "study_date": "2026-10-23",
+  "role": "content_structure_composition_only",
+  "not_style_baseline": true,
+  "project_relative_source_directory": "图标参考",
+  "resolution_base": "project_root_not_skill_directory",
+  "original_images_bundled": false,
+  "source_batch_count": 379,
+  "identity_note": "Descriptions are visual observations, not historical attribution. Preserve uncertainty in observations.",
+  "items": [
+    {
+      "id": "C001",
+      "file": "icon_bjb_001.png",
+      "sha256": "d480d64c83a7fb2589d17c65be356a643c5452a337fa6b4c223e5f3869f84e2f",
+      "description": "双圆币",
+      "observation": "一平一斜叠置，露出币面与厚边；学习少量重叠表达数量。"
+    },
+    {
+      "id": "C003",
+      "file": "icon_bjb_003.png",
+      "sha256": "32e26df81fec216bab2cecd28a4b865a5a88363118bb476b974a8057bbdf9753",
+      "description": "开口钱袋",
+      "observation": "束口翻边、绳结、袋腹与外落币分层；保留袋口装载关系。"
+    },
+    {
+      "id": "C005",
+      "file": "icon_bzn_119.png",
+      "sha256": "9942a47720e7de1b3217c9d1837f819cdc7a9a008915cf67d37347b14df4a7dc",
+      "description": "蓝色圆形机关状物",
+      "observation": "中心亮核、环形壳与短坠；结构可作幻想物参考，器名不确定。"
+    },
+    {
+      "id": "C010",
+      "file": "icon_ccl_1005.png",
+      "sha256": "b95ec7df29655e8fce098851b02a7cf5124333b5cd643e032d4f42c44b43ba57",
+      "description": "彩珠串",
+      "observation": "闭环珠串配单侧短坠；学习环内负空间，减少珠数。"
+    },
+    {
+      "id": "C012",
+      "file": "icon_ccl_1102.png",
+      "sha256": "c6b965b1f28643ab8f2f8d4a3f260ba5222979266f027dd980905b95f271f4fd",
+      "description": "闭合薄册",
+      "observation": "封面、书脊、页边三层；斜置突出厚度，不照搬破旧肌理。"
+    },
+    {
+      "id": "C013",
+      "file": "icon_ccl_1104.png",
+      "sha256": "907f418be51b7e3e2e5ac794117b2a62cfd13bd95e5920c383a7eb0c1e335cca",
+      "description": "束口布袋",
+      "observation": "长袋身、收束颈和短绳；去文字后仍靠袋型成立。"
+    },
+    {
+      "id": "C014",
+      "file": "icon_ccl_2001.png",
+      "sha256": "046b75097df0c7d4c6d816a201cbe26c8454575dff2110b95977eb3c7b10fb15",
+      "description": "提架与点心",
+      "observation": "拱形提梁包住托盘食物；保持提梁与食品间空隙。"
+    },
+    {
+      "id": "C015",
+      "file": "icon_ccl_2003.png",
+      "sha256": "8b365d2d5cb3ae26204ec712c895bc9989f2ec5b7e3789a150bcc4aecaac558c",
+      "description": "毛笔",
+      "observation": "笔杆、金属接头、尖笔毫共轴；长物斜置，控制杆长。"
+    },
+    {
+      "id": "C017",
+      "file": "icon_ccl_2019.png",
+      "sha256": "a87af6c91346f428bff9a32a06bf1e4367f31c427e7fbb983d5bb3fcb40a7c67",
+      "description": "翻开册页",
+      "observation": "左右书页围绕书脊折开；文字不作为识别必要条件。"
+    },
+    {
+      "id": "C018",
+      "file": "icon_ccl_3001.png",
+      "sha256": "372ec28b725089a91ed84653f5deb4dcc004af26cb48c47606dcd624871ff181",
+      "description": "展开竹简",
+      "observation": "一侧卷起、条片与横向编绳；保留展开关系，减少文字。"
+    },
+    {
+      "id": "C021",
+      "file": "icon_ccl_5007.png",
+      "sha256": "c3368bd289872706f01e57bb319c34891103dbcf02946622f8a391695cd4708c",
+      "description": "半卷竹简",
+      "observation": "竖条片包成卷、另一侧平展；无文字也可表达载体。"
+    },
+    {
+      "id": "C027",
+      "file": "icon_cjr_furong_2002.png",
+      "sha256": "e18e679aac5b30648c67636e2e09e5651427e0a9d627a880a8490e204cc29fa0",
+      "description": "圆竹提盒",
+      "observation": "单提梁、盖边、筒身与编织方向；编织只留宽篾层级。"
+    },
+    {
+      "id": "C032",
+      "file": "icon_gq_002.png",
+      "sha256": "637c982693efc7acf61b6dacb3989fbf23d22cdf823089e27d21ca3632d64110",
+      "description": "原木断枝",
+      "observation": "不规则断口与树皮长轴；仅保留大断面。"
+    },
+    {
+      "id": "C033",
+      "file": "icon_gq_003.png",
+      "sha256": "8f9886945da8c28e788fda741a765e013d1585350ff4974d6bce8bb6659685d6",
+      "description": "加工木料堆",
+      "observation": "多个方截面错叠；用截面与平行边表达加工状态。"
+    },
+    {
+      "id": "C035",
+      "file": "icon_gq_006.png",
+      "sha256": "e4f7307263fb136590bc20767737337b24f705b21c6084d77ed3e15446ca780b",
+      "description": "圆首钥匙",
+      "observation": "圆首镂空、长杆与齿端；保留三段关系。"
+    },
+    {
+      "id": "C037",
+      "file": "icon_gq_009.png",
+      "sha256": "64e34f766622e0c1d3f54139ec048cddf1c6e5dca707cc7fe8a18b0964a3b30a",
+      "description": "盘装白粉",
+      "observation": "浅盘椭圆口托住粉丘；区别容器与内容物。"
+    },
+    {
+      "id": "C042",
+      "file": "icon_guangling_bx_01.png",
+      "sha256": "89845f9f04e145aa406544aefe033556624fe559cdd558c7697903e36ac2c9cc",
+      "description": "深棕圆盖盒",
+      "observation": "圆盖压住筒壁、顶面浅纹；可学习上下盖缝。"
+    },
+    {
+      "id": "C043",
+      "file": "icon_guangling_bx_02.png",
+      "sha256": "20edee47280a712f157f4dd121a1eef1e803512dff0f63b44f4879ec66188f09",
+      "description": "暖金圆盖盒",
+      "observation": "与042共型，顶钮和纹样变化；不是新构图。"
+    },
+    {
+      "id": "C046",
+      "file": "icon_guangling_bx_05.png",
+      "sha256": "c69cc584899eeebf2970fcd1cc44bb59d204c4404c88135fdb6c524c78b056c0",
+      "description": "圆竹编盒",
+      "observation": "扁盖、筒壁与少量扣点；用宽编织表示材质。"
+    },
+    {
+      "id": "C048",
+      "file": "icon_guangling_bx_15.png",
+      "sha256": "89fef92d3ec5d5a363cd4a706dc07a33abf9518943e65e0f0d2c04af1c02b340",
+      "description": "红色圆漆盒",
+      "observation": "矮圆身与顶盖分层；红金配色只供本类可选。"
+    },
+    {
+      "id": "C055",
+      "file": "icon_hd_0010.png",
+      "sha256": "b0fbff17dc2310dcf7f07434f20fae1e607224428e84d74ba1a926887b28974c",
+      "description": "橙色晶片",
+      "observation": "斜立切面围绕中心纹；幻想材料，不确认为古代器物。"
+    },
+    {
+      "id": "C058",
+      "file": "icon_hunt_002.png",
+      "sha256": "17f814a551ed8c2ba0876bbf4cbafa73cd980b39c391f4c092d577f8852e9b2e",
+      "description": "素木方箱",
+      "observation": "盖缝、前锁扣、板面；低装饰仍可形成清楚箱体。"
+    },
+    {
+      "id": "C059",
+      "file": "icon_hunt_003.png",
+      "sha256": "5d81fb624405332dc77b7405586115773d0397d90fa3c6f08d68b25c8a702ae8",
+      "description": "红边木箱",
+      "observation": "盖板压住箱身，角件与锁扣分工；不要增厚为金属箱。"
+    },
+    {
+      "id": "C064",
+      "file": "icon_hunt_008.png",
+      "sha256": "ca8fa05dc99f5c7d5fbec4000aa7ad0af2f573c061f10e3f364d22e988724a80",
+      "description": "问号封条箱",
+      "observation": "封条纵跨盖缝；可借封缄位置，不沿用问号文字。"
+    },
+    {
+      "id": "C075",
+      "file": "icon_hyjf_001.png",
+      "sha256": "431748b44a538510eabd438679f106cb7a691b44a0d501dd9bd7a9638c84de70",
+      "description": "红色文字积分牌",
+      "observation": "文字承担主要意义；当前无字规范下不能直接迁移。"
+    },
+    {
+      "id": "C076",
+      "file": "icon_hyjf_002.png",
+      "sha256": "3da3de48d21672cfa0fd768a959089fe84e598b0e0b65a4d0f00808e71fae51a",
+      "description": "金色文字积分牌",
+      "observation": "与075同型换色；需重新设计非文字语义。"
+    },
+    {
+      "id": "C078",
+      "file": "icon_jl_002.png",
+      "sha256": "fd4ff79ae3983bc7db65b8e09a58c649927fbe5c9245909b0399822263751424",
+      "description": "金色圆盒近似变体",
+      "observation": "与043同族；可比材质层次，不新增类别。"
+    },
+    {
+      "id": "C079",
+      "file": "icon_jl_003.png",
+      "sha256": "dd133a38e6eebde8314f1b25f679f49bbdf4419ed87e0b3d57d09980a3944b02",
+      "description": "紫色圆盒近似变体",
+      "observation": "与044同族；重复构型用于家族一致性观察。"
+    },
+    {
+      "id": "C080",
+      "file": "icon_jsqb_00001.png",
+      "sha256": "9a741fcd7b7488c666c67a358ef4599fc9a2e4b56299fa0623617eca1a8056bb",
+      "description": "花苞形长簪",
+      "observation": "花形簪头接单根细杆；主识别在头部，杆不宜过长。"
+    },
+    {
+      "id": "C081",
+      "file": "icon_jsqb_00003.png",
+      "sha256": "b17df3e926f5e9620b80a89eb90ff214c3ee1cb39ad76bc02769901462eeef6d",
+      "description": "白花枝",
+      "observation": "主枝斜行、花苞与开放花错落；保留枝连接。"
+    },
+    {
+      "id": "C084",
+      "file": "icon_jsqb_00013.png",
+      "sha256": "2fdaef309a14768807f22506247235f5fc8c4f87a3ee42257ca3f7ba7093f58f",
+      "description": "长方挂牌",
+      "observation": "上部穿绳、长牌与双短穗；镂纹可减为一处主纹。"
+    },
+    {
+      "id": "C085",
+      "file": "icon_jsqb_00015.png",
+      "sha256": "935184eae07a5293122cd17710c0b87eea08a82894abe22c3d2d68c7d417c137",
+      "description": "粉色重瓣花",
+      "observation": "同心但不机械对称的花瓣围芯；概括外中内层。"
+    },
+    {
+      "id": "C086",
+      "file": "icon_jsqb_00016.png",
+      "sha256": "db791ee326bfd4745ec378d9ed13fb290709c6ad1653a51329b0f9132bf5ddac",
+      "description": "粉花斜枝",
+      "observation": "粗主枝承接侧枝与花苞；主花避开枝杈交点。"
+    },
+    {
+      "id": "C088",
+      "file": "icon_jsqb_00021.png",
+      "sha256": "7c2287a329539d68afa11add0fd5d61ee11f937bd77411e15f6b32ded1372f47",
+      "description": "双坚果",
+      "observation": "一前一后、壳帽分界；学习成双错位而非等大并排。"
+    },
+    {
+      "id": "C089",
+      "file": "icon_jsqb_00022.png",
+      "sha256": "caf274e47803c37444aaf87e8c1ff524fad7ec68a395a2d4fcb0910e685dd206",
+      "description": "倾倒蜜状液体罐",
+      "observation": "罐口、流线与承接勺形成动作；液体身份未确认。"
+    },
+    {
+      "id": "C095",
+      "file": "icon_jsqb_00033.png",
+      "sha256": "0ee08c799552279fbc075c2985ab4e276620cdcc303f646c9be2dc6a36ca7952",
+      "description": "青色长簪",
+      "observation": "云形簪首与单尖杆；不放大细纹取代簪首。"
+    },
+    {
+      "id": "C099",
+      "file": "icon_jy_00003.png",
+      "sha256": "4f606fed51f7b466f32a0baf60614dd0a18f504cf5b215f1314cf8f8b4be93a7",
+      "description": "叠木板",
+      "observation": "两片长板错位露出端头；用厚度区分纸片。"
+    },
+    {
+      "id": "C111",
+      "file": "icon_lb_0018.png",
+      "sha256": "ed940ac1691e2d923c8c21c37f6d42dc5f6f2a63a7dc4b4c0b1e74ce12eaedd0",
+      "description": "方箱装竹简与币",
+      "observation": "长简后、钱币前形成高低；内容与用途需要匹配。"
+    },
+    {
+      "id": "C115",
+      "file": "icon_lb_0022.png",
+      "sha256": "9f3971669467713108cffd2755c3d708dc189ec8e43ae8194020db3e9a6720dc",
+      "description": "棕色扁匣",
+      "observation": "低矮盒身、盖缝与短穗；靠结构即可成立。"
+    },
+    {
+      "id": "C117",
+      "file": "icon_lb_0024.png",
+      "sha256": "cd14692ec718d222712f22c2ac8ba9bbb27624086fc23c50880122b56f560bd8",
+      "description": "红色扁匣",
+      "observation": "中心结纹与前坠；可学闭合感，不固定红金。"
+    },
+    {
+      "id": "C120",
+      "file": "icon_lb_0043.png",
+      "sha256": "41404e3dfbd0d9416fbda802bd1564db59a0042c41161964088e2bdd5c9c4345",
+      "description": "问号发光开箱",
+      "observation": "问号和光束承担主题；只保留开箱结构，不迁移特效。"
+    },
+    {
+      "id": "C125",
+      "file": "icon_lb_0055.png",
+      "sha256": "9c84316ad5dc059fa7bb6dae8c7f4d1376d03d1dbae6e965d5e4488505b08cea",
+      "description": "圆盒装竹简笔束",
+      "observation": "笔束与简页形成高低差；减少笔数保留笔毫。"
+    },
+    {
+      "id": "C136",
+      "file": "icon_lb_0070.png",
+      "sha256": "da9caac1f27b43df28931fbad456915d87f8b6e2eb8edcb7f6a79eae470fd27f",
+      "description": "圆盒装小瓷罐",
+      "observation": "三罐形成前低后高；保留罐口，简化罐身细纹。"
+    },
+    {
+      "id": "C142",
+      "file": "icon_lb_battle_003.png",
+      "sha256": "3a8f22ed46526e77f66d8e70f0718a06eb8bee005b25a7c3a52bf4a1bb6e97c7",
+      "description": "木水桶",
+      "observation": "桶箍、木片、提耳与液面；保留桶口和提耳连接。"
+    },
+    {
+      "id": "C143",
+      "file": "icon_lb_battle_004.png",
+      "sha256": "f80c21f2d7b05c86c12a487d5fe980772de2274584710b93a593270336c1c8cf",
+      "description": "木水盆",
+      "observation": "浅盆与水平液面；与142靠高宽比和提手区别。"
+    },
+    {
+      "id": "C146",
+      "file": "icon_mc_00001.png",
+      "sha256": "0de2519b6ce555a3b18bf79aab5832eefd0c9c8106abc2ad701d0bca83de33ae",
+      "description": "双色卷材",
+      "observation": "两卷前后交叠，端部卷曲；宽色块可表达布料层级。"
+    },
+    {
+      "id": "C148",
+      "file": "icon_mc_00003.png",
+      "sha256": "5b8e3b5612be45f8b80ef35f82ca393442df81a5be7ef6697d2d0033f213b806",
+      "description": "碗装颗粒堆",
+      "observation": "颗粒山包高于碗口；保留大堆形，不逐粒复制。"
+    },
+    {
+      "id": "C154",
+      "file": "icon_mc_00010.png",
+      "sha256": "c2d7de5af5a0a018808c3afd3e2e83dc7cf73646201d93a422c5b656dbeaf668",
+      "description": "束叶",
+      "observation": "叶尖扇开、根端束结；用外轮廓组织疏密。"
+    },
+    {
+      "id": "C158",
+      "file": "icon_mc_00024.png",
+      "sha256": "6a4837790bf403e73b1cc20dc2369cc9965be09535c8caa608bcf06d96934089",
+      "description": "小箱装笔尺状工具",
+      "observation": "工具从箱内向外斜展；明确每支工具的插入点。"
+    },
+    {
+      "id": "C159",
+      "file": "icon_mc_00026.png",
+      "sha256": "e681b1d315f01be2a6e5d8e07ad4804005b18efd00ab741cffef52f956563d5b",
+      "description": "展开地图卷",
+      "observation": "两轴、卷边与垂绳；地图路径可代替密集图文。"
+    },
+    {
+      "id": "C162",
+      "file": "icon_mc_00033.png",
+      "sha256": "14a429d7108c83d842ffddf9744326163c77903e0099857b1b1f96275213f1e7",
+      "description": "紫色折布",
+      "observation": "折返形成两层厚度；阴影说明叠放而非额外描线。"
+    },
+    {
+      "id": "C164",
+      "file": "icon_mc_00036.png",
+      "sha256": "ad059dcaf2759bd99dba2053e9916e7ed28c37cef97a075c6957c1ca2b736d8c",
+      "description": "长匣装纸卷",
+      "observation": "长盖后开、纸卷顺匣轴；容器与内容长宽配合。"
+    },
+    {
+      "id": "C165",
+      "file": "icon_mc_00040.png",
+      "sha256": "02fd5a303f43e78b6087bf7b459bace8dbd68335c543566837b79877c3ec1fe7",
+      "description": "无字展开简册",
+      "observation": "卷端和编绳完整；证明竹简可不依赖文字识别。"
+    },
+    {
+      "id": "C168",
+      "file": "icon_mc_00051.png",
+      "sha256": "790d2b186881ede1d98b58e743d1a4a946e1c3f7c4b0949672c35f13d30d051d",
+      "description": "斜展竹简",
+      "observation": "上下编绳和弧形卷曲共同定位；简条不必逐条写字。"
+    },
+    {
+      "id": "C169",
+      "file": "icon_mc_00054.png",
+      "sha256": "6f3012aac86500892e4d37ac3a8fb4e1debebb70eb167170a4e8128563c033de",
+      "description": "盘装圆片",
+      "observation": "少量圆片叠搭、盘缘露出；食品类型不确定。"
+    },
+    {
+      "id": "C170",
+      "file": "icon_mc_00055.png",
+      "sha256": "9e143c652484da7f90965c7abee01b43a0ea1f0b4b6be7a16ab847624ddd09b0",
+      "description": "算盘",
+      "observation": "框架包住贯杆和珠列；珠列概括但须保持轴向。"
+    },
+    {
+      "id": "C171",
+      "file": "icon_mc_00057.png",
+      "sha256": "f43369b4c9e9804383e242e5f8c91810d92b0df2f729531147e428cf51f963a0",
+      "description": "捆扎木段",
+      "observation": "圆截面在前、长轴向后、束带环绕；切面区分方板。"
+    },
+    {
+      "id": "C179",
+      "file": "icon_mc_00097.png",
+      "sha256": "75fec06583cd65e0d5bf01ed4c476e48bdf98ecc5bc9be826dbe9ad5a244cea7",
+      "description": "环形玉佩",
+      "observation": "中心孔穿绳，绳结落在环外；孔洞不得填实。"
+    },
+    {
+      "id": "C183",
+      "file": "icon_mc_00107.png",
+      "sha256": "e8f2e23744cb696edec32a7b846d63cfbd678a1d1810cee1938bc2769039708c",
+      "description": "碗装白晶粒",
+      "observation": "角状颗粒堆与深色碗口区分；颗粒只留大组。"
+    },
+    {
+      "id": "C184",
+      "file": "icon_mc_00108.png",
+      "sha256": "3ec9175448e1a95cbeef5f5645a87adba98345eb4fbaebcb5473befb696b4836",
+      "description": "几何长瓶",
+      "observation": "三角腹与多面塞；偏幻想设计，不能直接当传统瓶式。"
+    },
+    {
+      "id": "C185",
+      "file": "icon_mc_00109.png",
+      "sha256": "fdc6e46f462626bcdd64c1e190fc824815271fb4f22533c75499938dc7de060c",
+      "description": "双铃与链",
+      "observation": "两只空口铃前后倾斜，链在上连接；减链节。"
+    },
+    {
+      "id": "C187",
+      "file": "icon_mc_00111.png",
+      "sha256": "3fcee471a21a74c29a978b4e94b40a157df621b5ed6ba681b928fc7b99d78bab",
+      "description": "素色束口袋",
+      "observation": "上口褶皱、细绳与袋腹；花朵仅作可删辅助。"
+    },
+    {
+      "id": "C189",
+      "file": "icon_mc_00115.png",
+      "sha256": "bbf856615c3795490aacceb1201de3f4ded387ddf3d66aebb7790fae20b4e82c",
+      "description": "展开折扇",
+      "observation": "扇骨汇聚同一轴心、扇面分区；短坠不能抢主轮廓。"
+    },
+    {
+      "id": "C190",
+      "file": "icon_mc_00116.png",
+      "sha256": "c56883a41e0580ad0084fe1b04f6a51652ebf5db0568b9377ba9dee2a6737673",
+      "description": "盘装丸状食物",
+      "observation": "后高前低三块堆叠；不依赖表面碎纹。"
+    },
+    {
+      "id": "C191",
+      "file": "icon_mc_00117.png",
+      "sha256": "e65039bc5f6f13ac7c21749f63a1ff1a8bf0c7343d7abec4681f314abe91f8cf",
+      "description": "红布封口坛",
+      "observation": "坛腹、布盖、束绳三段；封口与开口状态明确区分。"
+    },
+    {
+      "id": "C198",
+      "file": "icon_mtwq3_10.png",
+      "sha256": "d8a77e4fcd3ac937a5abb20fdd3653022d6293489bf76e1f475e5527dd4a89d8",
+      "description": "圆团扇",
+      "observation": "圆面、框、短柄共轴；纹样压低，保留柄框连接。"
+    },
+    {
+      "id": "C199",
+      "file": "icon_nz_0001.png",
+      "sha256": "10a7cbfe387d78424e3b495e76ebb7e14bcaca2a04c2f690035ab81f2e5a8311",
+      "description": "卷材筒套状物与侧盖",
+      "observation": "筒内露出卷材状物，侧件由带连接且近似筒径，合理推测为卸下的盖；用途待确认。"
+    },
+    {
+      "id": "C200",
+      "file": "icon_nz_0002.png",
+      "sha256": "48c6456ef2987b6c7d9cadc5959fb8184508118a2518322d88c9330d3e7e2def",
+      "description": "饰纹长筒器",
+      "observation": "与199共型，外套金边与挂件；结构先于装饰等级。"
+    },
+    {
+      "id": "C201",
+      "file": "icon_nz_0005.png",
+      "sha256": "38e83afd507b722033a442bf0c9558580b33720de1febfb9488bc5a86ffa4ef1",
+      "description": "盘装紫粉",
+      "observation": "低盘托住锥形粉丘；颜色不证明物质类型。"
+    },
+    {
+      "id": "C202",
+      "file": "icon_nz_0006.png",
+      "sha256": "012d3d72e8a5b20eb9e2e9b83e32dab02f940a477f6d6ba935443798f02bc060",
+      "description": "绿布束口袋",
+      "observation": "素腹与圆标、短口褶；删除圆标仍需读出袋。"
+    },
+    {
+      "id": "C214",
+      "file": "icon_nz_2002.png",
+      "sha256": "35a7f41760b40abc70ee05d654de0161a694105688bd76ab87c14f9ee093fae0",
+      "description": "叠花纸",
+      "observation": "两张纸错角叠放、边缘露出；花瓣可删，纸层保留。"
+    },
+    {
+      "id": "C216",
+      "file": "icon_nz_2004.png",
+      "sha256": "6a3773ddee10cdd8fc97f2baa39f6810140a387503d7eebd380e8e0d5a897382",
+      "description": "三枚方孔钱与绳",
+      "observation": "方孔、薄边、穿绳关系；以三个大圆形表达钱串。"
+    },
+    {
+      "id": "C220",
+      "file": "icon_nz_2008.png",
+      "sha256": "aab1f9c5c933390564456f7654e44568dfbe9de7b21ee0ead5ccb9c2f71353ba",
+      "description": "莲花与花苞",
+      "observation": "高低花头共享叶茎组；控制花苞比例形成主次。"
+    },
+    {
+      "id": "C237",
+      "file": "icon_nz_40106.png",
+      "sha256": "896f3bee182e81303ec61a7a3072ad1fdd0861ef0282b3039b790fe00368bcc5",
+      "description": "蓝金长筒与飞带特效",
+      "observation": "曲线光带与花形扩展轮廓；只保留实体结构。"
+    },
+    {
+      "id": "C238",
+      "file": "icon_nz_40107.png",
+      "sha256": "6d3f27e7fd7c4468233cdc7a9f3ee7855537b6c8c5d5bb27ab0a0522c8bbeed1",
+      "description": "蓝金长筒与冰形长件",
+      "observation": "两条斜线夹主物；冰特效不纳入古风器物词库。"
+    },
+    {
+      "id": "C244",
+      "file": "icon_nz_50104.png",
+      "sha256": "d26693ac0e317ad146183e2592d262aa4e4e59046babbc5bb0c612dc11111b3e",
+      "description": "红金长筒与鞍具状物",
+      "observation": "后方曲面坐垫与下垂皮带近似马鞍；合理推测，不确定具体用途。"
+    },
+    {
+      "id": "C246",
+      "file": "icon_qb_00007.png",
+      "sha256": "c463b3cde6a05d24e3510d67c898d010307a4969292c2305b6cffbbe2d1e1bf7",
+      "description": "简化绿花苞",
+      "observation": "几片大萼叶包中心、明暗高度概括；适合学习轮廓归纳。"
+    },
+    {
+      "id": "C247",
+      "file": "icon_qb_00008.png",
+      "sha256": "bfef83da4b8a2478fb38f381ca87559253454bb61dc82eb53098119878163a5d",
+      "description": "数字木牌状物",
+      "observation": "红牌正面数字主导；去字后需另设含义。"
+    },
+    {
+      "id": "C249",
+      "file": "icon_qxhd_020.png",
+      "sha256": "6b6eccdcc2ee895d635c320bf2f7bd5d561bf597a2fa2b1540a5e0adce794c01",
+      "description": "叠文字票券",
+      "observation": "前主券后两角，文字承担意义；只借叠放结构。"
+    },
+    {
+      "id": "C253",
+      "file": "icon_rouge_023.png",
+      "sha256": "24fa71c2ef7f35eae881832f9da3f846b6c13179d55dae5c874343bc64ebfb8a",
+      "description": "木珠串",
+      "observation": "珠环与两枚末端坠件；突出环孔和挂接。"
+    },
+    {
+      "id": "C254",
+      "file": "icon_rouge_027.png",
+      "sha256": "06d9284a0dc60918f8e35fc52005d10ac9a49dfa77dcbf55eef39166611cecf5",
+      "description": "双缺口玉环",
+      "observation": "一前一后穿叠，开口方向不同；避免误画成粘连圆盘。"
+    },
+    {
+      "id": "C255",
+      "file": "icon_rouge_031.png",
+      "sha256": "00adc70e18bb047f0c8850232788cb987dddd4eb286d1db914168b3ff26157a6",
+      "description": "花口盏",
+      "observation": "花瓣口沿、浅腹、小足；保留瓣口，不加多层装饰。"
+    },
+    {
+      "id": "C256",
+      "file": "icon_rouge_032.png",
+      "sha256": "ee3adae92c1bcc3db16189767a67f2ae29d6bd73768b8b5c1b8306ae58fbd6dd",
+      "description": "深蓝开盖圆盒",
+      "observation": "前盒后盖，金纹只在大面；纹样可简化为一朵。"
+    },
+    {
+      "id": "C260",
+      "file": "icon_rw_00004.png",
+      "sha256": "8c159020ecfd5e94f63804af45068790b85ba91256be175a2749c00209bbb2a0",
+      "description": "彩布卷叠放",
+      "observation": "一平两卷形成底座与上层；卷端承担布料识别。"
+    },
+    {
+      "id": "C261",
+      "file": "icon_spring2025_gift.png",
+      "sha256": "4add341281277ec3e90ed48322518004d612be217199a5e16009b5c6bcc3d3fc",
+      "description": "圆红礼囊",
+      "observation": "顶部结、扁圆袋腹、侧坠；控制侧坠不形成第二主体。"
+    },
+    {
+      "id": "C262",
+      "file": "icon_spring2025_lh_01.png",
+      "sha256": "fcc896b97b2c3c6bc31d7f5c647a80860d8083c28d8e5120bd9c0a8f9f4da364",
+      "description": "绿色扁长匣",
+      "observation": "盖边、长侧壁与短坠；同型系列首项。"
+    },
+    {
+      "id": "C263",
+      "file": "icon_spring2025_lh_02.png",
+      "sha256": "39e3d7559c923c039caf50e28ac91322b9b210c49a4e5f37d83614a824153a09",
+      "description": "金色扁长匣",
+      "observation": "262同型换色纹；作为家族一致性对照。"
+    },
+    {
+      "id": "C264",
+      "file": "icon_spring2025_lh_03.png",
+      "sha256": "5d782358abbeb015566622eb167fa3a24b6171de91ad8cb7d72889fc39010319",
+      "description": "红色扁长匣",
+      "observation": "同型加花扣与长穗；可学局部锚点变化，不复制长穗。"
+    },
+    {
+      "id": "C266",
+      "file": "icon_sum_cfpl2_003.png",
+      "sha256": "1dabb488fa81200f1acff04140bef344ba30e8754fdef8fdb6cf53c0d77cd500",
+      "description": "青色半开宝箱",
+      "observation": "近正面开盖，内腔形成大暗面；保留盖和箱的连接。"
+    },
+    {
+      "id": "C267",
+      "file": "icon_sum_cfpl2_004.png",
+      "sha256": "a9339f1d86d16f375f85f5cdb5bb29abca789d0e8448cea7bf592d1113eaa91f",
+      "description": "紫色半开宝箱",
+      "observation": "与266共构换色；不凭颜色设独立功能。"
+    },
+    {
+      "id": "C268",
+      "file": "icon_sum_cfpl2_005.png",
+      "sha256": "b6b530bd0d2e0d291632f48ecfa6ff832c7f94b4fb1c90f656f3e788fc411cd2",
+      "description": "红色半开宝箱",
+      "observation": "同构金扣更突出；适合有限系列，非普遍套壳。"
+    },
+    {
+      "id": "C271",
+      "file": "icon_ts_00002.png",
+      "sha256": "3a708b518fb6725eacc76d368466a964e128b7ccb46a72ca83bf7b00670a19f5",
+      "description": "火纹圆瓶",
+      "observation": "瓶颈与圆腹、中心火焰；幻想功能物，历史性未知。"
+    },
+    {
+      "id": "C272",
+      "file": "icon_tyzd_001.png",
+      "sha256": "10953fca373695d1dd5410f722d268811c72b5817ae218be3aac0834aabedd2d",
+      "description": "破裂心形晶体",
+      "observation": "心形外轮廓与中裂缝主导；不作传统玉饰依据。"
+    },
+    {
+      "id": "C273",
+      "file": "icon_tyzd_002.png",
+      "sha256": "b48e9a50a128c7b71307952aa6e935128c1c6dc7694f591a449d7d579ab6416a",
+      "description": "细颈粉白瓶",
+      "observation": "长颈、球腹、塞与花纹；学习形体比例，不默认粉花。"
+    },
+    {
+      "id": "C274",
+      "file": "icon_tyzd_003.png",
+      "sha256": "aaa8476c866f8f87ef046d2351747b02fc5c06a7f7da72bb7b83d8c35e7e5150",
+      "description": "宽肩粉白罐",
+      "observation": "短颈、宽肩、收底；与273形成器型差异。"
+    },
+    {
+      "id": "C277",
+      "file": "icon_xzrdz_0052.png",
+      "sha256": "35b513162288d7d7128cd54ad407ff52258ab2c08a0897aa5de970d4e5473abd",
+      "description": "银色钥匙",
+      "observation": "环首、直杆与齿；粗黑线属于异风格，不迁移。"
+    },
+    {
+      "id": "C278",
+      "file": "icon_xzrdz_0053.png",
+      "sha256": "45be29f22d72421cb9936bc34d2e56d7368b97c478257df7e869e7a6c399978e",
+      "description": "金色花首钥匙",
+      "observation": "花首镂空与齿端；保留身份三段，弱化粗边。"
+    },
+    {
+      "id": "C279",
+      "file": "icon_xzrdz_0140.png",
+      "sha256": "2957f8193bbcfe00039124e1030eaec8a5f02f4d00f510243780f19fff85a401",
+      "description": "臼与杵",
+      "observation": "短杵斜入凹腔，臼口露出；接触关系表达加工。"
+    },
+    {
+      "id": "C280",
+      "file": "icon_xzrdz_0141.png",
+      "sha256": "0ec7e884d9d693db8a11f90897b9ec00bd359516398d5b8b736ad9119049e32e",
+      "description": "石臼杵变体",
+      "observation": "与279同构不同材质；材质通过形面区分，不加描边。"
+    },
+    {
+      "id": "C284",
+      "file": "icon_xzrdz_0713.png",
+      "sha256": "5ef184ec2bba81a874ff0fcc3859f7938782c5bb50e56d9a78ae8ae315af6eb0",
+      "description": "软边册页",
+      "observation": "封面曲边与页块层厚；可学柔性纸，去粗黑边。"
+    },
+    {
+      "id": "C285",
+      "file": "icon_xzrdz_0714.png",
+      "sha256": "1ac3e8318bce0e8197260030d9cc483e6effa40b13e578c8ab8772da4298f152",
+      "description": "白色厚册",
+      "observation": "方角封面和书芯厚边；与284以硬软结构区分。"
+    },
+    {
+      "id": "C291",
+      "file": "icon_xzrxj_0002.png",
+      "sha256": "99eda61ff380ba194dfa2fe0f000bf32e48d1bbbc7565bc291a0331f51fabc42",
+      "description": "米色长封套",
+      "observation": "上口与纵向纸面、底印；可学纵式封装，无字也要可辨。"
+    },
+    {
+      "id": "C292",
+      "file": "icon_xzrxj_3002.png",
+      "sha256": "af8cfd498851fd2abfa11988ce2bcadd2bf473052d3583ea1c7f4000c70d5b82",
+      "description": "青色长封套",
+      "observation": "291同型换花纹与色；不是新的封装结构。"
+    },
+    {
+      "id": "C293",
+      "file": "icon_xzrxj_4002.png",
+      "sha256": "aaa31b08bf80e024a4b91adf77ef52167008b587e568c576f72452baae4142c5",
+      "description": "紫色长封套",
+      "observation": "同型边饰变化；避免整组入口仅换颜色。"
+    },
+    {
+      "id": "C294",
+      "file": "icon_xzrxj_5002.png",
+      "sha256": "4307d1af361aeb54cf3f3cf8c4d5625fc2e268fb8d72184d542bafeafbd35816",
+      "description": "粉色长封套",
+      "observation": "同构第四项；成套感不能替代功能差异。"
+    },
+    {
+      "id": "C299",
+      "file": "icon_yc_00010.png",
+      "sha256": "7db8231875c0a5980cc739f0c09ef7e078aad1e0e44a051792085926e9889020",
+      "description": "蓝色圆扇",
+      "observation": "斜柄、圆框与局部纹饰；保留扇柄连接。"
+    },
+    {
+      "id": "C304",
+      "file": "icon_yc_002.png",
+      "sha256": "9005fc167f2736a23495dfd4ac850e70831171a587fd32b0d448a682a6357222",
+      "description": "青边展开卷轴",
+      "observation": "左轴、卷面与右卷边；主纹服从纸面。"
+    },
+    {
+      "id": "C305",
+      "file": "icon_yc_003.png",
+      "sha256": "d13b8e978384d31147fd6749d6dcd01d97f0bea1fa4d25997b8a52f2332de369",
+      "description": "紫金卷轴",
+      "observation": "双轴和短流苏围住画面；减饰不破坏卷轴结构。"
+    },
+    {
+      "id": "C308",
+      "file": "icon_yc_010.png",
+      "sha256": "af25ec47114122610121d0e1ea9bad693942275f499f60d90273afef783ab80f",
+      "description": "孔雀羽扇状物",
+      "observation": "羽眼上端聚集，柄在下方；羽眼少量概括。"
+    },
+    {
+      "id": "C309",
+      "file": "icon_yc_011.png",
+      "sha256": "1700e48744d81d726b588c0045c0cec5aba24810aa588f0071d2c86ebf4dfad6",
+      "description": "白色绣团扇",
+      "observation": "薄框、扇面、短柄与结；绣纹不是必要身份。"
+    },
+    {
+      "id": "C310",
+      "file": "icon_yc_012.png",
+      "sha256": "531650130cf17d2c8b8d987ccdda4cc4aac88e23448946ae6e0d712910739cf8",
+      "description": "羽扇",
+      "observation": "束羽扇开、柄部收束；与团扇用轮廓和材质区分。"
+    },
+    {
+      "id": "C311",
+      "file": "icon_yc_013.png",
+      "sha256": "3f8a9d0c32a407faa0a3b571b9ade6e8bd3c963680caeda3f2780b744d1725f7",
+      "description": "多曲边宫扇状物",
+      "observation": "多瓣轮廓与短柄、长穗；保留轮廓，缩短尾穗。"
+    },
+    {
+      "id": "C312",
+      "file": "icon_yc_014.png",
+      "sha256": "e1c494f88afc954396c9876aa86c195b764e539cbf193eb0ae2dde4455ff352f",
+      "description": "素青圆腹瓶",
+      "observation": "口、颈、肩、腹、足连续；素面是器型学习优先样本。"
+    },
+    {
+      "id": "C313",
+      "file": "icon_yc_015.png",
+      "sha256": "0d4322b72271669e4069297140a6eb1db5e03c2ea58b59d60561f45425ab2993",
+      "description": "紫色执壶",
+      "observation": "单柄、窄颈、宽腹、小足；柄洞必须保留。"
+    },
+    {
+      "id": "C316",
+      "file": "icon_yc_018.png",
+      "sha256": "caf388a5804f1d5005972f126315ca91afa991d63fa0988b667b1e5581cfd333",
+      "description": "插枝青瓶",
+      "observation": "枝叶从瓶口伸出，腹体仍完整；不要把瓶画成生叶植物。"
+    },
+    {
+      "id": "C336",
+      "file": "icon_yk_001.png",
+      "sha256": "517de4d22095544d847739d9236516d94847f1b7a1afe01f9743f49aff99e61f",
+      "description": "发光青牌与底座",
+      "observation": "立板斜倚底座、中心花纹；透明发光效果不沿用。"
+    },
+    {
+      "id": "C340",
+      "file": "icon_yzn_20_041.png",
+      "sha256": "08cde2d9966433651de05989c77b685d701ad0c205c992196f406728f0e0b9a4",
+      "description": "紫色猫形梳",
+      "observation": "猫背连梳齿、头尾突出；学习功能部件与主题融合。"
+    },
+    {
+      "id": "C341",
+      "file": "icon_yzn_20_042.png",
+      "sha256": "72083c02255ca1ada1c3e814c556993915c45ec5b3a85c5545b2a0c76aab2a76",
+      "description": "金色猫形梳",
+      "observation": "340同结构材质色变；不按金色判断真实材料。"
+    },
+    {
+      "id": "C342",
+      "file": "icon_yzn_20_043.png",
+      "sha256": "abbbee34d24d129e55ec0a771f0ad4f142ea07cc7f4f2af305463522baf9e442",
+      "description": "绿色猫形梳",
+      "observation": "同构第三项；保留齿间空隙比花纹重要。"
+    },
+    {
+      "id": "C343",
+      "file": "icon_yzn_20_057.png",
+      "sha256": "68d9b211561da143bc25c8a9ebc8383a72980f9ea05ed347c1f70af578b1e60c",
+      "description": "猫形问号物",
+      "observation": "角色轮廓与问号主导；无字入口需重设语义。"
+    },
+    {
+      "id": "C344",
+      "file": "icon_yzn_25_002.png",
+      "sha256": "e87a9bf5d06043ca342e5899db47a353031d1cda420673c9859245cd59ea3b25",
+      "description": "敞口原料袋",
+      "observation": "卷口、布腹与高出袋口的粉丘；内容与袋口边界清晰。"
+    },
+    {
+      "id": "C349",
+      "file": "icon_yzn_25_039.png",
+      "sha256": "ad9c1d8b2153f3e0c602306de97cd4dda999785b1874299a27c02a8ce50a5ae7",
+      "description": "青色小杯",
+      "observation": "圆口、略收底与小卷柄；柄洞不可被高光抹掉。"
+    },
+    {
+      "id": "C353",
+      "file": "icon_zjzc_005.png",
+      "sha256": "88deffaf3c861d5bc682a65748af74781403faeab8212833a421cdd0323fe7db",
+      "description": "青玉坠与蓝绳",
+      "observation": "上绳穿孔、玉体中段收束、下穗；学习连续悬挂链。"
+    },
+    {
+      "id": "C355",
+      "file": "icon_zjzc_007.png",
+      "sha256": "c7ce29f9b6a2064a795ca478a34dae7fc13d69ef258e49433b576e25de376ffd",
+      "description": "短剑",
+      "observation": "柄、护手和剑刃共轴；不要因细长而缩得过小。"
+    },
+    {
+      "id": "C357",
+      "file": "icon_zjzc_009.png",
+      "sha256": "a25091695005fd6081597e1bdaad38257f7bc84b831851a7751530af4df8864b",
+      "description": "三足带盖壶",
+      "observation": "盖、侧流、后柄、三足各有连接；不可把足画成悬空饰件。"
+    },
+    {
+      "id": "C360",
+      "file": "icon_zjzc_013.png",
+      "sha256": "5db00759a9df3cd8785e021f08d3149f6c8a2d662db3d6c786f325fc9dc6fbe7",
+      "description": "珠玉项饰",
+      "observation": "闭环串珠与前坠分区；减少珠数、保留项链轮廓。"
+    },
+    {
+      "id": "C367",
+      "file": "icon_zjzc_026.png",
+      "sha256": "c1e0f8a50c7297aeb433202e8b9b62622d326f2e5b61760aa5a44d997d3f09c9",
+      "description": "蓝白束口囊",
+      "observation": "多瓣袋腹、收口与提绳；学习柔软褶皱区别瓷器。"
+    },
+    {
+      "id": "C370",
+      "file": "icon_zy_00002.png",
+      "sha256": "c684871d334e7abb8151e31929dd35acd3fa6e00ac8d7f5b8e62582b9aeb7ed9",
+      "description": "花汤杯",
+      "observation": "透明杯壁、汤面和花形浮物；透明材质按当前风格转译。"
+    },
+    {
+      "id": "C371",
+      "file": "icon_zy_00003.png",
+      "sha256": "c173296b1b38d2599935db9d12e616afa242a4ef1ed5e09511830b7b2469799c",
+      "description": "三枚圆点心与盘",
+      "observation": "后高前低三角关系，盘缘露出；少点装饰即可。"
+    },
+    {
+      "id": "C372",
+      "file": "ui_cl_0108.png",
+      "sha256": "eb48d6619e256335e08a5680c6609dc664a72c0a0278959b8c10962a7ed14f30",
+      "description": "钱币串",
+      "observation": "穿孔绳围币组、前主币清晰；孔与绳关系优先。"
+    },
+    {
+      "id": "C373",
+      "file": "ui_cl_coin05_0308.png",
+      "sha256": "cad1e1c06539f6b5acf87f6efd206b4d2b5694b39c3683e749ec23d43705e57e",
+      "description": "三枚方孔钱",
+      "observation": "前大后小并有错位；结构简洁可作货币候选。"
+    },
+    {
+      "id": "C374",
+      "file": "ui_cl_dsj02_0308.png",
+      "sha256": "b5231235416c2f766d9bf3d4cbc92627ec0f4aea661fa6ea9bd82935defaf3af",
+      "description": "青瓶与双紫壶",
+      "observation": "前圆瓶、后双壶三角站位；不要让后柄被完全遮掉。"
+    },
+    {
+      "id": "C375",
+      "file": "ui_cl_dsj03_0308.png",
+      "sha256": "6d7ee5a33e045af27c0f2ec63c57b13d1accdc92b9f294497dcae60b14fb0a47",
+      "description": "三件执壶组",
+      "observation": "高低略差、中心前置；通过器型而非纹色区分。"
+    },
+    {
+      "id": "C377",
+      "file": "ui_cl_dsj_0308.png",
+      "sha256": "fca4a1fe8ddf84ec35b964fea3b1470c03eac9125ea921f1316c168e0e760ec2",
+      "description": "素青瓶变体",
+      "observation": "与312同型；适合作为去纹样后器型识别对照。"
+    },
+    {
+      "id": "C379",
+      "file": "ui_cl_suo01.png",
+      "sha256": "1eb29e58e6d47512340c258f61363dfc021c0c8d81167ba8929deb46248ebb7b",
+      "description": "金色锁牌",
+      "observation": "挂绳穿过顶环、曲边牌体独立；比带类型签版本更便于学习本体。"
+    }
+  ]
+}

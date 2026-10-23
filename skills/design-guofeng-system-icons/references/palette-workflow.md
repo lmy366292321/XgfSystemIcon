@@ -11,7 +11,7 @@
 
 ## 固定步骤及命令
 
-路径使用绝对路径，或清单支持的相对路径。计划、工作流内全部文件描述使用绝对路径及真实SHA-256。建议将计划/控制卡放 `inputs/`，记录放 `records/`，对照放 `qa/`，审阅正文放 `reviews/`。每次记录输出用新文件名，禁止覆盖输入或旧记录。
+路径使用绝对路径，或清单支持的相对路径。计划、工作流内全部文件描述使用绝对路径及真实SHA-256。建议将计划/控制卡放 `inputs/`，工具回执与色彩记录放 `records/`，工作流阶段放独立 `workflow/`，对照放 `qa/`，审阅正文放 `reviews/`。每次记录输出用新文件名，禁止覆盖输入或旧记录。
 
 1. 按[完整组合区域流程](composition-layout.md)确定布局与资源，将配置路径和SHA-256写入控制卡；准备10张正式参考和 `design-plan.json`；制作前执行 `start`。计划只包含已有参考、控制卡和输入图，不要求未来成图已经存在。
 2. 新建/修改图像后，保存真实调用输入、输出及回执，立即按[色彩空间与导出记录](color-space-export.md)采集原始文件，再按composition-layout.md把组合位置写进PNG留白、将UI额外补偿归零，记录真实变换链并建立批次清单。记录 `generated`。纯复查跳过生成，只读collect/audit并明确是本次补采集，不倒填历史。
@@ -21,13 +21,13 @@
 6. 将最后记录的文件描述填入清单 `workflow`，运行 `check_batch.py`。只有 `delivery.status=pass`、退出码0，才称资源交付审核通过。组合检查缺口必须反映在相关视觉项，不能靠脚本退出码核销。用户接受、引擎和真机验收另列；脚本核对布局及嵌套资源、UI零补偿，例外另核对边界和变换；真实遮挡与引擎坐标仍需实际验证。
 
 ```text
-python -B scripts/review_workflow.py start /task/inputs/design-plan.json --output /task/records/01-plan.json --actor maker
-python -B scripts/review_workflow.py record /task/records/01-plan.json --manifest /task/manifest.json --stage generated --evidence /task/reviews/calls.json --output /task/records/02-generated.json --actor maker
-python -B scripts/review_workflow.py record /task/records/02-generated.json --manifest /task/manifest.json --stage files --output /task/records/03-files.json --actor maker
+python -B scripts/review_workflow.py start /task/inputs/design-plan.json --output /task/workflow/01-plan.json --actor maker
+python -B scripts/review_workflow.py record /task/workflow/01-plan.json --manifest /task/manifest.json --stage generated --evidence /task/reviews/calls.json --output /task/workflow/02-generated.json --actor maker
+python -B scripts/review_workflow.py record /task/workflow/02-generated.json --manifest /task/manifest.json --stage files --output /task/workflow/03-files.json --actor maker
 python -B scripts/build_qa_sheet.py /task/manifest.json --output-dir /task/qa/overview
 python -B scripts/build_relation_sheet.py /task/manifest.json --output-dir /task/qa/relations
-python -B scripts/review_workflow.py record /task/records/03-files.json --manifest /task/manifest.json --stage visual --output /task/records/04-visual.json --actor reviewer
-python -B scripts/review_workflow.py record /task/records/04-visual.json --manifest /task/manifest.json --stage recheck --output /task/records/05-recheck.json --actor reviewer
+python -B scripts/review_workflow.py record /task/workflow/03-files.json --manifest /task/manifest.json --stage visual --output /task/workflow/04-visual.json --actor reviewer
+python -B scripts/review_workflow.py record /task/workflow/04-visual.json --manifest /task/manifest.json --stage recheck --output /task/workflow/05-recheck.json --actor reviewer
 python -B scripts/check_batch.py /task/manifest.json --output-dir /task/final-check
 ```
 

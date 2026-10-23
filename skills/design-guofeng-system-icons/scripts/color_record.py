@@ -6,7 +6,7 @@ import io
 import json
 from pathlib import Path
 
-from PIL import Image, ImageCms, PngImagePlugin, features, __version__ as PILLOW_VERSION
+from PIL import Image, ImageCms, ImageFilter, PngImagePlugin, features, __version__ as PILLOW_VERSION
 import check_icon
 from batch_common import digest, descriptors, read_json, state, worst
 
@@ -137,6 +137,24 @@ def recipe(mode, resample="lanczos", target_profile=None, assumption=None):
             "assumption": assumption}
 
 
+def clean_detached_alpha(image):
+    """Remove only alpha=1 samples >8px from alpha>=2, never edge AA.
+
+    Opt-in export normalization, not a general background remover. RGB, canvas,
+    stronger samples and alpha=1 within the protected neighborhood stay exact.
+    """
+    alpha = image.getchannel("A")
+    guard = alpha.point(lambda v: 255 if v >= 2 else 0).filter(ImageFilter.MaxFilter(17))
+    mask = bytes(255 if a == 1 and not g else 0 for a, g in zip(alpha.tobytes(), guard.tobytes()))
+    count = mask.count(255)
+    require(count <= image.width * image.height // 1000,
+            "Detached alpha exceeds 0.1% cap; inspect rather than bulk-clear")
+    result = image.copy()
+    alpha.paste(0, (0, 0), Image.frombytes("L", image.size, mask))
+    result.putalpha(alpha)
+    return result, count
+
+
 def replay(image, icc, operation):
     require(operation["library"] == "Pillow" and operation["version"] == PILLOW_VERSION,
             "Recorded Pillow version unavailable for exact replay")
@@ -159,6 +177,14 @@ def replay(image, icc, operation):
         image = rgb
     resample = check_icon.RESAMPLERS[operation["resample"]]
     master = image.copy() if image.size == (1024, 1024) else image.resize((1024, 1024), resample)
+    cleanup = operation.get("alpha_cleanup")
+    if cleanup is not None:
+        require(operation["mode"] != "audit-existing", "Audit must not invent cleanup history")
+        require(cleanup.get("method") == "detached-alpha1-guard8-cap0.001-v1", "Unsupported alpha cleanup")
+        require(bool(checked(cleanup["basis"]).strip()), "Missing cleanup decision/evidence")
+        master, count = clean_detached_alpha(master)
+        require(type(cleanup.get("removed_count")) is int and cleanup["removed_count"] == count,
+                "Alpha cleanup count differs")
     return master, master.resize((120, 120), resample)
 
 
@@ -170,7 +196,7 @@ def new_record(capture_path, capture, master, preview, operation, activity):
             "scope": "Current color declaration/export replay; no visual, user, UI or historical acceptance"}
 
 
-def export(capture_path, output_dir, *, unknown="stop", basis=None, resample="lanczos"):
+def export(capture_path, output_dir, *, unknown="stop", basis=None, resample="lanczos", alpha_cleanup_basis=None):
     _, capture, observation, image, chunks, icc = read_capture(capture_path)
     src_status = source_state(capture, observation)["status"]
     require(src_status != "fail", "Invalid source metadata must be resolved, not relabelled")
@@ -199,6 +225,13 @@ def export(capture_path, output_dir, *, unknown="stop", basis=None, resample="la
         target = descriptor(profile_path)
     operation = recipe(mode, resample, target, assumption)
     master, preview = replay(image, icc, operation)
+    if alpha_cleanup_basis is not None:
+        decision = descriptor(alpha_cleanup_basis)
+        require(bool(checked(decision).strip()), "Missing cleanup decision/evidence")
+        _, count = clean_detached_alpha(master)
+        operation["alpha_cleanup"] = {"method": "detached-alpha1-guard8-cap0.001-v1",
+                                      "basis": decision, "removed_count": count}
+        master, preview = replay(image, icc, operation)
     info = PngImagePlugin.PngInfo()
     if mode == "preserve-unknown":
         for kind, payload in chunks:
@@ -359,6 +392,8 @@ def main(argv=None):
     p.add_argument("--output-dir", type=Path, required=True)
     p.add_argument("--unknown", choices=("stop", "preserve", "assume-srgb"), default="stop")
     p.add_argument("--basis", type=Path)
+    p.add_argument("--alpha-cleanup-basis", type=Path,
+                   help="Opt-in documented detached alpha=1 export normalization; never global threshold")
     p.add_argument("--resample", choices=tuple(check_icon.RESAMPLERS), default="lanczos")
     p = sub.add_parser("audit")
     p.add_argument("capture", type=Path)
@@ -379,7 +414,8 @@ def main(argv=None):
                       "record": descriptor(args.output), "acceptance": "run verify after export/audit"}
             code = 0
         elif args.command == "export":
-            result = export(args.capture, args.output_dir, unknown=args.unknown, basis=args.basis, resample=args.resample)
+            result = export(args.capture, args.output_dir, unknown=args.unknown, basis=args.basis, resample=args.resample,
+                            alpha_cleanup_basis=args.alpha_cleanup_basis)
             code = 0 if result["status"] == "pass" else 1
         elif args.command == "audit":
             result = audit(args.capture, args.master, args.preview, args.output, resample=args.resample)

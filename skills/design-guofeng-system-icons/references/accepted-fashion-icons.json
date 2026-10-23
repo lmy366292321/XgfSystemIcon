@@ -1,0 +1,190 @@
+{
+  "date": "2026-10-23",
+  "user_request": "将调整后的登记为通过，并加入到图库",
+  "user_acceptance": "pass",
+  "status": "正式限定用途参考",
+  "accepted_version": "fashion-fit-20261022-v1",
+  "scope": "Only the two latest adjusted icons and their selected static circle/nameplate composition; not the old centered icons or every historical candidate",
+  "items": [
+    {
+      "id": "R39",
+      "name": "装扮",
+      "version": "fashion-fit-20261022-v1",
+      "accepted_on": "2026-10-23",
+      "user_acceptance": "pass",
+      "status": "正式限定用途参考",
+      "purpose": "衣架悬挂衣裙、丝绸垂坠与圆底名称板避让",
+      "limits": "本案粉白浅金、约90.8%缩放和上移留白不推广；默认102px安全区例外，具体换装功能配名称",
+      "files": {
+        "1024": {
+          "path": "assets/wardrobe-outfit-fit-v1.png",
+          "sha256": "b4acea951b4e55895f5fa089db7863524c8e779ffd9a03760a55b21748462565",
+          "logical_source": "external-evidence/fashion-fit-20261022-v1/1024/01-装扮-1024.png"
+        },
+        "120": {
+          "path": "assets/previews/wardrobe-outfit-fit-v1-120.png",
+          "sha256": "47b33cc5b7b5d86e50e0f7c60f05dc3aa0149969f97786f011d4e90bad6c6acf",
+          "logical_source": "external-evidence/fashion-fit-20261022-v1/120/01-装扮-120.png"
+        }
+      },
+      "static_composition": "pass for the selected circle/nameplate arrangement",
+      "task_geometry": "pass",
+      "default_102px_safety": "fail retained; authorized task-layout exception",
+      "color_source": "unverified",
+      "resource_delivery": "unverified",
+      "engineering": "unverified",
+      "bbox_1024": [
+        166,
+        26,
+        859,
+        753
+      ],
+      "bbox_120": [
+        17,
+        1,
+        103,
+        90
+      ]
+    },
+    {
+      "id": "R40",
+      "name": "时装商店",
+      "version": "fashion-fit-20261022-v1",
+      "accepted_on": "2026-10-23",
+      "user_acceptance": "pass",
+      "status": "正式限定用途参考",
+      "purpose": "双拱提手绣袋、主辅纹饰与包底避让",
+      "limits": "不推广现代包型或粉色为全局标准；本案固定定位与默认安全区例外，售卖品类配名称",
+      "files": {
+        "1024": {
+          "path": "assets/fashion-shop-fit-v1.png",
+          "sha256": "8e25f8c089580d06254507c776e0824d0d31e45cff48307d42f2a1924c904bd6",
+          "logical_source": "external-evidence/fashion-fit-20261022-v1/1024/02-时装商店-1024.png"
+        },
+        "120": {
+          "path": "assets/previews/fashion-shop-fit-v1-120.png",
+          "sha256": "4f0d419c52880df451850aa303194bd63a16e2031748c965d1a3973af134ceb3",
+          "logical_source": "external-evidence/fashion-fit-20261022-v1/120/02-时装商店-120.png"
+        }
+      },
+      "static_composition": "pass for the selected circle/nameplate arrangement",
+      "task_geometry": "pass",
+      "default_102px_safety": "fail retained; authorized task-layout exception",
+      "color_source": "unverified",
+      "resource_delivery": "unverified",
+      "engineering": "unverified",
+      "bbox_1024": [
+        153,
+        26,
+        870,
+        745
+      ],
+      "bbox_120": [
+        16,
+        1,
+        104,
+        89
+      ]
+    }
+  ],
+  "qa": [
+    {
+      "path": "assets/qa/fashion-accepted/composition-before-after.png",
+      "sha256": "aded447e3dc00e60f140ecb1063fa70a0c7d9a48f9c07146b7b92628955053a3"
+    },
+    {
+      "path": "assets/qa/fashion-accepted/composition-light.png",
+      "sha256": "eb18e38a8f476272bf0fa9a6464dc2154345f5da40cb5c0d783ce89b67418795"
+    },
+    {
+      "path": "assets/qa/fashion-accepted/composition-dark.png",
+      "sha256": "93286d19adf9f53839f8f2a24ba3eb5c08a6671410b0dd553f8a3bfedb3d6d28"
+    },
+    {
+      "path": "assets/qa/fashion-accepted/ten-reference-light.png",
+      "sha256": "625c03d537e736b3639bcc87bf3f2aed1719278ba1312360a8eef9dfbe02564e"
+    },
+    {
+      "path": "assets/qa/fashion-accepted/ten-reference-dark.png",
+      "sha256": "aef1ea5b1b88880cdf9ae3665b711db667a15c615f3f20e64c809b707cf457d2"
+    }
+  ],
+  "composition": {
+    "icon_layer": [
+      120,
+      120
+    ],
+    "ui_extra_offset": [
+      0,
+      0
+    ],
+    "circle": {
+      "filename": "common_tab_function_2_1.png",
+      "sha256": "e8abf5c565ed71cc0282cedcf4d40140af42324d177277708a11c10fc2d5f70b",
+      "size": [
+        113,
+        113
+      ],
+      "offset": [
+        4,
+        7
+      ]
+    },
+    "nameplate": {
+      "filename": "common_tab_function_name_1.png",
+      "sha256": "4e441a92953684d3fba91680639295a657a51709d1ed505f1ac757c991bc8444",
+      "size": [
+        131,
+        40
+      ],
+      "offset": [
+        -6,
+        90
+      ]
+    },
+    "z_order": [
+      "circle",
+      "icon",
+      "nameplate",
+      "text"
+    ],
+    "font_and_backdrop": "preview approximation, not production verification"
+  },
+  "transform_scope": {
+    "scale": 0.908203125,
+    "method": "whole-canvas proportional resize and PNG-internal positioning; no redraw/recolor",
+    "final_preview": "full final1024 LANCZOS to120",
+    "clipped_nonzero_pixels": 0,
+    "overlap_with_nameplate_nonzero_alpha": 0
+  },
+  "historical_evidence": [
+    {
+      "logical_source": "external-evidence/fashion-fit-20261022-v1/manifest.json",
+      "sha256": "938766d4d7da53392e644787b6f444085b6377a77a13f510ed6612dc9484c6fb"
+    },
+    {
+      "logical_source": "external-evidence/fashion-fit-20261022-v1/records/final-verification.json",
+      "sha256": "537265f35e5ce52baa9e83b500dc8a18d8480e97b3a41cc6b9dd3866f179d99d"
+    },
+    {
+      "logical_source": "external-evidence/fashion-fit-20261022-v1/records/transforms.json",
+      "sha256": "9ecb6636c2278282dcb8b637af81958ee2e82f0ad32068c228e9d422071d7284"
+    },
+    {
+      "logical_source": "external-evidence/fashion-fit-20261022-v1/qa/final-check/batch-report.json",
+      "sha256": "4e183f24eea206f80743a1661912a9dd7258edb1adb00976199019a573eddf66"
+    },
+    {
+      "logical_source": "external-evidence/fashion-fit-20261022-v1/reviews/primary-evidence.json",
+      "sha256": "4c74570f7a70c24344914693f261258d26458f72fad49cf4f7e1a392d9775674"
+    },
+    {
+      "logical_source": "external-evidence/fashion-fit-20261022-v1/reviews/second-evidence.json",
+      "sha256": "6b35031ca63dfeccdc99e8fa85795a772d9ba1c2841eb858fae24acf46acb4d2"
+    }
+  ],
+  "resource_delivery": "unverified",
+  "color_source": "unverified",
+  "engineering": "unverified",
+  "global_rules_changed": false
+}

@@ -1,0 +1,184 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-23",
+  "library_version": "1.13",
+  "user_acceptance": "pass",
+  "status": "正式限定用途参考",
+  "user_confirmation": "就用这版，把放大后的区域榜和保持不变的总榜、花盟榜定稿，整理好三个图标的1024和120px透明PNG并打包。",
+  "admission_authorization": "把这三个定稿图标加入技能的正式参考图库，并更新对应的版本和确认记录。",
+  "scope": "Only three exact final assets: region V8 scaled6.25%, overall V1 placement unchanged, alliance V4 unchanged",
+  "items": [
+    {
+      "id": "R50",
+      "name": "区域榜",
+      "version": "V8：V1适配原画整体等比放大6.25%",
+      "accepted_on": "2026-10-23",
+      "user_acceptance": "pass",
+      "status": "正式限定用途参考",
+      "purpose": "分区折叠地图与前景三阶牌的主辅、横向纸物体量和圆底名称板适配",
+      "limits": "不推广6.25%比例、锚点、地图配色或金台造型；区域范围仍配名称，原纸面视重略轻属于本案已接受结果",
+      "files": {
+        "1024": {
+          "path": "assets/ranking-region-v8.png",
+          "sha256": "e9e7b9c45dd04c4f1eb9e2a3714252801b0e0bd0bd7fec80424caf1591eb61af",
+          "logical_source": "external-evidence/rankings-final-20261023/1024/区域榜-1024.png"
+        },
+        "120": {
+          "path": "assets/previews/ranking-region-v8-120.png",
+          "sha256": "41656221ce6716c4fd9bba1687afd9f4fd8d2032e6e4ba5b3c7f8f923928368e",
+          "logical_source": "external-evidence/rankings-final-20261023/120/区域榜-120.png"
+        }
+      },
+      "visual_120_and_static_composition": "pass for exact bound common component",
+      "source_color": "unverified",
+      "resource_delivery": "unverified",
+      "engineering": "unverified",
+      "layout_scope": "icon120 offset0; circle113x113@(4,7); nameplate131x40@(-6,90); text/background preview approximate",
+      "default_102px_safety": "01 default fail retained with task boundary; other per-file historical checks retained; no universal margin exemption",
+      "bbox_1024": [
+        91,
+        60,
+        932,
+        889
+      ],
+      "bbox_120": [
+        12,
+        14,
+        111,
+        92
+      ]
+    },
+    {
+      "id": "R51",
+      "name": "总榜",
+      "version": "V1适配稿，保持不变",
+      "accepted_on": "2026-10-23",
+      "user_acceptance": "pass",
+      "status": "正式限定用途参考",
+      "purpose": "修长斜向双轴榜纸、三行节点/条目与顶部榜首花冠的层级",
+      "limits": "不推广精确卷轴角度/轴长/红金装饰；底轴下缘少量遮挡仅属本案，三行核心完整，总榜范围配名称",
+      "files": {
+        "1024": {
+          "path": "assets/ranking-overall-v1-placement.png",
+          "sha256": "a01a8f7cb5cacc1f7c8215a26fde5a94b276744bdb0906a4fa1cbe07ae559082",
+          "logical_source": "external-evidence/rankings-final-20261023/1024/总榜-1024.png"
+        },
+        "120": {
+          "path": "assets/previews/ranking-overall-v1-placement-120.png",
+          "sha256": "e0ee67d8b749234da59450d7411ad1ee480ff886864b2a204b7fc4b0f379a544",
+          "logical_source": "external-evidence/rankings-final-20261023/120/总榜-120.png"
+        }
+      },
+      "visual_120_and_static_composition": "pass for exact bound common component",
+      "source_color": "unverified",
+      "resource_delivery": "unverified",
+      "engineering": "unverified",
+      "layout_scope": "icon120 offset0; circle113x113@(4,7); nameplate131x40@(-6,90); text/background preview approximate",
+      "default_102px_safety": "01 default fail retained with task boundary; other per-file historical checks retained; no universal margin exemption",
+      "bbox_1024": [
+        120,
+        104,
+        905,
+        880
+      ],
+      "bbox_120": [
+        20,
+        15,
+        106,
+        101
+      ]
+    },
+    {
+      "id": "R52",
+      "name": "花盟榜",
+      "version": "V4，保持不变",
+      "accepted_on": "2026-10-23",
+      "user_acceptance": "pass",
+      "status": "正式限定用途参考",
+      "purpose": "桃花社团旗与三行排行条目、短杆连接和紫绸大面明暗",
+      "limits": "花盟是社团包装；紫旗/花徽不是所有社团默认内容或配色，允许比纸类更实，精确入口范围配名称",
+      "files": {
+        "1024": {
+          "path": "assets/ranking-alliance-v4.png",
+          "sha256": "8adea6b854d9286fa9917e114ff67e1b849fdde02359b9273a1d0cf10c311295",
+          "logical_source": "external-evidence/rankings-final-20261023/1024/花盟榜-1024.png"
+        },
+        "120": {
+          "path": "assets/previews/ranking-alliance-v4-120.png",
+          "sha256": "0c3b3580bcbee3f71a93c19fd1f2caad181e05feed2e94ed6e0cb2487416dd55",
+          "logical_source": "external-evidence/rankings-final-20261023/120/花盟榜-120.png"
+        }
+      },
+      "visual_120_and_static_composition": "pass for exact bound common component",
+      "source_color": "unverified",
+      "resource_delivery": "unverified",
+      "engineering": "unverified",
+      "layout_scope": "icon120 offset0; circle113x113@(4,7); nameplate131x40@(-6,90); text/background preview approximate",
+      "default_102px_safety": "01 default fail retained with task boundary; other per-file historical checks retained; no universal margin exemption",
+      "bbox_1024": [
+        132,
+        122,
+        892,
+        792
+      ],
+      "bbox_120": [
+        13,
+        12,
+        107,
+        95
+      ]
+    }
+  ],
+  "qa": [
+    {
+      "path": "assets/qa/rankings-accepted/ten-reference-qa-dark-01.png",
+      "sha256": "ee05cd75ef10202a0270acbc6c63940056bdabc0ae4eabf4ee914eddf7235650"
+    },
+    {
+      "path": "assets/qa/rankings-accepted/ten-reference-qa-light-01.png",
+      "sha256": "c792fc402c57e392cc7195084de30cde7df37e53db5d4d11667214409f60e97a"
+    },
+    {
+      "path": "assets/qa/rankings-accepted/relation-cloth-dark.png",
+      "sha256": "b92923747db68028dcc6eeec660d7ee52ca82ee52ef6f3c3236db73fe1c87293"
+    },
+    {
+      "path": "assets/qa/rankings-accepted/relation-cloth-light.png",
+      "sha256": "989168f2e497c215de4eb2b0bd73f4764216a81c124369556e215da2fb03684e"
+    },
+    {
+      "path": "assets/qa/rankings-accepted/relation-paper-dark.png",
+      "sha256": "a7088838668e99c460e976d85e81902c54a78e43edb45347296e89a0bb98dd0d"
+    },
+    {
+      "path": "assets/qa/rankings-accepted/relation-paper-light.png",
+      "sha256": "6b6088461b8bf1e49f960b121e135ec6e41ff51a72cb6b8060ebff56b2f00d29"
+    },
+    {
+      "path": "assets/qa/rankings-accepted/relation-rankings-three-dark.png",
+      "sha256": "d33a0f9c532b110a33543de094ea13112715cb00a7b65bf38b9016fd9141d404"
+    },
+    {
+      "path": "assets/qa/rankings-accepted/relation-rankings-three-light.png",
+      "sha256": "a43ba07927aaa270701d81b71e3842d583a6c4b15c5a116bc45a34fdc1711d8c"
+    },
+    {
+      "path": "assets/qa/rankings-accepted/composition-current.png",
+      "sha256": "a667f755d4392edac27c06d20c3ca6811ec18ad6558c10c081d1f3f9626a4fc6"
+    },
+    {
+      "path": "assets/qa/rankings-accepted/composition-before-after-ten-reference.png",
+      "sha256": "c3fee7f91dc835b44a7f693270731c24e91a1ae9b4327eaa4db105d0751c805c"
+    }
+  ],
+  "visual_review": {
+    "primary": "pass",
+    "independent_recheck": "pass",
+    "bound_source_report": "external-evidence/rankings-v8-size-review-20261023-r2",
+    "scope": "120 file pixels and static common component, no device test"
+  },
+  "resource_delivery": "unverified",
+  "source_color": "unverified",
+  "engineering": "unverified",
+  "global_rule_change": false
+}

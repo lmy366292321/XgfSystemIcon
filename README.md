@@ -23,13 +23,13 @@
 - [技能入口](skills/design-guofeng-system-icons/SKILL.md)
 - [完整组件区域与留白](skills/design-guofeng-system-icons/references/composition-layout.md)：普通任务的设计与组合审核流程；具体底栏参数及最终选择单列在[案例记录](skills/design-guofeng-system-icons/references/bottom-tab-20261021.md)。
 - [完整设计规范与提示词](skills/design-guofeng-system-icons/references/design-standard.md)
-- [参考图](skills/design-guofeng-system-icons/assets)：38张完整图标、6张原像素局部观察图及1张真实尺寸失败反例，均来自本项目现有资源。
+- [参考图](skills/design-guofeng-system-icons/assets)：52张完整图标、6张原像素局部观察图及1张真实尺寸失败反例，均来自本项目现有资源。
 - [只读规格检查](skills/design-guofeng-system-icons/scripts/check_icon.py)：需要Python 3与Pillow，检查PNG真实位深、安全区、sRGB标识与120px派生关联；只读，不替代视觉验收。
 
 - [分类参考图库](skills/design-guofeng-system-icons/references/reference-library.md)：制作前及验收固定查看10张，生成输入选1–3张，标注来源与确认状态。
 - [画面控制卡](skills/design-guofeng-system-icons/references/visual-control.md)：明确必须保持、允许调整、禁止出现与可检查画面要求。
 
-参考图状态：R01–R09已确认；R10闺蜜、R11节日礼包、R12留言为后续已授权的限定用途参考，具体范围以图库索引为准。R13–R20为2026-10-21用户确认的第五版八项，见[入库记录](skills/design-guofeng-system-icons/references/accepted-v5-icons.md)。R21–R38为2026-10-21确认的主角3枚、好友4枚、花艺3枚与福利8枚，准确版本及限制见[统一图库索引](skills/design-guofeng-system-icons/references/reference-library.md)。不含早期失败反例，不自动批准未来改稿。
+参考图状态：R01–R09已确认；R10闺蜜、R11节日礼包、R12留言为后续已授权的限定用途参考，具体范围以图库索引为准。R13–R20为2026-10-21用户确认的第五版八项，见[入库记录](skills/design-guofeng-system-icons/references/accepted-v5-icons.md)。R21–R38为2026-10-21确认的主角3枚、好友4枚、花艺3枚与福利8枚，准确版本及限制见[统一图库索引](skills/design-guofeng-system-icons/references/reference-library.md)。R39–R40为2026-10-23确认的时装圆底适配v1，见[时装系统入库记录](skills/design-guofeng-system-icons/references/accepted-fashion-icons.md)。R41–R45为2026-10-23确认的排行商店V5，见[入库记录](skills/design-guofeng-system-icons/references/accepted-ranking-shop-icons.md)。不含早期失败反例，不自动批准未来改稿。
 
 - [交付与失败处理方案](skills/design-guofeng-system-icons/references/delivery-review.md)：逐项证据、参考分工、两次失败后换方法、实际UI与效果记录。
 - [120px对照验收](skills/design-guofeng-system-icons/references/qa-120.md)：固定10张参考，分开报告文件、视觉、用户接受、UI和工程状态。
@@ -66,3 +66,15 @@ python -B -m unittest discover -s skills/design-guofeng-system-icons/scripts -p 
 文件规格可自动测量；光源、功能识别、视觉重量、描边与噪点需实际查看120px浅深底对照。引擎导入、图集压缩及真机验收未执行时，不能声称上线通过。
 
 本仓库未添加通用开源许可；参考资源的使用权限由项目所有者决定。
+
+仓库四入口R46–R49为用户确认的正式限定用途参考，准确版本和用途见[入库记录](skills/design-guofeng-system-icons/references/accepted-warehouse-icons.md)。
+
+排行榜三入口R50–R52已在本地登记：区域榜V8等比放大6.25%、总榜V1适配与花盟榜V4；见[确认版本与限定用途](skills/design-guofeng-system-icons/references/accepted-rankings-icons.md)。本地维护文件更新不表示GitHub远端已同步。
+
+## 器物设计与定向修复
+
+- [物品词库](skills/design-guofeng-system-icons/references/object-content-library.md)、[结构卡](skills/design-guofeng-system-icons/references/object-structure.md)与[构图方法](skills/design-guofeng-system-icons/references/object-composition.md)：内容参考只学习物品、结构与构图，不替代正式画风基准；不打包外部内容参考原图。
+- [透明残留诊断与导出](skills/design-guofeng-system-icons/references/color-space-export.md)：先区分极淡孤立残点与实心主体越界，可选清理绑定依据、计数和精确重放；默认导出不清理，已确认图不批量重写。
+- 三物定向复测已回填[案例记录](skills/design-guofeng-system-icons/references/feedback-records.md)：香囊素面、折扇收幅和残点处理在本批最终候选中改善，不代表稳定首试成功或跨案例验证。色彩来源未验证及R45/R48默认边距冲突仍保留，完整交付未通过；测试候选未升级为正式参考。
+
+排行榜三入口R50–R52的已确认版本与限定用途见[入库记录](skills/design-guofeng-system-icons/references/accepted-rankings-icons.md)。

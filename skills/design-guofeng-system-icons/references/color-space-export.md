@@ -30,7 +30,7 @@ python -B scripts/color_record.py export /task/records/source-color.json --outpu
 
 已知原图sRGB：保持其颜色解释；有效RGB ICC：用实际源配置转换到工具保存的sRGB目标配置，再导出明确sRGB PNG，保留alpha。保存Pillow/LittleCMS版本、算法、源/目标配置指纹、源/高清/120文件指纹，验证时实际重放。
 
-`export`仍只支持正方形完整画布等比例缩放到1024，再由完整1024缩到120，默认LANCZOS；原1024不再缩放。**不裁边、去底、清噪点、自动居中或修安全区。** 硬规格和视觉审核仍独立执行，不能把导出成功当图标合格。PNG内定位按[组合输出规则](composition-layout.md#输出与双尺寸关联)确定并记录；此导出命令不会自动把UI偏移写入PNG。
+`export`仍只支持正方形完整画布等比例缩放到1024，再由完整1024缩到120，默认LANCZOS；原1024不再缩放。**默认不裁边、去底、清噪点、自动居中或修安全区。** 仅在本页末节的明确条件下启用已记录的极淡残点归一化。 硬规格和视觉审核仍独立执行，不能把导出成功当图标合格。PNG内定位按[组合输出规则](composition-layout.md#输出与双尺寸关联)确定并记录；此导出命令不会自动把UI偏移写入PNG。
 
 定位前后文件分开绑定：原色彩记录继续绑定真实来源与定位前1024/120，最终文件由几何合同绑定。使用`verify color-export.json --geometry geometry.json`只读复验，或在批次条目同时绑定`color_record`和`geometry`。检查先重放原色彩记录，再核对其输出与几何链源文件是否同一版本，重放定位并核对最终颜色声明不变；独立双尺寸关系按合同明确报告，不伪称最终高清直接派生。原始色彩来源未知、假设或未支持的更早处理不会因几何通过升级。没有原色彩记录仍为未验证，不把定位后文件倒称原始生成源；未支持的几何步骤不能写成无转换。
 
@@ -79,3 +79,17 @@ python -B scripts/color_record.py verify /task/recheck/color-export.json --outpu
 Windows固定入口为 `run-local.ps1 -Operation color-record -Arguments @(...)`。测试源码包括真实变换、未知/假设分支、拒绝覆写和篡改；合成夹具的通过不作为真实图标的来源证据。
 
 技术依据：[PNG色彩空间声明](https://www.w3.org/TR/png-3/#11sRGB)、[Pillow ICC转换](https://pillow.readthedocs.io/en/stable/reference/ImageCms.html#PIL.ImageCms.profileToProfile)。声明、转换与独立色度验证分别表述。
+
+## 远离主体的极淡残留：诊断与可选导出归一化
+
+先导出未处理候选并运行只读 `alpha_safety.py master-1024.png --output alpha-diagnosis.json`，分别报告alpha>=1/2/16/128/254包围盒、安全区外非零数及最高alpha。诊断阈值绝不替代原alpha>0硬规格。实际查看原图、深浅底和关键细部，区分残点、正常抗锯齿、半透明材质、实心主体越界。
+
+仅对本次获准修复的新候选、已确认无刻意半透明游离元素且残留符合条件时，写依据文件（用户修复范围、具体诊断文件/哈希、需保留部件），在新目录执行：
+
+```text
+python -B scripts/color_record.py export /task/records/source-color.json --unknown preserve --alpha-cleanup-basis /task/inputs/alpha-cleanup-decision.md --output-dir /task/candidates/clean-v1
+```
+
+该可选归一化在1024完整画布缩放后、120派生前运行：只将alpha恰为1且距任何alpha>=2像素超过8px（方形邻域）的样本置0；RGB、尺寸、位置、alpha>=2和邻域内alpha=1原样保留。超过整图0.1%像素则停止，不能扩大阈值硬清。此上限是防误清保护，不是质量标准。依据和删除计数写入operation.alpha_cleanup，verify重新计算并核对；删掉记录、篡改计数或依据均不能重放通过。原始source保持不变，已确认图不批量重导。
+
+默认export仍不清理。此步骤不判断残点语义，不能作为通用去背景、描边侵蚀或实心越界修复；如残点不满足条件或会涉及材质，改用图像编辑工具定向修复并另留版本。导出后重新查alpha、深浅底、提梁孔/挂绳/扇骨保持项。未知色彩来源仍未知；有清理时不得把source→master称为“仅缩放”，但master→120仍是完整画布直接派生。
