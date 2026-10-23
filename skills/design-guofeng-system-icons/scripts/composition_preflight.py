@@ -151,13 +151,17 @@ def validate(c):
 
 def instructions(c):
     load_composition(c)
+    quality = ''
+    if 'quality_goals' in c:
+        from composition_quality import prompt
+        quality = prompt(c)
     return ('\n\nCOMPOSITION CONTRACT (not a drawing of the UI):\n'
             'Output only the transparent icon; do not paint the frame, nameplate, labels or planning rectangles.\n'
             'The supplied planning board shows actual UI resources. Its diagram is enlarged 4x; coordinates below use a 120x120 full icon layer.\n'
             f'Subject footprint at 120px: {c["subject_bounds"]}; multiply coordinates by 1024/120 for the 1024 canvas.\n'
             f'Critical recognition regions: {json.dumps(c["critical_regions"],ensure_ascii=False)}.\n'
             f'Placement: {c["placement_intent"]}. Overlap policy: {c["occlusion_reason"]}.\n'
-            'Keep transparent padding consistent with this plan. This is a generation target, not a guarantee; verify the returned pixels in the actual component.')
+            'Keep transparent padding consistent with this plan. This is a generation target, not a guarantee; verify the returned pixels in the actual component.' + quality)
 
 
 def main():

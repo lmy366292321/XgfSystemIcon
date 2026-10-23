@@ -49,6 +49,11 @@ class WorkflowTests(unittest.TestCase):
             from test_composition_preflight import fixture
             self.plan['schema_version'] = 2
             composition = fixture(self.root / 'composition', standalone=True)
+            composition['quality_goals'] = {
+                'basis_kind':'task_reasoning','basis':composition['basis'],
+                'occupancy_target':'Synthetic blocks should fill the declared region',
+                'optical_balance':'Synthetic comparison; no numeric aesthetic inference',
+                'verification_method':'Compare same-size actual component states'}
             for item, target in zip(self.plan['items'], self.m['items']):
                 item['composition'] = copy.deepcopy(composition)
                 item['brief'] = 'Synthetic workflow test only'
@@ -108,6 +113,12 @@ class WorkflowTests(unittest.TestCase):
                       'evidence': self.desc(p), 'sheets': sheets,
                       'items': {k: {'status': 'pass', 'observation': 'Synthetic observation', 'location': 'Whole tile'} for k in common.VISUAL_FIELDS}}
             review['items']['palette']['status'] = palette_status
+            composition = self.plan['items'][0].get('composition')
+            if composition:
+                review['composition_review'] = {'same_size':True,'layouts':composition['layouts'],
+                    'evidence':sheets[0],
+                    'occupancy':{'status':'pass','observation':'Synthetic occupancy only','location':'candidate tile'},
+                    'optical_balance':{'status':'pass','observation':'Synthetic balance only','location':'candidate tile'}}
             if second:
                 review['method'] = 'same_reviewer_second_pass'
             item['visual_recheck' if second else 'visual_review'] = review
@@ -345,6 +356,16 @@ class WorkflowTests(unittest.TestCase):
         self.m['items'][0]['layout'] = self.desc(self.layout)
         with self.assertRaisesRegex(ValueError, 'Output layout differs'):
             workflow.current_binding(self.manifest, self.m, report, self.plan)
+
+    def test_new_production_needs_occupancy_and_optical_goals(self):
+        self.prepare('create')
+        del self.plan['items'][0]['composition']['quality_goals']
+        card = Path(self.plan['items'][0]['control_card']['path'])
+        common.write_json(card, {'composition':self.plan['items'][0]['composition']})
+        self.plan['items'][0]['control_card']=self.desc(card)
+        common.write_json(self.plan_path,self.plan)
+        with self.assertRaisesRegex(ValueError,'quality goal'):
+            workflow.start(self.plan_path,self.root/'new-records'/'start.json','fixture')
 
     def test_removing_color_record_never_passes_complete_visual_review(self):
         self.complete()

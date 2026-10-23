@@ -230,6 +230,8 @@ def prepare_request(record_path, item_id, output, actor):
     require(nonempty(actor), 'Missing request actor')
     item = next((x for x in plan['items'] if x['id'] == item_id), None)
     require(item is not None, 'Unknown item ID')
+    from composition_quality import validate_goals
+    validate_goals(item['composition'])
     request = {'schema_version': 1, 'item_id': item_id, 'actor': actor,
                'at': datetime.now(timezone.utc).isoformat(),
                'workflow': descriptor(record_path), 'plan': record['plan'],
@@ -315,8 +317,14 @@ def review_status(path, manifest, report, bound, stage, earliest):
     snap = snapshot(path, manifest)
     pages = verified_pages(path, manifest, report)
     statuses = []
+    plan = read_json(resolve(path.parent, manifest['design_plan']['path']))
+    planned = {i['id']: i for i in plan['items']}
     for item, row in zip(manifest["items"], report["items"]):
         review = item.get(key, {})
+        composition = planned[item['id']].get('composition', {})
+        if 'quality_goals' in composition:
+            from composition_quality import validate_review
+            statuses.append(validate_review(review.get('composition_review'), composition))
         value = imported_review(path.parent, review, row["binding_for_review"], snap, visual=True)
         require(value.get("freshness") == "current", f"{item['id']}: incomplete/stale {key}")
         require(timestamp(review.get("reviewed_at")) >= earliest, f"{item['id']}: review predates stage")
@@ -374,6 +382,10 @@ def start(plan_path, output, actor):
     require(plan.get("mode") == "review" or plan.get("schema_version") == 2,
             "Production start requires v2 composition preflight; legacy/review evidence is not generation permission")
     validate_plan(plan)
+    if plan['mode'] != 'review':
+        from composition_quality import validate_goals
+        for item in plan['items']:
+            validate_goals(item['composition'])
     record = {"schema_version": 1, "plan": descriptor(plan_path), "events": []}
     record["events"].append(new_event(record, "plan", actor, plan_sha256=record["plan"]["sha256"]))
     save_new(output, record)

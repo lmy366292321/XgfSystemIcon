@@ -25,3 +25,18 @@ Windows固定入口：`-Operation composition-plan`映射规划图工具，`-Ope
 ## 验证与边界
 
 见[真实试制报告](composition-preflight-validation.md)。验证后才引入本页通用流程。程序能阻断使用本工作流时的缺项和参数不一致，不能从软件层拦截任意直接调用imagegen，也不能证明人工观察或填写的使用依据是真实的。未执行检查或绕过准备参数的制作，不得宣称符合此流程。
+
+## 主体占比与视觉重心（经实际对照确认后加入）
+
+新start和prepare-request要求composition.quality_goals；旧计划仍可读取重放，不倒填历史。字段：
+
+- basis_kind：reference或task_reasoning；basis：参照图/任务依据的绝对路径和SHA-256。没有合适成图参照时可以记录任务推导，不能虚构用户认可。
+- occupancy_target：主物相对实际组件的体量、上下空间与识别面目标。说明依据，避免只为避让名称板而缩小主体；具体范围由本任务确定，不设全局占比。
+- optical_balance：观察大色面、明暗、结构疏密和不对称轮廓如何影响重心，说明拟保持或校正的视觉平衡。不强制左移；包围框中心、alpha质心仅为诊断，不能代替实际观察。
+- verification_method：同尺寸实际组件对照的方法及应保持的尺寸、位置和参照版本。新旧候选不能各自裁切后放大到同样大小再作体量比较。
+
+这些目标自动追加到生成参数中。它们是制作前意图，仍须生成后验证；精确比例/定位可通过有记录的等比导出与留白调整落实，不能只移动预览。不得把导出修正后的通过说成生成器直接准确执行。
+
+对含quality_goals的计划，visual_review和visual_recheck分别增加composition_review：same_size=true；layouts与计划全部状态一致；evidence绑定实际组合对照PNG的绝对路径及SHA-256；occupancy和optical_balance分别含status(pass/fail/unverified)、observation、location。它与现有weight判断互补，不替换八项审核。缺项、不同布局、失效图证据会被拒绝，任一fail或unverified不能变成通过。图像/布局更改继续使已有审核绑定失效。程序核对记录完整性，不自动推断美感，也不能认证自报的同尺寸观察。
+
+只有图层、实际圆底/名称板、背景及显示倍率一致才作可比判断；原截图被裁切或文字近似时标明边界，不能隐瞒。检查主体是否足够饱满、视觉重心是否平衡，并单独核对遮挡。改动数值只属于当前候选。案例见[体量与重心验证](composition-optical-validation.md)。

@@ -13,7 +13,7 @@ description: 设计、扩展、精修和评审新国风女性向古风游戏的�
 2. 先按 [完整组合区域流程](references/composition-layout.md)确定组件、可见区域和摆放，再读取 [画面控制卡](references/visual-control.md) 与 [交付与失败处理](references/delivery-review.md)，填清主次物件、参考分工、必须保持/允许调整/禁止出现，以及120px辨识与组合适配条件；普通单图任务同样执行，默认将组合位置写入PNG留白并将UI额外补偿归零。按需要查看对应局部裁切；文字不能保证像素级一致。
 3. 明确功能操作、主体、辅助语义和必须保留的元素。新选物时查[物品词库](references/object-content-library.md)，按选定类型核对[结构卡](references/object-structure.md)，再用[物品构图方法](references/object-composition.md)确定状态、识别面与主辅关系；已有主体的精修只查相关项，不另行换物。信息足够就直接制作；只有功能语义或缺失的关键组合尺寸会影响设计时才询问缺口。不要为常规配色、导出或可逆修改重复索要许可。
 4. 区分参考用途：用户原图负责主体保真，界面图提供内容语义及组合关系，精确布局优先取组件记录，内置图按图库明确授权的范围借鉴画风、材质、结构或相对比例，不把内容和全部参数一起照搬。C类内容参考仅用于注明的物品、结构、构图，不是画风基准，不占固定10张正式R对照名额；配色仍单独指定。用户本次明确要求优先于默认规范。
-5. 新增/修改先完成[生成前构图检查](references/composition-preflight.md)：用实际组件生成并查看规划图，生产计划schema_version=2与JSON控制卡绑定同一composition；start通过后prepare-request，将规划图与坐标约束一同传入生成。缺关键布局、资源或规划图不能开始制作。真实案例与未通过的像素项见[试制报告](references/composition-preflight-validation.md)。
+5. 新增/修改先完成[生成前构图检查](references/composition-preflight.md)：用实际组件生成并查看规划图，生产计划schema_version=2与JSON控制卡绑定同一composition；start通过后prepare-request，将规划图与坐标约束一同传入生成。缺关键布局、资源或规划图不能开始制作。还须规划主体占比目标、参照依据和视觉重心；实际组合分别检查体量与视觉居中，不能用几何居中或仅不遮挡替代，见[已确认的体量与重心验证](references/composition-optical-validation.md)。真实案例与未通过的像素项见[试制报告](references/composition-preflight-validation.md)。
 6. 使用当前环境的图像生成/编辑能力及其技能；缺少能力时明确说明，不以SVG、代码绘图或文字方案冒充已生成图标。不要仅因工具限制擅自切换付费API。
 
 ## 固定工作流与交付判定

@@ -1,0 +1,22 @@
+{
+  "target_main_bounds_at120": [
+    17,
+    3,
+    98.0371075166508,
+    88
+  ],
+  "scale_at120": 0.08087535680304472,
+  "source_main_alpha16_bounds": [
+    127,
+    27,
+    1129,
+    1078
+  ],
+  "source": "generated-source.png",
+  "notes": "Only isolated candidate export; no source or accepted asset modified. Alpha16 used for size measurement, never removed.",
+  "offset_at120": [
+    6.72882968601332,
+    0.8163653663177923
+  ],
+  "method": "uniform full-source scale and translation, System.Drawing HighQualityBicubic"
+}

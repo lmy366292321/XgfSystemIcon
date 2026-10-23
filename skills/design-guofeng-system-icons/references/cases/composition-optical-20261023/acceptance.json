@@ -1,0 +1,27 @@
+{
+  "status": "user-confirmed",
+  "scope": [
+    "subject occupancy",
+    "optical balance"
+  ],
+  "evidence": {
+    "comparison": "comparison-1x.png",
+    "comparison_sha256": "bc85d22102509b932639f437f08de04a9a242c89c2b1df0dff42cf4dad5da093",
+    "candidate120_sha256": "b583fbbe63df4ccad6b8b2bcb24c6d32936e8bf4d8da5da769eacef0f889ba3e",
+    "candidate1024_sha256": "76691f5fdc8a75099507ac4c653111ebf1c4912c02a053f0972c81be08eab98b"
+  },
+  "previous_main_bbox": [
+    26,
+    16,
+    97,
+    90
+  ],
+  "current_main_bbox": [
+    16,
+    3,
+    98,
+    88
+  ],
+  "measurement_note": "Alpha>16 used for occupancy diagnosis only, never acceptance threshold or alpha deletion.",
+  "limits": "Only this case. No gallery promotion, no global scale/offset. Faint alpha remains; full delivery not claimed."
+}
