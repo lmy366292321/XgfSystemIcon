@@ -1,0 +1,282 @@
+{
+  "accepted_on": "2026-10-23",
+  "user_request": "这批图标判定通过并加入图库",
+  "user_acceptance": "pass",
+  "status": "正式限定用途参考",
+  "scope": "Exact six files in latest delivered bundle:01v6,02 single-badge retained,03/04v10 local colour,05v11 blue midtone,06 retained task scroll. Does not approve earlier rejected redraws or future variants.",
+  "items": [
+    {
+      "id": "R53",
+      "source_id": "01",
+      "name": "特供商品",
+      "version": "refined-v6",
+      "accepted_on": "2026-10-23",
+      "user_acceptance": "pass",
+      "status": "正式限定用途参考",
+      "purpose": "花饰绿色商品盒、层叠承托与贴边价签的主辅关系",
+      "limits": "不将绿色盒/白花/紫托或价签样式推广；特供类别仍依入口名",
+      "files": {
+        "1024": {
+          "path": "assets/alliance-special-goods-v6.png",
+          "sha256": "18d1354829ba88b236ba942c68fcbff7b2e07f5cbf82d282949fe550f4e51b6d",
+          "logical_source": "external-evidence/alliance-latest-delivery-20261023/1024px/01-特供商品.png"
+        },
+        "120": {
+          "path": "assets/previews/alliance-special-goods-v6-120.png",
+          "sha256": "cce01a630ca5d2636a4d40527d984a7703224202fa636453ac1b057e42b24987",
+          "logical_source": "external-evidence/alliance-latest-delivery-20261023/120px/01-特供商品.png"
+        }
+      },
+      "source_color": "unverified",
+      "resource_delivery": "unverified",
+      "engineering": "unverified",
+      "bbox_1024": [
+        122,
+        102,
+        905,
+        883
+      ],
+      "bbox_120": [
+        12,
+        11,
+        108,
+        106
+      ],
+      "file_spec_check": "RGBA dimensions/default102px safety/full-canvas120 derivation pass"
+    },
+    {
+      "id": "R54",
+      "source_id": "02",
+      "name": "花盟技能",
+      "version": "locked-current",
+      "accepted_on": "2026-10-23",
+      "user_acceptance": "pass",
+      "status": "正式限定用途参考",
+      "purpose": "单一花形徽章、花瓣层级与圆底适配",
+      "limits": "单主体图形用于本花盟技能入口；不泛化为技能树/双节点或所有技能的通用图案",
+      "files": {
+        "1024": {
+          "path": "assets/alliance-skill-single.png",
+          "sha256": "af63dc1ff30b080bb9683f4baa7bd3e65a8f7e87c7161d9afc1d94c201afec62",
+          "logical_source": "external-evidence/alliance-latest-delivery-20261023/1024px/02-花盟技能.png"
+        },
+        "120": {
+          "path": "assets/previews/alliance-skill-single-120.png",
+          "sha256": "7fcde5e6e4493570d375ab963052f58bb1d5c1ed3895dc0f31b210d70c5dadbd",
+          "logical_source": "external-evidence/alliance-latest-delivery-20261023/120px/02-花盟技能.png"
+        }
+      },
+      "source_color": "unverified",
+      "resource_delivery": "unverified",
+      "engineering": "unverified",
+      "bbox_1024": [
+        127,
+        105,
+        909,
+        863
+      ],
+      "bbox_120": [
+        13,
+        12,
+        107,
+        101
+      ],
+      "file_spec_check": "RGBA dimensions/default102px safety/full-canvas120 derivation pass"
+    },
+    {
+      "id": "R55",
+      "source_id": "03",
+      "name": "竞赛转盘",
+      "version": "v10-local-color",
+      "accepted_on": "2026-10-23",
+      "user_acceptance": "pass",
+      "status": "正式限定用途参考",
+      "purpose": "六分区转盘、奖物分组及小色块浓度控制",
+      "limits": "六区及玉/水滴/礼盒各两件是本案内容，不固定其他转盘奖物或数量",
+      "files": {
+        "1024": {
+          "path": "assets/competition-wheel-v10.png",
+          "sha256": "d556539ff4fa6ee4e0dec82cb7b8518b995b6005ac7a39e2c281fe93b941f6bd",
+          "logical_source": "external-evidence/alliance-latest-delivery-20261023/1024px/03-竞赛转盘.png"
+        },
+        "120": {
+          "path": "assets/previews/competition-wheel-v10-120.png",
+          "sha256": "8cd54f1f7ea9dcc7758375c62b499bb699040e064d856d1ed2db81b7b23baa9a",
+          "logical_source": "external-evidence/alliance-latest-delivery-20261023/120px/03-竞赛转盘.png"
+        }
+      },
+      "source_color": "unverified",
+      "resource_delivery": "unverified",
+      "engineering": "unverified",
+      "bbox_1024": [
+        132,
+        102,
+        863,
+        823
+      ],
+      "bbox_120": [
+        17,
+        13,
+        103,
+        97
+      ],
+      "file_spec_check": "RGBA dimensions/default102px safety/full-canvas120 derivation pass"
+    },
+    {
+      "id": "R56",
+      "source_id": "04",
+      "name": "竞赛奖励",
+      "version": "v10-local-color",
+      "accepted_on": "2026-10-23",
+      "user_acceptance": "pass",
+      "status": "正式限定用途参考",
+      "purpose": "柔和红色闭合礼盒、绸结/花扣/宽云纹的丰富度",
+      "limits": "本稿无旗；珊瑚红、盒型与无旗选择不成为所有奖励入口规则",
+      "files": {
+        "1024": {
+          "path": "assets/competition-rewards-v10.png",
+          "sha256": "30a897a0e8e6c75ce42468975dbe6652ae8eb14abb6ae3c711636541917b589c",
+          "logical_source": "external-evidence/alliance-latest-delivery-20261023/1024px/04-竞赛奖励.png"
+        },
+        "120": {
+          "path": "assets/previews/competition-rewards-v10-120.png",
+          "sha256": "2411e78e046e8ed45a90de90eae24ea48a531db3b206aa33a6d69a59446591a7",
+          "logical_source": "external-evidence/alliance-latest-delivery-20261023/120px/04-竞赛奖励.png"
+        }
+      },
+      "source_color": "unverified",
+      "resource_delivery": "unverified",
+      "engineering": "unverified",
+      "bbox_1024": [
+        140,
+        114,
+        895,
+        839
+      ],
+      "bbox_120": [
+        14,
+        11,
+        106,
+        101
+      ],
+      "file_spec_check": "RGBA dimensions/default102px safety/full-canvas120 derivation pass"
+    },
+    {
+      "id": "R57",
+      "source_id": "05",
+      "name": "竞赛排名",
+      "version": "v11-blue-midtone",
+      "accepted_on": "2026-10-23",
+      "user_acceptance": "pass",
+      "status": "正式限定用途参考",
+      "purpose": "高中央台身与侧阶、花章/旗/宽云纹主次和蓝色中间调",
+      "limits": "与地图/榜纸/社团旗排行参考用途区分；不推广本稿蓝色/阶高/校色参数或要求等同红盒重量",
+      "files": {
+        "1024": {
+          "path": "assets/competition-ranking-v11.png",
+          "sha256": "6d5c9534edf55648aeab96a2420ac7f8bf8bd42b001f84e4f8564d05e7dbbd68",
+          "logical_source": "external-evidence/alliance-latest-delivery-20261023/1024px/05-竞赛排名.png"
+        },
+        "120": {
+          "path": "assets/previews/competition-ranking-v11-120.png",
+          "sha256": "18ed7ca6c35e266f236d3df37fc5fc6fdc2ac368ee3f7da848cc7c283461dc4b",
+          "logical_source": "external-evidence/alliance-latest-delivery-20261023/120px/05-竞赛排名.png"
+        }
+      },
+      "source_color": "unverified",
+      "resource_delivery": "unverified",
+      "engineering": "unverified",
+      "bbox_1024": [
+        141,
+        116,
+        913,
+        892
+      ],
+      "bbox_120": [
+        14,
+        11,
+        110,
+        98
+      ],
+      "file_spec_check": "RGBA dimensions/default102px safety/full-canvas120 derivation pass"
+    },
+    {
+      "id": "R58",
+      "source_id": "06",
+      "name": "竞赛任务",
+      "version": "locked-current",
+      "accepted_on": "2026-10-23",
+      "user_acceptance": "pass",
+      "status": "正式限定用途参考",
+      "purpose": "悬挂花任务卷轴、条目与勾选符号的层级",
+      "limits": "花种/卷轴方向/挂杆/勾选样式是本案，具体竞赛任务机制依入口名",
+      "files": {
+        "1024": {
+          "path": "assets/competition-tasks.png",
+          "sha256": "67aa485ebd3788c9a582198e7cc5a5d5bf214147fb017e3f31178928d5706fe0",
+          "logical_source": "external-evidence/alliance-latest-delivery-20261023/1024px/06-竞赛任务.png"
+        },
+        "120": {
+          "path": "assets/previews/competition-tasks-120.png",
+          "sha256": "a287a37d9f3fe20c69eccd52dbe7e46bbcf8d1fad16671cf234894f2b111a0c3",
+          "logical_source": "external-evidence/alliance-latest-delivery-20261023/120px/06-竞赛任务.png"
+        }
+      },
+      "source_color": "unverified",
+      "resource_delivery": "unverified",
+      "engineering": "unverified",
+      "bbox_1024": [
+        102,
+        104,
+        921,
+        869
+      ],
+      "bbox_120": [
+        13,
+        11,
+        110,
+        104
+      ],
+      "file_spec_check": "RGBA dimensions/default102px safety/full-canvas120 derivation pass"
+    }
+  ],
+  "qa": [
+    {
+      "path": "assets/qa/alliance-competition-accepted/six-light.png",
+      "sha256": "7566cf4b5b33c77cc0b955cc04c9cef665cf7d71d7302d4960113ded11d4f7e5"
+    },
+    {
+      "path": "assets/qa/alliance-competition-accepted/six-dark.png",
+      "sha256": "c9ccbf64ce27cc8c42d9c9034b0e07510d81adc151fd1b9bf9a5191b44578f1f"
+    },
+    {
+      "path": "assets/qa/alliance-competition-accepted/six-ui-states.png",
+      "sha256": "643932362d88669869a20a6b7becb1e2fe0fef223bac86038f36d329e9c4af00"
+    },
+    {
+      "path": "assets/qa/alliance-competition-accepted/345-local-colour-before-after.png",
+      "sha256": "891820d26c01b92142d370d8765422aac7f1feff1d7a425e7edd33e54ffac02f"
+    },
+    {
+      "path": "assets/qa/alliance-competition-accepted/ranking-blue-before-after.png",
+      "sha256": "5711761977dfe728884b3e7b96f1bb4bddd55230794fdef7bd2fcb0f7edebf8b"
+    },
+    {
+      "path": "assets/qa/alliance-competition-accepted/ten-reference-light.png",
+      "sha256": "fa122dedece583668c2b9b8ed04135ab58755b08c31c3a17578e5332f56954bc"
+    },
+    {
+      "path": "assets/qa/alliance-competition-accepted/ten-reference-dark.png",
+      "sha256": "2442c2e746d24b0e2bbd34f82f12976235babbc91268216281fdcb25ecc93354"
+    }
+  ],
+  "placement": "Retain accepted1024/120 files byte-for-byte. No resize/recentre/recolour. Icon layer120 with extra UI offset0, matching neutral or selected circle/nameplate.",
+  "visual_scope": "User explicitly accepts current six; static same-size previews and prior per-item reviews retained. Red box remains visually heavier; no absolute equal-weight claim.",
+  "file_checks": "Six1024 and six120RGBA, alpha/default safety and complete-canvas LANCZOS derivation verified at admission.",
+  "source_color": "unverified",
+  "resource_delivery": "unverified",
+  "engineering": "unverified",
+  "rules_changed": false,
+  "recipe_scope": "v10/v11 deterministic local colour values are case-specific, not global standards",
+  "evidence_notes": "Before/after and overview contain prior candidates for comparison only; accepted asset hashes are authoritative."
+}

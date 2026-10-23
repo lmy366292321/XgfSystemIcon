@@ -23,7 +23,7 @@
 - [技能入口](skills/design-guofeng-system-icons/SKILL.md)
 - [完整组件区域与留白](skills/design-guofeng-system-icons/references/composition-layout.md)：普通任务的设计与组合审核流程；具体底栏参数及最终选择单列在[案例记录](skills/design-guofeng-system-icons/references/bottom-tab-20261021.md)。
 - [完整设计规范与提示词](skills/design-guofeng-system-icons/references/design-standard.md)
-- [参考图](skills/design-guofeng-system-icons/assets)：52张完整图标、6张原像素局部观察图及1张真实尺寸失败反例，均来自本项目现有资源。
+- [参考图](skills/design-guofeng-system-icons/assets)：58张完整图标、6张原像素局部观察图及1张真实尺寸失败反例，均来自本项目现有资源。
 - [只读规格检查](skills/design-guofeng-system-icons/scripts/check_icon.py)：需要Python 3与Pillow，检查PNG真实位深、安全区、sRGB标识与120px派生关联；只读，不替代视觉验收。
 
 - [分类参考图库](skills/design-guofeng-system-icons/references/reference-library.md)：制作前及验收固定查看10张，生成输入选1–3张，标注来源与确认状态。
@@ -78,3 +78,5 @@ python -B -m unittest discover -s skills/design-guofeng-system-icons/scripts -p 
 - 三物定向复测已回填[案例记录](skills/design-guofeng-system-icons/references/feedback-records.md)：香囊素面、折扇收幅和残点处理在本批最终候选中改善，不代表稳定首试成功或跨案例验证。色彩来源未验证及R45/R48默认边距冲突仍保留，完整交付未通过；测试候选未升级为正式参考。
 
 排行榜三入口R50–R52的已确认版本与限定用途见[入库记录](skills/design-guofeng-system-icons/references/accepted-rankings-icons.md)。
+
+花盟与竞赛六入口R53–R58为用户确认的正式限定用途参考，准确版本和用途见[入库记录](skills/design-guofeng-system-icons/references/accepted-alliance-competition-icons.md)。
