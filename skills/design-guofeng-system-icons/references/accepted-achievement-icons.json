@@ -1,0 +1,109 @@
+{
+  "accepted_on": "2026-10-23",
+  "user_confirmation": "这版确认，四个图标都作为成就功能入口的最终版本保存。",
+  "admission_request": "将这四个已确认的最终版图标加入 design-guofeng-system-icons 的参考图库，作为成就功能入口的参考，保持当前图像不变。",
+  "user_acceptance": "pass",
+  "scope": "Exact latest delivered V6 four images, including V4 book translated only and V4 other three unchanged. Excludes rejected V5 book, old baskets and scissors.",
+  "items": [
+    {
+      "id": "R61",
+      "name": "成就总览",
+      "version": "V4原画仅上移约6px的V6",
+      "purpose": "展开成就册与花章、原画保持的圆底定位",
+      "limits": "保留已确认花纹与金边；不用否决的V5重绘；上移数值不推广",
+      "status": "正式限定用途参考",
+      "user_acceptance": "pass",
+      "files": {
+        "1024": {
+          "path": "assets/achievement-overview-v6.png",
+          "sha256": "64ba4c28b93173eeffbee6ee0aefba62bbd787020c960ffc2b77fc4a818f85e1"
+        },
+        "120": {
+          "path": "assets/previews/achievement-overview-v6-120.png",
+          "sha256": "2ca31a222f889c9860a9114d0802a67c93704e7c13bf7dd0809fbb033cc5b051"
+        }
+      },
+      "full_canvas_120_derivation": "pass"
+    },
+    {
+      "id": "R62",
+      "name": "店铺经营",
+      "version": "V4透明残点清理版",
+      "purpose": "算盘珠列与方孔币的经营成就语义、柔和木色层级",
+      "limits": "不是商城购物或建筑通用图；不改变原珠列和钱币内容",
+      "status": "正式限定用途参考",
+      "user_acceptance": "pass",
+      "files": {
+        "1024": {
+          "path": "assets/achievement-shop-v4.png",
+          "sha256": "c3d410ca6975d2492fe8d3f48d85913e7a382a0d4d680e8d122bfb4b7b518cf7"
+        },
+        "120": {
+          "path": "assets/previews/achievement-shop-v4-120.png",
+          "sha256": "9a736f25eb4c258c93dc708549d316e7f8482ff04ca0b7861fb231f81fef7d4c"
+        }
+      },
+      "full_canvas_120_derivation": "pass"
+    },
+    {
+      "id": "R63",
+      "name": "种植收获",
+      "version": "V4手握已采鲜花版",
+      "purpose": "手握裸茎鲜花表达采收所得、主花与手的层级",
+      "limits": "不用已否决花篮/盆栽剪刀版本；精确成就分类仍配名称",
+      "status": "正式限定用途参考",
+      "user_acceptance": "pass",
+      "files": {
+        "1024": {
+          "path": "assets/achievement-harvest-v4.png",
+          "sha256": "67ad53024b2d2d44cd3867ac8832d0dc5c05907e5b43b5c1d67fd3fd7b76bc21"
+        },
+        "120": {
+          "path": "assets/previews/achievement-harvest-v4-120.png",
+          "sha256": "8fda7855c1fa48cb591e3a9250598dfb329f738472dacbbd3b2f6e8d0cc4ea43"
+        }
+      },
+      "full_canvas_120_derivation": "pass"
+    },
+    {
+      "id": "R64",
+      "name": "日常社交",
+      "version": "已确认双人保留版",
+      "purpose": "双人招呼的社交成就入口、双脸与衣色层级",
+      "limits": "不推广为恋爱入口或固定人物；仅本图及成就入口用途",
+      "status": "正式限定用途参考",
+      "user_acceptance": "pass",
+      "files": {
+        "1024": {
+          "path": "assets/achievement-social-final.png",
+          "sha256": "076e2eb37198eb810ca1874259f0fb3c9a0a71df5304ff402c8405ae01c49122"
+        },
+        "120": {
+          "path": "assets/previews/achievement-social-final-120.png",
+          "sha256": "79ab632ab3c3995d8bd3eaa9bda1aeb0f6499fa8d79f200acf0841fb12aad135"
+        }
+      },
+      "full_canvas_120_derivation": "pass"
+    }
+  ],
+  "qa": [
+    {
+      "path": "assets/qa/achievement-accepted/ui-states.png",
+      "sha256": "99fdab6399354a84ddc7f8836a616519e8a5546ab7f8502134fe3392edbff596"
+    },
+    {
+      "path": "assets/qa/achievement-accepted/ten-reference-light.png",
+      "sha256": "82accfad23e640a532f5066ed74b3cd2e57d203438641369e1387bddbf6b7d92"
+    },
+    {
+      "path": "assets/qa/achievement-accepted/ten-reference-dark.png",
+      "sha256": "0006847629d2c5cef838e7d5a77d5958c06b7589e7b888ed954e16ff40543092"
+    }
+  ],
+  "source_color": "unverified",
+  "historical_resource_delivery": "not passed",
+  "engineering": "unverified",
+  "global_rules_changed": false,
+  "image_changes": false,
+  "publication": "User explicitly authorized GitHub synchronization; image bytes unchanged"
+}
