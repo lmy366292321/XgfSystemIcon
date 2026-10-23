@@ -1,0 +1,91 @@
+{
+  "accepted_on": "2026-10-23",
+  "user_request": "这两个图标确认，按最新交付版本加入 design-guofeng-system-icons 的参考图库。",
+  "user_acceptance": "pass",
+  "scope": "Only latest delivered seek-butterfly v5-position and dream-butterfly v2-size; older versions and future edits excluded.",
+  "items": [
+    {
+      "id": "R59",
+      "name": "寻蝶",
+      "version": "v5-position",
+      "purpose": "单蝶四翼概括、粉紫奶白层级及不对称蝶形的圆底视觉定位",
+      "limits": "本稿位置为用户确认的本案结果，不推广位移数值；精确寻蝶玩法依名称",
+      "user_acceptance": "pass",
+      "status": "正式限定用途参考",
+      "files": {
+        "1024": {
+          "path": "assets/seek-butterfly-v5.png",
+          "sha256": "ad57f3b8fa4a64e9dc5b685bde565ae9dea2e74dfcd5aa5e1e7ed52166f01fc9"
+        },
+        "120": {
+          "path": "assets/previews/seek-butterfly-v5-120.png",
+          "sha256": "381ee4c8cb8ff054be4d04c9beb2a7986ca6e105db1a618ab38afd16a5be36d6"
+        }
+      },
+      "alpha_bbox_1024": [
+        144,
+        113,
+        916,
+        840
+      ],
+      "alpha_bbox_120": [
+        24,
+        14,
+        110,
+        101
+      ],
+      "full_canvas_120_derivation": "pass"
+    },
+    {
+      "id": "R60",
+      "name": "引梦",
+      "version": "v2-size",
+      "purpose": "月牙环抱单蝶、内弧负空间、主体体量与名称板少量遮挡",
+      "limits": "不推广放大比例、粉紫浅金或遮挡量；保留月抱蝶关系，精确玩法依名称",
+      "user_acceptance": "pass",
+      "status": "正式限定用途参考",
+      "files": {
+        "1024": {
+          "path": "assets/dream-butterfly-v2.png",
+          "sha256": "5aad616cf7d361f205aaa627faa10567fc27937f1a3c95a6eddc4f7d7709c16f"
+        },
+        "120": {
+          "path": "assets/previews/dream-butterfly-v2-120.png",
+          "sha256": "f9038ecdb1048b2b15c22ab88cc90faae501b6314e1db3bac813036daac0c983"
+        }
+      },
+      "alpha_bbox_1024": [
+        76,
+        19,
+        949,
+        875
+      ],
+      "alpha_bbox_120": [
+        11,
+        8,
+        103,
+        97
+      ],
+      "full_canvas_120_derivation": "pass"
+    }
+  ],
+  "source_color": "unverified",
+  "prior_resource_delivery": "fail",
+  "engineering": "unverified",
+  "rules_changed": false,
+  "qa": [
+    {
+      "path": "assets/qa/butterfly-accepted/ui-states.png",
+      "sha256": "33348e78dd1b56c5bfeb5d079ddbab700cea80287063f9568619bc0b8f296faf"
+    },
+    {
+      "path": "assets/qa/butterfly-accepted/ten-reference-light.png",
+      "sha256": "2eccd9df497df5052a9667c98c0f71489e134b2c7a060add985e10474c10e8be"
+    },
+    {
+      "path": "assets/qa/butterfly-accepted/ten-reference-dark.png",
+      "sha256": "98585b54618b04b6fea422cec1aacd6858a9d79ce61a1b8ed46a41d79eccb733"
+    }
+  ],
+  "notes": "Four original delivered PNGs copied byte-for-byte. Known faint alpha remnants, default safety limitations and missing source colour evidence remain. Current user acceptance does not rewrite historical failed reviews. No external upload authorized in this admission."
+}
