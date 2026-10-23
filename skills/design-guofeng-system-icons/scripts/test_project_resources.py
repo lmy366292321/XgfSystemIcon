@@ -22,6 +22,7 @@ class ProjectResourcesTests(unittest.TestCase):
         c=json.loads((context/'output/inputs/composition.json').read_bytes())
         self.assertEqual(c['layouts'],[binding['layout']])
         self.assertEqual(c['status'],'unverified')
+        self.assertIsNone(c['allow_noncritical_overlap'])
         for name,d in binding['resources'].items():
             self.assertEqual(d['sha256'],desc(self.skill/'projects/entry-icons'/name)['sha256'])
 

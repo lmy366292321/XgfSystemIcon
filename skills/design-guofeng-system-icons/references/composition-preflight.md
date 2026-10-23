@@ -6,7 +6,7 @@
 
 1. 新任务先执行[项目资源入口](project-resource-entry.md)，自动取得本项目已确认布局与真实组件PNG；已解析成功不重复询问用户。布局必须列出组件版本、宽高、位置、z层级、裁切方式和完整组件范围。当前程序支持120px图层、UI零额外偏移、无裁切的静态RGBA组件；复杂裁切、其他接入方式先解决真实布局支持，不能用假资源或空组件绕过。多状态逐项提供layouts；第一项为本次输出的主布局。
 2. 在生产计划每项和JSON控制卡中写入同一份`composition`，字段见[模板](../templates/composition-plan.example.json)。`basis`绑定实际使用依据；framed绑定实际frame/nameplate组件ID；standalone须明确真实使用没有这些组件，布局components为空。独立图标不能虚构圆底，带底框任务不能冒称独立图标。
-3. 以120px图层坐标规划`subject_bounds`和`critical_regions`，说明主体摆放、关键识别面与遮挡策略。矩形采用左上闭、右下开。默认保护整个主体范围；确有设计依据允许非关键部分被遮挡时，显式设置allow_noncritical_overlap=true，并逐项保护关键识别面。脚本按真实前景alpha检查声明区域，不从名称板矩形猜测遮挡，也不替代语义与美感判断。
+3. 以120px图层坐标规划`subject_bounds`和`critical_regions`，说明主体摆放、关键识别面与遮挡策略。矩形采用左上闭、右下开。新任务草稿将allow_noncritical_overlap留为null，要求制作前显式决定，避免默认全避让。已有用户/项目依据允许有限非关键遮挡时设为true，在occlusion_reason逐项说明可遮挡部位、限度及需完整保留的识别面；没有依据时选择false，但不能无声缩小到失去体量。名称板遮挡下角不等于图标PNG裁断主体。脚本按真实前景alpha保护关键区域，实际组合再核对体量、语义和可见比例；关键面被挡仍失败。不得使用本案例数值作为全局标准。
 4. 运行`composition_preflight.py`生成规划图，真实组件叠加青色主体范围与紫色识别区；它只是示意图，不是图标。实际查看后填写review，绑定board的绝对路径及SHA-256。规划图必须能由当前资源与区域逐像素重现；只改hash不能放行过期图。没有真实尺寸或资源时，先补已有资料，关键缺口仍在才询问，不以示例或暂定布局进入制作。
 5. 计划每项另有`brief`和原有配色、参考分工、generation_inputs。执行start，再执行prepare-request。后者生成可直接传入image_gen.imagegen的arguments：brief、由规划自动追加的构图约束、原输入图加规划图、透明背景。实际图像总数最多3张，包含规划图；原正式style/color参考仍至少1张，十参考审阅基准保持不变。
 6. 必须按准备的arguments调用图像工具，不手动省略规划图。更换布局、主体范围、输入或brief时，生成前另存计划、控制卡、规划图并重新start。真实调用回执为JSON，保留arguments及真实返回信息；calls同时绑定request、arguments、receipt和输出。原有inputs仍记录generation_inputs，隐含追加的规划图在arguments内核对。脚本核对请求准备时间、原start、计划与参数一致性；本地回执不是独立后端证明。

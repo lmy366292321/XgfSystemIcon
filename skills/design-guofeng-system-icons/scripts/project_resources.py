@@ -52,7 +52,7 @@ def initialize(task_root,context=None,skill=None):
     composition={'schema_version':1,'kind':'framed','status':'unverified',
         'basis':desc(resources/'reuse-authorization.txt'),'layouts':[binding['layout']],
         'component_roles':resolved['component_roles'],'placement_intent':'','occlusion_reason':'',
-        'subject_bounds':[],'critical_regions':[],'allow_noncritical_overlap':False,
+        'subject_bounds':[],'critical_regions':[],'allow_noncritical_overlap':None,
         'quality_goals':{'basis_kind':'task_reasoning','basis':desc(resources/'reuse-authorization.txt'),
                          'occupancy_target':'','optical_balance':'','verification_method':''}}
     (inputs/'composition.json').write_text(json.dumps(composition,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')

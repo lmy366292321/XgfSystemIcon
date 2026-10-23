@@ -1,0 +1,15 @@
+{
+  "user_accepted": "subject occupancy only",
+  "fresh_image_generation": true,
+  "project_resources": "automatically resolved xgf-entry-icons; not global",
+  "allowed_overlap": "noncritical envelope lower corner only",
+  "preview_RGBA_identical": true,
+  "geometry": "pass",
+  "source_to_master": "pass",
+  "master_to_preview": "pass",
+  "output_metadata": "pass",
+  "source_color": "unverified",
+  "release_gate": "User explicitly authorized skill sync while retaining source-color unverified; no full icon delivery claim",
+  "accepted_assets_checked": 594,
+  "changed_assets": []
+}

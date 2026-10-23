@@ -176,7 +176,19 @@ def replay(image, icc, operation):
         rgb.putalpha(image.getchannel("A"))
         image = rgb
     resample = check_icon.RESAMPLERS[operation["resample"]]
-    master = image.copy() if image.size == (1024, 1024) else image.resize((1024, 1024), resample)
+    placement = None
+    side = 1024
+    if operation.get("placement") is not None:
+        require(mode != "audit-existing", "Audit must not invent placement history")
+        placement = json.loads(checked(operation["placement"]))
+        require(placement.get("schema_version") == 1, "Unsupported placement schema")
+        require(bool(checked(placement["basis"]).strip()), "Placement needs task basis")
+        side = placement.get("resize_side")
+        require(type(side) is int and 1 <= side <= 4096, "Invalid uniform resize side")
+        offset = placement.get("offset")
+        require(isinstance(offset, list) and len(offset) == 2 and
+                all(type(x) is int and abs(x) <= 4096 for x in offset), "Invalid placement offset")
+    master = image.copy() if image.size == (side, side) else image.resize((side, side), resample)
     cleanup = operation.get("alpha_cleanup")
     if cleanup is not None:
         require(operation["mode"] != "audit-existing", "Audit must not invent cleanup history")
@@ -185,6 +197,14 @@ def replay(image, icc, operation):
         master, count = clean_detached_alpha(master)
         require(type(cleanup.get("removed_count")) is int and cleanup["removed_count"] == count,
                 "Alpha cleanup count differs")
+    if placement is not None:
+        dx, dy = placement["offset"]
+        alpha = master.getchannel("A")
+        retained = (max(0, -dx), max(0, -dy), min(side, 1024-dx), min(side, 1024-dy))
+        require(retained[0] < retained[2] and retained[1] < retained[3], "Placement outside canvas")
+        lost = alpha.copy(); lost.paste(0, retained)
+        require(lost.getbbox() is None, "Placement would clip nontransparent pixels; resolve explicitly")
+        out = Image.new("RGBA", (1024, 1024)); out.paste(master, (dx, dy)); master = out
     return master, master.resize((120, 120), resample)
 
 
@@ -196,7 +216,7 @@ def new_record(capture_path, capture, master, preview, operation, activity):
             "scope": "Current color declaration/export replay; no visual, user, UI or historical acceptance"}
 
 
-def export(capture_path, output_dir, *, unknown="stop", basis=None, resample="lanczos", alpha_cleanup_basis=None):
+def export(capture_path, output_dir, *, unknown="stop", basis=None, resample="lanczos", alpha_cleanup_basis=None, placement=None):
     _, capture, observation, image, chunks, icc = read_capture(capture_path)
     src_status = source_state(capture, observation)["status"]
     require(src_status != "fail", "Invalid source metadata must be resolved, not relabelled")
@@ -224,14 +244,19 @@ def export(capture_path, output_dir, *, unknown="stop", basis=None, resample="la
         profile_path.write_bytes(ImageCms.ImageCmsProfile(ImageCms.createProfile("sRGB")).tobytes())
         target = descriptor(profile_path)
     operation = recipe(mode, resample, target, assumption)
-    master, preview = replay(image, icc, operation)
+    if placement is not None:
+        operation["placement"] = descriptor(placement)
     if alpha_cleanup_basis is not None:
         decision = descriptor(alpha_cleanup_basis)
         require(bool(checked(decision).strip()), "Missing cleanup decision/evidence")
-        _, count = clean_detached_alpha(master)
+        # Diagnose on the same resized canvas that replay cleans, before placement.
+        side = json.loads(checked(operation["placement"]))["resize_side"] if placement is not None else 1024
+        require(type(side) is int and 1 <= side <= 4096, "Invalid uniform resize side")
+        resized = image.resize((side, side), check_icon.RESAMPLERS[resample])
+        _, count = clean_detached_alpha(resized)
         operation["alpha_cleanup"] = {"method": "detached-alpha1-guard8-cap0.001-v1",
                                       "basis": decision, "removed_count": count}
-        master, preview = replay(image, icc, operation)
+    master, preview = replay(image, icc, operation)
     info = PngImagePlugin.PngInfo()
     if mode == "preserve-unknown":
         for kind, payload in chunks:
@@ -392,6 +417,7 @@ def main(argv=None):
     p.add_argument("--output-dir", type=Path, required=True)
     p.add_argument("--unknown", choices=("stop", "preserve", "assume-srgb"), default="stop")
     p.add_argument("--basis", type=Path)
+    p.add_argument("--placement", type=Path, help="Task-bound uniform square resize and lossless placement")
     p.add_argument("--alpha-cleanup-basis", type=Path,
                    help="Opt-in documented detached alpha=1 export normalization; never global threshold")
     p.add_argument("--resample", choices=tuple(check_icon.RESAMPLERS), default="lanczos")
@@ -415,7 +441,7 @@ def main(argv=None):
             code = 0
         elif args.command == "export":
             result = export(args.capture, args.output_dir, unknown=args.unknown, basis=args.basis, resample=args.resample,
-                            alpha_cleanup_basis=args.alpha_cleanup_basis)
+                            alpha_cleanup_basis=args.alpha_cleanup_basis, placement=args.placement)
             code = 0 if result["status"] == "pass" else 1
         elif args.command == "audit":
             result = audit(args.capture, args.master, args.preview, args.output, resample=args.resample)

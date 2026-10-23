@@ -155,7 +155,11 @@ def instructions(c):
     if 'quality_goals' in c:
         from composition_quality import prompt
         quality = prompt(c)
-    return ('\n\nCOMPOSITION CONTRACT (not a drawing of the UI):\n'
+    overlap = ('Noncritical parts may enter behind the nameplate only within the stated task limits. '
+               'Protect the named recognition regions, not the whole silhouette; do not shrink the entire subject merely to avoid all overlap.\n'
+               if c['allow_noncritical_overlap'] else
+               'This task explicitly protects the whole silhouette. If that makes the subject too small, reconsider the task overlap policy rather than silently shrinking it.\n')
+    return ('\n\nCOMPOSITION CONTRACT (not a drawing of the UI):\n' + overlap +
             'Output only the transparent icon; do not paint the frame, nameplate, labels or planning rectangles.\n'
             'The supplied planning board shows actual UI resources. Its diagram is enlarged 4x; coordinates below use a 120x120 full icon layer.\n'
             f'Subject footprint at 120px: {c["subject_bounds"]}; multiply coordinates by 1024/120 for the 1024 canvas.\n'
