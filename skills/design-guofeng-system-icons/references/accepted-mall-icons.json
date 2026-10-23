@@ -1,0 +1,53 @@
+{
+  "accepted_on": "2026-10-23",
+  "user_request": "将这版标记为通过，同步到图库里",
+  "user_acceptance": "pass",
+  "items": [
+    {
+      "id": "R65",
+      "name": "高级商城",
+      "version": "v8-delivered",
+      "user_acceptance": "pass",
+      "purpose": "双檐精品铺、曲框与亮面柜台的等级塑造及实际组件定位",
+      "limits": "紫白金、双檐、上移2px仅属本图；精确材质名称未验证",
+      "files": {
+        "1024": {
+          "path": "assets/advanced-mall-v8.png",
+          "sha256": "3ecf916d3ca12bf529d98ec851272257dfce34489a778270db9693c4dd76695f"
+        },
+        "120": {
+          "path": "assets/previews/advanced-mall-v8-120.png",
+          "sha256": "10fc1479daf9bd0af176c8070c27431a65be7b13dce10e82febad75a7c02fc7d"
+        }
+      }
+    },
+    {
+      "id": "R66",
+      "name": "初级商城",
+      "version": "v8-delivered",
+      "user_acceptance": "pass",
+      "purpose": "单檐直柱木铺、简洁柜面与高级铺面的同族等级对照",
+      "limits": "暖杏与单檐不成为所有初级入口默认；保持当前已确认位置",
+      "files": {
+        "1024": {
+          "path": "assets/basic-mall-v8.png",
+          "sha256": "08de6bea3d5bb4fd69129bf4afed9ffa15ba216afd51ed5542799f939bbdbc56"
+        },
+        "120": {
+          "path": "assets/previews/basic-mall-v8-120.png",
+          "sha256": "13032848925c22e02979e7bc66e3d25bc71f3229c5b63ca98ba1ec214fbf7f8d"
+        }
+      }
+    }
+  ],
+  "source_color": "unverified",
+  "resource_delivery": "unverified",
+  "engineering": "unverified",
+  "scope": "latest v8 delivery only; advanced shifted up2 at120/up17 at1024; basic unchanged",
+  "geometry_note": "Advanced top margin87 is task positioning exception; default102 margin not passed. Both independent integer translations, not direct master resize.",
+  "source_zip": {
+    "path": "商城双入口-v8-高级上移2px.zip",
+    "sha256": "4fc8948f8677af5aab7e5088bd833fa1be6fd10f6ece14cafa5cfe53be87f76a"
+  },
+  "publication": "GitHub sync authorized; original color remains unverified"
+}
