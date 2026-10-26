@@ -1,0 +1,155 @@
+{
+  "id": "R44",
+  "name": "礼包",
+  "accepted_on": "2026-10-26",
+  "user_request": "通过并加入图库，同步GitHub",
+  "accepted_version": "ranking-shop-gift-redesign-20261026-v2",
+  "user_acceptance": "pass",
+  "active_reference": true,
+  "status": "正式限定用途参考；替代旧R44",
+  "purpose": "竖式圆角闭合红礼匣、贴面米金宽束带、小绿花封饰与短垂带；完整组件中的体量与主辅关系",
+  "limits": "具体礼包内容依名称；器型、色相、圆角程度与定位不升级全局规则。旧低矮横匣仅历史追溯。",
+  "files": {
+    "1024": {
+      "path": "assets/gift-pack-shop-redesign-v2.png",
+      "sha256": "2cf25986aaba0560eb06654398c42e3230d6e215e62733db8c7e12851f8b45c8"
+    },
+    "120": {
+      "path": "assets/previews/gift-pack-shop-redesign-v2-120.png",
+      "sha256": "5ed776dcf0659e7c19eaaf9dc5a09394c49207a2ddbe865319c7a8edac638cd4"
+    }
+  },
+  "bbox_1024": [
+    176,
+    44,
+    854,
+    845
+  ],
+  "bbox_120": [
+    19,
+    3,
+    102,
+    101
+  ],
+  "supersedes": {
+    "record": "references/accepted-ranking-shop-icons.json",
+    "old_files": {
+      "1024": "assets/gift-pack-shop-v5.png",
+      "120": "assets/previews/gift-pack-shop-v5-120.png"
+    },
+    "old_state": "withdrawn, not positive reference",
+    "history": "references/withdrawn-r44-20261026.json"
+  },
+  "qa": [
+    {
+      "path": "assets/qa/r44-redesign-v2-accepted/composition.png",
+      "sha256": "4e36a7545e62b5406b1650b36d2ba0e60cb931cfcb9cddf88e7b6081e9f5ba5a"
+    },
+    {
+      "path": "assets/qa/r44-redesign-v2-accepted/composition-light.png",
+      "sha256": "b079380f9fc89e09cbf403d672a79786d3fbdb4f2db7f8a74bae8eed344c1e11"
+    },
+    {
+      "path": "assets/qa/r44-redesign-v2-accepted/composition-dark.png",
+      "sha256": "6f6914168ed5694f0570a36ee29a677c14c438aed0db6cae6fa2b8ae7edd35f9"
+    },
+    {
+      "path": "assets/qa/r44-redesign-v2-accepted/old-new-comparison.png",
+      "sha256": "cdeedada89c4d2344aae791fae62b2fa3891889262d161949da3a317f6deadf5"
+    },
+    {
+      "path": "assets/qa/r44-redesign-v2-accepted/ten-reference-light.png",
+      "sha256": "7e1347c7dfaf3e0f021ee53f1b3b87ad7e9fabd1dc1e4aa1e4ff76bc97c441f1"
+    },
+    {
+      "path": "assets/qa/r44-redesign-v2-accepted/ten-reference-dark.png",
+      "sha256": "b1a56f49bc670fffb24fbf5acc7b392e98041da8fcec66a3e4608b179470b4c3"
+    },
+    {
+      "path": "assets/qa/r44-redesign-v2-accepted/relation-G-material-dark.png",
+      "sha256": "9fb72c70152a78942f4a5fdd9aa6c7e111a8340bf1f55d8cc653a4d8c21f95fa"
+    },
+    {
+      "path": "assets/qa/r44-redesign-v2-accepted/relation-G-material-light.png",
+      "sha256": "a4883744b9a2c43af36ffa5c86000b1c0db44d283bc92d859a97ab6b815e69e0"
+    },
+    {
+      "path": "assets/qa/r44-redesign-v2-accepted/relation-G-shop-dark.png",
+      "sha256": "c2e7aedbbb0990f7e9e27c9ff2b9bfb4cb2e430271a2807af925d96dbf00f3f5"
+    },
+    {
+      "path": "assets/qa/r44-redesign-v2-accepted/relation-G-shop-light.png",
+      "sha256": "7f68bfd3651ee2a20c98dd62345e5fba0699f91131fd8503022013b4602ab597"
+    }
+  ],
+  "composition": {
+    "icon_layer": [
+      120,
+      120
+    ],
+    "ui_extra_offset": [
+      0,
+      0
+    ],
+    "circle": {
+      "size": [
+        113,
+        113
+      ],
+      "offset": [
+        4,
+        7
+      ],
+      "sha256": "e8abf5c565ed71cc0282cedcf4d40140af42324d177277708a11c10fc2d5f70b"
+    },
+    "nameplate": {
+      "size": [
+        131,
+        40
+      ],
+      "offset": [
+        -6,
+        90
+      ],
+      "sha256": "4e441a92953684d3fba91680639295a657a51709d1ed505f1ac757c991bc8444"
+    },
+    "occlusion": "limited noncritical box bottom and tail tip; seal/top/main face remain visible",
+    "font_and_backdrop": "preview approximation, not verified engine screenshot"
+  },
+  "validation": {
+    "pixel_copy": "byte-identical to user-confirmed delivered version",
+    "full_canvas_120_derivation": "pass",
+    "source_export_replay": "pass",
+    "geometry": "pass for the bound full-layer layout exception",
+    "static_visual_review": "two passes by the same reviewer; recorded before user confirmation",
+    "user_acceptance": "pass",
+    "historical_delivery_status": "fail",
+    "historical_exit_code": 1,
+    "historical_gate_limits": "R41/R45 positioned reference masters fail current reference default102px check; fixed references were retained. Source color-space remains unknown.",
+    "color_source": "unverified",
+    "engineering": "unverified"
+  },
+  "evidence": [
+    {
+      "logical_source": "external-evidence/ranking-shop-gift-redesign-20261026-v2/manifest.json",
+      "sha256": "46134e1ddcaa0d6578ecdba2e65c83af6027f4a5237fc50a15b0f566f9a2e92a"
+    },
+    {
+      "logical_source": "external-evidence/ranking-shop-gift-redesign-20261026-v2/records/final-verification.json",
+      "sha256": "5b098635a73cac1a06d417e5c9256777d76360aa180fbf317dce9fdd97169d24"
+    },
+    {
+      "logical_source": "external-evidence/ranking-shop-gift-redesign-20261026-v2/qa/final-check/batch-report.json",
+      "sha256": "536b226e27a373a8250fd0e032e0ac73d33c9f69a71a947b8a45c48720cc72ef"
+    },
+    {
+      "logical_source": "external-evidence/ranking-shop-gift-redesign-20261026-v2/reviews/primary.json",
+      "sha256": "db3bddb2daeba1512494f31621d4e15b92b4c20bf4a2826ac75cd1d4191d8603"
+    },
+    {
+      "logical_source": "external-evidence/ranking-shop-gift-redesign-20261026-v2/reviews/second.json",
+      "sha256": "ff2e150a77e6d3b20cafeeba44c23225f6e86e234d0caabbfe04804f7a04844c"
+    }
+  ],
+  "global_rules_changed": false
+}

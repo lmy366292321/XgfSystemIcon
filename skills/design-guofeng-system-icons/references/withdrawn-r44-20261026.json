@@ -1,0 +1,28 @@
+{
+  "reference_id": "R44",
+  "old_version": "ranking-shop-20261023-v5",
+  "state": "old asset withdrawn; current R44 has an accepted replacement",
+  "withdrawn_on": "2026-10-26",
+  "withdrawal_request": "R44礼包需要调整，图库中的图片作废，重新设计图标，参考示意图",
+  "old_files": {
+    "1024": {
+      "path": "assets/gift-pack-shop-v5.png",
+      "sha256": "46b8f361ddf6c5b25d825d72989da6f3dce69319351429f26561fbfa367f44d8",
+      "logical_source": "external-evidence/ranking-shop-20261023-v5/1024/04-礼包-1024.png"
+    },
+    "120": {
+      "path": "assets/previews/gift-pack-shop-v5-120.png",
+      "sha256": "59ffeb52f7e20afd84d8838b4007ca887e2f75fd87532d16a953f4e4fca11fa5",
+      "logical_source": "external-evidence/ranking-shop-20261023-v5/120/04-礼包-120.png"
+    }
+  },
+  "replacement": "references/accepted-r44-redesign-v2.json",
+  "replacement_acceptance": "pass on 2026-10-26",
+  "old_pixels_preserved": true,
+  "other_ids_unchanged": [
+    "R41",
+    "R42",
+    "R43",
+    "R45"
+  ]
+}

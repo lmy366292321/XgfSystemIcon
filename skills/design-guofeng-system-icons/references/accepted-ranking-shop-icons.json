@@ -1,8 +1,8 @@
 {
   "date": "2026-10-23",
   "user_request": "V5的这批图标登记通过，并加入到图库中",
-  "user_acceptance": "pass",
-  "status": "正式限定用途参考",
+  "user_acceptance": "historical V5: R44 old version revoked; R41/R42/R43/R45 remain accepted",
+  "status": "V5历史记录；R44由2026-10-26重设计V2替代",
   "accepted_version": "ranking-shop-20261023-v5",
   "scope": "All five exact V5 delivered icons and their shown static common circle/nameplate arrangement; no approval of earlier variants or future edits",
   "items": [
@@ -146,8 +146,8 @@
       "name": "礼包",
       "version": "ranking-shop-20261023-v5",
       "accepted_on": "2026-10-23",
-      "user_acceptance": "pass",
-      "status": "正式限定用途参考",
+      "user_acceptance": "revoked",
+      "status": "旧R44已作废；当前R44见替代记录",
       "purpose": "闭合矮漆匣、盘绳结、柔和胭脂漆面与连续明暗",
       "limits": "不将红色、低矮比例或盘绳结推广为所有礼包；保持漆器而非金属反光",
       "files": {
@@ -184,6 +184,17 @@
       "geometry_evidence": {
         "logical_source": "external-evidence/ranking-shop-20261023-v5/geometry/04.json",
         "sha256": "8aa7a9689743b0ba942af802fb9f40873c35bcfb7ecfb19f6032cb73f08e852e"
+      },
+      "historical_user_acceptance": "pass",
+      "active_reference": false,
+      "withdrawal": {
+        "date": "2026-10-26",
+        "record": "references/withdrawn-r44-20261026.json"
+      },
+      "replacement": {
+        "date": "2026-10-26",
+        "record": "references/accepted-r44-redesign-v2.json",
+        "user_acceptance": "pass"
       }
     },
     {
@@ -373,5 +384,11 @@
   "resource_delivery": "unverified",
   "color_source": "unverified",
   "engineering": "unverified",
-  "global_rules_changed": false
+  "global_rules_changed": false,
+  "inactive_reference_ids": [
+    "R44"
+  ],
+  "current_replacements": {
+    "R44": "references/accepted-r44-redesign-v2.json"
+  }
 }

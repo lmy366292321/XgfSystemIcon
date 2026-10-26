@@ -6,7 +6,7 @@
   ],
   "skill": {
     "path": "../SKILL.md",
-    "sha256": "2fc9ec6d5ff4224d94ac841829a8fe204cecfe233512ef985c6dd70ca382935d"
+    "sha256": "a4c28daa96e7605d681759518caaba4a2cc0ff487cedf37375348099acb4a22a"
   },
   "rules": [
     {
@@ -20,7 +20,7 @@
       "id": "reference-library",
       "file": {
         "path": "../references/reference-library.md",
-        "sha256": "1824520d422382969b5e89f64704649b1202e9dd86da34734e72705f5f058ded"
+        "sha256": "e41ed72dcd09405362026cacf699b193f795cf33fe2eed47fe7e9d4d6455138d"
       }
     },
     {

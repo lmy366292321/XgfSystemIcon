@@ -53,7 +53,7 @@
 | R41 [flower-gift-shop-v5](../assets/flower-gift-shop-v5.png) | 花礼（排行商店V5） | 商店／商品分类 | 绢帛斜束花礼、花头主块与束结次级、固定名称板组合 | 本案花种/三朵数量/桃粉奶白配色/左倾角度不推广；与R28鲜花库存主体区分 |
 | R42 [cultivation-shop-v5](../assets/cultivation-shop-v5.png) | 培育（排行商店V5） | 商店／商品分类 | 露籽束纸种包、苗印与竹勺的种子商品组合 | 具体培育耗材分类仍配名称；不将纸包、苗印或籽粒数量固定成全部培育功能 |
 | R43 [general-goods-shop-v5](../assets/general-goods-shop-v5.png) | 杂货（排行商店V5） | 商店／商品分类 | 宽篾竹篮承托布卷与瓷罐、多材质主次和细节收敛 | 杂货具体商品范围依名称；无提手/两类货物/暖竹淡瓷青为本案设计 |
-| R44 [gift-pack-shop-v5](../assets/gift-pack-shop-v5.png) | 礼包（排行商店V5） | 商店／商品分类 | 闭合矮漆匣、盘绳结、柔和胭脂漆面与连续明暗 | 不将红色、低矮比例或盘绳结推广为所有礼包；保持漆器而非金属反光 |
+| R44 [gift-pack-shop-redesign-v2](../assets/gift-pack-shop-redesign-v2.png) | 礼包（2026-10-26重设计V2） | 商店／商品分类 | 竖式圆角闭匣、米金贴面宽带、绿花封饰与短尾主次及固定组件适配 | 旧gift-pack-shop-v5已作废；不推广本图形状/配色/位移，来源色域及工程未验证 |
 | R45 [privilege-shop-v5](../assets/privilege-shop-v5.png) | 特权（排行商店V5） | 商店／商品分类 | 右斜宽玉凭牌、奶白花雕接触影与右下玉边的柔和层次 | 具体特权与售卖内容依名称；不将浅青玉/五瓣花/斜角/加深幅度推广为全局规则 |
 | R46 [warehouse-flowers-v3](../assets/warehouse-flowers-v3.png) | 鲜花（仓库入口） | 仓库／物品分类 | 裸茎花簇的主花层级、圆底体量与名称板承托 | 不替换R28；花种、粉白配色、放大比例与下沉量只属本案，具体仓库分类配名称 |
 | R47 [warehouse-cultivation-items-v3](../assets/warehouse-cultivation-items-v3.png) | 道具（仓库入口） | 仓库／物品分类 | 浇水壶与植物标培育袋的主辅、瓷器与布袋材质、用品类别表达 | 具体收纳目录仍配名称；不将壶/袋内容、雾蓝配色或纹饰密度推广为全部培育入口 |
@@ -226,3 +226,7 @@ R61–R64为用户确认的成就功能四入口，保持最新交付图像字�
 R74–R79为2026-10-26确认的六款礼包V3；[准确版本、用途与状态](accepted-gift-six-v3.md)。此前鲜花暂未入库的说明为历史状态。
 
 2026-10-26补齐已入库但未同步的R67–R73：[店铺与交易三入口](accepted-shop-trio-icons.md)、[四枚历史活动入口](accepted-historical-four-icons.md)。保留确认版本与历史未验证项；历史鲜花暂不入库说明不影响后来确认的R79。
+
+## R44当前有效版本（2026-10-26重设计V2）
+
+2026-10-26用户确认R44礼包重设计V2通过并授权入库及GitHub同步；有效参考改为竖式红礼匣、米金宽带与绿花封饰，旧gift-pack-shop-v5继续作废。见[替代入库记录](accepted-r44-redesign-v2.md)。 旧稿撤销状态不变；新图与旧图分别以文件哈希绑定，不能使用旧矮横匣代替新竖匣。

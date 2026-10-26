@@ -111,3 +111,6 @@ R61–R64为用户确认的成就功能四入口：成就总览V6位置版、店
 R74–R79为2026-10-26用户确认的道具、培育、加速、水滴、等级、鲜花六款礼包V3；仅借鉴各自限定构图与材质，见[六款礼包入库记录](references/accepted-gift-six-v3.md)。用户接受与原始色域/工程未验证状态分别保留。
 
 R67–R69店铺与交易最终v8及R70–R73四枚历史活动入口已于2026-10-26补齐GitHub同步，见[店铺记录](references/accepted-shop-trio-icons.md)与[历史入口记录](references/accepted-historical-four-icons.md)。原始色彩和工程未验证状态保留。
+
+
+R44于2026-10-26确认重设计V2：竖式圆角红礼匣、米金宽带和绿花封饰。仅[该版本](references/accepted-r44-redesign-v2.md)为有效限定用途参考，旧gift-pack-shop-v5继续作废；其他编号及全局规则不变。
