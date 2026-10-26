@@ -51,8 +51,8 @@
       "name": "时装商店",
       "version": "fashion-fit-20261022-v1",
       "accepted_on": "2026-10-23",
-      "user_acceptance": "pass",
-      "status": "正式限定用途参考",
+      "user_acceptance": "revoked",
+      "status": "旧绣袋已作废，仅作历史证据，禁止作为正向参考",
       "purpose": "双拱提手绣袋、主辅纹饰与包底避让",
       "limits": "不推广现代包型或粉色为全局标准；本案固定定位与默认安全区例外，售卖品类配名称",
       "files": {
@@ -84,7 +84,16 @@
         1,
         104,
         89
-      ]
+      ],
+      "historical_acceptance": {
+        "accepted_on": "2026-10-23",
+        "user_acceptance": "pass",
+        "version": "fashion-fit-20261022-v1"
+      },
+      "current_reference_status": "revoked",
+      "revoked_on": "2026-10-26",
+      "revocation_reason": "用户要求时装商店含店铺元素，旧绣袋作废",
+      "replacement_record": "accepted-r40-storefront-left2-v4.json"
     }
   ],
   "qa": [
@@ -186,5 +195,10 @@
   "resource_delivery": "unverified",
   "color_source": "unverified",
   "engineering": "unverified",
-  "global_rules_changed": false
+  "global_rules_changed": false,
+  "current_r40_record": {
+    "path": "accepted-r40-storefront-left2-v4.json",
+    "sha256": "3cc78b86cc5f051e175a6599823b52420e3db0ef47ebcc09967e7bf2a09f54a3"
+  },
+  "current_status": "R39 remains accepted and unchanged; current R40 storefront-left2-v4 accepted 2026-10-26; old bag remains revoked"
 }

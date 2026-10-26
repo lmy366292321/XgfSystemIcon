@@ -1,0 +1,152 @@
+{
+  "date": "2026-10-26",
+  "user_request": "这版视觉重心可以，将左移2px后的版本登记为通过并替换图库中的R40，R39保持不变，同步GitHub",
+  "user_acceptance": "pass",
+  "status": "正式限定用途参考",
+  "accepted_version": "storefront-left2-v4",
+  "scope": "Exact previously delivered cleaned fashion shop after horizontal -2px at120/-17px at1024, dy0; shown static circle/nameplate combination; R39 unchanged",
+  "items": [
+    {
+      "id": "R40",
+      "name": "时装商店",
+      "version": "storefront-left2-v4",
+      "accepted_on": "2026-10-26",
+      "user_acceptance": "pass",
+      "visual_centering": "pass explicitly confirmed by user",
+      "static_composition": "pass for this selected circle/nameplate arrangement",
+      "status": "正式限定用途参考，替代旧绣袋R40",
+      "purpose": "单檐木构时装店、挂售古风衣裙与短柜叠布；店铺首读、时装陈列次读及柔和材质区分",
+      "limits": "仅本图粉白暖木、横向店面体量及左移2px位置获确认；不推广为全组配色或通用位移；具体商城操作仍配名称",
+      "files": {
+        "1024": {
+          "path": "assets/fashion-shop-storefront-left2-v4.png",
+          "sha256": "4222386d542166930d91f6e7cf7c5797b96759253aca5cbac6b88cd628146e14",
+          "logical_source": "external-evidence/fashion-shop-optical-20261026-v4/1024/时装商店-重心调整.png"
+        },
+        "120": {
+          "path": "assets/previews/fashion-shop-storefront-left2-v4-120.png",
+          "sha256": "732a4cd5b281bf89a34404af5c91b6eaaab64d141ba7e8460a2a1ecc1ef8752e",
+          "logical_source": "external-evidence/fashion-shop-optical-20261026-v4/120/时装商店-重心调整.png"
+        }
+      },
+      "task_geometry": "pass; independent integer translation branches",
+      "default_102px_safety": "fail retained for left margin after visual correction; task-layout bounds pass",
+      "resource_delivery": "unverified; historical check_batch delivery fail retained",
+      "color_source": "unverified",
+      "engineering": "unverified",
+      "supersedes": {
+        "old_asset": "assets/fashion-shop-fit-v1.png",
+        "old_preview": "assets/previews/fashion-shop-fit-v1-120.png",
+        "status": "revoked; historical bytes retained"
+      },
+      "bbox_1024": [
+        87,
+        108,
+        904,
+        727
+      ],
+      "bbox_120": [
+        8,
+        10,
+        108,
+        87
+      ]
+    }
+  ],
+  "qa": [
+    {
+      "path": "assets/qa/r40-storefront-left2-v4-accepted/composition.png",
+      "sha256": "a87878ee5ef28267269add2d244e2cb15c63847e3d3f8b1925e57687a954a7d8"
+    },
+    {
+      "path": "assets/qa/r40-storefront-left2-v4-accepted/composition-light.png",
+      "sha256": "e0e472eddc0f579fe58ad5e4cc945f1e455a420c31e17eb7474fe3a0095cde51"
+    },
+    {
+      "path": "assets/qa/r40-storefront-left2-v4-accepted/composition-dark.png",
+      "sha256": "2749cd2fd3fc71101982deb9bc0e2af6cd1bb0e3b10efb0c09696b657b48d5a4"
+    },
+    {
+      "path": "assets/qa/r40-storefront-left2-v4-accepted/ten-reference-light.png",
+      "sha256": "0771bac91ac67f8bac259b58a785719b3d66e4305ed5607ef0ee8e1fc322fb09"
+    },
+    {
+      "path": "assets/qa/r40-storefront-left2-v4-accepted/ten-reference-dark.png",
+      "sha256": "88544449e44ec967639795389b7b0299d43b09c674beb405ee74737c0404082c"
+    }
+  ],
+  "composition": {
+    "icon_layer": [
+      120,
+      120
+    ],
+    "ui_extra_offset": [
+      0,
+      0
+    ],
+    "circle": {
+      "sha256": "e8abf5c565ed71cc0282cedcf4d40140af42324d177277708a11c10fc2d5f70b",
+      "size": [
+        113,
+        113
+      ],
+      "offset": [
+        4,
+        7
+      ]
+    },
+    "nameplate": {
+      "sha256": "4e441a92953684d3fba91680639295a657a51709d1ed505f1ac757c991bc8444",
+      "size": [
+        131,
+        40
+      ],
+      "offset": [
+        -6,
+        90
+      ]
+    },
+    "font_and_backdrop": "preview approximations; engineering unverified"
+  },
+  "transform_scope": {
+    "mode": "independent-translations",
+    "primary": "preview",
+    "preview_offset": [
+      -2,
+      0
+    ],
+    "master_offset": [
+      -17,
+      0
+    ],
+    "rounding_error_at_120": [
+      0.0078125,
+      0.0
+    ],
+    "clipped_nonzero": 0,
+    "pattern_and_color": "no resize, recolor or redraw; original RGBA preserved per integer branch",
+    "final_preview": "independent integer shift of verified original120; not direct resize from shifted1024"
+  },
+  "history": {
+    "old_bag": "revoked, not positive reference",
+    "cleanup": "1146 exterior low-alpha samples removed in prior task, original subject unchanged",
+    "historical_delivery_status": "fail",
+    "historical_report": {
+      "logical_source": "external-evidence/fashion-shop-optical-20261026-v4/qa/final-check/batch-report.json",
+      "sha256": "a27d25a98797c08fafcf2191bd037174a1378573cab26c103b46167da9eb9461"
+    },
+    "geometry_evidence": {
+      "logical_source": "external-evidence/fashion-shop-optical-20261026-v4/records/geometry-check.json",
+      "sha256": "3e87589011ed283a46d580f5780a95b1dc3e01ae1f131e734a554c36df27f919"
+    },
+    "pixel_evidence": {
+      "logical_source": "external-evidence/fashion-shop-optical-20261026-v4/records/pixel-preservation.json",
+      "sha256": "e5ab03974070475fcd4a4f87c2ab4f0f44b44577174aa6948edd39b96e83fb9e"
+    }
+  },
+  "resource_delivery": "unverified",
+  "color_source": "unverified",
+  "engineering": "unverified",
+  "global_rules_changed": false,
+  "github_authorization": "explicit in this user request"
+}

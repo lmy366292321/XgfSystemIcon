@@ -55,7 +55,7 @@ R28–R30为2026-10-21用户确认的花艺三项：鲜花v2、花瓶v3、培育
 
 R31–R38为2026-10-21用户确认的福利八项正式限定用途参考；准确版本与边界见[福利八项入库记录](references/accepted-benefits-icons.md)。
 
-R39–R40为2026-10-23用户确认的时装圆底适配v1：装扮衣架衣裙、时装商店绣袋；用途、定位例外及技术边界见[时装系统入库记录](references/accepted-fashion-icons.md)。
+R39装扮圆底适配v1继续有效且原文件不变；R40于2026-10-26替换为已清理外围残点、仅水平左移2px的时装店铺版，旧绣袋继续作废；准确版本、用途及技术边界见[当前R40记录](references/accepted-r40-storefront-left2-v4.md)。
 
 R41–R45为2026-10-23用户确认的排行商店V5：花礼、培育、杂货、礼包、特权；限定用途、双尺寸定位及技术边界见[排行商店入库记录](references/accepted-ranking-shop-icons.md)。
 
