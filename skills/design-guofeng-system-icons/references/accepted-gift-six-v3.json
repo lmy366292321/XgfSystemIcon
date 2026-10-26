@@ -1,0 +1,165 @@
+{
+  "confirmation_date": "2026-10-26",
+  "scope": "six V3 final delivered icons; original bytes retained",
+  "items": [
+    {
+      "id": "R74",
+      "name": "道具礼包",
+      "version": "V3 final, including approved targeted alpha cleanup for waterdrop and flower",
+      "files": {
+        "master": {
+          "file": "assets/item-gift-v3.png",
+          "sha256": "e4c126b150d82aa6853f36e3782839d95f2fb1f7e1fd56696323eecdc1e7b87b"
+        },
+        "preview": {
+          "file": "assets/item-gift-v3-120.png",
+          "sha256": "4e66f9c1c93cd54617b0943cf1159c88d129d9cd52402f889d43d5ae1e6dbea9"
+        }
+      },
+      "accepted_at": "2026-10-26",
+      "user_acceptance": "accepted: 通过这版图标，将图标加入到图库中，并同步GitHub",
+      "use": "综合道具在紫色提匣内的主次与承托",
+      "limits": "限定本版成图用途，不推广颜色/器型/比例为全局规则；重绘奖励不是原道具像素复用。",
+      "hard_specs": "pass",
+      "visual_review": "pass; two passes by same reviewer",
+      "color_provenance": "unverified",
+      "engine": "unverified",
+      "delivery": "unverified: original generation color space undeclared"
+    },
+    {
+      "id": "R75",
+      "name": "培育礼包",
+      "version": "V3 final, including approved targeted alpha cleanup for waterdrop and flower",
+      "files": {
+        "master": {
+          "file": "assets/cultivation-gift-v3.png",
+          "sha256": "5870c912835722543d731a446a50d2e0c4ba7a20657be560a47db47073cd5bbe"
+        },
+        "preview": {
+          "file": "assets/cultivation-gift-v3-120.png",
+          "sha256": "3fc38b15b208a5c9b8e6b24a5eb0c0e415c8f8c57279d029727b8dc1386bfa18"
+        }
+      },
+      "accepted_at": "2026-10-26",
+      "user_acceptance": "accepted: 通过这版图标，将图标加入到图库中，并同步GitHub",
+      "use": "礼匣内礼篮的层次及小尺寸概括",
+      "limits": "限定本版成图用途，不推广颜色/器型/比例为全局规则；重绘奖励不是原道具像素复用。",
+      "hard_specs": "pass",
+      "visual_review": "pass; two passes by same reviewer",
+      "color_provenance": "unverified",
+      "engine": "unverified",
+      "delivery": "unverified: original generation color space undeclared"
+    },
+    {
+      "id": "R76",
+      "name": "加速礼包",
+      "version": "V3 final, including approved targeted alpha cleanup for waterdrop and flower",
+      "files": {
+        "master": {
+          "file": "assets/acceleration-gift-v3.png",
+          "sha256": "de729601902d65f6ffc32a841904fe83299caf9b56d9c1e806c48a70bf357c11"
+        },
+        "preview": {
+          "file": "assets/acceleration-gift-v3-120.png",
+          "sha256": "61a123423675bff13ab3354338138e9189d00b988816c9ae197ded93d0eed8f4"
+        }
+      },
+      "accepted_at": "2026-10-26",
+      "user_acceptance": "accepted: 通过这版图标，将图标加入到图库中，并同步GitHub",
+      "use": "中央沙漏与朱杏云纹匣",
+      "limits": "限定本版成图用途，不推广颜色/器型/比例为全局规则；重绘奖励不是原道具像素复用。",
+      "hard_specs": "pass",
+      "visual_review": "pass; two passes by same reviewer",
+      "color_provenance": "unverified",
+      "engine": "unverified",
+      "delivery": "unverified: original generation color space undeclared"
+    },
+    {
+      "id": "R77",
+      "name": "水滴礼包",
+      "version": "V3 final, including approved targeted alpha cleanup for waterdrop and flower",
+      "files": {
+        "master": {
+          "file": "assets/waterdrop-gift-v3.png",
+          "sha256": "c3c43c50e3e544bcd1dcc245d3a74e59616a7e2d3bfb9ac8bdb118f565662d77"
+        },
+        "preview": {
+          "file": "assets/waterdrop-gift-v3-120.png",
+          "sha256": "e4f3a96fbf1e81efae252d612f6bbe51aa9608a51cabb1e2722db4794a228590"
+        }
+      },
+      "accepted_at": "2026-10-26",
+      "user_acceptance": "accepted: 通过这版图标，将图标加入到图库中，并同步GitHub",
+      "use": "深蓝圆匣、奶白衬底与水滴分离",
+      "limits": "限定本版成图用途，不推广颜色/器型/比例为全局规则；重绘奖励不是原道具像素复用。",
+      "hard_specs": "pass",
+      "visual_review": "pass; two passes by same reviewer",
+      "color_provenance": "unverified",
+      "engine": "unverified",
+      "delivery": "unverified: original generation color space undeclared"
+    },
+    {
+      "id": "R78",
+      "name": "等级礼包",
+      "version": "V3 final, including approved targeted alpha cleanup for waterdrop and flower",
+      "files": {
+        "master": {
+          "file": "assets/level-gift-v3.png",
+          "sha256": "a7975b1a6df0084e44863ae55387b67cfafef8d151c60ea4d523ba580cddc664"
+        },
+        "preview": {
+          "file": "assets/level-gift-v3-120.png",
+          "sha256": "15b5ddbd12cab1d130b5cf27155683dcc8bb781c20f27f15ce0bee32c94754ab"
+        }
+      },
+      "accepted_at": "2026-10-26",
+      "user_acceptance": "accepted: 通过这版图标，将图标加入到图库中，并同步GitHub",
+      "use": "青玉盒壁视觉重量和四类综合奖励",
+      "limits": "限定本版成图用途，不推广颜色/器型/比例为全局规则；重绘奖励不是原道具像素复用。",
+      "hard_specs": "pass",
+      "visual_review": "pass; two passes by same reviewer",
+      "color_provenance": "unverified",
+      "engine": "unverified",
+      "delivery": "unverified: original generation color space undeclared"
+    },
+    {
+      "id": "R79",
+      "name": "鲜花礼包",
+      "version": "V3 final, including approved targeted alpha cleanup for waterdrop and flower",
+      "files": {
+        "master": {
+          "file": "assets/flower-gift-v3.png",
+          "sha256": "5ff6b4b24183192ca148c7800c9799afeb1a28019040ba395ed8f2fc685db556"
+        },
+        "preview": {
+          "file": "assets/flower-gift-v3-120.png",
+          "sha256": "4ea855168ace17e53c89244516aa59473c18e0b5f32087534c5f12fc2b16dc74"
+        }
+      },
+      "accepted_at": "2026-10-26",
+      "user_acceptance": "accepted: 通过这版图标，将图标加入到图库中，并同步GitHub",
+      "use": "简洁玫粉盒壁与盒内鲜花层次",
+      "limits": "限定本版成图用途，不推广颜色/器型/比例为全局规则；重绘奖励不是原道具像素复用。",
+      "hard_specs": "pass",
+      "visual_review": "pass; two passes by same reviewer",
+      "color_provenance": "unverified",
+      "engine": "unverified",
+      "delivery": "unverified: original generation color space undeclared"
+    }
+  ],
+  "cleanup_exception": {
+    "scope": "only waterdrop and flower; explicit user approval",
+    "method": "only alpha=1 farther than 8px square neighborhood from alpha>=2 after recorded resizing",
+    "removed_counts": {
+      "waterdrop": 1462,
+      "flower": 2655
+    },
+    "nonpermitted_alpha_changes": 0,
+    "RGB_changes_during_cleanup": 0,
+    "originals_retained": true,
+    "exact_replay": "pass",
+    "global_rule_change": false
+  },
+  "validation_report_sha256": "9409154acf54947ff489a9336886dfc9e286e72846ec977ba22ae28f507feec9",
+  "note": "User acceptance and gallery admission do not resolve original color provenance or engine validation. Older flower draft remains historical, not this accepted reference."
+}
