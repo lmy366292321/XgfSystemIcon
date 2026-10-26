@@ -1,0 +1,59 @@
+{
+  "source_conversation": "User-provided original conversation; private locator retained locally.",
+  "recovery": "PNG bytes read from displayed attachment preview data URI; each matches historical feedback-records SHA256 exactly",
+  "items": [
+    {
+      "id": "R70",
+      "name": "幸运转盘",
+      "file": "assets/lucky-wheel-v3.png",
+      "sha256": "9910543bc9443358c4899ad87c634b0cdf348b3b35363a68f27e11abc8c50e95",
+      "preview": "assets/lucky-wheel-v3-120.png",
+      "preview_sha256": "a38d90be6dafd94a9e6745ece4765f5a86d784cd31fee6c2fd40a397f5a16fb0",
+      "preview_origin": "2026-10-23 derived from full 1024 canvas using Pillow LANCZOS; not historical 120 file",
+      "user_acceptance": "pass: explicit admission request 2026-10-23",
+      "color_provenance": "unverified",
+      "engine": "unverified",
+      "use": "多色转盘、指针与花结层级"
+    },
+    {
+      "id": "R71",
+      "name": "限时礼包",
+      "file": "assets/limited-gift-v2.png",
+      "sha256": "1ecf66bb9884b79f35b89b5a97d9e2e3c041df193f4d4555c30cb3ff9f0a2822",
+      "preview": "assets/limited-gift-v2-120.png",
+      "preview_sha256": "1a1c15af6555a113728933185ef36abfc623d71ee449e6c3b7dc9bc51d322fcf",
+      "preview_origin": "2026-10-23 derived from full 1024 canvas using Pillow LANCZOS; not historical 120 file",
+      "user_acceptance": "pass: explicit admission request 2026-10-23",
+      "color_provenance": "unverified",
+      "engine": "unverified",
+      "use": "紫色提匣与暖金沙漏"
+    },
+    {
+      "id": "R72",
+      "name": "云叙嘉礼",
+      "file": "assets/yunxu-gift-v3.png",
+      "sha256": "6a91b3700979404e2cf665c9746d2a28cfdad0db8b896be75e2a1986d91569bf",
+      "preview": "assets/yunxu-gift-v3-120.png",
+      "preview_sha256": "add7aaca116afc5a57cb25a88177be89b5e93d5b425a50461d13f487692d0177",
+      "preview_origin": "2026-10-23 derived from full 1024 canvas using Pillow LANCZOS; not historical 120 file",
+      "user_acceptance": "pass: explicit admission request 2026-10-23",
+      "color_provenance": "unverified",
+      "engine": "unverified",
+      "use": "帝王花、百合、棉花与青绿礼篮"
+    },
+    {
+      "id": "R73",
+      "name": "首充壕礼",
+      "file": "assets/first-charge-gift-v3.png",
+      "sha256": "5bc5f087157882f972caeb333bd2a707acf412468cfa8036a99021d6955f290a",
+      "preview": "assets/first-charge-gift-v3-120.png",
+      "preview_sha256": "21726064e97f564521ed5283d025ff351830ca305470508e4874b3126dd954ed",
+      "preview_origin": "2026-10-23 derived from full 1024 canvas using Pillow LANCZOS; not historical 120 file",
+      "user_acceptance": "pass: explicit admission request 2026-10-23",
+      "color_provenance": "unverified",
+      "engine": "unverified",
+      "use": "服饰开箱、宽袖与蝶扇奖励展示"
+    }
+  ],
+  "excluded": "鲜花礼包：本次不入库，另与五礼包调整"
+}

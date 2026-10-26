@@ -1,0 +1,76 @@
+{
+  "accepted_on": "2026-10-23",
+  "user_confirmation": "这版确认，3个图标都作为最终版本保存。",
+  "admission_and_sync_request": "加入到图库，图库更新同步到 GitHub。",
+  "user_acceptance": "pass",
+  "items": [
+    {
+      "id": "R67",
+      "name": "好友店铺",
+      "version": "用户确认最终v8",
+      "purpose": "同源瓦檐木构店铺、紫瓦与双人标识、圆底适配",
+      "limits": "好友归属配名称；不推广紫色、具体构件比例或遮挡量",
+      "status": "正式限定用途参考",
+      "user_acceptance": "pass",
+      "files": {
+        "1024": {
+          "path": "assets/friend-shop-final-v8.png",
+          "sha256": "f850fb2e03f20376e6c98286d8a7f3d04f6f3453f82d3b6ad4d027361f311283"
+        },
+        "120": {
+          "path": "assets/previews/friend-shop-final-v8-120.png",
+          "sha256": "9af902c747a5506bc00840457263d2e2045721dfc29306028ccde9b8a640979d"
+        }
+      },
+      "full_canvas_120_derivation": "pass"
+    },
+    {
+      "id": "R68",
+      "name": "我的店铺",
+      "version": "用户确认最终v8",
+      "purpose": "以好友店铺为母版的暖杏瓦钥匙变体、同组形状一致性",
+      "limits": "生成变体非逐像素同形；我的归属配名称，不沿用旧版粗构件",
+      "status": "正式限定用途参考",
+      "user_acceptance": "pass",
+      "files": {
+        "1024": {
+          "path": "assets/own-shop-final-v8.png",
+          "sha256": "68d20d1f07e44ba6dff118f9bf4da89b39a329a457601e6ca203ae0f195083b8"
+        },
+        "120": {
+          "path": "assets/previews/own-shop-final-v8-120.png",
+          "sha256": "717f1300224a7312d52c230a330f489866a5ef0d5cd43a78966b7b8cd05a87ce"
+        }
+      },
+      "full_canvas_120_derivation": "pass"
+    },
+    {
+      "id": "R69",
+      "name": "交易信息",
+      "version": "用户确认最终v8",
+      "purpose": "灰青线装册与灰蓝毛笔、细边小云纹、实心与镂空主体视重校准",
+      "limits": "仅已确认v8约8%等比缩小稿；比例、配色及纹饰不推广为通用规则",
+      "status": "正式限定用途参考",
+      "user_acceptance": "pass",
+      "files": {
+        "1024": {
+          "path": "assets/trade-ledger-final-v8.png",
+          "sha256": "0e758ae0a25acccd7e4b93933158dbc566f7a59604f2a5240d57848c531b418a"
+        },
+        "120": {
+          "path": "assets/previews/trade-ledger-final-v8-120.png",
+          "sha256": "87e8807e7b416bed30d82af55bede0139537e33391695bd8bf73c069c0e6fe99"
+        }
+      },
+      "full_canvas_120_derivation": "pass"
+    }
+  ],
+  "validation": {
+    "file_copy": "byte-identical to confirmed final v8",
+    "full_canvas_derivation": "pass",
+    "color_provenance": "unverified",
+    "engine": "unverified",
+    "historical_delivery_gate": "not_passed; prior workflow rule/asset drift remains recorded"
+  },
+  "scope": "Exact final v8 only; no redraw, color edit or rescale during admission"
+}
