@@ -23,7 +23,7 @@
 - [技能入口](skills/design-guofeng-system-icons/SKILL.md)
 - [完整组件区域与留白](skills/design-guofeng-system-icons/references/composition-layout.md)：普通任务的设计与组合审核流程；具体底栏参数及最终选择单列在[案例记录](skills/design-guofeng-system-icons/references/bottom-tab-20261021.md)。
 - [完整设计规范与提示词](skills/design-guofeng-system-icons/references/design-standard.md)
-- [参考图](skills/design-guofeng-system-icons/assets)：58张完整图标、6张原像素局部观察图及1张真实尺寸失败反例，均来自本项目现有资源。
+- [参考图](skills/design-guofeng-system-icons/assets)：81张当前有效正式参考图标、6张原像素局部观察图及1张真实尺寸失败反例，均来自本项目现有资源。
 - [只读规格检查](skills/design-guofeng-system-icons/scripts/check_icon.py)：需要Python 3与Pillow，检查PNG真实位深、安全区、sRGB标识与120px派生关联；只读，不替代视觉验收。
 
 - [分类参考图库](skills/design-guofeng-system-icons/references/reference-library.md)：制作前及验收固定查看10张，生成输入选1–3张，标注来源与确认状态。

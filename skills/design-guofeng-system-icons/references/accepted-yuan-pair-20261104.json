@@ -1,0 +1,105 @@
+{
+  "date": "2026-11-04",
+  "user_quote": "两个最新的图标通过",
+  "authorization": "按照你的建议执行，并同步到GitHub上",
+  "status": "正式限定用途参考；用户确认与技术交付状态分列",
+  "items": [
+    {
+      "id": "R80",
+      "name": "结缘商店",
+      "version": "v1-shop",
+      "accepted_on": "2026-11-04",
+      "user_acceptance": "confirmed",
+      "purpose": "结缘主题店铺与中央同心结的主次关系",
+      "limits": "结缘商店v1；不将红金配色、结饰或建筑比例推广为通用商城规则",
+      "files": {
+        "1024": {
+          "path": "assets/bond-shop-v1.png",
+          "sha256": "e7a9a69a7c23c9e346683cf9d0c87792c87306d22d105581aea60133c4b23eaa",
+          "logical_source": "external-evidence/缘系双入口-已确认-20261104/1024/结缘商店.png"
+        },
+        "120": {
+          "path": "assets/previews/bond-shop-v1-120.png",
+          "sha256": "656deacf009a163f9603571ba70f9e10d1cd1c79bc9846acf3abf82805fd5f78",
+          "logical_source": "external-evidence/缘系双入口-已确认-20261104/120/结缘商店.png"
+        }
+      },
+      "file_checks": {
+        "date": "2026-11-04",
+        "hard_specs": "pass",
+        "srgb_declaration": "pass",
+        "preview_derivation": "pass",
+        "layout": "pass",
+        "pillow_version": "13.0.0",
+        "scope": "File and layout checks only; no source-color or complete delivery acceptance"
+      }
+    },
+    {
+      "id": "R81",
+      "name": "同心花缘",
+      "version": "v2-cooperative-tasks",
+      "accepted_on": "2026-11-04",
+      "user_acceptance": "confirmed",
+      "purpose": "两个结缘的人共同完成任务：双人共持任务卷轴及勾选符号",
+      "limits": "仅v2共同任务稿；旧双花稿不入库；人物、配色与姿态不推广为全局规则",
+      "files": {
+        "1024": {
+          "path": "assets/bond-cooperative-tasks-v2.png",
+          "sha256": "c94b6c6dee9f41a7f4eae9cf5ead572473bd09104e2df66dcfff2dc93c6c8f77",
+          "logical_source": "external-evidence/缘系双入口-已确认-20261104/1024/同心花缘.png"
+        },
+        "120": {
+          "path": "assets/previews/bond-cooperative-tasks-v2-120.png",
+          "sha256": "7c19f6d7178a32aa2459254453d85d522dbde0f743b2e9a7f65e801cc4122b8c",
+          "logical_source": "external-evidence/缘系双入口-已确认-20261104/120/同心花缘.png"
+        }
+      },
+      "file_checks": {
+        "date": "2026-11-04",
+        "hard_specs": "pass",
+        "srgb_declaration": "pass",
+        "preview_derivation": "pass",
+        "layout": "pass",
+        "pillow_version": "13.0.0",
+        "scope": "File and layout checks only; no source-color or complete delivery acceptance"
+      }
+    }
+  ],
+  "qa": [
+    {
+      "path": "assets/qa/yuan-pair-accepted-20261104/components-120.png",
+      "sha256": "9dc6958331c2a9fe792305adb9f0ff51041d86cc92d362cc01250e6e461c3084",
+      "scope": "Original 2026-10-30 review sheet; candidate labels reflect that date; current acceptance is recorded separately"
+    },
+    {
+      "path": "assets/qa/yuan-pair-accepted-20261104/ten-reference-light.png",
+      "sha256": "3b8c09a26e7b4d7f0daf94a643666db48466a39693bdefdb613934277c442428",
+      "scope": "Original 2026-10-30 review sheet; candidate labels reflect that date; current acceptance is recorded separately"
+    },
+    {
+      "path": "assets/qa/yuan-pair-accepted-20261104/ten-reference-dark.png",
+      "sha256": "a13cd6edfcf6f08d6e60513ca938dd186f69a97fd9bab3f3dc01c1aaf5638b2f",
+      "scope": "Original 2026-10-30 review sheet; candidate labels reflect that date; current acceptance is recorded separately"
+    }
+  ],
+  "global_rules_changed": false,
+  "resource_delivery": "not_passed; historical delivery.status=fail retained",
+  "color_source": "unverified",
+  "engine_compression_device": "unverified",
+  "historical_report": {
+    "logical_source": "external-evidence/缘系双入口-交付候选-20261030/qa/final/batch-report.json",
+    "sha256": "df2848a9ba6a79b0f800b33519da56f0e9d414e024e6f0c79f31b0f7f4168298",
+    "delivery_status": "fail",
+    "color_provenance": "unverified",
+    "visual_record": "unverified",
+    "reference_margin_failures": [
+      "R40",
+      "R41",
+      "R65"
+    ]
+  },
+  "source_acceptance": {
+    "logical_source": "external-evidence/缘系双入口-已确认-20261104/确认记录.json",
+    "sha256": "916ac5134ecce61b64322a628882d19cb29d451f08e94ba09348faca2742e137"
+  }
+}
