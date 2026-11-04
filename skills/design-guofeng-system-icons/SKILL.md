@@ -39,7 +39,7 @@ description: 设计、扩展、精修和评审新国风女性向古风游戏的�
 
 ## 画风参考
 
-图库现含66张完整高清图、6张原像素局部裁切、1张尺寸/安全区失败反例。完整清单、选图规则、来源与局部坐标见 [参考图库](references/reference-library.md)。反例不得混入正向画风输入。
+图库数量和当前有效版本以参考图库索引为准；另有6张原像素局部裁切、1张尺寸/安全区失败反例。完整清单、选图规则、来源与局部坐标见 [参考图库](references/reference-library.md)。反例不得混入正向画风输入。
 
 优先按任务查图：纸册R01、瓷与液体R02、金叶R03、丝绸礼盒R04、开箱R05/R06、封闭卡包R07、地图印章R08、生命主体R09、人物／双人组合R10、礼盒／节庆红色R11、书信／双物件交叉组合R12。
 
@@ -102,7 +102,7 @@ R59–R60为2026-10-23用户按最新交付确认的寻蝶v5位置版与引梦v2
 修改本技能时同步检查SKILL.md、设计规范、元数据和参考图是否一致。不要把任务日志或生成历史塞进入口正文。GitHub维护源为 https://github.com/lmy366292321/XgfSystemIcon ，技能路径为 skills/design-guofeng-system-icons；仓库和安装副本不是自动双向同步，修改后核对版本，保留冲突而非静默覆盖。
 
 R65–R66为用户确认的商城v8：高级双檐精品铺上移版与初级单檐木铺；版本、用途和未验证项见[商城入库记录](references/accepted-mall-icons.md)。
-同功能不同等级入口或商城重心复发时，读取[商城关系组复盘](references/mall-entry-feedback.md)，分别核销重心、画风与等级关系。
+同功能不同等级入口或商城重心复发时，读取[商城关系组复盘](references/mall-entry-feedback.md)：在实际组件中分别核销视觉重心、项目画风与等级吸引力，不以位移完成或色差代替。
 
 
 R61–R64为用户确认的成就功能四入口：成就总览V6位置版、店铺经营V4、种植收获V4手握鲜花、日常社交保留版；准确版本与限定用途见[成就入口入库记录](references/accepted-achievement-icons.md)。
@@ -112,5 +112,9 @@ R74–R79为2026-10-26用户确认的道具、培育、加速、水滴、等级�
 
 R67–R69店铺与交易最终v8及R70–R73四枚历史活动入口已于2026-10-26补齐GitHub同步，见[店铺记录](references/accepted-shop-trio-icons.md)与[历史入口记录](references/accepted-historical-four-icons.md)。原始色彩和工程未验证状态保留。
 
+
+## 当前停用参考
+
+2026-10-26用户撤销R44旧礼包gift-pack-shop-v5，禁止作为正向画风/内容/配色参考，也不计入固定10张。R41/R42/R43/R45不受影响；R44编号保留，新设计已于2026-10-26另经用户确认，当前有效版见[替代记录](references/accepted-r44-redesign-v2.md)。以[当前有效图库与作废记录](references/reference-library.md#作废参考r44旧礼包2026-10-26)为准。
 
 R44于2026-10-26确认重设计V2：竖式圆角红礼匣、米金宽带和绿花封饰。仅[该版本](references/accepted-r44-redesign-v2.md)为有效限定用途参考，旧gift-pack-shop-v5继续作废；其他编号及全局规则不变。

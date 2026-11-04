@@ -200,5 +200,6 @@
     "path": "accepted-r40-storefront-left2-v4.json",
     "sha256": "3cc78b86cc5f051e175a6599823b52420e3db0ef47ebcc09967e7bf2a09f54a3"
   },
-  "current_status": "R39 remains accepted and unchanged; current R40 storefront-left2-v4 accepted 2026-10-26; old bag remains revoked"
+  "current_status": "R39 remains accepted and unchanged; current R40 storefront-left2-v4 accepted 2026-10-26; old bag remains revoked",
+  "revocation_request": "R40时装商店需要调整，图库中的图片作废，设计的图标，要有店铺元素"
 }

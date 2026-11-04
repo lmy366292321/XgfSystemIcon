@@ -390,5 +390,6 @@
   ],
   "current_replacements": {
     "R44": "references/accepted-r44-redesign-v2.json"
-  }
+  },
+  "historical_user_acceptance": "pass"
 }
